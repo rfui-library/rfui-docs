@@ -13,6 +13,15 @@ import stylesheet from "./app.css?url";
 export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
   { rel: "stylesheet", href: "https://rfui.deno.dev/rfui.css" },
+  { rel: "stylesheet", href: "/prism.css" },
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css?family=Open+Sans",
+  },
+  {
+    rel: "script",
+    href: "/prism.js",
+  },
 ];
 
 export const meta = () => [
