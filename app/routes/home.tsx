@@ -1,12 +1,10 @@
-import { Welcome } from "../welcome/welcome";
-
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "RFUI" },
+    { name: "description", content: "A component library for React" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <div>RFUI Docs</div>;
 }
