@@ -21,10 +21,6 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css?family=Open+Sans",
   },
-  {
-    rel: "script",
-    href: "/prism.js",
-  },
 ];
 
 export const meta = () => [
@@ -45,6 +41,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <script src="/prism.js"></script>
       </body>
     </html>
   );
