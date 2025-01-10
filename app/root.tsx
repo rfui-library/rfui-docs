@@ -6,6 +6,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { Stack, Container } from "rfui";
+import { Navbar } from "./components/navbar";
+import { Footer } from "./components/footer";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
@@ -48,7 +51,15 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default () => {
-  return <Outlet />;
+  return (
+    <Stack className="min-h-screen">
+      <Navbar route="TODO" />
+      <Container size="2xl" className="mb-6 mt-8 grow font-sans">
+        <Outlet />
+      </Container>
+      <Footer />
+    </Stack>
+  );
 };
 
 export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
