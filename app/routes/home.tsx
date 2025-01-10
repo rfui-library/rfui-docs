@@ -1,4 +1,4 @@
-import Component from "rfui";
+import { Badge } from "rfui";
 
 export const meta = () => ([
   { title: "Home - RFUI" },
@@ -6,5 +6,5 @@ export const meta = () => ([
 ]);
 
 export default function Home() {
-  return <div>RFUI Docs <Component /></div>;
+  return <div>RFUI Docs <Badge>Test</Badge></div>;
 }
