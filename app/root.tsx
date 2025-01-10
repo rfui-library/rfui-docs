@@ -12,12 +12,13 @@ import stylesheet from "./app.css?url";
 
 export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  { rel: "stylesheet", href: "https://rfui.deno.dev/rfui.css" },
 ];
 
-export const meta = () => ([
+export const meta = () => [
   { title: "RFUI" },
   { name: "description", content: "A component library for React" },
-]);
+];
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -35,11 +36,11 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </body>
     </html>
   );
-}
+};
 
 export default () => {
   return <Outlet />;
-}
+};
 
 export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
   let message = "Oops!";
@@ -68,4 +69,4 @@ export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
       )}
     </main>
   );
-}
+};
