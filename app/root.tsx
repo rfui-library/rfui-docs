@@ -14,6 +14,11 @@ export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
 
+export const meta = () => ([
+  { title: "RFUI" },
+  { name: "description", content: "A component library for React" },
+]);
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
