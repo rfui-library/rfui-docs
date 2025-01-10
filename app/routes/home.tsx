@@ -1,3 +1,5 @@
+import Component from "rfui";
+
 export function meta() {
   return [
     { title: "RFUI" },
@@ -6,5 +8,5 @@ export function meta() {
 }
 
 export default function Home() {
-  return <div>RFUI Docs</div>;
+  return <div>RFUI Docs <Component /></div>;
 }
