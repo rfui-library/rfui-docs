@@ -5,10 +5,10 @@ export const meta = () => [
   { name: "description", content: "The home page" },
 ];
 
-export default function Home() {
+export default () => {
   return (
     <div>
       RFUI Docs <Button>Test</Button>
     </div>
   );
-}
+};
