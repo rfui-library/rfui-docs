@@ -119,16 +119,16 @@ export const getComponents = () => ({
       href: "/components/form/checkbox",
       demo: <Checkbox />,
     },
-    {
-      name: "CheckboxCardGroup",
-      href: "/components/form/checkbox-card-group",
-      demo: (
-        <CheckboxCardGroup padding="sm">
-          <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
-          <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
-        </CheckboxCardGroup>
-      ),
-    },
+    // {
+    //   name: "CheckboxCardGroup",
+    //   href: "/components/form/checkbox-card-group",
+    //   demo: (
+    //     <CheckboxCardGroup padding="sm">
+    //       <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
+    //       <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
+    //     </CheckboxCardGroup>
+    //   ),
+    // },
     // {
     //   name: "FormField",
     //   href: "/components/form/form-field",
