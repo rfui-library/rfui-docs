@@ -11,7 +11,7 @@ export const Footer = () => {
       <FooterColumn>
         <FooterHeading>About</FooterHeading>
         <FooterItem href="/about">About</FooterItem>
-        <FooterItem href="https://github.com/adamzerner/rfui">
+        <FooterItem href="https://github.com/rfui-library/rfui-package">
           GitHub
         </FooterItem>
         <FooterItem href="mailto:adamzerner@protonmail.com">Contact</FooterItem>
