@@ -1,17 +1,12 @@
-import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "react-router";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { Stack, Container } from "rfui";
 import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
+
+export { ErrorBoundary } from "@/components/error-boundary/error-boundary";
 
 export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -38,7 +33,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <Links />
       </head>
       <body>
-        {children}
+        <Stack className="min-h-screen">
+          <Navbar route="TODO" />
+          <Container size="2xl" className="mb-6 mt-8 grow font-sans">
+            {children}
+          </Container>
+          <Footer />
+        </Stack>
         <ScrollRestoration />
         <Scripts />
         <script src="/prism.js"></script>
@@ -48,42 +49,5 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default () => {
-  return (
-    <Stack className="min-h-screen">
-      <Navbar route="TODO" />
-      <Container size="2xl" className="mb-6 mt-8 grow font-sans">
-        <Outlet />
-      </Container>
-      <Footer />
-    </Stack>
-  );
-};
-
-export const ErrorBoundary = ({ error }: Route.ErrorBoundaryProps) => {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
-
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
-  }
-
-  return (
-    <main className="container mx-auto p-4 pt-16">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full overflow-x-auto p-4">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
-  );
+  return <Outlet />;
 };
