@@ -27,9 +27,9 @@ export const Header = ({
             </div>
           )}
           <Link
-            href={sourceCodeUrl}
             _includeNewTabIcon
             _newTab
+            href={sourceCodeUrl}
             className="inline w-fit !text-neutral-900"
           >
             Source code
