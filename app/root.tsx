@@ -10,7 +10,6 @@ export { ErrorBoundary } from "@/components/error-boundary/error-boundary";
 
 export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
-  { rel: "stylesheet", href: "https://rfui.deno.dev/rfui.css" },
   { rel: "stylesheet", href: "/prism.css" },
   {
     rel: "stylesheet",

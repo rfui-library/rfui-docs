@@ -1,7 +1,10 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/rfui/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     fontFamily: {
       sans: "var(--fontFamily-sans)",
