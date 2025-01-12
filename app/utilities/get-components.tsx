@@ -19,6 +19,8 @@ import {
   PasswordInput,
   Progress,
   RadioButton,
+  RadioButtonGroup,
+  RadioButtonGroupItem,
   Select,
   Stack,
   Stepper,
@@ -167,16 +169,16 @@ export const getComponents = () => ({
     //     </RadioButtonCardGroup>
     //   ),
     // },
-    // {
-    //   name: "RadioButtonGroup",
-    //   href: "/components/form/radio-button-group",
-    //   demo: (
-    //     <RadioButtonGroup name="example">
-    //       <RadioButtonGroupItem value="one">One</RadioButtonGroupItem>
-    //       <RadioButtonGroupItem value="two">Two</RadioButtonGroupItem>
-    //     </RadioButtonGroup>
-    //   ),
-    // },
+    {
+      name: "RadioButtonGroup",
+      href: "/components/form/radio-button-group",
+      demo: (
+        <RadioButtonGroup name="example">
+          <RadioButtonGroupItem value="one">One</RadioButtonGroupItem>
+          <RadioButtonGroupItem value="two">Two</RadioButtonGroupItem>
+        </RadioButtonGroup>
+      ),
+    },
     {
       name: "Select",
       href: "/components/form/select",
