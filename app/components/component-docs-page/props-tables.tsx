@@ -23,7 +23,7 @@ export const PropsTables = ({ propsTables }: PropsTablesType) => {
   return (
     <section>
       {propsTables.map((propsTable) => (
-        <PropsTable {...propsTable} />
+        <PropsTable key={propsTable.title} {...propsTable} />
       ))}
     </section>
   );
@@ -54,7 +54,7 @@ const PropsTable = ({ props, title }: PropsTableType) => {
         </thead>
         <tbody>
           {props.map((prop) => (
-            <tr>
+            <tr key={prop.name}>
               <td className="whitespace-nowrap">
                 <InlineCode>{prop.name}</InlineCode>
               </td>

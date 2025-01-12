@@ -10,7 +10,7 @@ export const Examples = ({ examples }: ExamplesType) => {
   return (
     <section>
       {examples.map((example) => (
-        <section>
+        <section key={example.title}>
           <H2 inPageLink={`example-${titleToHref(example.title)}`}>
             {example.title}
           </H2>
