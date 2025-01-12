@@ -326,7 +326,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="PasswordInput"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/password-input.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/password-input.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

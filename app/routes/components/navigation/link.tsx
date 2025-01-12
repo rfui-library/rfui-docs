@@ -343,7 +343,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Link"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/link.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/link.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

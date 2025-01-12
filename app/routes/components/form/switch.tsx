@@ -123,7 +123,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Switch"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/switch.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/switch.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

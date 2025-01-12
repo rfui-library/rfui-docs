@@ -525,7 +525,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Navbar"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navbar.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/navbar.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

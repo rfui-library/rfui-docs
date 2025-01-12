@@ -136,7 +136,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Progress"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/progress.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/feedback/progress.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

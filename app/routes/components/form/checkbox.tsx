@@ -172,7 +172,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Checkbox"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/checkbox.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/checkbox.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

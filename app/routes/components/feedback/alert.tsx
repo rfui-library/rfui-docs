@@ -275,7 +275,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Alert"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/feedback/alert.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

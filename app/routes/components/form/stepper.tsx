@@ -256,7 +256,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Stepper"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/stepper.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/stepper.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

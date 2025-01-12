@@ -187,7 +187,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="RadioButton"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/radio-button.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/radio-button.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

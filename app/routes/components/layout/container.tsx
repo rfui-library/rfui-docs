@@ -81,7 +81,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Container"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/container.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/layout/container.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

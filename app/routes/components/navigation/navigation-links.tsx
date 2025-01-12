@@ -308,7 +308,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="NavigationLinks"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/navigation-links.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/navigation-links.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

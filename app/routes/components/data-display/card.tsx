@@ -792,7 +792,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Card"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/card.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/card.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

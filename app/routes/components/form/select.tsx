@@ -317,7 +317,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Select"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/select.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/select.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

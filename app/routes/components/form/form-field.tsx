@@ -847,7 +847,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="FormField"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/form-field.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/form-field.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

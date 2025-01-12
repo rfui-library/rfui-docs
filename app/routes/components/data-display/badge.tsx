@@ -344,7 +344,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Badge"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/badge.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/badge.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

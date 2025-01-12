@@ -133,7 +133,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Modal"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/overlays/modal.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

@@ -155,7 +155,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Blockquote"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/blockquote.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/typography/blockquote.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

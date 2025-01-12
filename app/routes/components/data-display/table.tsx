@@ -641,7 +641,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Table"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/table.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/table.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

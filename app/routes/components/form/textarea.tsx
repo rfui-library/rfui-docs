@@ -196,7 +196,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Textarea"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/textarea.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/textarea.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

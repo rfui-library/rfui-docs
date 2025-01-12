@@ -102,7 +102,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="OL"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/ol.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/typography/ol.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

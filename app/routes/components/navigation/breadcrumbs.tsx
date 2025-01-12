@@ -192,7 +192,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Breadcrumbs"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/breadcrumbs.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/breadcrumbs.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

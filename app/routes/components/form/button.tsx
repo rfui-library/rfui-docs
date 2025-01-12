@@ -466,7 +466,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Button"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/button.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/button.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

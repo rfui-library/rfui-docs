@@ -158,7 +158,7 @@ const fullName = firstName + " " + lastName;\`}
   return (
     <ComponentDocsPage
       componentName="CodeBlock"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/code-block.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/typography/code-block.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

@@ -282,7 +282,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Text"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/text.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/typography/text.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

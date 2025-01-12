@@ -73,7 +73,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="InlineCode"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/inline-code.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/typography/inline-code.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

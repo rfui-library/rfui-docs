@@ -165,7 +165,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="RadioButtonGroup"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-group.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/radio-button-group.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

@@ -189,7 +189,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="H2"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/h2.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/typography/h2.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

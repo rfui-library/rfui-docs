@@ -137,7 +137,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Tabs"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/tabs.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/tabs.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

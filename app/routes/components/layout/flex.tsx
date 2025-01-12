@@ -74,7 +74,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Flex"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/helpers/flex.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/layout/flex.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

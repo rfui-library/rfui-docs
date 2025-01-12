@@ -491,7 +491,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Footer"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/footer.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/footer.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

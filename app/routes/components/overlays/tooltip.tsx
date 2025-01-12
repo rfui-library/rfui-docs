@@ -137,7 +137,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Tooltip"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/tooltip.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/overlays/tooltip.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

@@ -115,7 +115,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="Highlight"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/atoms/highlight.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/typography/highlight.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}

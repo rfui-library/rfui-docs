@@ -511,7 +511,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="VerticalNavbar"
-      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/components/molecules/vertical-navbar.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/vertical-navbar.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}
