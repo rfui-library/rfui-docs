@@ -17,6 +17,7 @@ import {
   PasswordInput,
   RadioButton,
   Select,
+  FormField,
   Stepper,
   Textarea,
   Switch,
@@ -129,13 +130,13 @@ export const getComponents = () => ({
     //     </CheckboxCardGroup>
     //   ),
     // },
-    // {
-    //   name: "FormField",
-    //   href: "/components/form/form-field",
-    //   demo: (
-    //     <FormField label="Email" inputRest={{ class: "bg-neutral-50/20" }} />
-    //   ),
-    // },
+    {
+      name: "FormField",
+      href: "/components/form/form-field",
+      demo: (
+        <FormField label="Email" inputRest={{ class: "bg-neutral-50/20" }} />
+      ),
+    },
     {
       name: "Input",
       href: "/components/form/input",
