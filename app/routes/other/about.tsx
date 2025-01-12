@@ -1,4 +1,4 @@
-import { Card, Button, Link, CodeBlock, H1, Text, Alert } from "rfui";
+import { Alert, Button, Card, CodeBlock, H1, Link, Text } from "rfui";
 
 export default () => {
   return (

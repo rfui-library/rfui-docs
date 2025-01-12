@@ -1,5 +1,5 @@
-import { NavigationLinks, type LinkItemType } from "rfui";
 import { getComponents } from "@/utilities/get-components";
+import { NavigationLinks, type LinkItemType } from "rfui";
 
 type ComponentsList = {
   isSticky?: boolean;

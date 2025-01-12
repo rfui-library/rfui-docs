@@ -1,7 +1,7 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
-import { Stack, Container } from "rfui";
-import { Navbar } from "./components/navbar";
+import { Container, Stack } from "rfui";
 import { Footer } from "./components/footer";
+import { Navbar } from "./components/navbar";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";

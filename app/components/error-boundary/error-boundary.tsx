@@ -1,7 +1,6 @@
 import { isRouteErrorResponse, useRouteError } from "react-router";
-import type { Route } from "../../+types/root";
-import { NotFoundError } from "./not-found-error";
 import InternalServerError from "./internal-server-error";
+import { NotFoundError } from "./not-found-error";
 
 export const ErrorBoundary = () => {
   const error = useRouteError();

@@ -1,6 +1,6 @@
-import type { ExampleType } from "./index";
 import { titleToHref } from "@/utilities/title-to-href";
 import { Card, H2, Text } from "rfui";
+import type { ExampleType } from "./index";
 
 type ExamplesType = {
   examples: ExampleType[];

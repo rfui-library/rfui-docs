@@ -3,15 +3,15 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import {
-  Stack,
-  Link,
-  VerticalNavbarBottom,
-  VerticalNavbarItem,
-  VerticalNavbarTop,
   CodeBlock,
   InlineCode,
+  Link,
+  Stack,
   VerticalNavbar,
+  VerticalNavbarBottom,
+  VerticalNavbarItem,
   VerticalNavbarSection,
+  VerticalNavbarTop,
 } from "rfui";
 
 export default () => {

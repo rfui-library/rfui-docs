@@ -1,4 +1,4 @@
-import { Navbar as RFUINavbar, NavbarItem, NavbarLeft } from "rfui";
+import { NavbarItem, NavbarLeft, Navbar as RFUINavbar } from "rfui";
 
 type NavbarType = {
   route: string;

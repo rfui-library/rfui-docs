@@ -1,8 +1,8 @@
 import {
-  Footer as RFUIFooter,
   FooterColumn,
   FooterHeading,
   FooterItem,
+  Footer as RFUIFooter,
 } from "rfui";
 
 export const Footer = () => {

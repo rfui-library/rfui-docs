@@ -1,13 +1,13 @@
 import {
-  Link,
+  Alert,
+  AlertBody,
   CodeBlock,
   H1,
   H2,
   InlineCode,
+  Link,
   OL,
   Text,
-  Alert,
-  AlertBody,
 } from "rfui";
 
 export default () => {

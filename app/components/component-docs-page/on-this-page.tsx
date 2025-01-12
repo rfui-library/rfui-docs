@@ -1,5 +1,5 @@
-import { type LinkItemType, NavigationLinks } from "rfui";
 import { titleToHref } from "@/utilities/title-to-href";
+import { type LinkItemType, NavigationLinks } from "rfui";
 
 type OnThisPageType = {
   exampleTitles: string[];

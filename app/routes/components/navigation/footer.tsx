@@ -3,14 +3,14 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import {
-  Stack,
+  CodeBlock,
   Footer,
   FooterColumn,
   FooterHeading,
   FooterItem,
-  Link,
-  CodeBlock,
   InlineCode,
+  Link,
+  Stack,
 } from "rfui";
 
 export default () => {

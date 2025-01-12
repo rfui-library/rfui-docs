@@ -1,6 +1,6 @@
 import { titleToHref } from "@/utilities/title-to-href";
 import type { ReactNode } from "react";
-import { Table, Stack, Link, CodeBlock, H1, H2, InlineCode } from "rfui";
+import { CodeBlock, H1, H2, InlineCode, Link, Stack, Table } from "rfui";
 
 type PropsTablesType = {
   propsTables: PropsTableType[];

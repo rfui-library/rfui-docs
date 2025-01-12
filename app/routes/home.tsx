@@ -1,18 +1,18 @@
+import { ComponentsList } from "@/components/components-list";
+import { getComponents } from "@/utilities/get-components";
+import type { ReactNode } from "react";
 import {
   Card,
   CardBody,
   CardFooter,
   Flex,
-  Stack,
-  Link,
   H1,
   H2,
   InlineCode,
+  Link,
+  Stack,
   Text,
 } from "rfui";
-import { ComponentsList } from "@/components/components-list";
-import { getComponents } from "@/utilities/get-components";
-import type { ReactNode } from "react";
 
 export const meta = () => [
   { title: "Home - RFUI" },

@@ -3,10 +3,9 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import {
-  Stack,
-  Link,
   CodeBlock,
   InlineCode,
+  Link,
   Navbar,
   NavbarDropdown,
   NavbarDropdownItem,
@@ -14,6 +13,7 @@ import {
   NavbarLeft,
   NavbarMegamenu,
   NavbarRight,
+  Stack,
 } from "rfui";
 
 export default () => {

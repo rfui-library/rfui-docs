@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { Stack, Link, CodeBlock, InlineCode, InfoTooltip } from "rfui";
+import { CodeBlock, InfoTooltip, InlineCode, Link, Stack } from "rfui";
 
 export default () => {
   const overviewNotes = (

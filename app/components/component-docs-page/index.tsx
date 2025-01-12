@@ -1,9 +1,9 @@
-import { Header } from "./header";
 import { ComponentsList } from "@/components/components-list";
-import { Flex } from "rfui";
 import type { ReactNode } from "react";
+import { Flex } from "rfui";
 import { Examples } from "./examples";
 import { getImportStatement } from "./get-import-statement";
+import { Header } from "./header";
 import { OnThisPage } from "./on-this-page";
 import { PropsTables, type PropsTableType } from "./props-tables";
 

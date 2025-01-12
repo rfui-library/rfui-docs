@@ -1,36 +1,34 @@
 import {
+  Alert,
+  Badge,
   Blockquote,
+  Button,
+  Card,
+  Checkbox,
   CodeBlock,
+  Flex,
+  FormField,
   H1,
   H2,
+  HelpTooltip,
   Highlight,
+  InfoTooltip,
   InlineCode,
-  OL,
-  Text,
-  UL,
-  Button,
-  Checkbox,
-  CheckboxCardGroup,
-  Table,
-  CheckboxCardGroupItem,
   Input,
+  OL,
   PasswordInput,
+  Progress,
   RadioButton,
   Select,
-  FormField,
+  Stack,
   Stepper,
-  Textarea,
   Switch,
-  Badge,
-  Card,
+  Table,
   Tabs,
   TabSection,
-  Alert,
-  Progress,
-  HelpTooltip,
-  InfoTooltip,
-  Flex,
-  Stack,
+  Text,
+  Textarea,
+  UL,
 } from "rfui";
 
 export const getComponents = () => ({
@@ -134,7 +132,10 @@ export const getComponents = () => ({
       name: "FormField",
       href: "/components/form/form-field",
       demo: (
-        <FormField label="Email" inputRest={{ class: "bg-neutral-50/20" }} />
+        <FormField
+          label="Email"
+          inputRest={{ className: "bg-neutral-50/20" }}
+        />
       ),
     },
     {

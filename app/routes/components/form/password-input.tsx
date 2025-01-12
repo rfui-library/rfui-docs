@@ -3,13 +3,13 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import {
-  Stack,
-  Link,
   CodeBlock,
   InlineCode,
+  Link,
   OL,
-  UL,
   PasswordInput,
+  Stack,
+  UL,
 } from "rfui";
 
 export default () => {

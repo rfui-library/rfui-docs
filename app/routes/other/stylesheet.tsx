@@ -1,4 +1,4 @@
-import { Card, Checkbox, Link, CodeBlock, H1, InlineCode, Text } from "rfui";
+import { Card, Checkbox, CodeBlock, H1, InlineCode, Link, Text } from "rfui";
 
 export default () => {
   return (

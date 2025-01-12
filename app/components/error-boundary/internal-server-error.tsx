@@ -1,4 +1,4 @@
-import { H1, Text, Link } from "rfui";
+import { H1, Link, Text } from "rfui";
 
 export default () => {
   return (
