@@ -30,7 +30,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Alert>Your profile has been saved</Alert>,`}
+          code={`<Alert>Your profile has been saved</Alert>`}
         />
       ),
     },

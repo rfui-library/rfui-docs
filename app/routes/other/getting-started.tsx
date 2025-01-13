@@ -6,7 +6,6 @@ import {
   H2,
   InlineCode,
   Link,
-  OL,
   Text,
 } from "rfui";
 
@@ -127,53 +126,6 @@ export default () => {
           See the <Link href="/css-variables">"CSS variables" page</Link> for
           more information.
         </p>
-      </Text>
-
-      <H2 inPageLink="set-up-syntax-highlighting">
-        {"7) Set up syntax highlighting (optional)"}
-      </H2>
-      <Text>
-        <p>
-          If you want{" "}
-          <Link href="/atoms/code-block#language">syntax highlighting</Link> for
-          RFUI's{" "}
-          <Link href="/atoms/code-block">
-            <InlineCode>CodeBlock</InlineCode>
-          </Link>{" "}
-          component, you'll have to do a little bit more work.
-        </p>
-        <OL>
-          <li>
-            Generate a <InlineCode>prism.js</InlineCode> and{" "}
-            <InlineCode>prism.css</InlineCode> file{" "}
-            <Link href="https://prismjs.com/download.html">here</Link>. Make
-            sure you include whatever languages and plugins you need. Ie. if you
-            want to let users copy the code to their clipboard, you'll need to
-            include the{" "}
-            <Link href="https://prismjs.com/plugins/copy-to-clipboard/">
-              "Copy to Clipboard Button" plugin
-            </Link>
-            .
-          </li>
-          <li>
-            If you want stuff in code blocks to wrap (you probably do), change{" "}
-            <InlineCode>white-space:pre</InlineCode> in
-            <InlineCode>prism.css</InlineCode> to{" "}
-            <InlineCode>white-space:pre-wrap</InlineCode>.
-          </li>
-          <li>
-            Load them by adding something like:
-            <CodeBlock
-              language="html"
-              code={`<script src="/prism.js"></script>`}
-            />
-            <div>and:</div>
-            <CodeBlock
-              language="html"
-              code={`<link rel="stylesheet" href="/prism.css" />`}
-            />
-          </li>
-        </OL>
       </Text>
     </div>
   );

@@ -56,14 +56,10 @@ export default () => {
       description: (
         <div>
           See{" "}
-          <Link href="https://prismjs.com/index.html#supported-languages">
+          <Link href="https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_PRISM.MD">
             this list
           </Link>
-          . And make sure when you download Prism (see{" "}
-          <Link href="/getting-started#set-up-syntax-highlighting">
-            Getting started
-          </Link>
-          ) that you check off the languages you need.
+          .
         </div>
       ),
       demo: (
@@ -117,23 +113,8 @@ const fullName = firstName + " " + lastName;\`}
           notes: (
             <div>
               See{" "}
-              <Link href="https://github.com/FormidableLabs/prism-react-renderer?tab=readme-ov-file#custom-language-support">
-                here
-              </Link>
-              .
-            </div>
-          ),
-        },
-        {
-          name: "theme",
-          required: false,
-          type: "string",
-          default: null,
-          notes: (
-            <div>
-              See{" "}
-              <Link href="https://github.com/FormidableLabs/prism-react-renderer?tab=readme-ov-file#theming">
-                here
+              <Link href="https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_PRISM.MD">
+                this list
               </Link>
               .
             </div>
