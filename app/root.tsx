@@ -10,7 +10,6 @@ export { ErrorBoundary } from "@/components/error-boundary/error-boundary";
 
 export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
-  { rel: "stylesheet", href: "/prism.css" },
   {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css?family=Open+Sans",
@@ -45,7 +44,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         </Stack>
         <ScrollRestoration />
         <Scripts />
-        <script src="/prism.js"></script>
       </body>
     </html>
   );

@@ -117,12 +117,25 @@ const fullName = firstName + " " + lastName;\`}
           notes: (
             <div>
               See{" "}
-              <Link href="https://prismjs.com/index.html#supported-languages">
-                this list
+              <Link href="https://github.com/FormidableLabs/prism-react-renderer?tab=readme-ov-file#custom-language-support">
+                here
               </Link>
-              . And make sure when you download Prism (see{" "}
-              <Link href="/getting-started">Getting started</Link>) that you
-              check off the languages you need.
+              .
+            </div>
+          ),
+        },
+        {
+          name: "theme",
+          required: false,
+          type: "string",
+          default: null,
+          notes: (
+            <div>
+              See{" "}
+              <Link href="https://github.com/FormidableLabs/prism-react-renderer?tab=readme-ov-file#theming">
+                here
+              </Link>
+              .
             </div>
           ),
         },
