@@ -298,27 +298,27 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="gap-5">
-  <FormField
-    label="Name on card"
-    type="text"
-    className="w-14 max-w-full"
-  />
-  <FormField
-    label="Card number"
-    type="text"
-    className="w-14 max-w-full"
-  />
-  <FormField
-    label="Expiry date"
-    type="text"
-    className="w-10"
-  />
-  <FormField
-    label="CVC"
-    type="text"
-    className="w-10"
-  />
-</Stack>`}
+      <FormField
+        label="Name on card"
+        type="text"
+        className="w-14 max-w-full"
+      />
+      <FormField
+        label="Card number"
+        type="text"
+        className="w-14 max-w-full"
+      />
+      <FormField
+        label="Expiry date"
+        type="text"
+        className="w-10"
+      />
+      <FormField
+        label="CVC"
+        type="text"
+        className="w-10"
+      />
+    </Stack>`}
         />
       ),
     },
@@ -357,7 +357,7 @@ export default () => {
           <FormField label="Name" type="text" />
           <FormField label="Email" type="email" />
           <FormField label="Age" type="number" />
-          <FormField label="Password" type="password" value="foobar" />
+          <FormField label="Password" type="password" defaultValue="foobar" />
           <FormField label="Birthday" type="date" />
           <FormField label="Appointment" type="datetime-local" />
           <FormField label="Bed time" type="time" />
@@ -371,17 +371,17 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="gap-5">
-  <FormField label="Name" type="text" />
-  <FormField label="Email" type="email" />
-  <FormField label="Age" type="number" />
-  <FormField label="Password" type="password" value="foobar" />
-  <FormField label="Birthday" type="date" />
-  <FormField label="Appointment" type="datetime-local" />
-  <FormField label="Bed time" type="time" />
-  <FormField label="Profile photo" type="file" />
-  <FormField label="Mood" type="range" />
-  <FormField label="Favorite color" type="color" />
-</Stack>`}
+      <FormField label="Name" type="text" />
+      <FormField label="Email" type="email" />
+      <FormField label="Age" type="number" />
+      <FormField label="Password" type="password" defaultValue="foobar" />
+      <FormField label="Birthday" type="date" />
+      <FormField label="Appointment" type="datetime-local" />
+      <FormField label="Bed time" type="time" />
+      <FormField label="Profile photo" type="file" />
+      <FormField label="Mood" type="range" />
+      <FormField label="Favorite color" type="color" />
+    </Stack>`}
         />
       ),
     },
@@ -398,12 +398,12 @@ export default () => {
           <InlineCode>{`<Input type="checkbox" />`}</InlineCode>.
         </div>
       ),
-      demo: <FormField label="Agreed" type="checkbox" />,
+      demo: <FormField label="Agreed" type="checkbox" defaultChecked={true} />,
       code: (
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<FormField label="Agreed" type="checkbox" />`}
+          code={`<FormField label="Agreed" type="checkbox" defaultChecked={true} />`}
         />
       ),
     },
@@ -441,13 +441,17 @@ export default () => {
         </div>
       ),
       demo: (
-        <FormField label="Password" type="rfui-password-input" value="foobar" />
+        <FormField
+          label="Password"
+          type="rfui-password-input"
+          defaultValue="foobar"
+        />
       ),
       code: (
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<FormField label="Password" type="rfui-password-input" value="foobar" />`}
+          code={`<FormField label="Password" type="rfui-password-input" defaultValue="foobar" />`}
         />
       ),
     },
@@ -552,14 +556,14 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<FormField
-  label="Country"
-  type="select"
-  selectOptions={[
-    { value: "united-states", display: "United States" },
-    { value: "france", display: "France" },
-    { value: "japan", display: "Japan" },
-  ]}
-/>`}
+      label="Country"
+      type="select"
+      selectOptions={[
+        { value: "united-states", display: "United States" },
+        { value: "france", display: "France" },
+        { value: "japan", display: "Japan" },
+      ]}
+    />`}
         />
       ),
     },
