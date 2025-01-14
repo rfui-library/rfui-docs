@@ -160,7 +160,7 @@ export default () => {
                 you normally would pass to{" "}
                 <InlineCode>{'<input type="radio">'}</InlineCode> because the
                 return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/radio-button.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/form/radio-button.tsx">
                   looks something like
                 </Link>{" "}
                 this:

@@ -111,7 +111,7 @@ export default () => {
                 <InlineCode>H1</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<h1>"}</InlineCode> because
                 the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/h1.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/typography/h1.tsx">
                   looks something like
                 </Link>{" "}
                 this:

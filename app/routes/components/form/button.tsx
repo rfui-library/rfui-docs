@@ -446,7 +446,7 @@ export default () => {
                 <InlineCode>Button</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<button>"}</InlineCode>{" "}
                 because the container{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/button.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/form/button.tsx">
                   looks something like
                 </Link>{" "}
                 this:

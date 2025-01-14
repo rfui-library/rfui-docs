@@ -116,7 +116,7 @@ export default () => {
                 <InlineCode>Tooltip</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<span>"}</InlineCode>{" "}
                 because the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/tooltip.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/overlays/tooltip.tsx">
                   looks something like
                 </Link>{" "}
                 this:

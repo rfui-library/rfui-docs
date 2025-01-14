@@ -134,7 +134,7 @@ export default () => {
                 <InlineCode>Blockquote</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<blockquote>"}</InlineCode>{" "}
                 because the container{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/blockquote.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/typography/blockquote.tsx">
                   looks something like
                 </Link>{" "}
                 this:

@@ -216,7 +216,7 @@ export default () => {
                 <InlineCode>Alert</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
                 because the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/alert.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/feedback/alert.tsx">
                   looks something like
                 </Link>{" "}
                 this:

@@ -171,7 +171,7 @@ export default () => {
                 <InlineCode>Breadcrumbs</InlineCode>, you could pass anything
                 you normally would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
                 because the container{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/breadcrumbs.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/breadcrumbs.tsx">
                   looks something like
                 </Link>{" "}
                 this:

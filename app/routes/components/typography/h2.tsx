@@ -134,7 +134,8 @@ export default () => {
           notes: (
             <div>
               <div>
-                Makes the header an in-page link by returning the following:
+                Makes the header an in-page link by returning something like the
+                following:
               </div>
               <CodeBlock
                 language="tsx"
@@ -165,7 +166,7 @@ export default () => {
                 <InlineCode>H2</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<h2>"}</InlineCode> because
                 the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/h2.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/typography/h2.tsx">
                   looks something like
                 </Link>{" "}
                 this:

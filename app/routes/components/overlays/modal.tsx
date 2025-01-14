@@ -112,7 +112,7 @@ export default () => {
                 <InlineCode>Modal</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<dialog>"}</InlineCode>{" "}
                 because the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/modal.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/overlays/modal.tsx">
                   looks something like
                 </Link>{" "}
                 this:

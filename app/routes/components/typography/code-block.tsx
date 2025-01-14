@@ -55,7 +55,7 @@ export default () => {
       title: "Language",
       description: (
         <div>
-          See{" "}
+          For possible values see{" "}
           <Link href="https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_PRISM.MD">
             this list
           </Link>
@@ -112,7 +112,7 @@ const fullName = firstName + " " + lastName;\`}
           default: null,
           notes: (
             <div>
-              See{" "}
+              For possible values see{" "}
               <Link href="https://github.com/react-syntax-highlighter/react-syntax-highlighter/blob/master/AVAILABLE_LANGUAGES_PRISM.MD">
                 this list
               </Link>
@@ -133,7 +133,7 @@ const fullName = firstName + " " + lastName;\`}
                 <InlineCode>CodeBlock</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<pre>"}</InlineCode>{" "}
                 because the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/code-block.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/typography/code-block.tsx">
                   looks something like
                 </Link>{" "}
                 this:

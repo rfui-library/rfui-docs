@@ -60,7 +60,7 @@ export default () => {
                 <InlineCode>Container</InlineCode>, you could pass anything you
                 normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
                 because the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/molecules/container.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/layout/container.tsx">
                   looks something like
                 </Link>{" "}
                 this:

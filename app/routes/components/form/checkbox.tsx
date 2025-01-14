@@ -145,7 +145,7 @@ export default () => {
                 normally would pass to{" "}
                 <InlineCode>{'<input type="checkbox" />'}</InlineCode> because
                 the return value{" "}
-                <Link href="https://github.com/adamzerner/rfui/blob/master/islands/atoms/checkbox.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/form/checkbox.tsx">
                   looks something like
                 </Link>{" "}
                 this:
