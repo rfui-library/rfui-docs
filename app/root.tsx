@@ -1,4 +1,11 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+import {
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useLocation,
+} from "react-router";
 import { Container, Stack } from "rfui";
 import { Footer } from "./components/footer";
 import { Navbar } from "./components/navbar";
@@ -26,6 +33,8 @@ export const meta = () => [
 ];
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
+  const location = useLocation();
+
   return (
     <html lang="en">
       <head>
@@ -36,7 +45,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </head>
       <body>
         <Stack className="min-h-screen">
-          <Navbar route="TODO" />
+          <Navbar route={location.pathname} />
           <Container size="2xl" className="mb-6 mt-8 grow font-sans">
             {children}
           </Container>
