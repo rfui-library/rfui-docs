@@ -198,7 +198,7 @@ export default () => {
           something like a <InlineCode>{`<p>`}</InlineCode> or{" "}
           <InlineCode>{`<div>`}</InlineCode> because{" "}
           <InlineCode>Text</InlineCode> has a container of{" "}
-          <Link href="/helpers/stack">
+          <Link href="/components/layout/stack">
             <InlineCode>Stack</InlineCode>
           </Link>
           .
