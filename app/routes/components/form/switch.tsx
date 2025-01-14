@@ -37,17 +37,11 @@ export default () => {
       description: (
         <div>
           See{" "}
-          <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          <Link href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components">
             Controlled & Uncontrolled Components
-          </Link>{" "}
-          and{" "}
-          <Link href="https://preactjs.com/guide/v10/forms#checkbox-example">
-            Checkbox Example
-          </Link>{" "}
-          (since <InlineCode>Switch</InlineCode> uses{" "}
-          <InlineCode>{`<input type="checkbox" />`}</InlineCode>). Passing{" "}
-          <InlineCode>checked</InlineCode> and <InlineCode>onClick</InlineCode>{" "}
-          work because of{" "}
+          </Link>
+          . Passing <InlineCode>checked</InlineCode> and{" "}
+          <InlineCode>onClick</InlineCode> work because of{" "}
           <Link href="/rest-parameters">
             <InlineCode>...rest</InlineCode>
           </Link>

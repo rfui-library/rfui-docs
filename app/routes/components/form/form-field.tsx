@@ -23,7 +23,7 @@ export default () => {
       description: (
         <div>
           See{" "}
-          <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          <Link href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components">
             Controlled & Uncontrolled Components
           </Link>
           .

@@ -1,5 +1,6 @@
 .DS_Store
 /node_modules/
+*.todo
 
 # React Router
 /.react-router/

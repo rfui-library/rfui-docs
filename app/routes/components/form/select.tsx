@@ -44,12 +44,8 @@ export default () => {
       description: (
         <div>
           See{" "}
-          <Link href="https://preactjs.com/guide/v10/forms#controlled--uncontrolled-components">
+          <Link href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components">
             Controlled & Uncontrolled Components
-          </Link>{" "}
-          and{" "}
-          <Link href="https://preactjs.com/guide/v10/forms#select-input">
-            Select Input
           </Link>
           . Passing <InlineCode>checked</InlineCode> and{" "}
           <InlineCode>onChange</InlineCode> work because of{" "}
