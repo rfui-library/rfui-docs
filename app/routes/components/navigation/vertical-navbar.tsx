@@ -471,9 +471,12 @@ export default () => {
           default: "false",
           notes: (
             <div>
-              See the <Link href="/atoms/link#example-new-tab">docs</Link> for
-              the corresponding property in the <InlineCode>Link</InlineCode>{" "}
-              component.
+              See the{" "}
+              <Link href="/components/navigation/link#example-new-tab">
+                docs
+              </Link>{" "}
+              for the corresponding property in the{" "}
+              <InlineCode>Link</InlineCode> component.
             </div>
           ),
         },
@@ -484,9 +487,12 @@ export default () => {
           default: "false",
           notes: (
             <div>
-              See the <Link href="/atoms/link#example-new-tab">docs</Link> for
-              the corresponding property in the <InlineCode>Link</InlineCode>{" "}
-              component.
+              See the{" "}
+              <Link href="/components/navigation/link#example-new-tab">
+                docs
+              </Link>{" "}
+              for the corresponding property in the{" "}
+              <InlineCode>Link</InlineCode> component.
             </div>
           ),
         },

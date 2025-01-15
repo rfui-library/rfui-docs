@@ -220,8 +220,11 @@ export default () => {
       description: (
         <Stack className="gap-3">
           <div>
-            While <Link href="/molecules/navbar#dropdown">dropdowns</Link> work
-            well when there are few menu items, megamenus{" "}
+            While{" "}
+            <Link href="/components/navigation/navbar#example-dropdown">
+              dropdowns
+            </Link>{" "}
+            work well when there are few menu items, megamenus{" "}
             <Link href="https://www.nngroup.com/articles/mega-menus-work-well/">
               work well
             </Link>{" "}

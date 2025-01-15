@@ -328,7 +328,7 @@ export default () => {
         <Stack className="gap-3">
           <div>
             <InlineCode>type</InlineCode> usually gets passed to{" "}
-            <Link href="/atoms/input">
+            <Link href="/components/form/input">
               <InlineCode>Input</InlineCode>
             </Link>
             . However, for some of the values a component other than{" "}
@@ -391,7 +391,7 @@ export default () => {
         <div>
           If you pass <InlineCode>type="checkbox"</InlineCode> it will use
           RFUI's{" "}
-          <Link href="/atoms/checkbox">
+          <Link href="/components/form/checkbox">
             <InlineCode>Checkbox</InlineCode>
           </Link>{" "}
           component instead of doing{" "}
@@ -412,7 +412,7 @@ export default () => {
       description: (
         <div>
           If you pass <InlineCode>type="switch"</InlineCode> it will use RFUI's{" "}
-          <Link href="/atoms/switch">
+          <Link href="/components/form/switch">
             <InlineCode>Switch</InlineCode>
           </Link>
           .
@@ -432,7 +432,7 @@ export default () => {
       description: (
         <div>
           To use{" "}
-          <Link href="/molecules/password-input">
+          <Link href="/components/form/password-input">
             <InlineCode>PasswordInput</InlineCode>
           </Link>{" "}
           with <InlineCode>FormField</InlineCode> set{" "}
@@ -461,7 +461,7 @@ export default () => {
         <Stack className="gap-2">
           <div>
             To use{" "}
-            <Link href="/molecules/textarea">
+            <Link href="/components/form/textarea">
               <InlineCode>Textarea</InlineCode>
             </Link>{" "}
             with <InlineCode>FormField</InlineCode> set{" "}
@@ -489,7 +489,7 @@ export default () => {
     //       description: (
     //         <div>
     //           To use{" "}
-    //           <Link href="/molecules/radio-button-group">
+    //           <Link href="/components/form/radio-button-group">
     //             <InlineCode>RadioButtonGroup</InlineCode>
     //           </Link>{" "}
     //           with <InlineCode>FormField</InlineCode> set{" "}
@@ -532,7 +532,7 @@ export default () => {
       description: (
         <div>
           To use{" "}
-          <Link href="/atoms/select">
+          <Link href="/components/form/select">
             <InlineCode>Select</InlineCode>
           </Link>{" "}
           with <InlineCode>FormField</InlineCode> set{" "}

@@ -589,7 +589,7 @@ export default () => {
       description: (
         <div>
           To make the <InlineCode>Card</InlineCode> act as a link, wrap it in{" "}
-          <Link href="/atoms/link">
+          <Link href="/components/navigation/link">
             <InlineCode>Link</InlineCode>
           </Link>
           . You'll probably also want to add{" "}

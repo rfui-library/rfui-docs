@@ -11,7 +11,7 @@ export default () => {
       <InlineCode>{`<input />`}</InlineCode>. You'll probably want to use it
       along with a <InlineCode>{`<label>`}</InlineCode>. You also might prefer
       to use RFUI's{" "}
-      <Link href="/molecules/form-field">
+      <Link href="/components/form/form-field">
         <InlineCode>{`FormField`}</InlineCode>
       </Link>{" "}
       component instead.
@@ -132,17 +132,17 @@ export default () => {
       title: "Readonly",
       description: (
         <div>
-          Set <InlineCode>readonly</InlineCode> to either{" "}
+          Set <InlineCode>readOnly</InlineCode> to either{" "}
           <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
           Defaults to <InlineCode>false</InlineCode>.
         </div>
       ),
-      demo: <Input readOnly value="example" />,
+      demo: <Input readOnly defaultValue="example" />,
       code: (
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Input readonly value="example" />`}
+          code={`<Input readOnly defaultValue="example" />`}
         />
       ),
     },
@@ -155,12 +155,12 @@ export default () => {
           Defaults to <InlineCode>false</InlineCode>.
         </div>
       ),
-      demo: <Input invalid value="example" />,
+      demo: <Input invalid defaultValue="example" />,
       code: (
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Input invalid value="example" />`}
+          code={`<Input invalid defaultValue="example" />`}
         />
       ),
     },
@@ -189,7 +189,7 @@ export default () => {
           <Input type="email" placeholder="email" />
           <Input type="text" inputMode="numeric" pattern="[0-9]*" />
           <Input type="number" />
-          <Input type="password" value="foobar" />
+          <Input type="password" defaultValue="foobar" />
           <Input type="date" />
           <Input type="datetime-local" />
           <Input type="time" />
@@ -207,7 +207,7 @@ export default () => {
   <Input type="email" placeholder="email" />
   <Input type="text" inputmode="numeric" pattern="[0-9]*" />
   <Input type="number" />
-  <Input type="password" value="foobar" />
+  <Input type="password" defaultValue="foobar" />
   <Input type="date" />
   <Input type="datetime-local" />
   <Input type="time" />

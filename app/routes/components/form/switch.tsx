@@ -17,7 +17,7 @@ export default () => {
       </div>
       <div>
         Consider using RFUI's{" "}
-        <Link href="/molecules/form-field#switch">
+        <Link href="/components/form/form-field#example-switch">
           <InlineCode>FormField</InlineCode>
         </Link>{" "}
         component with <InlineCode>type="switch"</InlineCode> instead. If not,

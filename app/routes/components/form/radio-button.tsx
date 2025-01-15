@@ -12,7 +12,7 @@ export default () => {
         <InlineCode>{`<input type="radio" />`}</InlineCode>. You'll probably
         want to use it along with a <InlineCode>{`<label>`}</InlineCode>. You
         also might prefer to use RFUI's{" "}
-        <Link href="/molecules/form-field">
+        <Link href="/components/form/form-field">
           <InlineCode>{`FormField`}</InlineCode>
         </Link>{" "}
         component instead.
@@ -22,7 +22,7 @@ export default () => {
         <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>{" "}
         when you are allowing the user to choose between a few options. If there
         are many options to choose from, prefer the{" "}
-        <Link href="/atoms/select">
+        <Link href="/components/form/select">
           <InlineCode>Select</InlineCode>
         </Link>{" "}
         component.

@@ -99,11 +99,11 @@ export default () => {
               children: [
                 {
                   name: "Badge",
-                  href: "/atoms/badge",
+                  href: "/components/data-display/badge",
                 },
                 {
                   name: "Blockquote",
-                  href: "/atoms/blockquote",
+                  href: "/components/typography/blockquote",
                 },
               ],
             },
@@ -112,11 +112,11 @@ export default () => {
               children: [
                 {
                   name: "Alert",
-                  href: "/molecules/alert",
+                  href: "/components/feedback/alert",
                 },
                 {
                   name: "Card",
-                  href: "/molecules/card",
+                  href: "/components/data-display/card",
                 },
               ],
             },
@@ -135,19 +135,19 @@ export default () => {
     name: "Atoms",
     children: [{
       name: "Badge",
-      href: "/atoms/badge",
+      href: "/components/data-display/badge",
     }, {
       name: "Blockquote",
-      href: "/atoms/blockquote",
+      href: "/components/typography/blockquote",
     }],
   }, {
     name: "Molecules",
     children: [{
       name: "Alert",
-      href: "/molecules/alert",
+      href: "/components/feedback/alert",
     }, {
       name: "Card",
-      href: "/molecules/card",
+      href: "/components/data-display/card",
     }],
   }]}
 />`}
@@ -160,7 +160,7 @@ export default () => {
         <div>
           Using the <InlineCode>inPage</InlineCode> property will trigger the{" "}
           <InlineCode>Link</InlineCode> component's{" "}
-          <Link href="/atoms/link#example-in-page-link">
+          <Link href="/components/navigation/link#example-in-page-link">
             in-page link functionality
           </Link>
           .

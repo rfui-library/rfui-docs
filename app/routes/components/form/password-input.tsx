@@ -30,7 +30,7 @@ export default () => {
       </div>
       <div>
         Consider using RFUI's{" "}
-        <Link href="/molecules/form-field#passwordinput">
+        <Link href="/components/form/form-field#example-passwordinput">
           <InlineCode>FormField</InlineCode>
         </Link>{" "}
         component with <InlineCode>type="rfui-password-input"</InlineCode>{" "}

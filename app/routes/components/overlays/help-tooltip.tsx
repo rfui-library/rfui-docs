@@ -9,7 +9,7 @@ export default () => {
     <Stack className="gap-3">
       <p>
         This is just a thin wrapper over the{" "}
-        <Link href="/molecules/tooltip">
+        <Link href="/components/overlays/tooltip">
           <InlineCode>Tooltip</InlineCode>
         </Link>{" "}
         component because it is a common need to use a help icon with a tooltip.

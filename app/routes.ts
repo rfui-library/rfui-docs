@@ -33,6 +33,7 @@ export default [
       route("checkbox", "./routes/components/form/checkbox.tsx"),
       route("form-field", "./routes/components/form/form-field.tsx"),
       route("input", "./routes/components/form/input.tsx"),
+      route("password-input", "./routes/components/form/password-input.tsx"),
       route(
         "radio-button-card-group",
         "./routes/components/form/radio-button-card-group.tsx"

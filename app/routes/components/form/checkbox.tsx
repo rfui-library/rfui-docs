@@ -11,10 +11,10 @@ export default () => {
       <InlineCode>{`<input type="checkbox" />`}</InlineCode>. You'll probably
       want to use it along with a <InlineCode>{`<label>`}</InlineCode>. You also
       might prefer to use RFUI's{" "}
-      <Link href="/molecules/form-field">
+      <Link href="/components/form/form-field#example-checkbox">
         <InlineCode>{`FormField`}</InlineCode>
       </Link>{" "}
-      component instead.
+      component with <InlineCode>type="checkbox"</InlineCode>instead.
     </div>
   );
   const examples: ExampleType[] = [

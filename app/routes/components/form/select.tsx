@@ -11,7 +11,7 @@ export default () => {
       <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>{" "}
       when you are allowing the user to choose between many options. If there
       are only a few options to choose from, prefer the{" "}
-      <Link href="/atoms/radio-button">
+      <Link href="/components/form/radio-button">
         <InlineCode>RadioButton</InlineCode>
       </Link>{" "}
       component.

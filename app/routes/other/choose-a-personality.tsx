@@ -103,7 +103,7 @@ export default () => {
           <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
           <InlineCode>"lg"</InlineCode>, and sometimes{" "}
           <InlineCode>"full"</InlineCode>. Check out{" "}
-          <Link href="/atoms/button#rounded">
+          <Link href="/components/form/button#rounded">
             <InlineCode>Button</InlineCode>
           </Link>{" "}
           as an example.
