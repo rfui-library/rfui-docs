@@ -2,10 +2,27 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, Flex, InlineCode, Link } from "rfui";
+import { CodeBlock, Flex, InlineCode, Link, Stack } from "rfui";
 
 export default () => {
-  const overviewNotes = null;
+  const overviewNotes = (
+    <Stack className="gap-3">
+      <div>
+        A helper to make it easier to set up{" "}
+        <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout">
+          flexbox layouts
+        </Link>
+        .
+      </div>
+      <div>
+        Tip: Check out Josh W. Comeau's excellent post{" "}
+        <Link href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/">
+          An Interactive Guide to Flexbox
+        </Link>
+        .
+      </div>
+    </Stack>
+  );
   const examples: ExampleType[] = [
     {
       title: "Basic",

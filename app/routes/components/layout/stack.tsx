@@ -5,7 +5,25 @@ import {
 import { CodeBlock, InlineCode, Link, Stack } from "rfui";
 
 export default () => {
-  const overviewNotes = null;
+  const overviewNotes = (
+    <Stack className="gap-3">
+      <div>
+        A helper to make it easier to set up vertical{" "}
+        <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout">
+          flexbox layouts
+        </Link>
+        . Ie. ones that have <InlineCode>flex-direction</InlineCode> set to{" "}
+        <InlineCode>column</InlineCode>.
+      </div>
+      <div>
+        Tip: Check out Josh W. Comeau's excellent post{" "}
+        <Link href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/">
+          An Interactive Guide to Flexbox
+        </Link>
+        .
+      </div>
+    </Stack>
+  );
   const examples: ExampleType[] = [
     {
       title: "Basic",
