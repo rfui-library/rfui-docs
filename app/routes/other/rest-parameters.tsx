@@ -17,7 +17,7 @@ export default () => {
   }
   
   return (
-    <div class={className} {...restWithoutClass}>
+    <div className={className} {...restWithoutClass}>
       {children}
     </div>
   );
@@ -33,21 +33,21 @@ export default () => {
         <p>You'll get:</p>
         <CodeBlock
           language="tsx"
-          code={`<div class="something">
+          code={`<div className="something">
   Example
 </div>`}
         />
         <p>But if you do:</p>
         <CodeBlock
           language="tsx"
-          code={`<MyComponent class="text-neutral-700">
+          code={`<MyComponent className="text-neutral-700">
   Example
 </MyComponent>`}
         />
         <p>You'll get:</p>
         <CodeBlock
           language="tsx"
-          code={`<div class="something text-neutral-700">
+          code={`<div className="something text-neutral-700">
   Example
 </div>`}
         />
@@ -72,7 +72,7 @@ export default () => {
         <p>You'll get:</p>
         <CodeBlock
           language="tsx"
-          code={`<div class="something" title="example">
+          code={`<div className="something" title="example">
   Example
 </div>`}
         />

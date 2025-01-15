@@ -30,7 +30,7 @@ export default () => {
         </p>
       ),
       demo: (
-        <Flex className="flex-wrap gap-3">
+        <Flex className="gap-3">
           <Badge type="neutral">neutral</Badge>
           <Badge type="info">info</Badge>
           <Badge type="success">success</Badge>
@@ -42,7 +42,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Flex class="flex-wrap gap-3">
+          code={`<Flex className="gap-3">
   <Badge type="neutral">neutral</Badge>
   <Badge type="info">info</Badge>
   <Badge type="success">success</Badge>
@@ -65,7 +65,7 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
-          <Flex className="flex-wrap gap-3">
+          <Flex className="gap-3">
             <Badge type="neutral" size="sm">
               neutral
             </Badge>
@@ -82,7 +82,7 @@ export default () => {
               danger
             </Badge>
           </Flex>
-          <Flex className="flex-wrap gap-3">
+          <Flex className="gap-3">
             <Badge type="neutral" size="md">
               neutral
             </Badge>
@@ -99,7 +99,7 @@ export default () => {
               danger
             </Badge>
           </Flex>
-          <Flex className="flex-wrap gap-3">
+          <Flex className="gap-3">
             <Badge type="neutral" size="lg">
               neutral
             </Badge>
@@ -122,22 +122,22 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Stack class="gap-5">
-  <Flex class="flex-wrap gap-3">
+          code={`<Stack className"gap-5">
+  <Flex className="gap-3">
     <Badge type="neutral" size="sm">neutral</Badge>
     <Badge type="info" size="sm">info</Badge>
     <Badge type="success" size="sm">success</Badge>
     <Badge type="warning" size="sm">warning</Badge>
     <Badge type="danger" size="sm">danger</Badge>
   </Flex>
-  <Flex class="flex-wrap gap-3">
+  <Flex className="gap-3">
     <Badge type="neutral" size="md">neutral</Badge>
     <Badge type="info" size="md">info</Badge>
     <Badge type="success" size="md">success</Badge>
     <Badge type="warning" size="md">warning</Badge>
     <Badge type="danger" size="md">danger</Badge>
   </Flex>
-  <Flex class="flex-wrap gap-3">
+  <Flex className="gap-3">
     <Badge type="neutral" size="lg">neutral</Badge>
     <Badge type="info" size="lg">info</Badge>
     <Badge type="success" size="lg">success</Badge>
@@ -163,7 +163,7 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
-          <Flex className="flex-wrap gap-3">
+          <Flex className="gap-3">
             <Badge type="neutral" rounded="square">
               neutral
             </Badge>
@@ -180,7 +180,7 @@ export default () => {
               danger
             </Badge>
           </Flex>
-          <Flex className="flex-wrap gap-3">
+          <Flex className="gap-3">
             <Badge type="neutral" rounded="sm">
               neutral
             </Badge>
@@ -197,7 +197,7 @@ export default () => {
               danger
             </Badge>
           </Flex>
-          <Flex className="flex-wrap gap-3">
+          <Flex className="gap-3">
             <Badge type="neutral" rounded="lg">
               neutral
             </Badge>
@@ -214,7 +214,7 @@ export default () => {
               danger
             </Badge>
           </Flex>
-          <Flex className="flex-wrap gap-3">
+          <Flex className="gap-3">
             <Badge type="neutral" rounded="full">
               neutral
             </Badge>
@@ -237,29 +237,29 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Stack class="gap-5">
-  <Flex class="flex-wrap gap-3">
+          code={`<Stack className="gap-5">
+  <Flex className="gap-3">
     <Badge type="neutral" rounded="square">neutral</Badge>
     <Badge type="info" rounded="square">info</Badge>
     <Badge type="success" rounded="square">success</Badge>
     <Badge type="warning" rounded="square">warning</Badge>
     <Badge type="danger" rounded="square">danger</Badge>
   </Flex>
-  <Flex class="flex-wrap gap-3">
+  <Flex className="gap-3">
     <Badge type="neutral" rounded="sm">neutral</Badge>
     <Badge type="info" rounded="sm">info</Badge>
     <Badge type="success" rounded="sm">success</Badge>
     <Badge type="warning" rounded="sm">warning</Badge>
     <Badge type="danger" rounded="sm">danger</Badge>
   </Flex>
-  <Flex class="flex-wrap gap-3">
+  <Flex className="gap-3">
     <Badge type="neutral" rounded="lg">neutral</Badge>
     <Badge type="info" rounded="lg">info</Badge>
     <Badge type="success" rounded="lg">success</Badge>
     <Badge type="warning" rounded="lg">warning</Badge>
     <Badge type="danger" rounded="lg">danger</Badge>
   </Flex>
-  <Flex class="flex-wrap gap-3">
+  <Flex className="gap-3">
     <Badge type="neutral" rounded="full">neutral</Badge>
     <Badge type="info" rounded="full">info</Badge>
     <Badge type="success" rounded="full">success</Badge>
@@ -330,7 +330,7 @@ export default () => {
               </div>
               <CodeBlock
                 language="tsx"
-                code={`<div class={className} {...restWithoutClass}>
+                code={`<div className={className} {...restWithoutClass}>
   {children}
 </div>`}
               />
