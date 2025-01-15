@@ -306,11 +306,11 @@ export const getComponents = () => ({
       href: "/components/overlays/modal",
       demo: <InlineCode>{"<Modal>"}</InlineCode>,
     },
-    {
-      name: "Popover",
-      href: "/components/overlays/popover",
-      demo: <InlineCode>{"<Popover>"}</InlineCode>,
-    },
+    // {
+    //   name: "Popover",
+    //   href: "/components/overlays/popover",
+    //   demo: <InlineCode>{"<Popover>"}</InlineCode>,
+    // },
     {
       name: "Tooltip",
       href: "/components/overlays/tooltip",

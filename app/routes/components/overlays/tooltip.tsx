@@ -6,9 +6,9 @@ import { CodeBlock, InlineCode, Link, Stack, Tooltip } from "rfui";
 
 export default () => {
   const overviewNotes = (
-    <Stack className="gap-4">
+    <Stack className="gap-3">
       <p>
-        Warning: Tooltips are often overused. They are generally useful when the
+        Note: Tooltips are often overused. They are generally useful when the
         information in the tooltip is supplementary and when it isn't pragmatic
         to place the info on the screen. Consider Nielsen Norman Group's{" "}
         <Link href="https://www.nngroup.com/articles/tooltip-guidelines/">
@@ -50,16 +50,16 @@ export default () => {
       title: "Direction",
       demo: (
         <Stack className="items-center gap-8 p-8">
-          <Tooltip content="Example content" direction="top">
+          <Tooltip direction="top" content="Example content">
             Top
           </Tooltip>
-          <Tooltip content="Example content" direction="right">
+          <Tooltip direction="right" content="Example content">
             Right
           </Tooltip>
-          <Tooltip content="Example content" direction="bottom">
+          <Tooltip direction="bottom" content="Example content">
             Bottom
           </Tooltip>
-          <Tooltip content="Example content" direction="left">
+          <Tooltip direction="left" content="Example content">
             Left
           </Tooltip>
         </Stack>
@@ -69,10 +69,18 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="items-center gap-8 p-8">
-  <Tooltip content="Example content" direction="top">Top</Tooltip>
-  <Tooltip content="Example content" direction="right">Right</Tooltip>
-  <Tooltip content="Example content" direction="bottom">Bottom</Tooltip>
-  <Tooltip content="Example content" direction="left">Left</Tooltip>
+  <Tooltip direction="top" content="Example content">
+    Top
+  </Tooltip>
+  <Tooltip direction="right" content="Example content">
+    Right
+  </Tooltip>
+  <Tooltip direction="bottom" content="Example content">
+    Bottom
+  </Tooltip>
+  <Tooltip direction="left" content="Example content">
+    Left
+  </Tooltip>
 </Stack>`}
         />
       ),

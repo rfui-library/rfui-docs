@@ -6,19 +6,35 @@ import { CodeBlock, InfoTooltip, InlineCode, Link, Stack } from "rfui";
 
 export default () => {
   const overviewNotes = (
-    <div>
-      This is just a thin wrapper over the{" "}
-      <Link href="/molecules/tooltip">
-        <InlineCode>Tooltip</InlineCode>
-      </Link>{" "}
-      component because it is a common need to use an info icon with a tooltip.
-      However, note that it is{" "}
-      <Link href="https://www.nngroup.com/articles/tooltip-guidelines/">
-        generally recommended
-      </Link>{" "}
-      to only use tooltips to provide supplementary rather than essential
-      information to users.
-    </div>
+    <Stack className="gap-3">
+      <p>
+        This is just a thin wrapper over the{" "}
+        <Link href="/molecules/tooltip">
+          <InlineCode>Tooltip</InlineCode>
+        </Link>{" "}
+        component because it is a common need to use a help icon with a tooltip.
+      </p>
+      <p>
+        Note: Tooltips are often overused. They are generally useful when the
+        information in the tooltip is supplementary and when it isn't pragmatic
+        to place the info on the screen. Consider Nielsen Norman Group's{" "}
+        <Link href="https://www.nngroup.com/articles/tooltip-guidelines/">
+          guidelines
+        </Link>{" "}
+        before using a tooltip.
+      </p>
+      <p>
+        Note: To avoid accidental activations of the tooltip, a 400ms delay is
+        used. [
+        <Link href="https://ux.stackexchange.com/q/358/39046">source</Link>]
+      </p>
+      <p>
+        Note: Tooltips are meant for small amounts of content. If you have a
+        larger amount of content that you want to display after a user
+        interaction, consider a popover component instead. [
+        <Link href="https://ux.stackexchange.com/q/88844/39046">source</Link>]
+      </p>
+    </Stack>
   );
   const examples: ExampleType[] = [
     {
@@ -36,10 +52,10 @@ export default () => {
       title: "Direction",
       demo: (
         <Stack className="items-center gap-8 p-8">
-          <InfoTooltip content="Example content" direction="top" />
-          <InfoTooltip content="Example content" direction="right" />
-          <InfoTooltip content="Example content" direction="bottom" />
-          <InfoTooltip content="Example content" direction="left" />
+          <InfoTooltip direction="top" content="Example content" />
+          <InfoTooltip direction="right" content="Example content" />
+          <InfoTooltip direction="bottom" content="Example content" />
+          <InfoTooltip direction="left" content="Example content" />
         </Stack>
       ),
       code: (
@@ -47,10 +63,10 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="items-center gap-8 p-8">
-  <InfoTooltip content="Example content" direction="top" />
-  <InfoTooltip content="Example content" direction="right" />
-  <InfoTooltip content="Example content" direction="bottom" />
-  <InfoTooltip content="Example content" direction="left" />
+  <InfoTooltip direction="top" content="Example content" />
+  <InfoTooltip direction="right" content="Example content" />
+  <InfoTooltip direction="bottom" content="Example content" />
+  <InfoTooltip direction="left" content="Example content" />
 </Stack>`}
         />
       ),
@@ -59,9 +75,9 @@ export default () => {
       title: "Size",
       demo: (
         <Stack className="items-center gap-8 p-8">
-          <InfoTooltip content="Example content" size="sm" />
-          <InfoTooltip content="Example content" size="md" />
-          <InfoTooltip content="Example content" size="lg" />
+          <InfoTooltip size="sm" content="Example content" />
+          <InfoTooltip size="md" content="Example content" />
+          <InfoTooltip size="lg" content="Example content" />
         </Stack>
       ),
       code: (
@@ -69,9 +85,9 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="items-center gap-8 p-8">
-  <InfoTooltip content="Example content" size="sm" />
-  <InfoTooltip content="Example content" size="md" />
-  <InfoTooltip content="Example content" size="lg" />
+  <InfoTooltip size="sm" content="Example content" />
+  <InfoTooltip size="md" content="Example content" />
+  <InfoTooltip size="lg" content="Example content" />
 </Stack>`}
         />
       ),
