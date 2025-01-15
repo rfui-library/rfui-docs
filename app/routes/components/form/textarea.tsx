@@ -95,7 +95,7 @@ export default () => {
       title: "Readonly",
       description: (
         <div>
-          Set <InlineCode>readonly</InlineCode> to either{" "}
+          Set <InlineCode>readOnly</InlineCode> to either{" "}
           <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
           Defaults to <InlineCode>false</InlineCode>.
         </div>
@@ -105,7 +105,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Textarea readonly>Example</Textarea>`}
+          code={`<Textarea readOnly>Example</Textarea>`}
         />
       ),
     },

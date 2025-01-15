@@ -6,16 +6,25 @@ import { CodeBlock, InlineCode, Link, Select, Stack } from "rfui";
 
 export default () => {
   const overviewNotes = (
-    <div>
-      Select dropdowns are{" "}
-      <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>{" "}
-      when you are allowing the user to choose between many options. If there
-      are only a few options to choose from, prefer the{" "}
-      <Link href="/components/form/radio-button">
-        <InlineCode>RadioButton</InlineCode>
-      </Link>{" "}
-      component.
-    </div>
+    <Stack className="gap-3">
+      <p>
+        Select dropdowns are{" "}
+        <Link href="https://ux.stackexchange.com/q/456/39046">appropriate</Link>{" "}
+        when you are allowing the user to choose between many options. If there
+        are only a few options to choose from, prefer the{" "}
+        <Link href="/components/form/radio-button">
+          <InlineCode>RadioButton</InlineCode>
+        </Link>{" "}
+        component.
+      </p>
+      <p>
+        Note: You may prefer to use RFUI's{" "}
+        <Link href="/components/form/form-field#example-select">
+          <InlineCode>FormField</InlineCode>
+        </Link>{" "}
+        component with <InlineCode>type="select"</InlineCode> instead.
+      </p>
+    </Stack>
   );
   const examples: ExampleType[] = [
     {

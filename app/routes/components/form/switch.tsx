@@ -33,7 +33,7 @@ export default () => {
       code: <CodeBlock className="mt-4" language="tsx" code={`<Switch />`} />,
     },
     {
-      title: "Switch",
+      title: "Controlled",
       description: (
         <div>
           See{" "}
