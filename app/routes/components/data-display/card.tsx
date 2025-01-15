@@ -10,8 +10,8 @@ import {
   CardHeader,
   CardHeading,
   CodeBlock,
-  // FormField,
   Flex,
+  FormField,
   InlineCode,
   Link,
   Stack,
@@ -419,14 +419,14 @@ export default () => {
             <CardHeading>Profile</CardHeading>
           </CardHeader>
           <CardBody>
-            <div className="mb-6 text-neutral-700">
+            <div className="mb-6">
               Please fill out the following information.
             </div>
-            {/* <Stack className="gap-3">
+            <Stack className="gap-3">
               <FormField label="Name" type="text" />
               <FormField label="Email" type="email" />
               <FormField label="Age" type="number" />
-            </Stack> */}
+            </Stack>
           </CardBody>
           <CardFooter>
             <Flex className="gap-2">
@@ -445,7 +445,7 @@ export default () => {
     <CardHeading>Profile</CardHeading>
   </CardHeader>
   <CardBody>
-    <div className="mb-6 text-neutral-700">
+    <div className="mb-6">
       Please fill out the following information.
     </div>
     <Stack className="gap-3">
@@ -476,19 +476,17 @@ export default () => {
       demo: (
         <Card topAccent rounded="square">
           <CardHeader>
-            <h1 className="font-bold tracking-wide text-neutral-700">
-              Profile
-            </h1>
+            <CardHeading>Profile</CardHeading>
           </CardHeader>
           <CardBody>
-            <div className="mb-6 text-neutral-700">
+            <div className="mb-6">
               Please fill out the following information.
             </div>
-            {/* <Stack className="gap-3">
+            <Stack className="gap-3">
               <FormField label="Name" type="text" />
               <FormField label="Email" type="email" />
               <FormField label="Age" type="number" />
-            </Stack> */}
+            </Stack>
           </CardBody>
           <CardFooter>
             <Flex className="gap-2">
@@ -504,7 +502,7 @@ export default () => {
           language="tsx"
           code={`<Card topAccent rounded="square">
   <CardHeader>
-    <h1 className="font-bold tracking-wide text-neutral-700">Profile</h1>
+    <CardHeading>Profile</CardHeading>
   </CardHeader>
   <CardBody>
     <div className="mb-6 text-neutral-700">
@@ -538,9 +536,7 @@ export default () => {
       demo: (
         <Card leftAccent rounded="square">
           <CardHeader>
-            <h1 className="font-bold tracking-wide text-neutral-700">
-              Profile
-            </h1>
+            <CardHeading>Profile</CardHeading>
           </CardHeader>
           <CardBody>
             <div className="mb-6 text-neutral-700">
@@ -566,7 +562,7 @@ export default () => {
           language="tsx"
           code={`<Card leftAccent rounded="square">
   <CardHeader>
-    <h1 className="font-bold tracking-wide text-neutral-700">Profile</h1>
+    <CardHeading>Profile</CardHeading>
   </CardHeader>
   <CardBody>
     <div className="mb-6 text-neutral-700">

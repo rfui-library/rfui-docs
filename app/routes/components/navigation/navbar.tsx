@@ -38,7 +38,7 @@ export default () => {
         code={`export default () => {
   return (
     <>
-      <Navbar route={route} />
+      <Navbar />
       <Container size="xl">
         <Component />
       </Container>

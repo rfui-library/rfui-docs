@@ -106,7 +106,7 @@ export default () => {
       description: (
         <Stack className="gap-3">
           <div>
-            Set <InlineCode>inPageLink</InlineCode> to either{" "}
+            Set <InlineCode>_newTab</InlineCode> to either{" "}
             <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
             Defaults to <InlineCode>false</InlineCode>.
           </div>

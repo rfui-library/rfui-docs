@@ -322,6 +322,10 @@ export default () => {
             Making the header sticky is helpful when the user needs to
             cross-reference and avoid losing context.
           </div>
+          <div>
+            Note: The example below won't actually be sticky but it will work
+            elsewhere.
+          </div>
         </Stack>
       ),
       demo: (
@@ -432,8 +436,7 @@ export default () => {
       title: "Sticky header and first column",
       description: (
         <div>
-          Set <InlineCode>stickyHeader</InlineCode> to{" "}
-          <InlineCode>true</InlineCode> and{" "}
+          Set <InlineCode>stickyHeader</InlineCode> and{" "}
           <InlineCode>stickyFirstColumn</InlineCode> to{" "}
           <InlineCode>true</InlineCode>.
         </div>
@@ -462,7 +465,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Table stickyHeader>
+          code={`<Table stickyHeader stickyFirstColumn>
   <thead>
     <tr>
       <th>name</th>

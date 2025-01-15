@@ -36,7 +36,7 @@ export default () => {
         code={`export default () => {
   return (
     <>
-      <Navbar route={route} />
+      <Navbar />
       <Container size="xl">
         <Component />
       </Container>
@@ -62,7 +62,7 @@ export default () => {
         code={`export default () => {
   return (
     <Stack className="min-h-screen">
-      <Navbar route={route} />
+      <Navbar />
       <Container size="xl" className="grow">
         <Component />
       </Container>
@@ -93,28 +93,6 @@ export default () => {
             <FooterItem href="/getting-started">Getting started</FooterItem>
             <FooterItem href="/tutorial">Tutorial</FooterItem>
           </FooterColumn>
-          <FooterColumn>
-            <FooterHeading>Code</FooterHeading>
-            <FooterItem href="https://github.com/adamzerner/rfui">
-              GitHub
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
-              Changelog
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
-              Contributing
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
-              License
-            </FooterItem>
-          </FooterColumn>
-          <FooterColumn>
-            <FooterHeading>Help</FooterHeading>
-            <FooterItem href="mailto:adamzerner@protonmail.com">
-              Contact
-            </FooterItem>
-            <FooterItem href="/faq">FAQ</FooterItem>
-          </FooterColumn>
         </Footer>
       ),
       code: (
@@ -135,28 +113,6 @@ export default () => {
     <FooterItem href="/">Components</FooterItem>
     <FooterItem href="/getting-started">Getting started</FooterItem>
     <FooterItem href="/tutorial">Tutorial</FooterItem>
-  </FooterColumn>
-  <FooterColumn>
-    <FooterHeading>Code</FooterHeading>
-    <FooterItem href="https://github.com/adamzerner/rfui">
-      GitHub
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
-      Changelog
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
-      Contributing
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
-      License
-    </FooterItem>
-  </FooterColumn>
-  <FooterColumn>
-    <FooterHeading>Help</FooterHeading>
-    <FooterItem href="mailto:adamzerner@protonmail.com">
-      Contact
-    </FooterItem>
-    <FooterItem href="/faq">FAQ</FooterItem>
   </FooterColumn>
 </Footer>`}
         />
@@ -195,28 +151,6 @@ export default () => {
             <FooterItem href="/getting-started">Getting started</FooterItem>
             <FooterItem href="/tutorial">Tutorial</FooterItem>
           </FooterColumn>
-          <FooterColumn>
-            <FooterHeading background="none">Code</FooterHeading>
-            <FooterItem href="https://github.com/adamzerner/rfui">
-              GitHub
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
-              Changelog
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
-              Contributing
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
-              License
-            </FooterItem>
-          </FooterColumn>
-          <FooterColumn>
-            <FooterHeading background="none">Help</FooterHeading>
-            <FooterItem href="mailto:adamzerner@protonmail.com">
-              Contact
-            </FooterItem>
-            <FooterItem href="/faq">FAQ</FooterItem>
-          </FooterColumn>
         </Footer>
       ),
       code: (
@@ -237,28 +171,6 @@ export default () => {
     <FooterItem href="/">Components</FooterItem>
     <FooterItem href="/getting-started">Getting started</FooterItem>
     <FooterItem href="/tutorial">Tutorial</FooterItem>
-  </FooterColumn>
-  <FooterColumn>
-    <FooterHeading background="none">Code</FooterHeading>
-    <FooterItem href="https://github.com/adamzerner/rfui">
-      GitHub
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
-      Changelog
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
-      Contributing
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
-      License
-    </FooterItem>
-  </FooterColumn>
-  <FooterColumn>
-    <FooterHeading background="none">Help</FooterHeading>
-    <FooterItem href="mailto:adamzerner@protonmail.com">
-      Contact
-    </FooterItem>
-    <FooterItem href="/faq">FAQ</FooterItem>
   </FooterColumn>
 </Footer>`}
         />
@@ -299,28 +211,6 @@ export default () => {
             <FooterItem href="/getting-started">Getting started</FooterItem>
             <FooterItem href="/tutorial">Tutorial</FooterItem>
           </FooterColumn>
-          <FooterColumn>
-            <FooterHeading>Code</FooterHeading>
-            <FooterItem href="https://github.com/adamzerner/rfui">
-              GitHub
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
-              Changelog
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
-              Contributing
-            </FooterItem>
-            <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
-              License
-            </FooterItem>
-          </FooterColumn>
-          <FooterColumn>
-            <FooterHeading>Help</FooterHeading>
-            <FooterItem href="mailto:adamzerner@protonmail.com">
-              Contact
-            </FooterItem>
-            <FooterItem href="/faq">FAQ</FooterItem>
-          </FooterColumn>
         </Footer>
       ),
       code: (
@@ -341,28 +231,6 @@ export default () => {
     <FooterItem href="/">Components</FooterItem>
     <FooterItem href="/getting-started">Getting started</FooterItem>
     <FooterItem href="/tutorial">Tutorial</FooterItem>
-  </FooterColumn>
-  <FooterColumn>
-    <FooterHeading>Code</FooterHeading>
-    <FooterItem href="https://github.com/adamzerner/rfui">
-      GitHub
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CHANGELOG.md">
-      Changelog
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/CONTRIBUTING.md">
-      Contributing
-    </FooterItem>
-    <FooterItem href="https://github.com/adamzerner/rfui/blob/master/LICENSE">
-      License
-    </FooterItem>
-  </FooterColumn>
-  <FooterColumn>
-    <FooterHeading>Help</FooterHeading>
-    <FooterItem href="mailto:adamzerner@protonmail.com">
-      Contact
-    </FooterItem>
-    <FooterItem href="/faq">FAQ</FooterItem>
   </FooterColumn>
 </Footer>`}
         />
