@@ -484,49 +484,49 @@ export default () => {
         />
       ),
     },
-    //     {
-    //       title: "RadioButtonGroup",
-    //       description: (
-    //         <div>
-    //           To use{" "}
-    //           <Link href="/components/form/radio-button-group">
-    //             <InlineCode>RadioButtonGroup</InlineCode>
-    //           </Link>{" "}
-    //           with <InlineCode>FormField</InlineCode> set{" "}
-    //           <InlineCode>type</InlineCode> to{" "}
-    //           <InlineCode>"radio-button-group"</InlineCode> and use{" "}
-    //           <InlineCode>radioButtonGroupOptions</InlineCode> like so:
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <FormField
-    //           label="Plan"
-    //           type="radio-button-group"
-    //           name="plan"
-    //           radioButtonGroupOptions={[
-    //             { value: "free", display: "Free" },
-    //             { value: "basic", display: "Basic" },
-    //             { value: "premium", display: "Premium" },
-    //           ]}
-    //         />
-    //       ),
-    //       code: (
-    //         <CodeBlock
-    //           className="mt-4"
-    //           language="tsx"
-    //           code={`<FormField
-    //   label="Plan"
-    //   type="radio-button-group"
-    //   name="plan"
-    //   radioButtonGroupOptions={[
-    //     { value: "free", display: "Free" },
-    //     { value: "basic", display: "Basic" },
-    //     { value: "premium", display: "Premium" },
-    //   ]}
-    // />`}
-    //         />
-    //       ),
-    //     },
+    {
+      title: "RadioButtonGroup",
+      description: (
+        <div>
+          To use{" "}
+          <Link href="/components/form/radio-button-group">
+            <InlineCode>RadioButtonGroup</InlineCode>
+          </Link>{" "}
+          with <InlineCode>FormField</InlineCode> set{" "}
+          <InlineCode>type</InlineCode> to{" "}
+          <InlineCode>"radio-button-group"</InlineCode> and use{" "}
+          <InlineCode>radioButtonGroupOptions</InlineCode> like so:
+        </div>
+      ),
+      demo: (
+        <FormField
+          label="Plan"
+          type="radio-button-group"
+          name="plan"
+          radioButtonGroupOptions={[
+            { value: "free", display: "Free" },
+            { value: "basic", display: "Basic" },
+            { value: "premium", display: "Premium" },
+          ]}
+        />
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<FormField
+      label="Plan"
+      type="radio-button-group"
+      name="plan"
+      radioButtonGroupOptions={[
+        { value: "free", display: "Free" },
+        { value: "basic", display: "Basic" },
+        { value: "premium", display: "Premium" },
+      ]}
+    />`}
+        />
+      ),
+    },
     {
       title: "Select",
       description: (
