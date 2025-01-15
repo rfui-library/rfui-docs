@@ -122,7 +122,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Stack className"gap-5">
+          code={`<Stack className="gap-5">
   <Flex className="gap-3">
     <Badge type="neutral" size="sm">neutral</Badge>
     <Badge type="info" size="sm">info</Badge>
