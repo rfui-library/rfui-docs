@@ -19,6 +19,17 @@ export default () => {
       ),
     },
     {
+      title: "Uncontrolled",
+      demo: <FormField label="Name" name="name" defaultValue="John Doe" />,
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<FormField label="Name" name="name" defaultValue="John Doe" />,`}
+        />
+      ),
+    },
+    {
       title: "Controlled",
       description: (
         <div>
@@ -34,7 +45,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<FormField label="Name" value={value} inputRest={{ onInput: onInput }} />`}
+          code={`<FormField label="Name" value={value} onChange={onChange} />`}
         />
       ),
     },
@@ -298,27 +309,27 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="gap-5">
-      <FormField
-        label="Name on card"
-        type="text"
-        className="w-14 max-w-full"
-      />
-      <FormField
-        label="Card number"
-        type="text"
-        className="w-14 max-w-full"
-      />
-      <FormField
-        label="Expiry date"
-        type="text"
-        className="w-10"
-      />
-      <FormField
-        label="CVC"
-        type="text"
-        className="w-10"
-      />
-    </Stack>`}
+  <FormField
+    label="Name on card"
+    type="text"
+    className="w-14 max-w-full"
+  />
+  <FormField
+    label="Card number"
+    type="text"
+    className="w-14 max-w-full"
+  />
+  <FormField
+    label="Expiry date"
+    type="text"
+    className="w-10"
+  />
+  <FormField
+    label="CVC"
+    type="text"
+    className="w-10"
+  />
+</Stack>`}
         />
       ),
     },
@@ -371,17 +382,17 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="gap-5">
-      <FormField label="Name" type="text" />
-      <FormField label="Email" type="email" />
-      <FormField label="Age" type="number" />
-      <FormField label="Password" type="password" defaultValue="foobar" />
-      <FormField label="Birthday" type="date" />
-      <FormField label="Appointment" type="datetime-local" />
-      <FormField label="Bed time" type="time" />
-      <FormField label="Profile photo" type="file" />
-      <FormField label="Mood" type="range" />
-      <FormField label="Favorite color" type="color" />
-    </Stack>`}
+  <FormField label="Name" type="text" />
+  <FormField label="Email" type="email" />
+  <FormField label="Age" type="number" />
+  <FormField label="Password" type="password" defaultValue="foobar" />
+  <FormField label="Birthday" type="date" />
+  <FormField label="Appointment" type="datetime-local" />
+  <FormField label="Bed time" type="time" />
+  <FormField label="Profile photo" type="file" />
+  <FormField label="Mood" type="range" />
+  <FormField label="Favorite color" type="color" />
+</Stack>`}
         />
       ),
     },
@@ -414,8 +425,8 @@ export default () => {
           If you pass <InlineCode>type="switch"</InlineCode> it will use RFUI's{" "}
           <Link href="/components/form/switch">
             <InlineCode>Switch</InlineCode>
-          </Link>
-          .
+          </Link>{" "}
+          component.
         </div>
       ),
       demo: <FormField label="Agreed" type="switch" />,
@@ -431,11 +442,11 @@ export default () => {
       title: "PasswordInput",
       description: (
         <div>
-          To use{" "}
+          To use RFUI's{" "}
           <Link href="/components/form/password-input">
             <InlineCode>PasswordInput</InlineCode>
           </Link>{" "}
-          with <InlineCode>FormField</InlineCode> set{" "}
+          component with <InlineCode>FormField</InlineCode> set{" "}
           <InlineCode>type</InlineCode> to{" "}
           <InlineCode>"rfui-password-input"</InlineCode>.
         </div>
@@ -460,16 +471,17 @@ export default () => {
       description: (
         <Stack className="gap-2">
           <div>
-            To use{" "}
+            To use RFUI's{" "}
             <Link href="/components/form/textarea">
               <InlineCode>Textarea</InlineCode>
             </Link>{" "}
-            with <InlineCode>FormField</InlineCode> set{" "}
+            component with <InlineCode>FormField</InlineCode> set{" "}
             <InlineCode>type</InlineCode> to <InlineCode>"textarea"</InlineCode>
             .
           </div>
           <div>
-            Note: <InlineCode>value</InlineCode> isn't passed as a prop; it's
+            Note: <InlineCode>value</InlineCode> or{" "}
+            <InlineCode>defaultValue</InlineCode> isn't passed as a prop; it's
             passed instead like this:{" "}
             <InlineCode>{"<Textarea>{value}</Textarea>"}</InlineCode>
           </div>
@@ -515,15 +527,15 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<FormField
-      label="Plan"
-      type="radio-button-group"
-      name="plan"
-      radioButtonGroupOptions={[
-        { value: "free", display: "Free" },
-        { value: "basic", display: "Basic" },
-        { value: "premium", display: "Premium" },
-      ]}
-    />`}
+  label="Plan"
+  type="radio-button-group"
+  name="plan"
+  radioButtonGroupOptions={[
+    { value: "free", display: "Free" },
+    { value: "basic", display: "Basic" },
+    { value: "premium", display: "Premium" },
+  ]}
+/>`}
         />
       ),
     },
@@ -556,14 +568,14 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<FormField
-      label="Country"
-      type="select"
-      selectOptions={[
-        { value: "united-states", display: "United States" },
-        { value: "france", display: "France" },
-        { value: "japan", display: "Japan" },
-      ]}
-    />`}
+  label="Country"
+  type="select"
+  selectOptions={[
+    { value: "united-states", display: "United States" },
+    { value: "france", display: "France" },
+    { value: "japan", display: "Japan" },
+  ]}
+/>`}
         />
       ),
     },
