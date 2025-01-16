@@ -500,11 +500,11 @@ export default () => {
       title: "RadioButtonGroup",
       description: (
         <div>
-          To use{" "}
+          To use RFUI's{" "}
           <Link href="/components/form/radio-button-group">
             <InlineCode>RadioButtonGroup</InlineCode>
           </Link>{" "}
-          with <InlineCode>FormField</InlineCode> set{" "}
+          component with <InlineCode>FormField</InlineCode> set{" "}
           <InlineCode>type</InlineCode> to{" "}
           <InlineCode>"radio-button-group"</InlineCode> and use{" "}
           <InlineCode>radioButtonGroupOptions</InlineCode> like so:
