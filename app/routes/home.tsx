@@ -27,14 +27,14 @@ export default () => {
       <header className="max-w-prose">
         <H1 className="text-6xl">RFUI</H1>
         <H2 className="text-2xl">
-          A lightweight, DX-focused component library for Preact + Deno apps.
+          A lightweight, UX and DX-focused component library for React apps.
         </H2>
         <Text>
           <p>
             RFUI is opinionated. It doesn't try to please everyone, and it
-            doesn't try to do too much. It prioritizes simplicity, developer
-            experience, pits of success, avoiding dependencies, and{" "}
-            <InlineCode>#useThePlatform</InlineCode>.
+            doesn't try to do too much. It prioritizes simplicity, user
+            experience, developer experience, pits of success, avoiding
+            dependencies, and <InlineCode>#useThePlatform</InlineCode>.
           </p>
           <p>
             Interested? Check out the <Link href="/about">About</Link> page or

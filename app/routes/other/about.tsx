@@ -6,8 +6,8 @@ export default () => {
       <H1>About</H1>
       <Text>
         <p>
-          RFUI is a component library for Preact (not React) apps. It lets you
-          do stuff like this:
+          RFUI is a component library for React apps. It lets you do stuff like
+          this:
         </p>
         <CodeBlock
           language="tsx"
@@ -27,21 +27,19 @@ const SubmitButton = () => {
           <Button variant="secondary">Submit</Button>
         </Card>
         <p>
-          It is available as a{" "}
-          <Link href="https://deno.land/x">Deno Third Party Module</Link>. Check
-          out the <Link href="/getting-started">Getting Started</Link> if you'd
-          like to give it a try.
+          It is available as an{" "}
+          <Link href="hthttps://www.npmjs.com/package/rfui-package">
+            NPM package
+          </Link>
+          . Check out the <Link href="/getting-started">Getting Started</Link>{" "}
+          page if you'd like to give it a try.
         </p>
         <Alert className="mt-4">
           <Text>
             <p>
-              Note: Anyone is welcome to use RFUI. However, consider that I am
-              my own target audience for this project and I am not looking to
-              support others.
-            </p>
-            <p>
-              It probably will always remain this way, but it's possible that I
-              look to target a wider, public audience in the future.
+              Note: Anyone is welcome to use RFUI. However, consider that it
+              isn't battle tested yet (hence being on version 0.x.x instead of
+              1.x.x).
             </p>
           </Text>
         </Alert>
