@@ -1,30 +1,40 @@
 import {
-  isRouteErrorResponse,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
+import { Container, Stack } from "rfui";
+import { Footer } from "./components/footer";
+import { Navbar } from "./components/navbar";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 
+export { ErrorBoundary } from "@/components/error-boundary/error-boundary";
+
 export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
+  { rel: "stylesheet", href: stylesheet },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css?family=Open+Sans",
   },
-  { rel: "stylesheet", href: stylesheet },
+  {
+    rel: "icon",
+    href: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☆</text></svg>",
+  },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export const meta = () => [
+  { title: "RFUI" },
+  { name: "description", content: "A component library for React" },
+];
+
+export const Layout = ({ children }: { children: React.ReactNode }) => {
+  const location = useLocation();
+
   return (
     <html lang="en">
       <head>
@@ -34,43 +44,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Stack className="min-h-screen">
+          <Navbar route={location.pathname} />
+          <Container size="2xl" className="mb-6 mt-8 grow font-sans">
+            {children}
+          </Container>
+          <Footer />
+        </Stack>
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
   );
-}
+};
 
-export default function App() {
+export default () => {
   return <Outlet />;
-}
-
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
-
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
-  }
-
-  return (
-    <main className="container mx-auto p-4 pt-16">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full overflow-x-auto p-4">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
-  );
-}
+};
