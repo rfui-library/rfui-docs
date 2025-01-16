@@ -1,5 +1,5 @@
 import { titleToHref } from "@/utilities/title-to-href";
-import { Card, H2, Text } from "rfui";
+import { Card, H2, Text } from "rfui-package";
 import type { ExampleType } from "./index";
 
 type ExamplesType = {

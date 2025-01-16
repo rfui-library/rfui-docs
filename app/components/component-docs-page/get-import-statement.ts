@@ -11,7 +11,7 @@ export const getImportStatement = (
   const componentsToImportString =
     getComponentsToImportString(componentsToImport);
 
-  return `import { ${componentsToImportString}} from "rfui";`;
+  return `import { ${componentsToImportString}} from "rfui-package";`;
 };
 
 const getComponentsToImportString = (componentsToImport: string[]) =>

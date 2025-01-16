@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { Breadcrumbs, CodeBlock, InlineCode, Link, Stack } from "rfui";
+import { Breadcrumbs, CodeBlock, InlineCode, Link, Stack } from "rfui-package";
 
 export default () => {
   const overviewNotes = (

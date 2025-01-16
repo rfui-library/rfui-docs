@@ -1,4 +1,4 @@
-import { H1, Text } from "rfui";
+import { H1, Text } from "rfui-package";
 
 export const NotFoundError = () => {
   return (

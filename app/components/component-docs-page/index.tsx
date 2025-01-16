@@ -1,6 +1,6 @@
 import { ComponentsList } from "@/components/components-list";
 import type { ReactNode } from "react";
-import { Flex } from "rfui";
+import { Flex } from "rfui-package";
 import { Examples } from "./examples";
 import { getImportStatement } from "./get-import-statement";
 import { Header } from "./header";

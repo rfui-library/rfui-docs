@@ -10,7 +10,7 @@ import {
   PasswordInput,
   Stack,
   UL,
-} from "rfui";
+} from "rfui-package";
 
 export default () => {
   const overviewNotes = (

@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
   useLocation,
 } from "react-router";
-import { Container, Stack } from "rfui";
+import { Container, Stack } from "rfui-package";
 import { Footer } from "./components/footer";
 import { Navbar } from "./components/navbar";
 

@@ -7,7 +7,7 @@ import {
   InlineCode,
   Link,
   Text,
-} from "rfui";
+} from "rfui-package";
 
 export default () => {
   return (
@@ -76,7 +76,7 @@ export default () => {
         <p>Something like:</p>
         <CodeBlock
           language="tsx"
-          code={`import { Button } from "rfui";
+          code={`import { Button } from "rfui-package";
 
 <Button>Example</Button>`}
         />

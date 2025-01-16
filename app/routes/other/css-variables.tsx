@@ -1,4 +1,4 @@
-import { Alert, CodeBlock, H1, H2, InlineCode, Link, Text } from "rfui";
+import { Alert, CodeBlock, H1, H2, InlineCode, Link, Text } from "rfui-package";
 
 export default () => {
   return (

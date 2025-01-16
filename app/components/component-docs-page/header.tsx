@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Card, CardBody, CodeBlock, H1, Link, Stack, Text } from "rfui";
+import { Card, CardBody, CodeBlock, H1, Link, Stack, Text } from "rfui-package";
 
 type HeaderType = {
   componentName: string;

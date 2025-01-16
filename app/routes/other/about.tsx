@@ -1,4 +1,4 @@
-import { Alert, Button, Card, CodeBlock, H1, Link, Text } from "rfui";
+import { Alert, Button, Card, CodeBlock, H1, Link, Text } from "rfui-package";
 
 export default () => {
   return (
@@ -11,7 +11,7 @@ export default () => {
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { Button } from "rfui";
+          code={`import { Button } from "rfui-package";
 
 const SubmitButton = () => {
   return (

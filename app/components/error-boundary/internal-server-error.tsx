@@ -1,4 +1,4 @@
-import { H1, Link, Text } from "rfui";
+import { H1, Link, Text } from "rfui-package";
 
 export default () => {
   return (

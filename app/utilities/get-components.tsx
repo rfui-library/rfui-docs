@@ -31,7 +31,7 @@ import {
   Text,
   Textarea,
   UL,
-} from "rfui";
+} from "rfui-package";
 
 export const getComponents = () => ({
   typography: [

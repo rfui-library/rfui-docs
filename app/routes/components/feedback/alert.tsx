@@ -10,7 +10,7 @@ import {
   InlineCode,
   Link,
   Stack,
-} from "rfui";
+} from "rfui-package";
 
 export default () => {
   const overviewNotes = (

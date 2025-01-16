@@ -12,7 +12,7 @@ import {
   Link,
   Stack,
   Text,
-} from "rfui";
+} from "rfui-package";
 
 export const meta = () => [
   { title: "Home - RFUI" },

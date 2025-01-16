@@ -3,7 +3,7 @@ import {
   FooterHeading,
   FooterItem,
   Footer as RFUIFooter,
-} from "rfui";
+} from "rfui-package";
 
 export const Footer = () => {
   return (

@@ -7,7 +7,7 @@ import {
   InlineCode,
   RadioButtonGroup,
   RadioButtonGroupItem,
-} from "rfui";
+} from "rfui-package";
 
 export default () => {
   const overviewNotes = null;

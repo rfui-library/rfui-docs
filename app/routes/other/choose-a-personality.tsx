@@ -9,7 +9,7 @@ import {
   Stack,
   Text,
   UL,
-} from "rfui";
+} from "rfui-package";
 
 export default () => {
   return (

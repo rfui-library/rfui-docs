@@ -4,7 +4,7 @@ import {
 } from "@/components/component-docs-page/index";
 import type { ReactNode } from "react";
 import { useState } from "react";
-import { Button, CodeBlock, InlineCode, Link, Modal } from "rfui";
+import { Button, CodeBlock, InlineCode, Link, Modal } from "rfui-package";
 
 type ModalExampleProps = { heading?: string; children: ReactNode };
 

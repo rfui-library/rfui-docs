@@ -12,7 +12,7 @@ import {
   VerticalNavbarItem,
   VerticalNavbarSection,
   VerticalNavbarTop,
-} from "rfui";
+} from "rfui-package";
 
 export default () => {
   const overviewNotes = (
