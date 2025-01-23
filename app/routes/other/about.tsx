@@ -28,7 +28,7 @@ const SubmitButton = () => {
         </Card>
         <p>
           It is available as an{" "}
-          <Link href="hthttps://www.npmjs.com/package/rfui-package">
+          <Link href="https://www.npmjs.com/package/rfui-package">
             NPM package
           </Link>
           . Check out the <Link href="/getting-started">Getting Started</Link>{" "}
