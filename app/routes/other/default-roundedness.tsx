@@ -28,7 +28,7 @@ export default () => {
         <p>
           RFUI makes it easy to do this. In RFUI's stylesheet there is a{" "}
           <InlineCode>--default-roundedness</InlineCode> CSS variable that you{" "}
-          <Link href="/css-variables">can set</Link>.
+          <Link href="/getting-started#set-up-styles">can set</Link>.
         </p>
         <CodeBlock
           language="css"

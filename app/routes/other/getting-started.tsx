@@ -46,18 +46,29 @@ export default () => {
         <CodeBlock code={`npm install rfui-package`} />
       </Text>
 
-      <H2 inPageLink="include-rfui-stylesheet">
-        {"2) Include RFUI stylesheet"}
-      </H2>
+      <H2 inPageLink="set-up-styles">{"2) Set up styles"}</H2>
       <Text>
-        <p>Something like this:</p>
-        <CodeBlock
-          language="tsx"
-          code={`<link rel="stylesheet" href="https://rfui.deno.dev/rfui.css" />`}
-        />
         <p>
-          See the <Link href="/stylesheet">Stylesheet</Link> page for more
-          information.
+          RFUI gives you components that use classes like{" "}
+          <InlineCode>w-full</InlineCode>. But in order for things to look as
+          they're expected to look, you'll need to make sure that you have the
+          corresponding CSS:
+        </p>
+        <CodeBlock language="css" code={`.w-full { width: 100% }`} />
+        <p>
+          Right now RFUI is intended to be used by apps that use{" "}
+          <Link href="https://tailwindcss.com/">Tailwind CSS</Link>. Make sure
+          that you have a CSS file like{" "}
+          <Link href="https://github.com/rfui-library/rfui-docs/blob/master/app/app.css">
+            this one
+          </Link>{" "}
+          and that you have:
+        </p>
+        <CodeBlock code='"./node_modules/rfui-package/dist/**/*.{js,jsx,ts,tsx}"' />
+        <p>
+          In your <InlineCode>tailwind.config.ts</InlineCode>'s{" "}
+          <InlineCode>content</InlineCode> array so that Tailwind doesn't purge
+          the classes that RFUI needs.
         </p>
       </Text>
 
@@ -92,31 +103,6 @@ export default () => {
           <Link href="https://heroicons.com/">heroicons</Link>. If you end up
           having a need for more icons, to maintain a consistent look and feel,
           you probably will want to use heroicons in your project as well.
-        </p>
-      </Text>
-
-      <H2 inPageLink="customize-css-variables">
-        {"6) Customize CSS variables (optional)"}
-      </H2>
-      <Text>
-        <p>
-          In your project's eg. <InlineCode>app.css</InlineCode> file do
-          something like this to override the{" "}
-          <Link href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">
-            CSS variables
-          </Link>{" "}
-          that were defined in RFUI's stylesheet that you set up in{" "}
-          <Link href="#include-rfui-stylesheet">step two</Link>.
-        </p>
-        <CodeBlock
-          language="css"
-          code={`:root {
-  --default-roundedness: var(--rounded-lg);
-}`}
-        />
-        <p>
-          See the <Link href="/css-variables">"CSS variables" page</Link> for
-          more information.
         </p>
       </Text>
     </div>

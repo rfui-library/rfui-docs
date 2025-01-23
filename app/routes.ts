@@ -9,11 +9,9 @@ export default [
   index("routes/home.tsx"),
   route("about", "./routes/other/about.tsx"),
   route("choose-a-personality", "./routes/other/choose-a-personality.tsx"),
-  route("css-variables", "./routes/other/css-variables.tsx"),
   route("default-roundedness", "./routes/other/default-roundedness.tsx"),
   route("getting-started", "./routes/other/getting-started.tsx"),
   route("rest-parameters", "./routes/other/rest-parameters.tsx"),
-  route("stylesheet", "./routes/other/stylesheet.tsx"),
   ...prefix("components", [
     ...prefix("data-display", [
       route("badge", "./routes/components/data-display/badge.tsx"),

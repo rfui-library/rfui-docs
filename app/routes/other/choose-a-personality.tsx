@@ -204,9 +204,7 @@ export default () => {
           <AlertBody>
             To set your color palette you can edit the CSS variables. For
             example, <InlineCode>--color-primary-50</InlineCode>,{" "}
-            <InlineCode>--color-primary-100</InlineCode>, etc. See the{" "}
-            <Link href="/css-variables">"CSS variables"</Link> page for more
-            information.
+            <InlineCode>--color-primary-100</InlineCode>, etc.
           </AlertBody>
         </Alert>
         <p>
