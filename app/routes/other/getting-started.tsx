@@ -34,24 +34,16 @@ export default () => {
         </Alert>
       </Text>
 
-      <H2 inPageLink="set-up-package">{"1) Set up package"}</H2>
+      <H2 inPageLink="install-package">{"1) Install package"}</H2>
       <Text>
         <p>
-          The RFUI library is hosted as a{" "}
-          <Link href="https://deno.land/x">Deno Third Party Module</Link>.
-        </p>
-        <p>
-          You'll probably want to use{"  "}
-          <Link href="https://docs.deno.com/runtime/manual/basics/import_maps">
-            Import Maps
+          The RFUI library is hosted as an{" "}
+          <Link href="https://www.npmjs.com/package/rfui-package">
+            NPM package
           </Link>
-          . Add the following to the <InlineCode>"imports"</InlineCode> object
-          in <InlineCode>deno.json</InlineCode>:
+          .
         </p>
-        <CodeBlock
-          language="ts"
-          code={`"rfui": "https://deno.land/x/rfui@v0.1.30/mod.ts"`}
-        />
+        <CodeBlock code={`npm install rfui-package`} />
       </Text>
 
       <H2 inPageLink="include-rfui-stylesheet">
@@ -73,7 +65,7 @@ export default () => {
         {"3) Import and use RFUI component"}
       </H2>
       <Text>
-        <p>Something like:</p>
+        <p>Something like this:</p>
         <CodeBlock
           language="tsx"
           code={`import { Button } from "rfui-package";
