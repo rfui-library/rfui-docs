@@ -8,7 +8,6 @@ import {
   Flex,
   H1,
   H2,
-  InlineCode,
   Link,
   Stack,
   Text,
@@ -30,12 +29,12 @@ export default () => {
           A lightweight, UX and DX-focused component library for React apps.
         </H2>
         <Text>
-          <p>
+          {/* <p>
             RFUI is opinionated. It doesn't try to please everyone, and it
             doesn't try to do too much. It prioritizes simplicity, user
             experience, developer experience, pits of success, avoiding
             dependencies, and <InlineCode>#useThePlatform</InlineCode>.
-          </p>
+          </p> */}
           <p>
             Interested? Check out the <Link href="/about">About</Link> page or
             just <Link href="/getting-started">get started</Link>.
