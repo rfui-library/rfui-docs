@@ -37,24 +37,19 @@ export default () => {
       ),
     },
     {
-      title: "Uncontrolled",
+      title: "Name",
       description: (
         <div>
           The approach below leads to <InlineCode>name</InlineCode> being passed
-          to <InlineCode>{`<input type="checkbox" />`}</InlineCode>.
+          to <InlineCode>{`<input type="checkbox" />`}</InlineCode>. This is
+          useful when you are doing native form submissions.
         </div>
       ),
       demo: (
         <CheckboxCardGroup>
-          <CheckboxCardGroupItem checkboxRest={{ name: "one" }}>
-            One
-          </CheckboxCardGroupItem>
-          <CheckboxCardGroupItem checkboxRest={{ name: "two" }}>
-            Two
-          </CheckboxCardGroupItem>
-          <CheckboxCardGroupItem checkboxRest={{ name: "three" }}>
-            Three
-          </CheckboxCardGroupItem>
+          <CheckboxCardGroupItem name="one">One</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem name="two">Two</CheckboxCardGroupItem>
+          <CheckboxCardGroupItem name="three">Three</CheckboxCardGroupItem>
         </CheckboxCardGroup>
       ),
       code: (
@@ -62,21 +57,15 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<CheckboxCardGroup>
-  <CheckboxCardGroupItem checkboxRest={{ name: "one" }}>
-    One
-  </CheckboxCardGroupItem>
-  <CheckboxCardGroupItem checkboxRest={{ name: "two" }}>
-    Two
-  </CheckboxCardGroupItem>
-  <CheckboxCardGroupItem checkboxRest={{ name: "three" }}>
-    Three
-  </CheckboxCardGroupItem>
+  <CheckboxCardGroupItem name="one">One</CheckboxCardGroupItem>
+  <CheckboxCardGroupItem name="two">Two</CheckboxCardGroupItem>
+  <CheckboxCardGroupItem name="three">Three</CheckboxCardGroupItem>
 </CheckboxCardGroup>`}
         />
       ),
     },
     {
-      title: "Controlled",
+      title: "Handling changes",
       description: (
         <div>
           Pass <InlineCode>onChange</InlineCode> to{" "}
@@ -261,9 +250,16 @@ export default () => {
           notes: null,
         },
         {
+          name: "name",
+          required: false,
+          type: 'CheckboxType["name"]',
+          default: null,
+          notes: null,
+        },
+        {
           name: "checkboxRest",
           required: false,
-          type: 'Omit<CheckboxType, "size">',
+          type: 'Omit<CheckboxType, "size" | "name">',
           default: null,
           notes: (
             <div>
