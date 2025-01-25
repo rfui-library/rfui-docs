@@ -42,7 +42,7 @@ export default () => {
     {
       title: "With value initially selected",
       demo: (
-        <RadioButtonGroup name="plan" defaultSelectedValue="free">
+        <RadioButtonGroup name="plan" initialSelectedValue="free">
           <RadioButtonGroupItem value="free">Free</RadioButtonGroupItem>
           <RadioButtonGroupItem value="basic">Basic</RadioButtonGroupItem>
           <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
@@ -52,7 +52,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<RadioButtonGroup name="plan" defaultSelectedValue="free">
+          code={`<RadioButtonGroup name="plan" initialSelectedValue="free">
   <RadioButtonGroupItem value="free">
     Free
   </RadioButtonGroupItem>
@@ -118,7 +118,7 @@ export default () => {
           ),
         },
         {
-          name: "defaultSelectedValue",
+          name: "initialSelectedValue",
           required: false,
           type: 'RadioButtonType["value"]',
           default: null,
