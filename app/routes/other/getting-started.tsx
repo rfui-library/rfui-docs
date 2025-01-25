@@ -54,7 +54,7 @@ export default () => {
       <Text>
         <p>
           The RFUI library has a{" "}
-          <Link href="https://nodejs.org/en/blog/npm/peer-dependencies">
+          <Link href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json#peerdependencies">
             peer dependency
           </Link>{" "}
           on{" "}
