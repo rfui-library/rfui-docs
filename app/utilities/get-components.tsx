@@ -21,6 +21,8 @@ import {
   PasswordInput,
   Progress,
   RadioButton,
+  RadioButtonCardGroup,
+  RadioButtonCardGroupItem,
   RadioButtonGroup,
   RadioButtonGroupItem,
   Select,
@@ -157,20 +159,20 @@ export const getComponents = () => ({
       href: "/components/form/radio-button",
       demo: <RadioButton />,
     },
-    // {
-    //   name: "RadioButtonCardGroup",
-    //   href: "/components/form/radio-button-card-group",
-    //   demo: (
-    //     <RadioButtonCardGroup padding="sm">
-    //       <RadioButtonCardGroupItem name="one" selectedItemName={signal}>
-    //         One
-    //       </RadioButtonCardGroupItem>
-    //       <RadioButtonCardGroupItem name="two" selectedItemName={signal}>
-    //         Two
-    //       </RadioButtonCardGroupItem>
-    //     </RadioButtonCardGroup>
-    //   ),
-    // },
+    {
+      name: "RadioButtonCardGroup",
+      href: "/components/form/radio-button-card-group",
+      demo: (
+        <RadioButtonCardGroup padding="sm">
+          <RadioButtonCardGroupItem name="one" selectedItemName={signal}>
+            One
+          </RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem name="two" selectedItemName={signal}>
+            Two
+          </RadioButtonCardGroupItem>
+        </RadioButtonCardGroup>
+      ),
+    },
     {
       name: "RadioButtonGroup",
       href: "/components/form/radio-button-group",
