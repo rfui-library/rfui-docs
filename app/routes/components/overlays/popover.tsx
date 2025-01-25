@@ -2,7 +2,14 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, InlineCode, Link, Stack, Tooltip } from "rfui-package";
+import {
+  Button,
+  CodeBlock,
+  InlineCode,
+  Link,
+  Popover,
+  Stack,
+} from "rfui-package";
 
 export default () => {
   const overviewNotes = (
@@ -31,54 +38,58 @@ export default () => {
   const examples: ExampleType[] = [
     {
       title: "Basic",
-      demo: <Tooltip content="Example content">Test</Tooltip>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Tooltip content="Example content">Test</Tooltip>`}
-        />
-      ),
-    },
-    {
-      title: "Direction",
       demo: (
-        <Stack className="items-center gap-8 p-8">
-          <Tooltip direction="top" content="Example content">
-            Top
-          </Tooltip>
-          <Tooltip direction="right" content="Example content">
-            Right
-          </Tooltip>
-          <Tooltip direction="bottom" content="Example content">
-            Bottom
-          </Tooltip>
-          <Tooltip direction="left" content="Example content">
-            Left
-          </Tooltip>
-        </Stack>
+        <Popover content="Example content">
+          <Button>Test</Button>
+        </Popover>
       ),
       code: (
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<Stack className="items-center gap-8 p-8">
-  <Tooltip direction="top" content="Example content">
-    Top
-  </Tooltip>
-  <Tooltip direction="right" content="Example content">
-    Right
-  </Tooltip>
-  <Tooltip direction="bottom" content="Example content">
-    Bottom
-  </Tooltip>
-  <Tooltip direction="left" content="Example content">
-    Left
-  </Tooltip>
-</Stack>`}
+          code={`<Popover content="Example content">Test</Popover>`}
         />
       ),
     },
+    //     {
+    //       title: "Direction",
+    //       demo: (
+    //         <Stack className="items-center gap-8 p-8">
+    //           <Tooltip direction="top" content="Example content">
+    //             Top
+    //           </Tooltip>
+    //           <Tooltip direction="right" content="Example content">
+    //             Right
+    //           </Tooltip>
+    //           <Tooltip direction="bottom" content="Example content">
+    //             Bottom
+    //           </Tooltip>
+    //           <Tooltip direction="left" content="Example content">
+    //             Left
+    //           </Tooltip>
+    //         </Stack>
+    //       ),
+    //       code: (
+    //         <CodeBlock
+    //           className="mt-4"
+    //           language="tsx"
+    //           code={`<Stack className="items-center gap-8 p-8">
+    //   <Tooltip direction="top" content="Example content">
+    //     Top
+    //   </Tooltip>
+    //   <Tooltip direction="right" content="Example content">
+    //     Right
+    //   </Tooltip>
+    //   <Tooltip direction="bottom" content="Example content">
+    //     Bottom
+    //   </Tooltip>
+    //   <Tooltip direction="left" content="Example content">
+    //     Left
+    //   </Tooltip>
+    // </Stack>`}
+    //         />
+    //       ),
+    //     },
   ];
   const propsTables = [
     {
