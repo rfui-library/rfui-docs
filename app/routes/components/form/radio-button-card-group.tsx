@@ -69,10 +69,39 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<RadioButtonCardGroup 
-  name="basic-example" 
+  name="on-change-example" 
   onChange={(newValue) => {
     console.log(newValue);
   }}
+>
+  <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+</RadioButtonCardGroup>`}
+        />
+      ),
+    },
+    {
+      title: "Initial selected value",
+      demo: (
+        <RadioButtonCardGroup
+          name="initial-selected-value-example"
+          initialSelectedValue="two"
+        >
+          <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="three">
+            Three
+          </RadioButtonCardGroupItem>
+        </RadioButtonCardGroup>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<RadioButtonCardGroup 
+  name="initial-selected-value-example" 
+  initialSelectedValue="two"
 >
   <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
@@ -208,6 +237,13 @@ export default () => {
           name: "name",
           required: true,
           type: 'RadioButtonType["name"]',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "initialSelectedValue",
+          required: false,
+          type: 'RadioButtonType["value"]',
           default: null,
           notes: null,
         },
