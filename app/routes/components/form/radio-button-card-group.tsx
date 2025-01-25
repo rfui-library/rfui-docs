@@ -49,6 +49,39 @@ export default () => {
       ),
     },
     {
+      title: "Reacting to changes",
+      demo: (
+        <RadioButtonCardGroup
+          name="on-change-example"
+          onChange={(newValue) => {
+            console.log(newValue);
+          }}
+        >
+          <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="three">
+            Three
+          </RadioButtonCardGroupItem>
+        </RadioButtonCardGroup>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<RadioButtonCardGroup 
+  name="basic-example" 
+  onChange={(newValue) => {
+    console.log(newValue);
+  }}
+>
+  <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+</RadioButtonCardGroup>`}
+        />
+      ),
+    },
+    {
       title: "Padding",
       description: (
         <div>
@@ -197,6 +230,13 @@ export default () => {
               <Link href="/default-roundedness">"Default roundedness"</Link>.
             </div>
           ),
+        },
+        {
+          name: "onChange",
+          required: false,
+          type: '(newValue: RadioButtonType["value"]) => void;',
+          default: null,
+          notes: null,
         },
         {
           name: "children",
