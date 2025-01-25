@@ -52,11 +52,22 @@ export default () => {
       <Text>
         <p>
           RFUI gives you components that use classes like{" "}
-          <InlineCode>w-full</InlineCode>. But in order for things to look as
-          they're expected to look, you'll need to make sure that you have the
-          corresponding CSS:
+          <InlineCode>flex-col</InlineCode>. For example, the{" "}
+          <Link href="/components/layout/stack">
+            <InlineCode>Stack</InlineCode>
+          </Link>{" "}
+          component outputs the following HTML:
         </p>
-        <CodeBlock language="css" code={`.w-full { width: 100% }`} />
+        <CodeBlock language="html" code={`<div class="flex flex-col"></div>`} />
+        <p>
+          In order for things to look as they're expected to look, you'll need
+          to make sure that you have the corresponding CSS:
+        </p>
+        <CodeBlock
+          language="css"
+          code={`.flex { display: flex; }
+.flex-col { flex-direction: column; }`}
+        />
         <p>
           Right now RFUI is intended to be used by apps that use{" "}
           <Link href="https://tailwindcss.com/">Tailwind CSS</Link>. Make sure
