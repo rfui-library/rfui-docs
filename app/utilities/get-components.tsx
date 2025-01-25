@@ -163,13 +163,9 @@ export const getComponents = () => ({
       name: "RadioButtonCardGroup",
       href: "/components/form/radio-button-card-group",
       demo: (
-        <RadioButtonCardGroup padding="sm">
-          <RadioButtonCardGroupItem name="one" selectedItemName={signal}>
-            One
-          </RadioButtonCardGroupItem>
-          <RadioButtonCardGroupItem name="two" selectedItemName={signal}>
-            Two
-          </RadioButtonCardGroupItem>
+        <RadioButtonCardGroup name="number" padding="sm">
+          <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
         </RadioButtonCardGroup>
       ),
     },

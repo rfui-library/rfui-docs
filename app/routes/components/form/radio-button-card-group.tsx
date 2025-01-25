@@ -12,14 +12,6 @@ import {
 } from "rfui-package";
 
 export default () => {
-  // const 'basicExampleSelectedItemName' = useSignal<string | null>(null);
-  // const 'paddingSmExampleSelectedItemName' = useSignal<string | null>(null);
-  // const 'paddingMdExampleSelectedItemName' = useSignal<string | null>(null);
-  // const 'paddingLgExampleSelectedItemName' = useSignal<string | null>(null);
-  // const 'roundedSquareExampleSelectedItemName' = useSignal<string | null>(null);
-  // const 'roundedSmExampleSelectedItemName' = useSignal<string | null>(null);
-  // const 'roundedLgExampleSelectedItemName' = useSignal<string | null>(null);
-
   const overviewNotes = (
     <Stack className="gap-2">
       <div>
@@ -27,7 +19,8 @@ export default () => {
         content.
       </div>
       <div>
-        Note: The example below doesn't work due to a quirk in the docs.
+        Note: The example below is slightly buggy due to a quirk in the docs,
+        not due to a real issue with the component.
       </div>
     </Stack>
   );
@@ -35,23 +28,10 @@ export default () => {
     {
       title: "Basic",
       demo: (
-        <RadioButtonCardGroup>
-          <RadioButtonCardGroupItem
-            name="basic-one"
-            selectedItemName={"basicExampleSelectedItemName"}
-          >
-            One
-          </RadioButtonCardGroupItem>
-          <RadioButtonCardGroupItem
-            name="basic-two"
-            selectedItemName={"basicExampleSelectedItemName"}
-          >
-            Two
-          </RadioButtonCardGroupItem>
-          <RadioButtonCardGroupItem
-            name="basic-three"
-            selectedItemName={"basicExampleSelectedItemName"}
-          >
+        <RadioButtonCardGroup name="basic-example">
+          <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="three">
             Three
           </RadioButtonCardGroupItem>
         </RadioButtonCardGroup>
@@ -60,25 +40,10 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<RadioButtonCardGroup>
-  <RadioButtonCardGroupItem
-    name="basic-one"
-    selectedItemName={'basicExampleSelectedItemName'}
-  >
-    One
-  </RadioButtonCardGroupItem>
-  <RadioButtonCardGroupItem
-    name="basic-two"
-    selectedItemName={'basicExampleSelectedItemName'}
-  >
-    Two
-  </RadioButtonCardGroupItem>
-  <RadioButtonCardGroupItem
-    name="basic-three"
-    selectedItemName={'basicExampleSelectedItemName'}
-  >
-    Three
-  </RadioButtonCardGroupItem>
+          code={`<RadioButtonCardGroup name="basic-example">
+  <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
 </RadioButtonCardGroup>`}
         />
       ),
@@ -94,63 +59,24 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
-          <RadioButtonCardGroup padding="sm">
-            <RadioButtonCardGroupItem
-              name="padding-sm-one"
-              selectedItemName={"paddingSmExampleSelectedItemName"}
-            >
-              One
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="padding-sm-two"
-              selectedItemName={"paddingSmExampleSelectedItemName"}
-            >
-              Two
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="padding-sm-three"
-              selectedItemName={"paddingSmExampleSelectedItemName"}
-            >
+          <RadioButtonCardGroup name="padding-example-sm" padding="sm">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
               Three
             </RadioButtonCardGroupItem>
           </RadioButtonCardGroup>
-          <RadioButtonCardGroup padding="md">
-            <RadioButtonCardGroupItem
-              name="padding-md-one"
-              selectedItemName={"paddingMdExampleSelectedItemName"}
-            >
-              One
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="padding-md-two"
-              selectedItemName={"paddingMdExampleSelectedItemName"}
-            >
-              Two
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="padding-md-three"
-              selectedItemName={"paddingMdExampleSelectedItemName"}
-            >
+          <RadioButtonCardGroup name="padding-example-md" padding="md">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
               Three
             </RadioButtonCardGroupItem>
           </RadioButtonCardGroup>
-          <RadioButtonCardGroup padding="lg">
-            <RadioButtonCardGroupItem
-              name="padding-lg-one"
-              selectedItemName={"paddingLgExampleSelectedItemName"}
-            >
-              One
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="padding-lg-two"
-              selectedItemName={"paddingLgExampleSelectedItemName"}
-            >
-              Two
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="padding-lg-three"
-              selectedItemName={"paddingLgExampleSelectedItemName"}
-            >
+          <RadioButtonCardGroup name="padding-example-lg" padding="lg">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
               Three
             </RadioButtonCardGroupItem>
           </RadioButtonCardGroup>
@@ -161,65 +87,20 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="gap-5">
-  <RadioButtonCardGroup padding="sm">
-    <RadioButtonCardGroupItem
-      name="padding-sm-one"
-      selectedItemName={'paddingSmExampleSelectedItemName'}
-    >
-      One
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="padding-sm-two"
-      selectedItemName={'paddingSmExampleSelectedItemName'}
-    >
-      Two
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="padding-sm-three"
-      selectedItemName={'paddingSmExampleSelectedItemName'}
-    >
-      Three
-    </RadioButtonCardGroupItem>
+  <RadioButtonCardGroup name="padding-example-sm" padding="sm">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
-  <RadioButtonCardGroup padding="md">
-    <RadioButtonCardGroupItem
-      name="padding-md-one"
-      selectedItemName={'paddingMdExampleSelectedItemName'}
-    >
-      One
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="padding-md-two"
-      selectedItemName={'paddingMdExampleSelectedItemName'}
-    >
-      Two
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="padding-md-three"
-      selectedItemName={'paddingMdExampleSelectedItemName'}
-    >
-      Three
-    </RadioButtonCardGroupItem>
+  <RadioButtonCardGroup name="padding-example-md" padding="md">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
-  <RadioButtonCardGroup padding="lg">
-    <RadioButtonCardGroupItem
-      name="padding-lg-one"
-      selectedItemName={'paddingLgExampleSelectedItemName'}
-    >
-      One
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="padding-lg-two"
-      selectedItemName={'paddingLgExampleSelectedItemName'}
-    >
-      Two
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="padding-lg-three"
-      selectedItemName={'paddingLgExampleSelectedItemName'}
-    >
-      Three
-    </RadioButtonCardGroupItem>
+  <RadioButtonCardGroup name="padding-example-lg" padding="lg">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
 </Stack>`}
         />
@@ -238,63 +119,24 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
-          <RadioButtonCardGroup rounded="square">
-            <RadioButtonCardGroupItem
-              name="rounded-square-one"
-              selectedItemName={"roundedSquareExampleSelectedItemName"}
-            >
-              One
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="rounded-square-two"
-              selectedItemName={"roundedSquareExampleSelectedItemName"}
-            >
-              Two
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="rounded-square-three"
-              selectedItemName={"roundedSquareExampleSelectedItemName"}
-            >
+          <RadioButtonCardGroup name="rounded-example-square" rounded="square">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
               Three
             </RadioButtonCardGroupItem>
           </RadioButtonCardGroup>
-          <RadioButtonCardGroup rounded="sm">
-            <RadioButtonCardGroupItem
-              name="rounded-sm-one"
-              selectedItemName={"roundedSmExampleSelectedItemName"}
-            >
-              One
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="rounded-sm-two"
-              selectedItemName={"roundedSmExampleSelectedItemName"}
-            >
-              Two
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="rounded-sm-three"
-              selectedItemName={"roundedSmExampleSelectedItemName"}
-            >
+          <RadioButtonCardGroup name="rounded-example-sm" rounded="sm">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
               Three
             </RadioButtonCardGroupItem>
           </RadioButtonCardGroup>
-          <RadioButtonCardGroup rounded="lg">
-            <RadioButtonCardGroupItem
-              name="rounded-lg-one"
-              selectedItemName={"roundedLgExampleSelectedItemName"}
-            >
-              One
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="rounded-lg-two"
-              selectedItemName={"roundedLgExampleSelectedItemName"}
-            >
-              Two
-            </RadioButtonCardGroupItem>
-            <RadioButtonCardGroupItem
-              name="rounded-lg-three"
-              selectedItemName={"roundedLgExampleSelectedItemName"}
-            >
+          <RadioButtonCardGroup name="rounded-example-lg" rounded="lg">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
               Three
             </RadioButtonCardGroupItem>
           </RadioButtonCardGroup>
@@ -305,65 +147,20 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<Stack className="gap-5">
-  <RadioButtonCardGroup rounded="square">
-    <RadioButtonCardGroupItem
-      name="rounded-square-one"
-      selectedItemName={'roundedSquareExampleSelectedItemName'}
-    >
-      One
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="rounded-square-two"
-      selectedItemName={'roundedSquareExampleSelectedItemName'}
-    >
-      Two
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="rounded-square-three"
-      selectedItemName={'roundedSquareExampleSelectedItemName'}
-    >
-      Three
-    </RadioButtonCardGroupItem>
+  <RadioButtonCardGroup name="rounded-example-square" rounded="square">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
-  <RadioButtonCardGroup rounded="sm">
-    <RadioButtonCardGroupItem
-      name="rounded-sm-one"
-      selectedItemName={'roundedSmExampleSelectedItemName'}
-    >
-      One
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="rounded-sm-two"
-      selectedItemName={'roundedSmExampleSelectedItemName'}
-    >
-      Two
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="rounded-sm-three"
-      selectedItemName={'roundedSmExampleSelectedItemName'}
-    >
-      Three
-    </RadioButtonCardGroupItem>
+  <RadioButtonCardGroup name="rounded-example-sm" rounded="sm">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
-  <RadioButtonCardGroup rounded="lg">
-    <RadioButtonCardGroupItem
-      name="rounded-lg-one"
-      selectedItemName={'roundedLgExampleSelectedItemName'}
-    >
-      One
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="rounded-lg-two"
-      selectedItemName={'roundedLgExampleSelectedItemName'}
-    >
-      Two
-    </RadioButtonCardGroupItem>
-    <RadioButtonCardGroupItem
-      name="rounded-lg-three"
-      selectedItemName={'roundedLgExampleSelectedItemName'}
-    >
-      Three
-    </RadioButtonCardGroupItem>
+  <RadioButtonCardGroup name="rounded-example-lg" rounded="lg">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
 </Stack>`}
         />
@@ -374,6 +171,13 @@ export default () => {
     {
       title: null,
       props: [
+        {
+          name: "name",
+          required: true,
+          type: 'RadioButtonType["name"]',
+          default: null,
+          notes: null,
+        },
         {
           name: "padding",
           required: false,
@@ -407,52 +211,11 @@ export default () => {
       title: "RadioButtonCardGroupItem",
       props: [
         {
-          name: "name",
-          required: true,
-          type: "string",
-          default: null,
-          notes: null,
-        },
-        {
           name: "value",
           required: false,
           type: 'RadioButtonType["value"]',
           default: null,
           notes: null,
-        },
-        {
-          name: "selectedItemName",
-          required: true,
-          type: "Signal<string | null>",
-          default: null,
-          notes: (
-            <div>
-              See the Preact docs for{" "}
-              <Link href="https://preactjs.com/guide/v10/signals">signals</Link>
-              .
-            </div>
-          ),
-        },
-        {
-          name: "radioButtonRest",
-          required: false,
-          type: 'Omit<RadioButtonType, "size">',
-          default: null,
-          notes: (
-            <div>
-              <div className="leading-relaxed">
-                This gets spread to the <InlineCode>RadioButton</InlineCode>{" "}
-                like so:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<div>
-  ...
-  <RadioButton {...radioButtonRest} />
-</div>`}
-              />
-            </div>
-          ),
         },
         {
           name: "children",
