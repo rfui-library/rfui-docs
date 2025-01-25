@@ -51,45 +51,45 @@ export default () => {
         />
       ),
     },
-    //     {
-    //       title: "Direction",
-    //       demo: (
-    //         <Stack className="items-center gap-8 p-8">
-    //           <Tooltip direction="top" content="Example content">
-    //             Top
-    //           </Tooltip>
-    //           <Tooltip direction="right" content="Example content">
-    //             Right
-    //           </Tooltip>
-    //           <Tooltip direction="bottom" content="Example content">
-    //             Bottom
-    //           </Tooltip>
-    //           <Tooltip direction="left" content="Example content">
-    //             Left
-    //           </Tooltip>
-    //         </Stack>
-    //       ),
-    //       code: (
-    //         <CodeBlock
-    //           className="mt-4"
-    //           language="tsx"
-    //           code={`<Stack className="items-center gap-8 p-8">
-    //   <Tooltip direction="top" content="Example content">
-    //     Top
-    //   </Tooltip>
-    //   <Tooltip direction="right" content="Example content">
-    //     Right
-    //   </Tooltip>
-    //   <Tooltip direction="bottom" content="Example content">
-    //     Bottom
-    //   </Tooltip>
-    //   <Tooltip direction="left" content="Example content">
-    //     Left
-    //   </Tooltip>
-    // </Stack>`}
-    //         />
-    //       ),
-    //     },
+    {
+      title: "Direction",
+      demo: (
+        <Stack className="items-center gap-8 p-8">
+          <Popover direction="top" content="Example content">
+            <Button>Top</Button>
+          </Popover>
+          <Popover direction="right" content="Example content">
+            <Button>Right</Button>
+          </Popover>
+          <Popover direction="bottom" content="Example content">
+            <Button>Botton</Button>
+          </Popover>
+          <Popover direction="left" content="Example content">
+            <Button>Left</Button>
+          </Popover>
+        </Stack>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<Stack className="items-center gap-8 p-8">
+  <Popover direction="top" content="Example content">
+    <Button>Top</Button>
+  </Popover>
+  <Popover direction="right" content="Example content">
+    <Button>Right</Button>
+  </Popover>
+  <Popover direction="bottom" content="Example content">
+    <Button>Botton</Button>
+  </Popover>
+  <Popover direction="left" content="Example content">
+    <Button>Left</Button>
+  </Popover>
+</Stack>`}
+        />
+      ),
+    },
   ];
   const propsTables = [
     {
@@ -115,33 +115,6 @@ export default () => {
           type: "ComponentChild",
           default: null,
           notes: null,
-        },
-        {
-          name: "...rest",
-          required: false,
-          type: 'ComponentProps<"span">',
-          default: null,
-          notes: (
-            <div>
-              <div className="leading-relaxed">
-                See the docs for{" "}
-                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>Tooltip</InlineCode>, you could pass anything you
-                normally would pass to <InlineCode>{"<span>"}</InlineCode>{" "}
-                because the return value{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/overlays/tooltip.tsx">
-                  looks something like
-                </Link>{" "}
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<span className={containerClass} {...restWithoutClass}>
-  {children}
-</span>`}
-              />
-            </div>
-          ),
         },
       ],
     },
