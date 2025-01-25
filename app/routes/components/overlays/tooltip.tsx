@@ -24,7 +24,11 @@ export default () => {
       <p>
         Note: Tooltips are meant for small amounts of content. If you have a
         larger amount of content that you want to display after a user
-        interaction, consider a popover component instead. [
+        interaction, consider the{" "}
+        <Link href="/components/overlays/popover">
+          <InlineCode>Popover</InlineCode>
+        </Link>{" "}
+        component instead. [
         <Link href="https://ux.stackexchange.com/q/88844/39046">source</Link>]
       </p>
       <p>
