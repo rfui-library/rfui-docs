@@ -34,7 +34,9 @@ export default () => {
         </Alert>
       </Text>
 
-      <H2 inPageLink="install-package">{"1) Install package"}</H2>
+      <H2 inPageLink="install-package">
+        {"1)"} Install <InlineCode>rfui-package</InlineCode>
+      </H2>
       <Text>
         <p>
           The RFUI library is hosted as an{" "}
@@ -104,6 +106,33 @@ export default () => {
           having a need for more icons, to maintain a consistent look and feel,
           you probably will want to use heroicons in your project as well.
         </p>
+      </Text>
+
+      <H2 inPageLink="install-headless-ui">
+        {"6)"} Install <InlineCode>@headlessui/react</InlineCode> (optional)
+      </H2>
+      <Text>
+        <p>
+          The RFUI library has an{" "}
+          <Link href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json#peerdependenciesmeta">
+            optional
+          </Link>{" "}
+          <Link href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json#peerdependencies">
+            peer dependency
+          </Link>{" "}
+          on{" "}
+          <Link href="https://www.npmjs.com/package/@headlessui/react">
+            <InlineCode>@headlessui/react</InlineCode>
+          </Link>
+          . It is optional because only certain RFUI components such as{" "}
+          <Link href="/components/overlays/popover">
+            <InlineCode>Popover</InlineCode>
+          </Link>{" "}
+          depend on <InlineCode>@headlessui/react</InlineCode>. The components
+          that depend on it say so at the top of the corresponding documentation
+          page.
+        </p>
+        <CodeBlock code={`npm install @headlessui/react`} />
       </Text>
     </div>
   );
