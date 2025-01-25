@@ -48,7 +48,25 @@ export default () => {
         <CodeBlock code={`npm install rfui-package`} />
       </Text>
 
-      <H2 inPageLink="set-up-styles">{"2) Set up styles"}</H2>
+      <H2 inPageLink="install-headless-ui">
+        {"2)"} Install <InlineCode>@headlessui/react</InlineCode>
+      </H2>
+      <Text>
+        <p>
+          The RFUI library has a{" "}
+          <Link href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json#peerdependencies">
+            peer dependency
+          </Link>{" "}
+          on{" "}
+          <Link href="https://www.npmjs.com/package/@headlessui/react">
+            <InlineCode>@headlessui/react</InlineCode>
+          </Link>
+          .
+        </p>
+        <CodeBlock code={`npm install @headlessui/react`} />
+      </Text>
+
+      <H2 inPageLink="set-up-styles">{"3) Set up styles"}</H2>
       <Text>
         <p>
           RFUI gives you components that use classes like{" "}
@@ -108,7 +126,7 @@ export default () => {
       </Text>
 
       <H2 inPageLink="import-rfui-component">
-        {"3) Import and use RFUI component"}
+        {"4) Import and use RFUI component"}
       </H2>
       <Text>
         <p>Something like this:</p>
@@ -121,7 +139,7 @@ export default () => {
       </Text>
 
       <H2 inPageLink="decide-on-a-personality">
-        {"4) Decide on a personality (recommended)"}
+        {"5) Decide on a personality (recommended)"}
       </H2>
       <Text>
         <p>
@@ -131,7 +149,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 inPageLink="use-heroicons">{"5) Use heroicons (recommended)"}</H2>
+      <H2 inPageLink="use-heroicons">{"6) Use heroicons (recommended)"}</H2>
       <Text>
         <p>
           Various RFUI components use{" "}
@@ -139,33 +157,6 @@ export default () => {
           having a need for more icons, to maintain a consistent look and feel,
           you probably will want to use heroicons in your project as well.
         </p>
-      </Text>
-
-      <H2 inPageLink="install-headless-ui">
-        {"6)"} Install <InlineCode>@headlessui/react</InlineCode> (optional)
-      </H2>
-      <Text>
-        <p>
-          The RFUI library has an{" "}
-          <Link href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json#peerdependenciesmeta">
-            optional
-          </Link>{" "}
-          <Link href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json#peerdependencies">
-            peer dependency
-          </Link>{" "}
-          on{" "}
-          <Link href="https://www.npmjs.com/package/@headlessui/react">
-            <InlineCode>@headlessui/react</InlineCode>
-          </Link>
-          . It is optional because only certain RFUI components such as{" "}
-          <Link href="/components/overlays/popover">
-            <InlineCode>Popover</InlineCode>
-          </Link>{" "}
-          depend on <InlineCode>@headlessui/react</InlineCode>. The components
-          that depend on it say so at the top of the corresponding documentation
-          page.
-        </p>
-        <CodeBlock code={`npm install @headlessui/react`} />
       </Text>
     </div>
   );
