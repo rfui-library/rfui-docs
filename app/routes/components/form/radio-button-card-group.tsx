@@ -1,3 +1,280 @@
+import {
+  ComponentDocsPage,
+  type ExampleType,
+} from "@/components/component-docs-page/index";
+import {
+  CodeBlock,
+  InlineCode,
+  Link,
+  RadioButtonCardGroup,
+  RadioButtonCardGroupItem,
+  Stack,
+} from "rfui-package";
+
 export default () => {
-  return <div>RadioButtonCardGroup</div>;
+  const overviewNotes = (
+    <Stack className="gap-2">
+      <div>
+        Add some flair and professionalism to your radio buttons and associated
+        content.
+      </div>
+      <div>
+        Note: The example below is slightly buggy due to a quirk in the docs,
+        not due to a real issue with the component.
+      </div>
+    </Stack>
+  );
+  const examples: ExampleType[] = [
+    {
+      title: "Basic",
+      demo: (
+        <RadioButtonCardGroup name="basic-example">
+          <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="three">
+            Three
+          </RadioButtonCardGroupItem>
+        </RadioButtonCardGroup>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<RadioButtonCardGroup name="basic-example">
+  <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+</RadioButtonCardGroup>`}
+        />
+      ),
+    },
+    {
+      title: "Reacting to changes",
+      demo: (
+        <RadioButtonCardGroup
+          name="on-change-example"
+          onChange={(newValue) => {
+            console.log(newValue);
+          }}
+        >
+          <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="three">
+            Three
+          </RadioButtonCardGroupItem>
+        </RadioButtonCardGroup>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<RadioButtonCardGroup 
+  name="basic-example" 
+  onChange={(newValue) => {
+    console.log(newValue);
+  }}
+>
+  <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+</RadioButtonCardGroup>`}
+        />
+      ),
+    },
+    {
+      title: "Padding",
+      description: (
+        <div>
+          Set <InlineCode>padding</InlineCode> to <InlineCode>"sm"</InlineCode>,{" "}
+          <InlineCode>"md"</InlineCode>, or <InlineCode>"lg"</InlineCode>.
+          Defaults to <InlineCode>"md"</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <Stack className="gap-5">
+          <RadioButtonCardGroup name="padding-example-sm" padding="sm">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
+              Three
+            </RadioButtonCardGroupItem>
+          </RadioButtonCardGroup>
+          <RadioButtonCardGroup name="padding-example-md" padding="md">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
+              Three
+            </RadioButtonCardGroupItem>
+          </RadioButtonCardGroup>
+          <RadioButtonCardGroup name="padding-example-lg" padding="lg">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
+              Three
+            </RadioButtonCardGroupItem>
+          </RadioButtonCardGroup>
+        </Stack>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<Stack className="gap-5">
+  <RadioButtonCardGroup name="padding-example-sm" padding="sm">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+  </RadioButtonCardGroup>
+  <RadioButtonCardGroup name="padding-example-md" padding="md">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+  </RadioButtonCardGroup>
+  <RadioButtonCardGroup name="padding-example-lg" padding="lg">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+  </RadioButtonCardGroup>
+</Stack>`}
+        />
+      ),
+    },
+    {
+      title: "Rounded",
+      description: (
+        <div>
+          Set <InlineCode>rounded</InlineCode> to{" "}
+          <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or{" "}
+          <InlineCode>"lg"</InlineCode>. Defaults to the value of the CSS
+          variable <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <Link href="/default-roundedness">"Default roundedness"</Link>.
+        </div>
+      ),
+      demo: (
+        <Stack className="gap-5">
+          <RadioButtonCardGroup name="rounded-example-square" rounded="square">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
+              Three
+            </RadioButtonCardGroupItem>
+          </RadioButtonCardGroup>
+          <RadioButtonCardGroup name="rounded-example-sm" rounded="sm">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
+              Three
+            </RadioButtonCardGroupItem>
+          </RadioButtonCardGroup>
+          <RadioButtonCardGroup name="rounded-example-lg" rounded="lg">
+            <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+            <RadioButtonCardGroupItem value="three">
+              Three
+            </RadioButtonCardGroupItem>
+          </RadioButtonCardGroup>
+        </Stack>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<Stack className="gap-5">
+  <RadioButtonCardGroup name="rounded-example-square" rounded="square">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+  </RadioButtonCardGroup>
+  <RadioButtonCardGroup name="rounded-example-sm" rounded="sm">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+  </RadioButtonCardGroup>
+  <RadioButtonCardGroup name="rounded-example-lg" rounded="lg">
+    <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+    <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+  </RadioButtonCardGroup>
+</Stack>`}
+        />
+      ),
+    },
+  ];
+  const propsTables = [
+    {
+      title: null,
+      props: [
+        {
+          name: "name",
+          required: true,
+          type: 'RadioButtonType["name"]',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "padding",
+          required: false,
+          type: '"sm" | "md" | "lg"',
+          default: '"md"',
+          notes: null,
+        },
+        {
+          name: "rounded",
+          required: false,
+          type: '"square" | "sm" | "lg"',
+          default: null,
+          notes: (
+            <div>
+              Defaults to the value of the CSS variable{" "}
+              <InlineCode>--default-roundedness</InlineCode>. See{" "}
+              <Link href="/default-roundedness">"Default roundedness"</Link>.
+            </div>
+          ),
+        },
+        {
+          name: "onChange",
+          required: false,
+          type: '(newValue: RadioButtonType["value"]) => void;',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "children",
+          required: true,
+          type: "ComponentChild",
+          default: null,
+          notes: null,
+        },
+      ],
+    },
+    {
+      title: "RadioButtonCardGroupItem",
+      props: [
+        {
+          name: "value",
+          required: false,
+          type: 'RadioButtonType["value"]',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "children",
+          required: true,
+          type: "ComponentChild",
+          default: null,
+          notes: null,
+        },
+      ],
+    },
+  ];
+
+  return (
+    <ComponentDocsPage
+      componentName="RadioButtonCardGroup"
+      sourceCodeUrl="https://github.com/adamzerner/rfui/blob/master/islands/molecules/radio-button-card-group.tsx"
+      overviewNotes={overviewNotes}
+      examples={examples}
+      propsTables={propsTables}
+    />
+  );
 };
