@@ -34,7 +34,9 @@ export default () => {
         </Alert>
       </Text>
 
-      <H2 inPageLink="install-package">{"1) Install package"}</H2>
+      <H2 inPageLink="install-package">
+        {"1)"} Install <InlineCode>rfui-package</InlineCode>
+      </H2>
       <Text>
         <p>
           The RFUI library is hosted as an{" "}
@@ -46,7 +48,25 @@ export default () => {
         <CodeBlock code={`npm install rfui-package`} />
       </Text>
 
-      <H2 inPageLink="set-up-styles">{"2) Set up styles"}</H2>
+      <H2 inPageLink="install-package">
+        {"2)"} Install <InlineCode>@headlessui/react</InlineCode>
+      </H2>
+      <Text>
+        <p>
+          The RFUI library has a{" "}
+          <Link href="https://nodejs.org/en/blog/npm/peer-dependencies">
+            peer dependency
+          </Link>{" "}
+          on{" "}
+          <Link href="https://www.npmjs.com/package/@headlessui/react">
+            <InlineCode>@headlessui/react</InlineCode>
+          </Link>{" "}
+          so you will need to install that as well.
+        </p>
+        <CodeBlock code={`npm install @headlessui/react`} />
+      </Text>
+
+      <H2 inPageLink="set-up-styles">{"3) Set up styles"}</H2>
       <Text>
         <p>
           RFUI gives you components that use classes like{" "}
@@ -73,7 +93,7 @@ export default () => {
       </Text>
 
       <H2 inPageLink="import-rfui-component">
-        {"3) Import and use RFUI component"}
+        {"4) Import and use RFUI component"}
       </H2>
       <Text>
         <p>Something like this:</p>
@@ -86,7 +106,7 @@ export default () => {
       </Text>
 
       <H2 inPageLink="decide-on-a-personality">
-        {"4) Decide on a personality (recommended)"}
+        {"5) Decide on a personality (recommended)"}
       </H2>
       <Text>
         <p>
@@ -96,7 +116,7 @@ export default () => {
         </p>
       </Text>
 
-      <H2 inPageLink="use-heroicons">{"5) Use heroicons (recommended)"}</H2>
+      <H2 inPageLink="use-heroicons">{"6) Use heroicons (recommended)"}</H2>
       <Text>
         <p>
           Various RFUI components use{" "}
