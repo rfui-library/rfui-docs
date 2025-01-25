@@ -69,20 +69,42 @@ export default () => {
 .flex-col { flex-direction: column; }`}
         />
         <p>
-          Right now RFUI is intended to be used by apps that use{" "}
-          <Link href="https://tailwindcss.com/">Tailwind CSS</Link>. Make sure
-          that you have a CSS file like{" "}
+          Most of the styles you'll need come from{" "}
+          <Link href="https://tailwindcss.com/">Tailwind CSS</Link>. Others come
+          from RFUI. The bottom of{" "}
+          <Link href="https://github.com/rfui-library/rfui-docs/blob/master/app/app.css">
+            this file
+          </Link>{" "}
+          has the styles that come from RFUI .
+        </p>
+        <p>
+          If you are using Tailwind in your app, make sure that you have a CSS
+          file like{" "}
           <Link href="https://github.com/rfui-library/rfui-docs/blob/master/app/app.css">
             this one
-          </Link>{" "}
-          and that you have:
+          </Link>
+          . Note the <InlineCode>@tailwind</InlineCode> directives at the top,
+          the <InlineCode>@layer</InlineCode> directive in the middle, and the
+          RFUI styles at the bottom. They are all needed. You will also need to
+          have:
         </p>
-        <CodeBlock code='"./node_modules/rfui-package/dist/**/*.{js,jsx,ts,tsx}"' />
+        <CodeBlock code='"./node_modules/rfui-package/dist/**/*.{js,ts}"' />
         <p>
-          In your <InlineCode>tailwind.config.ts</InlineCode>'s{" "}
+          in your <InlineCode>tailwind.config.ts</InlineCode>'s{" "}
           <InlineCode>content</InlineCode> array so that Tailwind doesn't purge
           the classes that RFUI needs.
         </p>
+        <p>
+          If you aren't using Tailwind you can use this{" "}
+          <Link href="https://github.com/rfui-library/rfui-package/blob/master/rfui.css">
+            <InlineCode>rfui.css</InlineCode>
+          </Link>{" "}
+          file:
+        </p>
+        <CodeBlock
+          language="html"
+          code='<link rel="stylesheet" href="https://github.com/rfui-library/rfui-package/blob/master/rfui.css" />'
+        />
       </Text>
 
       <H2 inPageLink="import-rfui-component">
