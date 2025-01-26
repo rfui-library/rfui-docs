@@ -6,6 +6,7 @@ import { useState } from "react";
 import {
   CodeBlock,
   InlineCode,
+  Link,
   RadioButtonGroup,
   RadioButtonGroupItem,
 } from "rfui-package";
@@ -42,7 +43,18 @@ export default () => {
       ),
     },
     {
-      title: "With value initially selected",
+      title: "With different value initially selected",
+      description: (
+        <div>
+          By default the first value will be selected. This is in accordance
+          with{" "}
+          <Link href="https://www.nngroup.com/articles/radio-buttons-default-selection/">
+            UX best practices
+          </Link>
+          . If you want a different value to be selected you can use{" "}
+          <InlineCode>initialSelectedValue</InlineCode>.
+        </div>
+      ),
       demo: (
         <RadioButtonGroup name="plan-2" initialSelectedValue="basic">
           <RadioButtonGroupItem value="free">Free</RadioButtonGroupItem>
@@ -69,10 +81,48 @@ export default () => {
       ),
     },
     {
+      title: "With no value initially selected",
+      description: (
+        <div>
+          By default the first value will be selected. This is in accordance
+          with{" "}
+          <Link href="https://www.nngroup.com/articles/radio-buttons-default-selection/">
+            UX best practices
+          </Link>
+          . If you don't want a value to be initially selected you can set{" "}
+          <InlineCode>initialSelectedValue</InlineCode> to an empty string.
+        </div>
+      ),
+      demo: (
+        <RadioButtonGroup name="plan-3" initialSelectedValue="">
+          <RadioButtonGroupItem value="free">Free</RadioButtonGroupItem>
+          <RadioButtonGroupItem value="basic">Basic</RadioButtonGroupItem>
+          <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
+        </RadioButtonGroup>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<RadioButtonGroup name="plan-3" initialSelectedValue="">
+  <RadioButtonGroupItem value="free">
+    Free
+  </RadioButtonGroupItem>
+  <RadioButtonGroupItem value="basic">
+    Basic
+  </RadioButtonGroupItem>
+  <RadioButtonGroupItem value="premium">
+    Premium
+  </RadioButtonGroupItem>
+</RadioButtonGroup>`}
+        />
+      ),
+    },
+    {
       title: "Controlled",
       demo: (
         <RadioButtonGroup
-          name="plan-3"
+          name="plan-4"
           selectedValue={selectedValue}
           onChange={(newSelectedVal) => {
             setSelectedValue(newSelectedVal as string);
@@ -88,7 +138,7 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<RadioButtonGroup
-  name="plan-3"
+  name="plan-4"
   selectedValue={selectedValue}
   onChange={(newSelectedValue) => {
     setSelectedValue(newSelectedValue);
