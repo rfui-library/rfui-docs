@@ -82,7 +82,18 @@ export default () => {
       ),
     },
     {
-      title: "Initial selected value",
+      title: "With different value initially selected",
+      description: (
+        <div>
+          By default the first value will be selected. This is in accordance
+          with{" "}
+          <Link href="https://www.nngroup.com/articles/radio-buttons-default-selection/">
+            UX best practices
+          </Link>
+          . If you want a different value to be selected you can use{" "}
+          <InlineCode>initialSelectedValue</InlineCode>.
+        </div>
+      ),
       demo: (
         <RadioButtonCardGroup
           name="initial-selected-value-example"
@@ -102,6 +113,46 @@ export default () => {
           code={`<RadioButtonCardGroup 
   name="initial-selected-value-example" 
   initialSelectedValue="two"
+>
+  <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+  <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
+</RadioButtonCardGroup>`}
+        />
+      ),
+    },
+    {
+      title: "With no value initially selected",
+      description: (
+        <div>
+          By default the first value will be selected. This is in accordance
+          with{" "}
+          <Link href="https://www.nngroup.com/articles/radio-buttons-default-selection/">
+            UX best practices
+          </Link>
+          . If you don't want a value to be initially selected you can set{" "}
+          <InlineCode>initialSelectedValue</InlineCode> to an empty string.
+        </div>
+      ),
+      demo: (
+        <RadioButtonCardGroup
+          name="no-initial-selected-value-example"
+          initialSelectedValue=""
+        >
+          <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
+          <RadioButtonCardGroupItem value="three">
+            Three
+          </RadioButtonCardGroupItem>
+        </RadioButtonCardGroup>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<RadioButtonCardGroup 
+  name="no-initial-selected-value-example" 
+  initialSelectedValue=""
 >
   <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
