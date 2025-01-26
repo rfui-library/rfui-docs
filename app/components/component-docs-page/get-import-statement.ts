@@ -17,7 +17,7 @@ export const getImportStatement = (
 const getComponentsToImportString = (componentsToImport: string[]) =>
   componentsToImport.length >= 3
     ? handleThreeOrMore(componentsToImport)
-    : componentsToImport.join(",") + " ";
+    : componentsToImport.join(", ") + " ";
 
 const handleThreeOrMore = (componentsToImport: string[]) =>
   componentsToImport
@@ -28,4 +28,4 @@ const handleThreeOrMore = (componentsToImport: string[]) =>
         ? `  ${c}\n`
         : `  ${c}`
     )
-    .join(`, \n`);
+    .join(`,\n`);
