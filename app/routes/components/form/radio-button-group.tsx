@@ -2,6 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
+import { useState } from "react";
 import {
   CodeBlock,
   InlineCode,
@@ -10,6 +11,7 @@ import {
 } from "rfui-package";
 
 export default () => {
+  const [selectedValue, setSelectedValue] = useState("free");
   const overviewNotes = null;
   const examples: ExampleType[] = [
     {
@@ -42,7 +44,7 @@ export default () => {
     {
       title: "With value initially selected",
       demo: (
-        <RadioButtonGroup name="plan" initialSelectedValue="free">
+        <RadioButtonGroup name="plan-2" initialSelectedValue="basic">
           <RadioButtonGroupItem value="free">Free</RadioButtonGroupItem>
           <RadioButtonGroupItem value="basic">Basic</RadioButtonGroupItem>
           <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
@@ -52,7 +54,7 @@ export default () => {
         <CodeBlock
           className="mt-4"
           language="tsx"
-          code={`<RadioButtonGroup name="plan" initialSelectedValue="free">
+          code={`<RadioButtonGroup name="plan-2" initialSelectedValue="basic">
   <RadioButtonGroupItem value="free">
     Free
   </RadioButtonGroupItem>
@@ -69,7 +71,13 @@ export default () => {
     {
       title: "Controlled",
       demo: (
-        <RadioButtonGroup name="plan">
+        <RadioButtonGroup
+          name="plan-3"
+          selectedValue={selectedValue}
+          onChange={(newSelectedVal) => {
+            setSelectedValue(newSelectedVal as string);
+          }}
+        >
           <RadioButtonGroupItem value="free">Free</RadioButtonGroupItem>
           <RadioButtonGroupItem value="basic">Basic</RadioButtonGroupItem>
           <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
@@ -80,7 +88,7 @@ export default () => {
           className="mt-4"
           language="tsx"
           code={`<RadioButtonGroup
-  name="plan"
+  name="plan-3"
   selectedValue={selectedValue}
   onChange={(newSelectedValue) => {
     setSelectedValue(newSelectedValue);
