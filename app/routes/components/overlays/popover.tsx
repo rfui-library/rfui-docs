@@ -8,13 +8,15 @@ export default () => {
   const overviewNotes = (
     <Stack className="gap-3">
       <p>
-        Note: This component requires you to have{" "}
+        Note: This component uses{" "}
         <Link href="https://www.npmjs.com/package/@headlessui/react">
           <InlineCode>@headlessui/react</InlineCode>
+        </Link>
+        's{" "}
+        <Link href="https://headlessui.com/react/popover">
+          <InlineCode>Popover</InlineCode>
         </Link>{" "}
-        installed. See{" "}
-        <Link href="/getting-started#install-headless-ui">this section</Link> on
-        the Getting Started page.
+        component.
       </p>
       <p>
         Note: Popovers are often overused. They are generally useful when the

@@ -18,6 +18,17 @@ export default () => {
         component.
       </p>
       <p>
+        Note: This component uses{" "}
+        <Link href="https://www.npmjs.com/package/@headlessui/react">
+          <InlineCode>@headlessui/react</InlineCode>
+        </Link>
+        's{" "}
+        <Link href="https://headlessui.com/react/listbox">
+          <InlineCode>Listbox</InlineCode>
+        </Link>{" "}
+        component.
+      </p>
+      <p>
         Note: You may prefer to use RFUI's{" "}
         <Link href="/components/form/form-field#example-select">
           <InlineCode>FormField</InlineCode>
