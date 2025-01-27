@@ -218,34 +218,63 @@ export default () => {
     //         />
     //       ),
     //     },
-    //     {
-    //       title: "Disabled",
-    //       description: (
-    //         <div>
-    //           Set <InlineCode>disabled</InlineCode> to either{" "}
-    //           <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
-    //           Defaults to <InlineCode>false</InlineCode>.
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Select disabled>
-    //           <option value="foo">foo</option>
-    //           <option value="bar">bar</option>
-    //           <option value="baz">baz</option>
-    //         </Select>
-    //       ),
-    //       code: (
-    //         <CodeBlock
-    //           className="mt-4"
-    //           language="tsx"
-    //           code={`<Select disabled>
-    //   <option value="foo">foo</option>
-    //   <option value="bar">bar</option>
-    //   <option value="baz">baz</option>
-    // </Select>`}
-    //         />
-    //       ),
-    //     },
+    {
+      title: "Disabled",
+      description: (
+        <div>
+          Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>
+          .
+        </div>
+      ),
+      demo: (
+        <Select
+          disabled
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<Select
+  disabled
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`}
+        />
+      ),
+    },
     //     {
     //       title: "Invalid",
     //       description: (
