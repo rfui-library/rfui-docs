@@ -25,6 +25,7 @@ import {
   RadioButtonCardGroupItem,
   RadioButtonGroup,
   RadioButtonGroupItem,
+  Select,
   Stack,
   Stepper,
   Switch,
@@ -182,10 +183,15 @@ export const getComponents = () => ({
       name: "Select",
       href: "/components/form/select",
       demo: (
-        <div>Select</div>
-        // <Select className="bg-neutral-50/20">
-        //   <option value="united-states">United States</option>
-        // </Select>
+        <Select
+          options={[
+            {
+              id: "united-states",
+              value: "united-states",
+              display: "United States",
+            },
+          ]}
+        />
       ),
     },
     {
