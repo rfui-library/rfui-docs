@@ -473,6 +473,61 @@ export default () => {
 />`,
     },
     {
+      title: "Disabled option",
+      description: (
+        <div>
+          Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>{" "}
+          for a given option .
+        </div>
+      ),
+      demo: (
+        <Select
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+              disabled: false,
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+              disabled: true,
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+              disabled: false,
+            },
+          ]}
+        />
+      ),
+      code: `<Select
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+      disabled: false,
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+      disabled: true,
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+      disabled: false,
+    },
+  ]}
+/>`,
+    },
+    {
       title: "Invalid",
       description: (
         <div>
