@@ -164,60 +164,191 @@ export default () => {
     //         />
     //       ),
     //     },
-    //     {
-    //       title: "Rounded",
-    //       description: (
-    //         <div>
-    //           Set <InlineCode>rounded</InlineCode> to either{" "}
-    //           <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or{" "}
-    //           <InlineCode>"lg"</InlineCode>. Defaults to the value of the CSS
-    //           variable <InlineCode>--default-roundedness</InlineCode>. See{" "}
-    //           <Link href="/default-roundedness">"Default roundedness"</Link>.
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Stack className="w-fit gap-5">
-    //           <Select rounded="square">
-    //             <option value="foo">foo</option>
-    //             <option value="bar">bar</option>
-    //             <option value="baz">baz</option>
-    //           </Select>
-    //           <Select rounded="sm">
-    //             <option value="foo">foo</option>
-    //             <option value="bar">bar</option>
-    //             <option value="baz">baz</option>
-    //           </Select>
-    //           <Select rounded="lg">
-    //             <option value="foo">foo</option>
-    //             <option value="bar">bar</option>
-    //             <option value="baz">baz</option>
-    //           </Select>
-    //         </Stack>
-    //       ),
-    //       code: (
-    //         <CodeBlock
-    //           className="mt-4"
-    //           language="tsx"
-    //           code={`<Stack className="w-fit gap-5">
-    //   <Select rounded="square">
-    //     <option value="foo">foo</option>
-    //     <option value="bar">bar</option>
-    //     <option value="baz">baz</option>
-    //   </Select>
-    //   <Select rounded="sm">
-    //     <option value="foo">foo</option>
-    //     <option value="bar">bar</option>
-    //     <option value="baz">baz</option>
-    //   </Select>
-    //   <Select rounded="lg">
-    //     <option value="foo">foo</option>
-    //     <option value="bar">bar</option>
-    //     <option value="baz">baz</option>
-    //   </Select>
-    // </Stack>`}
-    //         />
-    //       ),
-    //     },
+    {
+      title: "Rounded",
+      description: (
+        <div>
+          Set <InlineCode>rounded</InlineCode> to either{" "}
+          <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
+          <InlineCode>"lg"</InlineCode>, or <InlineCode>"full"</InlineCode>.
+          Defaults to the value of the CSS variable{" "}
+          <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <Link href="/default-roundedness">"Default roundedness"</Link>.
+        </div>
+      ),
+      demo: (
+        <Stack className="w-fit gap-5">
+          <Select
+            rounded="square"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            rounded="sm"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            rounded="lg"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            rounded="full"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+        </Stack>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<Stack className="w-fit gap-5">
+  <Select
+    rounded="square"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    rounded="sm"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    rounded="lg"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    rounded="full"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+</Stack>`}
+        />
+      ),
+    },
     {
       title: "Disabled",
       description: (
