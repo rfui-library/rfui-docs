@@ -275,34 +275,63 @@ export default () => {
         />
       ),
     },
-    //     {
-    //       title: "Invalid",
-    //       description: (
-    //         <div>
-    //           Set <InlineCode>invalid</InlineCode> to either{" "}
-    //           <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
-    //           Defaults to <InlineCode>false</InlineCode>.
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Select invalid>
-    //           <option value="foo">foo</option>
-    //           <option value="bar">bar</option>
-    //           <option value="baz">baz</option>
-    //         </Select>
-    //       ),
-    //       code: (
-    //         <CodeBlock
-    //           className="mt-4"
-    //           language="tsx"
-    //           code={`<Select invalid>
-    //   <option value="foo">foo</option>
-    //   <option value="bar">bar</option>
-    //   <option value="baz">baz</option>
-    // </Select>`}
-    //         />
-    //       ),
-    //     },
+    {
+      title: "Invalid",
+      description: (
+        <div>
+          Set <InlineCode>invalid</InlineCode> to
+          <InlineCode>true</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <Select
+          invalid
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<Select
+  invalid
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`}
+        />
+      ),
+    },
   ];
   const propsTables = [
     {
