@@ -70,6 +70,76 @@ export default () => {
   ]}
 />`,
     },
+    {
+      title: "Empty initial value",
+      description: (
+        <div>
+          <p>
+            If you want an empty initial value use something like this as the
+            first option in the <InlineCode>options</InlineCode> array:
+          </p>
+          <CodeBlock
+            className="mt-2"
+            language="ts"
+            code={`{
+  id: "",
+  value: "",
+  display: "",
+}`}
+          />
+        </div>
+      ),
+      demo: (
+        <Select
+          options={[
+            {
+              id: "",
+              value: "",
+              display: "",
+            },
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: `<Select
+  options={[
+    {
+      id: "",
+      value: "",
+      display: "",
+    },
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
     //     {
     //       title: "Controlled",
     //       description: (
