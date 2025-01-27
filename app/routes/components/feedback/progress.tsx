@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Progress value={40} />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Progress value={40} />`}
-        />
-      ),
+      code: `<Progress value={40} />`,
     },
     {
       title: "Size",
@@ -34,17 +28,11 @@ export default () => {
           <Progress value={40} size="lg" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Progress value={40} size="sm" />
   <Progress value={40} size="md" />
   <Progress value={40} size="lg" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Variant",
@@ -57,19 +45,13 @@ export default () => {
           <Progress value={40} variant="danger" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Progress value={40} variant="neutral" />
   <Progress value={40} variant="info" />
   <Progress value={40} variant="success" />
   <Progress value={40} variant="warning" />
   <Progress value={40} variant="danger" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

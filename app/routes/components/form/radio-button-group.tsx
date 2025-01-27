@@ -24,11 +24,7 @@ export default () => {
           <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
         </RadioButtonGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonGroup name="plan">
+      code: `<RadioButtonGroup name="plan">
   <RadioButtonGroupItem value="free">
     Free
   </RadioButtonGroupItem>
@@ -38,9 +34,7 @@ export default () => {
   <RadioButtonGroupItem value="premium">
     Premium
   </RadioButtonGroupItem>
-</RadioButtonGroup>`}
-        />
-      ),
+</RadioButtonGroup>`,
     },
     {
       title: "With different value initially selected",
@@ -62,11 +56,7 @@ export default () => {
           <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
         </RadioButtonGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonGroup name="plan-2" initialSelectedValue="basic">
+      code: `<RadioButtonGroup name="plan-2" initialSelectedValue="basic">
   <RadioButtonGroupItem value="free">
     Free
   </RadioButtonGroupItem>
@@ -76,9 +66,7 @@ export default () => {
   <RadioButtonGroupItem value="premium">
     Premium
   </RadioButtonGroupItem>
-</RadioButtonGroup>`}
-        />
-      ),
+</RadioButtonGroup>`,
     },
     {
       title: "With no value initially selected",
@@ -100,11 +88,7 @@ export default () => {
           <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
         </RadioButtonGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonGroup name="plan-3" initialSelectedValue="">
+      code: `<RadioButtonGroup name="plan-3" initialSelectedValue="">
   <RadioButtonGroupItem value="free">
     Free
   </RadioButtonGroupItem>
@@ -114,9 +98,7 @@ export default () => {
   <RadioButtonGroupItem value="premium">
     Premium
   </RadioButtonGroupItem>
-</RadioButtonGroup>`}
-        />
-      ),
+</RadioButtonGroup>`,
     },
     {
       title: "Controlled",
@@ -133,11 +115,7 @@ export default () => {
           <RadioButtonGroupItem value="premium">Premium</RadioButtonGroupItem>
         </RadioButtonGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonGroup
+      code: `<RadioButtonGroup
   name="plan-4"
   selectedValue={selectedValue}
   onChange={(newSelectedValue) => {
@@ -153,9 +131,7 @@ export default () => {
   <RadioButtonGroupItem value="premium">
     Premium
   </RadioButtonGroupItem>
-</RadioButtonGroup>`}
-        />
-      ),
+</RadioButtonGroup>`,
     },
   ];
   const propsTables = [

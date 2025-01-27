@@ -3,7 +3,6 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import {
-  CodeBlock,
   InlineCode,
   Link,
   RadioButtonCardGroup,
@@ -36,17 +35,11 @@ export default () => {
           </RadioButtonCardGroupItem>
         </RadioButtonCardGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonCardGroup name="basic-example">
+      code: `<RadioButtonCardGroup name="basic-example">
   <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
-</RadioButtonCardGroup>`}
-        />
-      ),
+</RadioButtonCardGroup>`,
     },
     {
       title: "Reacting to changes",
@@ -64,11 +57,7 @@ export default () => {
           </RadioButtonCardGroupItem>
         </RadioButtonCardGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonCardGroup 
+      code: `<RadioButtonCardGroup 
   name="on-change-example" 
   onChange={(newValue) => {
     console.log(newValue);
@@ -77,9 +66,7 @@ export default () => {
   <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
-</RadioButtonCardGroup>`}
-        />
-      ),
+</RadioButtonCardGroup>`,
     },
     {
       title: "With different value initially selected",
@@ -106,20 +93,14 @@ export default () => {
           </RadioButtonCardGroupItem>
         </RadioButtonCardGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonCardGroup 
+      code: `<RadioButtonCardGroup 
   name="initial-selected-value-example" 
   initialSelectedValue="two"
 >
   <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
-</RadioButtonCardGroup>`}
-        />
-      ),
+</RadioButtonCardGroup>`,
     },
     {
       title: "With no value initially selected",
@@ -146,20 +127,14 @@ export default () => {
           </RadioButtonCardGroupItem>
         </RadioButtonCardGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButtonCardGroup 
+      code: `<RadioButtonCardGroup 
   name="no-initial-selected-value-example" 
   initialSelectedValue=""
 >
   <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
   <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
-</RadioButtonCardGroup>`}
-        />
-      ),
+</RadioButtonCardGroup>`,
     },
     {
       title: "Padding",
@@ -195,11 +170,7 @@ export default () => {
           </RadioButtonCardGroup>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <RadioButtonCardGroup name="padding-example-sm" padding="sm">
     <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
     <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
@@ -215,9 +186,7 @@ export default () => {
     <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
     <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Rounded",
@@ -255,11 +224,7 @@ export default () => {
           </RadioButtonCardGroup>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <RadioButtonCardGroup name="rounded-example-square" rounded="square">
     <RadioButtonCardGroupItem value="one">One</RadioButtonCardGroupItem>
     <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
@@ -275,9 +240,7 @@ export default () => {
     <RadioButtonCardGroupItem value="two">Two</RadioButtonCardGroupItem>
     <RadioButtonCardGroupItem value="three">Three</RadioButtonCardGroupItem>
   </RadioButtonCardGroup>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

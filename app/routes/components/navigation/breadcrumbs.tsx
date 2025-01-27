@@ -35,19 +35,13 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Breadcrumbs
+      code: `<Breadcrumbs
   links={[
     { title: "One", href: "/one" },
     { title: "Two", href: "/two" },
     { title: "Three", href: "/three" },
   ]}
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "Size",
@@ -87,11 +81,7 @@ export default () => {
           />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-6">
+      code: `<Stack className="gap-6">
   <Breadcrumbs
     size="sm"
     links={[
@@ -124,9 +114,7 @@ export default () => {
       { title: "Three", href: "/three" },
     ]}
   />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Blockquote>All models are wrong. Some are useful.</Blockquote>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Blockquote>All models are wrong. Some are useful.</Blockquote>`}
-        />
-      ),
+      code: `<Blockquote>All models are wrong. Some are useful.</Blockquote>`,
     },
     {
       title: "Multi-paragraph quote",
@@ -50,11 +44,7 @@ export default () => {
           </p>
         </Blockquote>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Blockquote className="gap-3">
+      code: `<Blockquote className="gap-3">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue ut
@@ -82,9 +72,7 @@ export default () => {
     purus in mollis.
   </p>
 </Blockquote>
-`}
-        />
-      ),
+`,
     },
     {
       title: "With citation",
@@ -96,18 +84,12 @@ export default () => {
           </footer>
         </Blockquote>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Blockquote cite="https://example.com">
+      code: `<Blockquote cite="https://example.com">
   <p>All models are wrong. Some are useful.</p>
   <footer>
     —Someone, <cite>Somewhere</cite>
   </footer>
-</Blockquote>`}
-        />
-      ),
+</Blockquote>`,
     },
   ];
   const propsTables = [

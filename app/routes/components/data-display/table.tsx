@@ -29,11 +29,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table>
+      code: `<Table>
   <thead>
     <tr>
       <th>name</th>
@@ -50,9 +46,7 @@ export default () => {
       <td>25</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "No border",
@@ -82,11 +76,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table bordered={false}>
+      code: `<Table bordered={false}>
   <thead>
     <tr>
       <th>name</th>
@@ -103,9 +93,7 @@ export default () => {
       <td>25</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "No hover",
@@ -134,11 +122,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table hover={false}>
+      code: `<Table hover={false}>
   <thead>
     <tr>
       <th>name</th>
@@ -155,9 +139,7 @@ export default () => {
       <td>25</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "Striped",
@@ -209,11 +191,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table striped bordered={false}>
+      code: `<Table striped bordered={false}>
   <thead>
     <tr>
       <th>name</th>
@@ -238,9 +216,7 @@ export default () => {
       <td>34</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "Striped with border",
@@ -277,11 +253,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table striped>
+      code: `<Table striped>
   <thead>
     <tr>
       <th>name</th>
@@ -306,9 +278,7 @@ export default () => {
       <td>34</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "Sticky header",
@@ -348,11 +318,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table stickyHeader>
+      code: `<Table stickyHeader>
   <thead>
     <tr>
       <th>name</th>
@@ -369,9 +335,7 @@ export default () => {
       <td>25</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "Sticky first column",
@@ -407,11 +371,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table stickyFirstColumn>
+      code: `<Table stickyFirstColumn>
   <thead>
     <tr>
       <th>name</th>
@@ -428,9 +388,7 @@ export default () => {
       <td>25</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "Sticky header and first column",
@@ -461,11 +419,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table stickyHeader stickyFirstColumn>
+      code: `<Table stickyHeader stickyFirstColumn>
   <thead>
     <tr>
       <th>name</th>
@@ -482,9 +436,7 @@ export default () => {
       <td>25</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
     {
       title: "Condensed",
@@ -514,11 +466,7 @@ export default () => {
           </tbody>
         </Table>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Table condensed>
+      code: `<Table condensed>
   <thead>
     <tr>
       <th>name</th>
@@ -535,9 +483,7 @@ export default () => {
       <td>25</td>
     </tr>
   </tbody>
-</Table>`}
-        />
-      ),
+</Table>`,
     },
   ];
   const propsTables = [

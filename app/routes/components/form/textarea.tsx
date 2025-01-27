@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Textarea></Textarea>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Textarea></Textarea>`}
-        />
-      ),
+      code: `<Textarea></Textarea>`,
     },
     {
       title: "Controlled",
@@ -35,13 +29,7 @@ export default () => {
         </div>
       ),
       demo: <Textarea></Textarea>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Textarea value={value} onInput={onInput}></Textarea>`}
-        />
-      ),
+      code: `<Textarea value={value} onInput={onInput}></Textarea>`,
     },
     {
       title: "Rounded",
@@ -61,17 +49,11 @@ export default () => {
           <Textarea rounded="lg"></Textarea>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Textarea rounded="square"></Textarea>
   <Textarea rounded="sm"></Textarea>
   <Textarea rounded="lg"></Textarea>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Disabled",
@@ -83,13 +65,7 @@ export default () => {
         </div>
       ),
       demo: <Textarea disabled></Textarea>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Textarea disabled></Textarea>`}
-        />
-      ),
+      code: `<Textarea disabled></Textarea>`,
     },
     {
       title: "Readonly",
@@ -101,13 +77,7 @@ export default () => {
         </div>
       ),
       demo: <Textarea readOnly>Example</Textarea>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Textarea readOnly>Example</Textarea>`}
-        />
-      ),
+      code: `<Textarea readOnly>Example</Textarea>`,
     },
     {
       title: "Invalid",
@@ -119,13 +89,7 @@ export default () => {
         </div>
       ),
       demo: <Textarea invalid>Example</Textarea>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Textarea invalid>Example</Textarea>`}
-        />
-      ),
+      code: `<Textarea invalid>Example</Textarea>`,
     },
   ];
   const propsTables = [

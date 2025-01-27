@@ -19,7 +19,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Stepper />,
-      code: <CodeBlock className="mt-4" language="tsx" code={`<Stepper />`} />,
+      code: `<Stepper />`,
     },
     {
       title: "Uncontrolled",
@@ -32,13 +32,7 @@ export default () => {
         </div>
       ),
       demo: <Stepper name="number-of-items" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stepper name="number-of-items" />`}
-        />
-      ),
+      code: `<Stepper name="number-of-items" />`,
     },
     {
       title: "Controlled",
@@ -49,13 +43,7 @@ export default () => {
         </div>
       ),
       demo: <Stepper />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stepper onChange={onChange} />`}
-        />
-      ),
+      code: `<Stepper onChange={onChange} />`,
     },
     {
       title: "Size",
@@ -73,17 +61,11 @@ export default () => {
           <Stepper size="lg" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Stepper size="sm" />
   <Stepper size="md" />
   <Stepper size="lg" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Rounded",
@@ -105,18 +87,12 @@ export default () => {
           <Stepper rounded="full" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Stepper rounded="square" />
   <Stepper rounded="sm" />
   <Stepper rounded="lg" />
   <Stepper rounded="full" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Starting value",
@@ -127,13 +103,7 @@ export default () => {
         </div>
       ),
       demo: <Stepper startingValue={100} />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stepper startingValue={100} />`}
-        />
-      ),
+      code: `<Stepper startingValue={100} />`,
     },
     {
       title: "Min and max",
@@ -144,13 +114,7 @@ export default () => {
         </div>
       ),
       demo: <Stepper min={0} max={5} />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stepper min={0} max={5} />`}
-        />
-      ),
+      code: `<Stepper min={0} max={5} />`,
     },
   ];
   const propsTables = [

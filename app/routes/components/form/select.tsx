@@ -50,11 +50,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Select
+      code: `<Select
   options={[
     {
       id: "foo",
@@ -72,9 +68,7 @@ export default () => {
       display: "baz",
     },
   ]}
-/>`}
-        />
-      ),
+/>`,
     },
     //     {
     //       title: "Controlled",
@@ -185,11 +179,7 @@ export default () => {
           />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-fit gap-5">
+      code: `<Stack className="w-fit gap-5">
   <Select
     size="sm"
     options={[
@@ -250,9 +240,7 @@ export default () => {
       },
     ]}
   />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Rounded",
@@ -350,11 +338,7 @@ export default () => {
           />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-fit gap-5">
+      code: `<Stack className="w-fit gap-5">
   <Select
     rounded="square"
     options={[
@@ -435,9 +419,7 @@ export default () => {
       },
     ]}
   />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Disabled",
@@ -469,11 +451,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Select
+      code: `<Select
   disabled
   options={[
     {
@@ -492,9 +470,7 @@ export default () => {
       display: "baz",
     },
   ]}
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "Invalid",
@@ -526,11 +502,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Select
+      code: `<Select
   invalid
   options={[
     {
@@ -549,9 +521,7 @@ export default () => {
       display: "baz",
     },
   ]}
-/>`}
-        />
-      ),
+/>`,
     },
   ];
   const propsTables = [

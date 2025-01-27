@@ -36,16 +36,10 @@ export default () => {
           </p>
         </Text>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Text>
+      code: `<Text>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat odio facilisis mauris sit.</p>
   <p>Amet consectetur adipiscing elit duis tristique. Ac turpis egestas maecenas pharetra. Dui nunc mattis enim ut tellus. Egestas congue quisque egestas diam in.</p>
-</Text>`}
-        />
-      ),
+</Text>`,
     },
     {
       title: "Small",
@@ -67,11 +61,7 @@ export default () => {
           </p>
         </Text>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Text size="sm">
+      code: `<Text size="sm">
   <p>
     Illo quia quam perferendis ut consectetur rerum dolores dolores.
     Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
@@ -81,9 +71,7 @@ export default () => {
     Quod enim vitae et. Impedit ut maxime fugit excepturi harum
     qui. Praesentium pariatur nisi ut rerum et dolores sed.
   </p>
-</Text>`}
-        />
-      ),
+</Text>`,
     },
     {
       title: "Medium",
@@ -105,11 +93,7 @@ export default () => {
           </p>
         </Text>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Text size="md">
+      code: `<Text size="md">
   <p>
     Illo quia quam perferendis ut consectetur rerum dolores dolores.
     Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
@@ -119,9 +103,7 @@ export default () => {
     Quod enim vitae et. Impedit ut maxime fugit excepturi harum
     qui. Praesentium pariatur nisi ut rerum et dolores sed.
   </p>
-</Text>`}
-        />
-      ),
+</Text>`,
     },
     {
       title: "Large",
@@ -145,11 +127,7 @@ export default () => {
           </p>
         </Text>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Text size="lg">
+      code: `<Text size="lg">
   <p>
     Illo quia quam perferendis ut consectetur rerum dolores dolores.
     Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
@@ -159,9 +137,7 @@ export default () => {
     Quod enim vitae et. Impedit ut maxime fugit excepturi harum
     qui. Praesentium pariatur nisi ut rerum et dolores sed.
   </p>
-</Text>`}
-        />
-      ),
+</Text>`,
     },
     {
       title: "One paragraph",
@@ -178,17 +154,11 @@ export default () => {
           consectetur non amet nostrum quo animi.
         </Text>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Text>
+      code: `<Text>
   Illo quia quam perferendis ut consectetur rerum dolores dolores.
   Reiciendis est beatae magnam ut amet quis sequi. Eaque consequatur
   consectetur non amet nostrum quo animi.
-</Text>`}
-        />
-      ),
+</Text>`,
     },
     {
       title: "One paragraph with element",
@@ -214,20 +184,14 @@ export default () => {
           </p>
         </Text>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Text>
+      code: `<Text>
   <p>
     Illo quia quam perferendis ut consectetur{" "}
     <Link href="https://example.com">rerum dolores</Link>{" "}
     dolores. Reiciendis est beatae magnam ut amet quis sequi. Eaque
     consequatur consectetur non amet nostrum quo animi.
   </p>
-</Text>`}
-        />
-      ),
+</Text>`,
     },
   ];
   const propsTables = [

@@ -95,11 +95,7 @@ export default () => {
           </FooterColumn>
         </Footer>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Footer>
+      code: `<Footer>
   <FooterColumn>
     <FooterHeading>About</FooterHeading>
     <FooterItem href="/about">About</FooterItem>
@@ -114,9 +110,7 @@ export default () => {
     <FooterItem href="/getting-started">Getting started</FooterItem>
     <FooterItem href="/tutorial">Tutorial</FooterItem>
   </FooterColumn>
-</Footer>`}
-        />
-      ),
+</Footer>`,
     },
     {
       title: "Empty background",
@@ -153,11 +147,7 @@ export default () => {
           </FooterColumn>
         </Footer>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Footer background="none">
+      code: `<Footer background="none">
   <FooterColumn>
     <FooterHeading background="none">About</FooterHeading>
     <FooterItem href="/about">About</FooterItem>
@@ -172,9 +162,7 @@ export default () => {
     <FooterItem href="/getting-started">Getting started</FooterItem>
     <FooterItem href="/tutorial">Tutorial</FooterItem>
   </FooterColumn>
-</Footer>`}
-        />
-      ),
+</Footer>`,
     },
     {
       title: "Without default margin",
@@ -213,11 +201,7 @@ export default () => {
           </FooterColumn>
         </Footer>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Footer className="!mt-0">
+      code: `<Footer className="!mt-0">
   <FooterColumn>
     <FooterHeading>About</FooterHeading>
     <FooterItem href="/about">About</FooterItem>
@@ -232,9 +216,7 @@ export default () => {
     <FooterItem href="/getting-started">Getting started</FooterItem>
     <FooterItem href="/tutorial">Tutorial</FooterItem>
   </FooterColumn>
-</Footer>`}
-        />
-      ),
+</Footer>`,
     },
   ];
   const propsTables = [

@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Badge>Basic</Badge>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Badge>Basic</Badge>`}
-        />
-      ),
+      code: `<Badge>Basic</Badge>`,
     },
     {
       title: "Type",
@@ -38,20 +32,14 @@ export default () => {
           <Badge type="danger">danger</Badge>
         </Flex>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Flex className="gap-3">
+      code: `<Flex className="gap-3">
   <Badge type="neutral">neutral</Badge>
   <Badge type="info">info</Badge>
   <Badge type="success">success</Badge>
   <Badge type="warning">warning</Badge>
   <Badge type="danger">danger</Badge>
 </Flex>
-`}
-        />
-      ),
+`,
     },
     {
       title: "Size",
@@ -118,11 +106,7 @@ export default () => {
           </Flex>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Flex className="gap-3">
     <Badge type="neutral" size="sm">neutral</Badge>
     <Badge type="info" size="sm">info</Badge>
@@ -145,9 +129,7 @@ export default () => {
     <Badge type="danger" size="lg">danger</Badge>
   </Flex>
 </Stack>
-`}
-        />
-      ),
+`,
     },
     {
       title: "Rounded",
@@ -233,11 +215,7 @@ export default () => {
           </Flex>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Flex className="gap-3">
     <Badge type="neutral" rounded="square">neutral</Badge>
     <Badge type="info" rounded="square">info</Badge>
@@ -267,9 +245,7 @@ export default () => {
     <Badge type="danger" rounded="full">danger</Badge>
   </Flex>
 </Stack>
-`}
-        />
-      ),
+`,
     },
   ];
   const propsTables = [

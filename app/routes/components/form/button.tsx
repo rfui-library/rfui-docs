@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Button>Example</Button>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Button>Example</Button>`}
-        />
-      ),
+      code: `<Button>Example</Button>`,
     },
     {
       title: "Handle click",
@@ -30,13 +24,7 @@ export default () => {
         </div>
       ),
       demo: <Button>Example</Button>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Button onClick={onClick}>Example</Button>`}
-        />
-      ),
+      code: `<Button onClick={onClick}>Example</Button>`,
     },
     {
       title: "Variant",
@@ -56,17 +44,11 @@ export default () => {
           <Button variant="tertiary">Tertiary</Button>
         </Flex>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Flex className="gap-3">
+      code: `<Flex className="gap-3">
   <Button variant="primary">Primary</Button>
   <Button variant="secondary">Secondary</Button>
   <Button variant="tertiary">Tertiary</Button>
-</Flex>`}
-        />
-      ),
+</Flex>`,
     },
     {
       title: "Danger variants",
@@ -85,17 +67,11 @@ export default () => {
           <Button variant="danger-tertiary">Tertiary</Button>
         </Flex>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Flex className="gap-3">
+      code: `<Flex className="gap-3">
   <Button variant="danger-primary">Primary</Button>
   <Button variant="danger-secondary">Secondary</Button>
   <Button variant="danger-tertiary">Tertiary</Button>
-</Flex>`}
-        />
-      ),
+</Flex>`,
     },
     {
       title: "Size",
@@ -152,11 +128,7 @@ export default () => {
           </Stack>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Flex className="gap-3">
     <Button variant="primary" size="sm">Primary</Button>
     <Button variant="secondary" size="sm">Secondary</Button>
@@ -176,9 +148,7 @@ export default () => {
     <Button variant="primary" size="block">Primary</Button>
     <Button variant="secondary" size="block">Secondary</Button>
   </Stack>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Rounded",
@@ -240,11 +210,7 @@ export default () => {
           </Flex>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Flex className="gap-3">
     <Button variant="primary" rounded="square">Primary</Button>
     <Button variant="secondary" rounded="square">Secondary</Button>
@@ -265,9 +231,7 @@ export default () => {
     <Button variant="secondary" rounded="full">Secondary</Button>
     <Button variant="tertiary" rounded="full">Tertiary</Button>
   </Flex>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Disabled",
@@ -291,17 +255,11 @@ export default () => {
           </Button>
         </Flex>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Flex className="gap-3">
+      code: `<Flex className="gap-3">
   <Button disabled variant="primary">Primary</Button>
   <Button disabled variant="secondary">Secondary</Button>
   <Button disabled variant="tertiary">Tertiary</Button>
-</Flex>`}
-        />
-      ),
+</Flex>`,
     },
     {
       title: "Loading",
@@ -332,11 +290,7 @@ export default () => {
           </Button>
         </Flex>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Flex className="gap-3">
+      code: `<Flex className="gap-3">
   <Button variant="primary" isLoading loadingContent="Loading...">
     Primary
   </Button>
@@ -346,9 +300,7 @@ export default () => {
   <Button variant="tertiary" isLoading loadingContent="Loading...">
     Tertiary
   </Button>
-</Flex>`}
-        />
-      ),
+</Flex>`,
     },
     {
       title: "With icon",
@@ -364,15 +316,9 @@ export default () => {
           <span>＋</span> Example
         </Button>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Button>
+      code: `<Button>
   <span>＋</span> Example
-</Button>`}
-        />
-      ),
+</Button>`,
     },
   ];
   const propsTables = [

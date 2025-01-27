@@ -26,13 +26,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Alert>Your profile has been saved</Alert>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Alert>Your profile has been saved</Alert>`}
-        />
-      ),
+      code: `<Alert>Your profile has been saved</Alert>`,
     },
     {
       title: "AlertHeader and AlertBody",
@@ -42,16 +36,10 @@ export default () => {
           <AlertBody>Your profile has been saved.</AlertBody>
         </Alert>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Alert>
+      code: `<Alert>
   <AlertHeader>Success</AlertHeader>
   <AlertBody>Your profile has been saved.</AlertBody>
-</Alert>`}
-        />
-      ),
+</Alert>`,
     },
     {
       title: "Variant",
@@ -87,11 +75,7 @@ export default () => {
           </Alert>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-full gap-5">
+      code: `<Stack className="w-full gap-5">
   <Alert variant="success">
     <AlertHeader>Success</AlertHeader>
     <AlertBody>Your profile has been saved.</AlertBody>
@@ -112,9 +96,7 @@ export default () => {
     <AlertHeader>Note</AlertHeader>
     <AlertBody>Your account has been updated.</AlertBody>
   </Alert>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Not dismissable",
@@ -148,11 +130,7 @@ export default () => {
           </Alert>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-full gap-5">
+      code: `<Stack className="w-full gap-5">
   <Alert isDismissable={false} variant="success">
     <AlertHeader>Success</AlertHeader>
     <AlertBody>Your profile has been saved.</AlertBody>
@@ -173,9 +151,7 @@ export default () => {
     <AlertHeader>Note</AlertHeader>
     <AlertBody>Your account has been updated.</AlertBody>
   </Alert>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

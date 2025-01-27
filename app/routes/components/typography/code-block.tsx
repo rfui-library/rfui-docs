@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <CodeBlock code={`console.log("Hello world");`} />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<CodeBlock code={\`console.log("Hello world");\`} />`}
-        />
-      ),
+      code: `<CodeBlock code={\`console.log("Hello world");\`} />`,
     },
     {
       title: "Whitespace",
@@ -38,18 +32,12 @@ export default () => {
 }`}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<CodeBlock
+      code: `<CodeBlock
   language="ts"
   code={\`function sayHello() {
   console.log("Hello world");
 }\`}
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "Language",
@@ -70,18 +58,12 @@ const lastName = 'Doe';
 const fullName = firstName + " " + lastName;`}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<CodeBlock
+      code: `<CodeBlock
  language="ts"
  code={\`const firstName = 'John';
 const lastName = 'Doe';
 const fullName = firstName + " " + lastName;\`}
-/>`}
-        />
-      ),
+/>`,
     },
   ];
   const propsTables = [

@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Link href="https://example.com">Example</Link>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Link href="https://example.com">Example</Link>`}
-        />
-      ),
+      code: `<Link href="https://example.com">Example</Link>`,
     },
     {
       title: "Underline",
@@ -52,17 +46,11 @@ export default () => {
           </Link>
         </Flex>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Flex className="gap-3">
+      code: `<Flex className="gap-3">
   <Link underline="always" href="https://example.com">always</Link>
   <Link underline="hover" href="https://example.com">hover</Link>
   <Link underline="none" href="https://example.com">none</Link>
-</Flex>`}
-        />
-      ),
+</Flex>`,
     },
     {
       title: "In-page link",
@@ -91,15 +79,9 @@ export default () => {
           Example
         </Link>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Link inPageLink underline="hover" href="#section">
+      code: `<Link inPageLink underline="hover" href="#section">
   Example
-</Link>`}
-        />
-      ),
+</Link>`,
     },
     {
       title: "New tab",
@@ -174,11 +156,7 @@ export default () => {
           </Stack>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-8">
+      code: `<Stack className="gap-8">
   <Stack className="gap-5">
     <Link _newTab href="https://example.com" underline="always">
       _newTab
@@ -216,9 +194,7 @@ export default () => {
       _includeNewTabIcon
     </Link>
   </Stack>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

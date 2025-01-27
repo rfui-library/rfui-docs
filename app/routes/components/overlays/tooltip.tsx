@@ -42,13 +42,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Tooltip content="Example content">Test</Tooltip>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Tooltip content="Example content">Test</Tooltip>`}
-        />
-      ),
+      code: `<Tooltip content="Example content">Test</Tooltip>`,
     },
     {
       title: "Direction",
@@ -68,11 +62,7 @@ export default () => {
           </Tooltip>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="items-center gap-8 p-8">
+      code: `<Stack className="items-center gap-8 p-8">
   <Tooltip direction="top" content="Example content">
     Top
   </Tooltip>
@@ -85,9 +75,7 @@ export default () => {
   <Tooltip direction="left" content="Example content">
     Left
   </Tooltip>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

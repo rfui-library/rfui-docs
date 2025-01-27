@@ -30,7 +30,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Switch />,
-      code: <CodeBlock className="mt-4" language="tsx" code={`<Switch />`} />,
+      code: `<Switch />`,
     },
     {
       title: "Controlled",
@@ -49,13 +49,7 @@ export default () => {
         </div>
       ),
       demo: <Switch />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Switch checked={checked} onClick={onClick} />`}
-        />
-      ),
+      code: `<Switch checked={checked} onClick={onClick} />`,
     },
     {
       title: "Disabled",
@@ -67,13 +61,7 @@ export default () => {
         </div>
       ),
       demo: <Switch disabled />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Switch disabled />`}
-        />
-      ),
+      code: `<Switch disabled />`,
     },
   ];
   const propsTables = [

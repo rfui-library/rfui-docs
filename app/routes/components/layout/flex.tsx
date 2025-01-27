@@ -33,17 +33,11 @@ export default () => {
           <div>right</div>
         </Flex>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Flex className="gap-8">
+      code: `<Flex className="gap-8">
   <div>left</div>
   <div>center</div>
   <div>right</div>
-</Flex>`}
-        />
-      ),
+</Flex>`,
     },
   ];
   const propsTables = [

@@ -24,17 +24,11 @@ export default () => {
           <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
         </CheckboxCardGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<CheckboxCardGroup>
+      code: `<CheckboxCardGroup>
   <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
   <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
   <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
-</CheckboxCardGroup>`}
-        />
-      ),
+</CheckboxCardGroup>`,
     },
     {
       title: "Name",
@@ -52,17 +46,11 @@ export default () => {
           <CheckboxCardGroupItem name="three">Three</CheckboxCardGroupItem>
         </CheckboxCardGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<CheckboxCardGroup>
+      code: `<CheckboxCardGroup>
   <CheckboxCardGroupItem name="one">One</CheckboxCardGroupItem>
   <CheckboxCardGroupItem name="two">Two</CheckboxCardGroupItem>
   <CheckboxCardGroupItem name="three">Three</CheckboxCardGroupItem>
-</CheckboxCardGroup>`}
-        />
-      ),
+</CheckboxCardGroup>`,
     },
     {
       title: "Handling changes",
@@ -80,17 +68,11 @@ export default () => {
           <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
         </CheckboxCardGroup>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<CheckboxCardGroup>
+      code: `<CheckboxCardGroup>
   <CheckboxCardGroupItem onChange={() => {...}}>One</CheckboxCardGroupItem>
   <CheckboxCardGroupItem onChange={() => {...}}>Two</CheckboxCardGroupItem>
   <CheckboxCardGroupItem onChange={() => {...}}>Three</CheckboxCardGroupItem>
-</CheckboxCardGroup>`}
-        />
-      ),
+</CheckboxCardGroup>`,
     },
     {
       title: "Padding",
@@ -120,11 +102,7 @@ export default () => {
           </CheckboxCardGroup>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack class="gap-5">
+      code: `<Stack class="gap-5">
   <CheckboxCardGroup padding="sm">
     <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
     <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
@@ -140,9 +118,7 @@ export default () => {
     <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
     <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
   </CheckboxCardGroup>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Rounded",
@@ -174,11 +150,7 @@ export default () => {
           </CheckboxCardGroup>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack class="gap-5">
+      code: `<Stack class="gap-5">
   <CheckboxCardGroup rounded="square">
     <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
     <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
@@ -194,9 +166,7 @@ export default () => {
     <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
     <CheckboxCardGroupItem>Three</CheckboxCardGroupItem>
   </CheckboxCardGroup>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

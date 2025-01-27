@@ -2,14 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import {
-  Button,
-  CodeBlock,
-  InlineCode,
-  Link,
-  Popover,
-  Stack,
-} from "rfui-package";
+import { Button, InlineCode, Link, Popover, Stack } from "rfui-package";
 
 export default () => {
   const overviewNotes = (
@@ -52,13 +45,7 @@ export default () => {
           <Button>Test</Button>
         </Popover>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Popover content="Example content">Test</Popover>`}
-        />
-      ),
+      code: `<Popover content="Example content">Test</Popover>`,
     },
     {
       title: "Direction",
@@ -78,11 +65,7 @@ export default () => {
           </Popover>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="items-center gap-8 p-8">
+      code: `<Stack className="items-center gap-8 p-8">
   <Popover direction="top" content="Example content">
     <Button>Top</Button>
   </Popover>
@@ -95,9 +78,7 @@ export default () => {
   <Popover direction="left" content="Example content">
     <Button>Left</Button>
   </Popover>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

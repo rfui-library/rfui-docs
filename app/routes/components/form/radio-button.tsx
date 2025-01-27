@@ -33,9 +33,7 @@ export default () => {
     {
       title: "Basic",
       demo: <RadioButton />,
-      code: (
-        <CodeBlock className="mt-4" language="tsx" code={`<RadioButton />`} />
-      ),
+      code: `<RadioButton />`,
     },
     {
       title: "Controlled",
@@ -54,13 +52,7 @@ export default () => {
         </div>
       ),
       demo: <RadioButton />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButton checked={checked} onClick={onClick} />`}
-        />
-      ),
+      code: `<RadioButton checked={checked} onClick={onClick} />`,
     },
     {
       title: "Size",
@@ -79,17 +71,11 @@ export default () => {
           <RadioButton size="lg" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <RadioButton size="sm" />
   <RadioButton size="md" />
   <RadioButton size="lg" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Disabled",
@@ -101,13 +87,7 @@ export default () => {
         </div>
       ),
       demo: <RadioButton disabled />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButton disabled />`}
-        />
-      ),
+      code: `<RadioButton disabled />`,
     },
     {
       title: "Invalid",
@@ -119,13 +99,7 @@ export default () => {
         </div>
       ),
       demo: <RadioButton invalid />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<RadioButton invalid />`}
-        />
-      ),
+      code: `<RadioButton invalid />`,
     },
   ];
   const propsTables = [
