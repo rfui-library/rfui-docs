@@ -111,59 +111,149 @@ export default () => {
     //         />
     //       ),
     //     },
-    //     {
-    //       title: "Size",
-    //       description: (
-    //         <div>
-    //           Set <InlineCode>size</InlineCode> to either{" "}
-    //           <InlineCode>"sm"</InlineCode>, <InlineCode>"md"</InlineCode> or{" "}
-    //           <InlineCode>"lg"</InlineCode>. Defaults to{" "}
-    //           <InlineCode>"md"</InlineCode>.
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Stack className="w-fit gap-5">
-    //           <Select size="sm">
-    //             <option value="foo">foo</option>
-    //             <option value="bar">bar</option>
-    //             <option value="baz">baz</option>
-    //           </Select>
-    //           <Select size="md">
-    //             <option value="foo">foo</option>
-    //             <option value="bar">bar</option>
-    //             <option value="baz">baz</option>
-    //           </Select>
-    //           <Select size="lg">
-    //             <option value="foo">foo</option>
-    //             <option value="bar">bar</option>
-    //             <option value="baz">baz</option>
-    //           </Select>
-    //         </Stack>
-    //       ),
-    //       code: (
-    //         <CodeBlock
-    //           className="mt-4"
-    //           language="tsx"
-    //           code={`<Stack className="w-fit gap-5">
-    //   <Select size="sm">
-    //     <option value="foo">foo</option>
-    //     <option value="bar">bar</option>
-    //     <option value="baz">baz</option>
-    //   </Select>
-    //   <Select size="md">
-    //     <option value="foo">foo</option>
-    //     <option value="bar">bar</option>
-    //     <option value="baz">baz</option>
-    //   </Select>
-    //   <Select size="lg">
-    //     <option value="foo">foo</option>
-    //     <option value="bar">bar</option>
-    //     <option value="baz">baz</option>
-    //   </Select>
-    // </Stack>`}
-    //         />
-    //       ),
-    //     },
+    {
+      title: "Size",
+      description: (
+        <div>
+          Set <InlineCode>size</InlineCode> to either{" "}
+          <InlineCode>"sm"</InlineCode>, <InlineCode>"md"</InlineCode> or{" "}
+          <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+          <InlineCode>"md"</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <Stack className="w-fit gap-5">
+          <Select
+            size="sm"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            size="md"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            size="lg"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+        </Stack>
+      ),
+      code: (
+        <CodeBlock
+          className="mt-4"
+          language="tsx"
+          code={`<Stack className="w-fit gap-5">
+  <Select
+    size="sm"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    size="md"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    size="lg"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+</Stack>`}
+        />
+      ),
+    },
     {
       title: "Rounded",
       description: (
