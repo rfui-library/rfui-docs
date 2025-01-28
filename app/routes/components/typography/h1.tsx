@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <H1>Hello world</H1>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<H1>Hello world</H1>`}
-        />
-      ),
+      code: `<H1>Hello world</H1>`,
     },
     {
       title: "Alongside paragraphs",
@@ -36,11 +30,7 @@ export default () => {
           </Text>
         </div>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<div>
+      code: `<div>
   <H1>Hello world</H1>
   <Text>
     <p>
@@ -53,9 +43,7 @@ export default () => {
       qui.Praesentium pariatur nisi ut rerum et dolores sed.
     </p>
   </Text>
-</div>`}
-        />
-      ),
+</div>`,
     },
     {
       title: "Without default margins",
@@ -78,13 +66,7 @@ export default () => {
         </Stack>
       ),
       demo: <H1 className="!my-4">Hello world</H1>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<H1 className="!my-4">Hello world</H1>`}
-        />
-      ),
+      code: `<H1 className="!my-4">Hello world</H1>`,
     },
   ];
   const propsTables = [

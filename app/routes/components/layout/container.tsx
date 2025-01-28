@@ -11,13 +11,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Container className="bg-neutral-50">Example</Container>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Container className="bg-neutral-50">Example</Container>`}
-        />
-      ),
+      code: `<Container className="bg-neutral-50">Example</Container>`,
     },
   ];
   const propsTables = [

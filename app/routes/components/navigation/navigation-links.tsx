@@ -30,11 +30,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<NavigationLinks
+      code: `<NavigationLinks
   linkItems={[{
     name: "One",
     href: "/one",
@@ -42,9 +38,7 @@ export default () => {
     name: "Two",
     href: "/two",
   }]}
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "With header",
@@ -66,11 +60,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<NavigationLinks
+      code: `<NavigationLinks
   linkItems={[{
     name: "Header",
     isHeader: true,
@@ -81,9 +71,7 @@ export default () => {
     name: "Two",
     href: "/two",
   }]}
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "Multilevel",
@@ -129,11 +117,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<NavigationLinks
+      code: `<NavigationLinks
   linkItems={[{
     name: "Components",
     isHeader: true,
@@ -156,9 +140,7 @@ export default () => {
       href: "/components/data-display/card",
     }],
   }]}
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "In page",
@@ -188,11 +170,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<NavigationLinks
+      code: `<NavigationLinks
   linkItems={[{
     name: "One",
     href: "#one",
@@ -202,9 +180,7 @@ export default () => {
     href: "#two",
     inPage: true,
   }]}
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "Sticky",
@@ -236,11 +212,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<NavigationLinks
+      code: `<NavigationLinks
   className="sticky top-6 max-h-[90vh] overflow-y-auto"
   linkItems={[{
     name: "One",
@@ -249,9 +221,7 @@ export default () => {
     name: "Two",
     href: "/two",
   }]}
-/>`}
-        />
-      ),
+/>`,
     },
   ];
   const propsTables = [

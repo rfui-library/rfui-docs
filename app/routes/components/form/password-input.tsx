@@ -44,9 +44,7 @@ export default () => {
     {
       title: "Basic",
       demo: <PasswordInput />,
-      code: (
-        <CodeBlock className="mt-4" language="tsx" code={`<PasswordInput />`} />
-      ),
+      code: `<PasswordInput />`,
     },
     {
       title: "Controlled",
@@ -65,13 +63,7 @@ export default () => {
         </div>
       ),
       demo: <PasswordInput />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<PasswordInput value={value} onInput={onInput} />`}
-        />
-      ),
+      code: `<PasswordInput value={value} onInput={onInput} />`,
     },
     {
       title: "Default visible",
@@ -121,13 +113,7 @@ export default () => {
         </div>
       ),
       demo: <PasswordInput defaultVisibility="shown" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<PasswordInput defaultVisibility="shown" />`}
-        />
-      ),
+      code: `<PasswordInput defaultVisibility="shown" />`,
     },
     {
       title: "Size",
@@ -145,17 +131,11 @@ export default () => {
           <PasswordInput size="lg" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <PasswordInput size="sm" />
   <PasswordInput size="md" />
   <PasswordInput size="lg" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Rounded",
@@ -177,18 +157,12 @@ export default () => {
           <PasswordInput rounded="full" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <PasswordInput rounded="square" />
   <PasswordInput rounded="sm" />
   <PasswordInput rounded="lg" />
   <PasswordInput rounded="full" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Invalid",
@@ -200,13 +174,7 @@ export default () => {
         </div>
       ),
       demo: <PasswordInput invalid />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<PasswordInput invalid />`}
-        />
-      ),
+      code: `<PasswordInput invalid />`,
     },
   ];
   const propsTables = [

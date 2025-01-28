@@ -18,11 +18,15 @@ export default () => {
         component.
       </p>
       <p>
-        Note: You may prefer to use RFUI's{" "}
-        <Link href="/components/form/form-field#example-select">
-          <InlineCode>FormField</InlineCode>
+        Note: This component uses{" "}
+        <Link href="https://www.npmjs.com/package/@headlessui/react">
+          <InlineCode>@headlessui/react</InlineCode>
+        </Link>
+        's{" "}
+        <Link href="https://headlessui.com/react/listbox">
+          <InlineCode>Listbox</InlineCode>
         </Link>{" "}
-        component with <InlineCode>type="select"</InlineCode> instead.
+        component.
       </p>
     </Stack>
   );
@@ -30,58 +34,225 @@ export default () => {
     {
       title: "Basic",
       demo: (
-        <Select>
-          <option value="foo">foo</option>
-          <option value="bar">bar</option>
-          <option value="baz">baz</option>
-        </Select>
-      ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Select>
-  <option value="foo">foo</option>
-  <option value="bar">bar</option>
-  <option value="baz">baz</option>
-</Select>`}
+        <Select
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
         />
       ),
+      code: `<Select
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
     },
     {
-      title: "Controlled",
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Using with HTML forms",
       description: (
         <div>
-          See{" "}
-          <Link href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components">
-            Controlled & Uncontrolled Components
-          </Link>
-          . Passing <InlineCode>checked</InlineCode> and{" "}
-          <InlineCode>onChange</InlineCode> work because of{" "}
-          <Link href="/rest-parameters">
-            <InlineCode>...rest</InlineCode>
+          If you add the <InlineCode>name</InlineCode> prop, a hidden input
+          element will be rendered and kept in sync with the
+          <InlineCode>Select</InlineCode> state. See Headless UI's docs{" "}
+          <Link href="https://headlessui.com/react/listbox#using-with-html-forms">
+            here
           </Link>
           .
         </div>
       ),
       demo: (
-        <Select>
-          <option value="foo">foo</option>
-          <option value="bar">bar</option>
-          <option value="baz">baz</option>
-        </Select>
-      ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Select value={value} onChange={onChange}>
-  <option value="foo">foo</option>
-  <option value="bar">bar</option>
-  <option value="baz">baz</option>
-</Select>`}
+        <Select
+          name="name-example"
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
         />
       ),
+      code: `<Select
+  name="name-example"
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Empty initial value",
+      description: (
+        <div>
+          <p>
+            If you want an empty initial value use something like this as the
+            first option in the <InlineCode>options</InlineCode> array:
+          </p>
+          <CodeBlock
+            className="mt-2"
+            language="ts"
+            code={`{
+  id: "",
+  value: "",
+  display: "",
+}`}
+          />
+        </div>
+      ),
+      demo: (
+        <Select
+          options={[
+            {
+              id: "",
+              value: "",
+              display: "",
+            },
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: `<Select
+  options={[
+    {
+      id: "",
+      value: "",
+      display: "",
+    },
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Handle change",
+      description: (
+        <div>
+          Use the <InlineCode>onChange</InlineCode> prop.
+        </div>
+      ),
+      demo: (
+        <Select
+          onChange={(newVal) => {
+            console.log(newVal);
+          }}
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: `<Select
+  onChange={(newVal) => {
+    console.log(newVal);
+  }}
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
     },
     {
       title: "Size",
@@ -95,162 +266,547 @@ export default () => {
       ),
       demo: (
         <Stack className="w-fit gap-5">
-          <Select size="sm">
-            <option value="foo">foo</option>
-            <option value="bar">bar</option>
-            <option value="baz">baz</option>
-          </Select>
-          <Select size="md">
-            <option value="foo">foo</option>
-            <option value="bar">bar</option>
-            <option value="baz">baz</option>
-          </Select>
-          <Select size="lg">
-            <option value="foo">foo</option>
-            <option value="bar">bar</option>
-            <option value="baz">baz</option>
-          </Select>
+          <Select
+            size="sm"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            size="md"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            size="lg"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-fit gap-5">
-  <Select size="sm">
-    <option value="foo">foo</option>
-    <option value="bar">bar</option>
-    <option value="baz">baz</option>
-  </Select>
-  <Select size="md">
-    <option value="foo">foo</option>
-    <option value="bar">bar</option>
-    <option value="baz">baz</option>
-  </Select>
-  <Select size="lg">
-    <option value="foo">foo</option>
-    <option value="bar">bar</option>
-    <option value="baz">baz</option>
-  </Select>
-</Stack>`}
+      code: `<Stack className="w-fit gap-5">
+  <Select
+    size="sm"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    size="md"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    size="lg"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+</Stack>`,
+    },
+    {
+      title: "Width",
+      description: (
+        <div>
+          To set the width use <InlineCode>buttonClassName</InlineCode> and{" "}
+          <InlineCode>optionsClassName</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <Select
+          buttonClassName="w-[500px]"
+          optionsClassName="w-[500px]"
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
         />
       ),
+      code: `<Select
+  buttonClassName="w-[500px]"
+  optionsClassName="w-[500px]"
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
     },
     {
       title: "Rounded",
       description: (
         <div>
           Set <InlineCode>rounded</InlineCode> to either{" "}
-          <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>, or{" "}
-          <InlineCode>"lg"</InlineCode>. Defaults to the value of the CSS
-          variable <InlineCode>--default-roundedness</InlineCode>. See{" "}
+          <InlineCode>"square"</InlineCode>, <InlineCode>"sm"</InlineCode>,{" "}
+          <InlineCode>"lg"</InlineCode>, or <InlineCode>"full"</InlineCode>.
+          Defaults to the value of the CSS variable{" "}
+          <InlineCode>--default-roundedness</InlineCode>. See{" "}
           <Link href="/default-roundedness">"Default roundedness"</Link>.
         </div>
       ),
       demo: (
         <Stack className="w-fit gap-5">
-          <Select rounded="square">
-            <option value="foo">foo</option>
-            <option value="bar">bar</option>
-            <option value="baz">baz</option>
-          </Select>
-          <Select rounded="sm">
-            <option value="foo">foo</option>
-            <option value="bar">bar</option>
-            <option value="baz">baz</option>
-          </Select>
-          <Select rounded="lg">
-            <option value="foo">foo</option>
-            <option value="bar">bar</option>
-            <option value="baz">baz</option>
-          </Select>
+          <Select
+            rounded="square"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            rounded="sm"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            rounded="lg"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Select
+            rounded="full"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-fit gap-5">
-  <Select rounded="square">
-    <option value="foo">foo</option>
-    <option value="bar">bar</option>
-    <option value="baz">baz</option>
-  </Select>
-  <Select rounded="sm">
-    <option value="foo">foo</option>
-    <option value="bar">bar</option>
-    <option value="baz">baz</option>
-  </Select>
-  <Select rounded="lg">
-    <option value="foo">foo</option>
-    <option value="bar">bar</option>
-    <option value="baz">baz</option>
-  </Select>
-</Stack>`}
-        />
-      ),
+      code: `<Stack className="w-fit gap-5">
+  <Select
+    rounded="square"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    rounded="sm"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    rounded="lg"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Select
+    rounded="full"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+</Stack>`,
     },
     {
       title: "Disabled",
       description: (
         <div>
-          Set <InlineCode>disabled</InlineCode> to either{" "}
-          <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
-          Defaults to <InlineCode>false</InlineCode>.
+          Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>
+          .
         </div>
       ),
       demo: (
-        <Select disabled>
-          <option value="foo">foo</option>
-          <option value="bar">bar</option>
-          <option value="baz">baz</option>
-        </Select>
-      ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Select disabled>
-  <option value="foo">foo</option>
-  <option value="bar">bar</option>
-  <option value="baz">baz</option>
-</Select>`}
+        <Select
+          disabled
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
         />
       ),
+      code: `<Select
+  disabled
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Disabled option",
+      description: (
+        <div>
+          Set <InlineCode>disabled</InlineCode> to <InlineCode>true</InlineCode>{" "}
+          for a given option .
+        </div>
+      ),
+      demo: (
+        <Select
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+              disabled: false,
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+              disabled: true,
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+              disabled: false,
+            },
+          ]}
+        />
+      ),
+      code: `<Select
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+      disabled: false,
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+      disabled: true,
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+      disabled: false,
+    },
+  ]}
+/>`,
     },
     {
       title: "Invalid",
       description: (
         <div>
-          Set <InlineCode>invalid</InlineCode> to either{" "}
-          <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
-          Defaults to <InlineCode>false</InlineCode>.
+          Set <InlineCode>invalid</InlineCode> to
+          <InlineCode>true</InlineCode>.
         </div>
       ),
       demo: (
-        <Select invalid>
-          <option value="foo">foo</option>
-          <option value="bar">bar</option>
-          <option value="baz">baz</option>
-        </Select>
-      ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Select invalid>
-  <option value="foo">foo</option>
-  <option value="bar">bar</option>
-  <option value="baz">baz</option>
-</Select>`}
+        <Select
+          invalid
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
         />
       ),
+      code: `<Select
+  invalid
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
     },
   ];
   const propsTables = [
     {
       title: null,
       props: [
+        {
+          name: "options",
+          required: true,
+          type: '{ id: string; display: string; value: ComponentProps<"option">["value"]; disabled?: boolean; }[]',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "name",
+          required: false,
+          type: "string",
+          default: null,
+          notes: (
+            <div>
+              Use if you want to submit as an HTML form. See{" "}
+              <Link href="https://headlessui.com/react/listbox#using-with-html-forms">
+                Headless UI's docs
+              </Link>
+              .
+            </div>
+          ),
+        },
         {
           name: "size",
           required: false,
@@ -286,32 +842,54 @@ export default () => {
           notes: null,
         },
         {
-          name: "...rest",
+          name: "onChange",
           required: false,
-          type: 'Omit<ComponentProps<"select">, "size">',
+          type: "(newValue: Option) => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "buttonClassName",
+          required: false,
+          type: "string",
           default: null,
           notes: (
             <div>
-              <div className="leading-relaxed">
-                See the docs for{" "}
-                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>Select</InlineCode>, you could pass anything you
-                normally would pass to <InlineCode>{"<select>"}</InlineCode>{" "}
-                because the return value{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/form/select.tsx">
-                  looks something like
-                </Link>{" "}
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<select
-  className={className}
-  {...restWithoutClass}
->
-  {children}
-</select>`}
-              />
+              This will be passed to Headless UI's{" "}
+              <Link href="https://headlessui.com/react/listbox#listbox-button">
+                <InlineCode>ListboxButton</InlineCode>
+              </Link>{" "}
+              component.
+            </div>
+          ),
+        },
+        {
+          name: "optionsClassName",
+          required: false,
+          type: "string",
+          default: null,
+          notes: (
+            <div>
+              This will be passed to Headless UI's{" "}
+              <Link href="https://headlessui.com/react/listbox#listbox-options">
+                <InlineCode>ListboxOptions</InlineCode>
+              </Link>{" "}
+              component.
+            </div>
+          ),
+        },
+        {
+          name: "optionClassName",
+          required: false,
+          type: "string",
+          default: null,
+          notes: (
+            <div>
+              This will be passed to Headless UI's{" "}
+              <Link href="https://headlessui.com/react/listbox#listbox-option">
+                <InlineCode>ListboxOption</InlineCode>
+              </Link>{" "}
+              component.
             </div>
           ),
         },

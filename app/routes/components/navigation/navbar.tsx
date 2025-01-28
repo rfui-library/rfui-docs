@@ -61,18 +61,12 @@ export default () => {
           </NavbarLeft>
         </Navbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Navbar size="xl">
+      code: `<Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
   </NavbarLeft>
-</Navbar>`}
-        />
-      ),
+</Navbar>`,
     },
     {
       title: "NavbarLeft and NavbarRight",
@@ -88,11 +82,7 @@ export default () => {
           </NavbarRight>
         </Navbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Navbar size="xl">
+      code: `<Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -101,9 +91,7 @@ export default () => {
     <NavbarItem href="https://three.com">Three</NavbarItem>
     <NavbarItem href="https://four.com">Four</NavbarItem>
   </NavbarRight>
-</Navbar>`}
-        />
-      ),
+</Navbar>`,
     },
     {
       title: "Background",
@@ -138,11 +126,7 @@ export default () => {
           </Navbar>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-full gap-5">
+      code: `<Stack className="w-full gap-5">
   <Navbar size="xl" background="neutral">
     <NavbarLeft>
       <NavbarItem href="https://one.com">One</NavbarItem>
@@ -163,9 +147,7 @@ export default () => {
       <NavbarItem href="https://four.com">Four</NavbarItem>
     </NavbarRight>
   </Navbar>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Dropdown",
@@ -194,11 +176,7 @@ export default () => {
           </NavbarLeft>
         </Navbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Navbar size="xl">
+      code: `<Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -211,9 +189,7 @@ export default () => {
       </NavbarDropdownItem>
     </NavbarDropdown>
   </NavbarLeft>
-</Navbar>`}
-        />
-      ),
+</Navbar>`,
     },
     {
       title: "Megamenu",
@@ -266,11 +242,7 @@ export default () => {
           </NavbarLeft>
         </Navbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Navbar size="xl">
+      code: `<Navbar size="xl">
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
@@ -286,9 +258,7 @@ export default () => {
       <div>Example</div>
     </NavbarMegamenu>
   </NavbarLeft>
-</Navbar>`}
-        />
-      ),
+</Navbar>`,
     },
   ];
   const propsTables = [

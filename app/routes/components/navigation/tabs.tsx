@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, InlineCode, Tabs, TabSection } from "rfui-package";
+import { InlineCode, Tabs, TabSection } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -16,17 +16,11 @@ export default () => {
           <TabSection tabName="Third">Three</TabSection>
         </Tabs>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Tabs>
+      code: `<Tabs>
   <TabSection tabName="First">One</TabSection>
   <TabSection tabName="Second">Two</TabSection>
   <TabSection tabName="Third">Three</TabSection>
-</Tabs>`}
-        />
-      ),
+</Tabs>`,
     },
     {
       title: "Full width",
@@ -44,17 +38,11 @@ export default () => {
           <TabSection tabName="Third">Three</TabSection>
         </Tabs>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Tabs fullWidth>
+      code: `<Tabs fullWidth>
   <TabSection tabName="First">One</TabSection>
   <TabSection tabName="Second">Two</TabSection>
   <TabSection tabName="Third">Three</TabSection>
-</Tabs>`}
-        />
-      ),
+</Tabs>`,
     },
     {
       title: "Initial active tab",
@@ -73,17 +61,11 @@ export default () => {
           <TabSection tabName="Third">Three</TabSection>
         </Tabs>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Tabs initialActiveTab="Second">
+      code: `<Tabs initialActiveTab="Second">
   <TabSection tabName="First">One</TabSection>
   <TabSection tabName="Second">Two</TabSection>
   <TabSection tabName="Third">Three</TabSection>
-</Tabs>`}
-        />
-      ),
+</Tabs>`,
     },
   ];
   const propsTables = [

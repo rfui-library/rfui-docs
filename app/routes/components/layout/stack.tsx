@@ -34,17 +34,11 @@ export default () => {
           <div>bottom</div>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <div>top</div>
   <div>middle</div>
   <div>bottom</div>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

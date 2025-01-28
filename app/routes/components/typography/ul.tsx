@@ -16,17 +16,11 @@ export default () => {
           <li>Third</li>
         </UL>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<UL>
+      code: `<UL>
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
-</UL>`}
-        />
-      ),
+</UL>`,
     },
     {
       title: "Bullet type",
@@ -68,11 +62,7 @@ export default () => {
           </UL>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <UL bulletType="bullet">
     <li>One</li>
     <li>Two</li>
@@ -98,9 +88,7 @@ export default () => {
     <li>Two</li>
     <li>Three</li>
   </UL>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Outside",
@@ -134,11 +122,7 @@ export default () => {
           </UL>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <UL bulletLocation="outside" bulletType="bullet">
     <li>One</li>
     <li>Two</li>
@@ -159,9 +143,7 @@ export default () => {
     <li>Two</li>
     <li>Three</li>
   </UL>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Bigger",
@@ -196,11 +178,7 @@ export default () => {
           </UL>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <UL bulletType="bullet" className="text-xl">
     <li>One</li>
     <li>Two</li>
@@ -221,9 +199,7 @@ export default () => {
     <li>Two</li>
     <li>Three</li>
   </UL>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Color",
@@ -258,11 +234,7 @@ export default () => {
           </UL>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <UL bulletType="bullet" className="text-neutral-500">
     <li>One</li>
     <li>Two</li>
@@ -283,9 +255,7 @@ export default () => {
     <li>Two</li>
     <li>Three</li>
   </UL>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Custom",
@@ -313,11 +283,7 @@ export default () => {
           </li>
         </UL>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<UL bulletType="none">
+      code: `<UL bulletType="none">
   <li>
     <Flex className="gap-2">
       <span>😎</span>
@@ -336,9 +302,7 @@ export default () => {
       Three
     </Flex>
   </li>
-</UL>`}
-        />
-      ),
+</UL>`,
     },
   ];
   const propsTables = [

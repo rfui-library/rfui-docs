@@ -21,7 +21,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Input />,
-      code: <CodeBlock className="mt-4" language="tsx" code={`<Input />`} />,
+      code: `<Input />`,
     },
     {
       title: "Controlled",
@@ -40,13 +40,7 @@ export default () => {
         </div>
       ),
       demo: <Input />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Input value={value} onInput={onInput} />`}
-        />
-      ),
+      code: `<Input value={value} onInput={onInput} />`,
     },
     {
       title: "Size",
@@ -65,17 +59,11 @@ export default () => {
           <Input size="lg" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-fit gap-5">
+      code: `<Stack className="w-fit gap-5">
   <Input size="sm" />
   <Input size="md" />
   <Input size="lg" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Rounded",
@@ -97,18 +85,12 @@ export default () => {
           <Input rounded="full" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="w-fit gap-5">
+      code: `<Stack className="w-fit gap-5">
   <Input rounded="square" />
   <Input rounded="sm" />
   <Input rounded="lg" />
   <Input rounded="full" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Disabled",
@@ -120,13 +102,7 @@ export default () => {
         </div>
       ),
       demo: <Input disabled />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Input disabled />`}
-        />
-      ),
+      code: `<Input disabled />`,
     },
     {
       title: "Readonly",
@@ -138,13 +114,7 @@ export default () => {
         </div>
       ),
       demo: <Input readOnly defaultValue="example" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Input readOnly defaultValue="example" />`}
-        />
-      ),
+      code: `<Input readOnly defaultValue="example" />`,
     },
     {
       title: "Invalid",
@@ -156,13 +126,7 @@ export default () => {
         </div>
       ),
       demo: <Input invalid defaultValue="example" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Input invalid defaultValue="example" />`}
-        />
-      ),
+      code: `<Input invalid defaultValue="example" />`,
     },
     {
       title: "Type",
@@ -198,11 +162,7 @@ export default () => {
           <Input type="color" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Input type="text" placeholder="text" />
   <Input type="email" placeholder="email" />
   <Input type="text" inputmode="numeric" pattern="[0-9]*" />
@@ -214,9 +174,7 @@ export default () => {
   <Input type="file" />
   <Input type="range" />
   <Input type="color" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
   ];
   const propsTables = [

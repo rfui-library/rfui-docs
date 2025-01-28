@@ -1,5 +1,5 @@
 import { titleToHref } from "@/utilities/title-to-href";
-import { Card, H2, Text } from "rfui-package";
+import { Card, CodeBlock, H2, Text } from "rfui-package";
 import type { ExampleType } from "./index";
 
 type ExamplesType = {
@@ -22,7 +22,11 @@ export const Examples = ({ examples }: ExamplesType) => {
           <Card width="full" className="mb-4">
             {example.demo}
           </Card>
-          {example.code}
+          <CodeBlock
+            className="mt-4 max-h-96 overflow-y-auto"
+            language="tsx"
+            code={example.code}
+          />
         </section>
       ))}
     </section>

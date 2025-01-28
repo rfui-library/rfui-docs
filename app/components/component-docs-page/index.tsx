@@ -19,7 +19,7 @@ export type ExampleType = {
   title: string;
   description?: ReactNode | string;
   demo: ReactNode;
-  code: ReactNode;
+  code: string;
 };
 
 export const ComponentDocsPage = ({

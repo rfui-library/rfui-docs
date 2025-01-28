@@ -66,7 +66,30 @@ export default () => {
         <CodeBlock code={`npm install @headlessui/react`} />
       </Text>
 
-      <H2 inPageLink="set-up-styles">{"3) Set up styles"}</H2>
+      <H2 inPageLink="install-heroicons">
+        {"3)"} Install <InlineCode>@heroicons/react</InlineCode>
+      </H2>
+      <Text>
+        <p>
+          The RFUI library has a{" "}
+          <Link href="https://docs.npmjs.com/cli/v11/configuring-npm/package-json#peerdependencies">
+            peer dependency
+          </Link>{" "}
+          on{" "}
+          <Link href="https://www.npmjs.com/package/@heroicons/react">
+            <InlineCode>@heroicons/react</InlineCode>
+          </Link>
+          .
+        </p>
+        <CodeBlock code={`npm install @heroicons/react`} />
+        <p>
+          Various RFUI components use heroicons so if you end up having a need
+          for more icons, to maintain a consistent look and feel, you probably
+          will want to use heroicons in your project as well.
+        </p>
+      </Text>
+
+      <H2 inPageLink="set-up-styles">{"4) Set up styles"}</H2>
       <Text>
         <p>
           RFUI gives you components that use classes like{" "}
@@ -96,8 +119,8 @@ export default () => {
           has the styles that come from RFUI .
         </p>
         <p>
-          If you are using Tailwind in your app, make sure that you have a CSS
-          file like{" "}
+          Right now RFUI requires you to use Tailwind in your app. Make sure
+          that you have a CSS file like{" "}
           <Link href="https://github.com/rfui-library/rfui-docs/blob/master/app/app.css">
             this one
           </Link>
@@ -112,21 +135,10 @@ export default () => {
           <InlineCode>content</InlineCode> array so that Tailwind doesn't purge
           the classes that RFUI needs.
         </p>
-        <p>
-          If you aren't using Tailwind you can use this{" "}
-          <Link href="https://github.com/rfui-library/rfui-package/blob/master/rfui.css">
-            <InlineCode>rfui.css</InlineCode>
-          </Link>{" "}
-          file:
-        </p>
-        <CodeBlock
-          language="html"
-          code='<link rel="stylesheet" href="https://github.com/rfui-library/rfui-package/blob/master/rfui.css" />'
-        />
       </Text>
 
       <H2 inPageLink="import-rfui-component">
-        {"4) Import and use RFUI component"}
+        {"5) Import and use RFUI component"}
       </H2>
       <Text>
         <p>Something like this:</p>
@@ -139,23 +151,13 @@ export default () => {
       </Text>
 
       <H2 inPageLink="decide-on-a-personality">
-        {"5) Decide on a personality (recommended)"}
+        {"6) Decide on a personality (recommended)"}
       </H2>
       <Text>
         <p>
           It is usually a good idea to decide upfront on how serious or playful
           you want the tone of your website to be. See "
           <Link href="/choose-a-personality">Choose a personality</Link>".
-        </p>
-      </Text>
-
-      <H2 inPageLink="use-heroicons">{"6) Use heroicons (recommended)"}</H2>
-      <Text>
-        <p>
-          Various RFUI components use{" "}
-          <Link href="https://heroicons.com/">heroicons</Link>. If you end up
-          having a need for more icons, to maintain a consistent look and feel,
-          you probably will want to use heroicons in your project as well.
         </p>
       </Text>
     </div>

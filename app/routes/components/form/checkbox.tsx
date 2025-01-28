@@ -21,7 +21,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Checkbox />,
-      code: <CodeBlock className="mt-4" language="tsx" code={`<Checkbox />`} />,
+      code: `<Checkbox />`,
     },
     {
       title: "Controlled",
@@ -40,13 +40,7 @@ export default () => {
         </div>
       ),
       demo: <Checkbox />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Checkbox checked={checked} onClick={onClick} />`}
-        />
-      ),
+      code: `<Checkbox checked={checked} onClick={onClick} />`,
     },
     {
       title: "Size",
@@ -64,17 +58,11 @@ export default () => {
           <Checkbox size="lg" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Checkbox size="sm" />
   <Checkbox size="md" />
   <Checkbox size="lg" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Disabled",
@@ -86,13 +74,7 @@ export default () => {
         </div>
       ),
       demo: <Checkbox disabled />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Checkbox disabled />`}
-        />
-      ),
+      code: `<Checkbox disabled />`,
     },
     {
       title: "Invalid",
@@ -104,13 +86,7 @@ export default () => {
         </div>
       ),
       demo: <Checkbox invalid />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Checkbox invalid />`}
-        />
-      ),
+      code: `<Checkbox invalid />`,
     },
   ];
   const propsTables = [

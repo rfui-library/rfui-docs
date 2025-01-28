@@ -14,15 +14,9 @@ export default () => {
           The <Highlight>pizza</Highlight> is very good.
         </div>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<div>
+      code: `<div>
   The <Highlight>pizza</Highlight> is very good.
-</div>`}
-        />
-      ),
+</div>`,
     },
     {
       title: "Longer example",
@@ -43,11 +37,7 @@ export default () => {
           </div>
         </div>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<div>
+      code: `<div>
   <h1 className="mb-5 text-3xl">
     Lorem ipsum <Highlight>dolor</Highlight> sit amet, consectetur.
   </h1>
@@ -62,9 +52,7 @@ export default () => {
     nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
     in culpa qui officia deserunt mollit anim id est laborum.
   </div>
-</div>`}
-        />
-      ),
+</div>`,
     },
   ];
   const propsTables = [

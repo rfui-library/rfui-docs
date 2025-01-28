@@ -10,24 +10,12 @@ export default () => {
     {
       title: "Basic",
       demo: <FormField label="Name" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Name" />`}
-        />
-      ),
+      code: `<FormField label="Name" />`,
     },
     {
       title: "Uncontrolled",
       demo: <FormField label="Name" name="name" defaultValue="John Doe" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Name" name="name" defaultValue="John Doe" />,`}
-        />
-      ),
+      code: `<FormField label="Name" name="name" defaultValue="John Doe" />,`,
     },
     {
       title: "Controlled",
@@ -41,13 +29,7 @@ export default () => {
         </div>
       ),
       demo: <FormField label="Name" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Name" value={value} onChange={onChange} />`}
-        />
-      ),
+      code: `<FormField label="Name" value={value} onChange={onChange} />`,
     },
     {
       title: "Helper text",
@@ -58,13 +40,7 @@ export default () => {
         </div>
       ),
       demo: <FormField label="Name" helperText="Your first and last name" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Name" helperText="Your first and last name" />`}
-        />
-      ),
+      code: `<FormField label="Name" helperText="Your first and last name" />`,
     },
     {
       title: "Invalid",
@@ -76,13 +52,7 @@ export default () => {
         </div>
       ),
       demo: <FormField label="Name" invalid />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Name" invalid />`}
-        />
-      ),
+      code: `<FormField label="Name" invalid />`,
     },
     {
       title: "Error text",
@@ -94,13 +64,7 @@ export default () => {
         </div>
       ),
       demo: <FormField label="Name" invalid errorText="Invalid name" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Name" invalid errorText="Invalid name" />`}
-        />
-      ),
+      code: `<FormField label="Name" invalid errorText="Invalid name" />`,
     },
     {
       title: "Helper and error text",
@@ -113,18 +77,12 @@ export default () => {
           errorText="Invalid name"
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField
+      code: `<FormField
   label="Name"
   helperText="Your first and last name"
   invalid
   errorText="Invalid name"
-/>`}
-        />
-      ),
+/>`,
     },
     {
       title: "Required",
@@ -152,11 +110,7 @@ export default () => {
           <FormField label="Name" required requiredIndicator="asterisk" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <FormField
     label="Name"
     required
@@ -167,9 +121,7 @@ export default () => {
     required
     requiredIndicator="asterisk"
   />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Optional",
@@ -197,11 +149,7 @@ export default () => {
           <FormField label="Name" optionalIndicator="asterisk" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <FormField
     label="Name"
     optionalIndicator="text"
@@ -210,9 +158,7 @@ export default () => {
     label="Name"
     optionalIndicator="asterisk"
   />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Size",
@@ -248,11 +194,7 @@ export default () => {
           />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <FormField
     label="Name"
     size="sm"
@@ -274,9 +216,7 @@ export default () => {
     requiredIndicator="text"
     helperText="First and last name"
   />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Width",
@@ -304,11 +244,7 @@ export default () => {
           <FormField label="CVC" type="text" className="w-10" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <FormField
     label="Name on card"
     type="text"
@@ -329,9 +265,7 @@ export default () => {
     type="text"
     className="w-10"
   />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Type",
@@ -377,11 +311,7 @@ export default () => {
           <FormField label="Favorite color" type="color" />
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <FormField label="Name" type="text" />
   <FormField label="Email" type="email" />
   <FormField label="Age" type="number" />
@@ -392,9 +322,7 @@ export default () => {
   <FormField label="Profile photo" type="file" />
   <FormField label="Mood" type="range" />
   <FormField label="Favorite color" type="color" />
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Checkbox",
@@ -410,13 +338,7 @@ export default () => {
         </div>
       ),
       demo: <FormField label="Agreed" type="checkbox" defaultChecked={true} />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Agreed" type="checkbox" defaultChecked={true} />`}
-        />
-      ),
+      code: `<FormField label="Agreed" type="checkbox" defaultChecked={true} />`,
     },
     {
       title: "Switch",
@@ -430,13 +352,7 @@ export default () => {
         </div>
       ),
       demo: <FormField label="Agreed" type="switch" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Agreed" type="switch" />`}
-        />
-      ),
+      code: `<FormField label="Agreed" type="switch" />`,
     },
     {
       title: "PasswordInput",
@@ -458,13 +374,7 @@ export default () => {
           defaultValue="foobar"
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Password" type="rfui-password-input" defaultValue="foobar" />`}
-        />
-      ),
+      code: `<FormField label="Password" type="rfui-password-input" defaultValue="foobar" />`,
     },
     {
       title: "Textarea",
@@ -488,13 +398,7 @@ export default () => {
         </Stack>
       ),
       demo: <FormField label="Notes" type="textarea" />,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField label="Notes" type="textarea" />`}
-        />
-      ),
+      code: `<FormField label="Notes" type="textarea" />`,
     },
     {
       title: "RadioButtonGroup",
@@ -522,11 +426,7 @@ export default () => {
           ]}
         />
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField
+      code: `<FormField
   label="Plan"
   type="radio-button-group"
   name="plan"
@@ -535,49 +435,7 @@ export default () => {
     { value: "basic", display: "Basic" },
     { value: "premium", display: "Premium" },
   ]}
-/>`}
-        />
-      ),
-    },
-    {
-      title: "Select",
-      description: (
-        <div>
-          To use{" "}
-          <Link href="/components/form/select">
-            <InlineCode>Select</InlineCode>
-          </Link>{" "}
-          with <InlineCode>FormField</InlineCode> set{" "}
-          <InlineCode>type</InlineCode> to <InlineCode>"select"</InlineCode> and
-          use <InlineCode>selectOptions</InlineCode> like so:
-        </div>
-      ),
-      demo: (
-        <FormField
-          label="Country"
-          type="select"
-          selectOptions={[
-            { value: "united-states", display: "United States" },
-            { value: "france", display: "France" },
-            { value: "japan", display: "Japan" },
-          ]}
-        />
-      ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<FormField
-  label="Country"
-  type="select"
-  selectOptions={[
-    { value: "united-states", display: "United States" },
-    { value: "france", display: "France" },
-    { value: "japan", display: "Japan" },
-  ]}
-/>`}
-        />
-      ),
+/>`,
     },
   ];
   const propsTables = [
@@ -704,19 +562,6 @@ export default () => {
           ),
         },
         {
-          name: "selectOptions",
-          required: false,
-          type: "{ value: string; display: string; }[]",
-          default: null,
-          notes: (
-            <div>
-              This is to be used to be used to construct{" "}
-              <InlineCode>{`<option>`}</InlineCode> elements when you have{" "}
-              <InlineCode>type="select"</InlineCode>.
-            </div>
-          ),
-        },
-        {
           name: "inputRest",
           required: false,
           type: 'Omit<ComponentProps<"input">, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
@@ -796,35 +641,6 @@ export default () => {
               <CodeBlock
                 language="tsx"
                 code={`<RadioButtonGroup {...radioButtonGroupRest}></RadioButtonGroup>`}
-              />
-            </div>
-          ),
-        },
-        {
-          name: "selectRest",
-          required: false,
-          type: 'Omit<SelectType, "id" | "name" | "value" | "required" | "invalid">',
-          default: null,
-          notes: (
-            <div>
-              <div>
-                The structure of <InlineCode>FormField</InlineCode> when used
-                with <InlineCode>type="select"</InlineCode> is something like
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<div>
-  ...
-  <Select></Select>
-</div>`}
-              />
-              <div className="mb-3 mt-4">
-                <InlineCode>selectRest</InlineCode> gets passed like this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<Select {...selectRest}></Select>`}
               />
             </div>
           ),

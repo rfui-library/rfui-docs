@@ -16,17 +16,11 @@ export default () => {
           <li>Third</li>
         </OL>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<OL>
+      code: `<OL>
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
-</OL>`}
-        />
-      ),
+</OL>`,
     },
     {
       title: "Outside",
@@ -37,17 +31,11 @@ export default () => {
           <li>Third</li>
         </OL>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<OL bulletLocation="outside">
+      code: `<OL bulletLocation="outside">
   <li>First</li>
   <li>Second</li>
   <li>Third</li>
-</OL>`}
-        />
-      ),
+</OL>`,
     },
   ];
   const propsTables = [

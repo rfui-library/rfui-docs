@@ -65,11 +65,7 @@ export default () => {
           </VerticalNavbarTop>
         </VerticalNavbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<VerticalNavbar>
+      code: `<VerticalNavbar>
   <VerticalNavbarTop>
     <VerticalNavbarItem href="/one" isActive={false}>
       One
@@ -81,9 +77,7 @@ export default () => {
       Three
     </VerticalNavbarItem>
   </VerticalNavbarTop>
-</VerticalNavbar>`}
-        />
-      ),
+</VerticalNavbar>`,
     },
     {
       title: "Active link",
@@ -114,11 +108,7 @@ export default () => {
           </VerticalNavbarTop>
         </VerticalNavbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<VerticalNavbar>
+      code: `<VerticalNavbar>
   <VerticalNavbarTop>
     <VerticalNavbarItem href="/one" isActive={true}>
       One
@@ -130,9 +120,7 @@ export default () => {
       Three
     </VerticalNavbarItem>
   </VerticalNavbarTop>
-</VerticalNavbar>`}
-        />
-      ),
+</VerticalNavbar>`,
     },
     {
       title: "Sections",
@@ -158,11 +146,7 @@ export default () => {
           </VerticalNavbarTop>
         </VerticalNavbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<VerticalNavbar>
+      code: `<VerticalNavbar>
   <VerticalNavbarTop>
     <VerticalNavbarSection>
       <VerticalNavbarItem href="/one" isActive={false}>
@@ -181,9 +165,7 @@ export default () => {
       </VerticalNavbarItem>
     </VerticalNavbarSection>
   </VerticalNavbarTop>
-</VerticalNavbar>`}
-        />
-      ),
+</VerticalNavbar>`,
     },
     {
       title: "Heading",
@@ -204,11 +186,7 @@ export default () => {
           </VerticalNavbarTop>
         </VerticalNavbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<VerticalNavbar>
+      code: `<VerticalNavbar>
   <VerticalNavbarTop>
     <VerticalNavbarSection heading="Heading">
       <VerticalNavbarItem href="/one" isActive={false}>
@@ -222,9 +200,7 @@ export default () => {
       </VerticalNavbarItem>
     </VerticalNavbarSection>
   </VerticalNavbarTop>
-</VerticalNavbar>`}
-        />
-      ),
+</VerticalNavbar>`,
     },
     {
       title: "Top and bottom",
@@ -256,11 +232,7 @@ export default () => {
           </VerticalNavbarBottom>
         </VerticalNavbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<VerticalNavbar>
+      code: `<VerticalNavbar>
   <VerticalNavbarTop>
     <VerticalNavbarItem href="/one" isActive={false}>
       One
@@ -277,9 +249,7 @@ export default () => {
       Four
     </VerticalNavbarItem>
   </VerticalNavbarBottom>
-</VerticalNavbar>`}
-        />
-      ),
+</VerticalNavbar>`,
     },
     {
       title: "Icons",
@@ -319,11 +289,7 @@ export default () => {
           </VerticalNavbarTop>
         </VerticalNavbar>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<VerticalNavbar>
+      code: `<VerticalNavbar>
   <VerticalNavbarTop>
     <VerticalNavbarItem href="/one" isActive={false} icon={<IconOne />}>
       One
@@ -339,9 +305,7 @@ export default () => {
       Three
     </VerticalNavbarItem>
   </VerticalNavbarTop>
-</VerticalNavbar>`}
-        />
-      ),
+</VerticalNavbar>`,
     },
   ];
   const propsTables = [

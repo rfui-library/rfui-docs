@@ -23,13 +23,7 @@ export default () => {
     {
       title: "Basic",
       demo: <Card>A summary of your account.</Card>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card>A summary of your account.</Card>`}
-        />
-      ),
+      code: `<Card>A summary of your account.</Card>`,
     },
     {
       title: "CardBody",
@@ -38,15 +32,9 @@ export default () => {
           <CardBody>A summary of your account.</CardBody>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card>
+      code: `<Card>
   <CardBody>A summary of your account.</CardBody>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "CardHeader and CardBody",
@@ -56,16 +44,10 @@ export default () => {
           <CardBody>A summary of your account.</CardBody>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card>
+      code: `<Card>
   <CardHeader>Summary</CardHeader>
   <CardBody>A summary of your account.</CardBody>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "CardHeading",
@@ -77,18 +59,12 @@ export default () => {
           <CardBody>A summary of your account.</CardBody>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card>
+      code: `<Card>
   <CardHeader>
     <CardHeading>Summary</CardHeading>
   </CardHeader>
   <CardBody>A summary of your account.</CardBody>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "CardBody and CardFooter",
@@ -100,18 +76,12 @@ export default () => {
           </CardFooter>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card>
+      code: `<Card>
   <CardBody>A summary of your account.</CardBody>
   <CardFooter>
     <Button>Close</Button>
   </CardFooter>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "CardHeader, CardBody and CardFooter",
@@ -124,19 +94,13 @@ export default () => {
           </CardFooter>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card>
+      code: `<Card>
   <CardHeader>Summary</CardHeader>
   <CardBody>A summary of your account.</CardBody>
   <CardFooter>
     <Button>Close</Button>
   </CardFooter>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "Rounded",
@@ -174,11 +138,7 @@ export default () => {
           </Card>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Card rounded="square">
     <CardHeader>Summary</CardHeader>
     <CardBody>A summary of your account.</CardBody>
@@ -200,9 +160,7 @@ export default () => {
       <Button>Close</Button>
     </CardFooter>
   </Card>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Width",
@@ -246,11 +204,7 @@ export default () => {
           </Card>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Card width="sm">
     <CardHeader>Summary</CardHeader>
     <CardBody>A summary of your account.</CardBody>
@@ -279,9 +233,7 @@ export default () => {
       <Button>Close</Button>
     </CardFooter>
   </Card>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Shadow",
@@ -317,11 +269,7 @@ export default () => {
           </Card>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Card shadow="sm">
     <CardHeader>Summary</CardHeader>
     <CardBody>A summary of your account.</CardBody>
@@ -343,9 +291,7 @@ export default () => {
       <Button>Close</Button>
     </CardFooter>
   </Card>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Padding",
@@ -381,11 +327,7 @@ export default () => {
           </Card>
         </Stack>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Stack className="gap-5">
+      code: `<Stack className="gap-5">
   <Card padding="sm">
     <CardHeader>Summary</CardHeader>
     <CardBody>A summary of your account.</CardBody>
@@ -407,9 +349,7 @@ export default () => {
       <Button>Close</Button>
     </CardFooter>
   </Card>
-</Stack>`}
-        />
-      ),
+</Stack>`,
     },
     {
       title: "Realistic",
@@ -436,11 +376,7 @@ export default () => {
           </CardFooter>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card>
+      code: `<Card>
   <CardHeader>
     <CardHeading>Profile</CardHeading>
   </CardHeader>
@@ -460,9 +396,7 @@ export default () => {
       <Button>Cancel</Button>
     </Flex>
   </CardFooter>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "Top accent",
@@ -496,11 +430,7 @@ export default () => {
           </CardFooter>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card topAccent rounded="square">
+      code: `<Card topAccent rounded="square">
   <CardHeader>
     <CardHeading>Profile</CardHeading>
   </CardHeader>
@@ -520,9 +450,7 @@ export default () => {
       <Button>Cancel</Button>
     </Flex>
   </CardFooter>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "Left accent",
@@ -556,11 +484,7 @@ export default () => {
           </CardFooter>
         </Card>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Card leftAccent rounded="square">
+      code: `<Card leftAccent rounded="square">
   <CardHeader>
     <CardHeading>Profile</CardHeading>
   </CardHeader>
@@ -580,9 +504,7 @@ export default () => {
       <Button>Cancel</Button>
     </Flex>
   </CardFooter>
-</Card>`}
-        />
-      ),
+</Card>`,
     },
     {
       title: "As link",
@@ -604,19 +526,13 @@ export default () => {
           </Card>
         </Link>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Link href="https://example.com">
+      code: `<Link href="https://example.com">
   <Card className="pointer-events-none">
     <CardBody>
       Click to visit example.com
     </CardBody>
   </Card>
-</Link>`}
-        />
-      ),
+</Link>`,
     },
   ];
   const propsTables = [

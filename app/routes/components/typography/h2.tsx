@@ -10,13 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: <H2>Hello world</H2>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<H2>Hello world</H2>`}
-        />
-      ),
+      code: `<H2>Hello world</H2>`,
     },
     {
       title: "Alongside paragraphs",
@@ -36,11 +30,7 @@ export default () => {
           </Text>
         </div>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<div>
+      code: `<div>
   <H2>Hello world</H2>
   <Text>
     <p>
@@ -53,9 +43,7 @@ export default () => {
       qui.Praesentium pariatur nisi ut rerum et dolores sed.
     </p>
   </Text>
-</div>`}
-        />
-      ),
+</div>`,
     },
     {
       title: "Without default margins",
@@ -78,13 +66,7 @@ export default () => {
         </Stack>
       ),
       demo: <H2 className="!my-2">Hello world</H2>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<H2 className="!my-2">Hello world</H2>`}
-        />
-      ),
+      code: `<H2 className="!my-2">Hello world</H2>`,
     },
     {
       title: "In-page link",
@@ -113,13 +95,7 @@ export default () => {
         </div>
       ),
       demo: <H2 inPageLink="hello-world">Hello world</H2>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<H2 inPageLink="hello-world">Hello world</H2>`}
-        />
-      ),
+      code: `<H2 inPageLink="hello-world">Hello world</H2>`,
     },
   ];
   const propsTables = [

@@ -33,15 +33,9 @@ export default () => {
     {
       title: "Basic",
       demo: <ModalExample>Example</ModalExample>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Modal isOpen={isOpen} close={close}>
+      code: `<Modal isOpen={isOpen} close={close}>
   Example
-</Modal>`}
-        />
-      ),
+</Modal>`,
     },
     {
       title: "With heading",
@@ -51,15 +45,9 @@ export default () => {
         </div>
       ),
       demo: <ModalExample heading="Modal heading">Example</ModalExample>,
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<Modal heading="Modal heading" isOpen={isOpen} close={close}>
+      code: `<Modal heading="Modal heading" isOpen={isOpen} close={close}>
   Example
-</Modal>`}
-        />
-      ),
+</Modal>`,
     },
   ];
   const propsTables = [

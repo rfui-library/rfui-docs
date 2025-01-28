@@ -14,15 +14,9 @@ export default () => {
           When I wrote <InlineCode>sayHello("John")</InlineCode> it didn't work.
         </div>
       ),
-      code: (
-        <CodeBlock
-          className="mt-4"
-          language="tsx"
-          code={`<div>
+      code: `<div>
   When I wrote <InlineCode>sayHello("John")</InlineCode> it didn't work.
-</div>`}
-        />
-      ),
+</div>`,
     },
   ];
   const propsTables = [
