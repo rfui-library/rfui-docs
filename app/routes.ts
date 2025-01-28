@@ -29,6 +29,7 @@ export default [
         "./routes/components/form/checkbox-card-group.tsx"
       ),
       route("checkbox", "./routes/components/form/checkbox.tsx"),
+      route("combobox", "./routes/components/form/combobox.tsx"),
       route("form-field", "./routes/components/form/form-field.tsx"),
       route("input", "./routes/components/form/input.tsx"),
       route("password-input", "./routes/components/form/password-input.tsx"),

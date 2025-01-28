@@ -135,6 +135,11 @@ export const getComponents = () => ({
       ),
     },
     {
+      name: "Combobox",
+      href: "/components/form/combobox",
+      demo: <Checkbox />,
+    },
+    {
       name: "FormField",
       href: "/components/form/form-field",
       demo: (
