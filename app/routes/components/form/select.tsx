@@ -28,13 +28,6 @@ export default () => {
         </Link>{" "}
         component.
       </p>
-      <p>
-        Note: You may prefer to use RFUI's{" "}
-        <Link href="/components/form/form-field#example-select">
-          <InlineCode>FormField</InlineCode>
-        </Link>{" "}
-        component with <InlineCode>type="select"</InlineCode> instead.
-      </p>
     </Stack>
   );
   const examples: ExampleType[] = [

@@ -437,40 +437,6 @@ export default () => {
   ]}
 />`,
     },
-    {
-      title: "Select",
-      description: (
-        <div>
-          To use{" "}
-          <Link href="/components/form/select">
-            <InlineCode>Select</InlineCode>
-          </Link>{" "}
-          with <InlineCode>FormField</InlineCode> set{" "}
-          <InlineCode>type</InlineCode> to <InlineCode>"select"</InlineCode> and
-          use <InlineCode>selectOptions</InlineCode> like so:
-        </div>
-      ),
-      demo: (
-        <FormField
-          label="Country"
-          type="select"
-          selectOptions={[
-            { value: "united-states", display: "United States" },
-            { value: "france", display: "France" },
-            { value: "japan", display: "Japan" },
-          ]}
-        />
-      ),
-      code: `<FormField
-  label="Country"
-  type="select"
-  selectOptions={[
-    { value: "united-states", display: "United States" },
-    { value: "france", display: "France" },
-    { value: "japan", display: "Japan" },
-  ]}
-/>`,
-    },
   ];
   const propsTables = [
     {
@@ -596,19 +562,6 @@ export default () => {
           ),
         },
         {
-          name: "selectOptions",
-          required: false,
-          type: "{ value: string; display: string; }[]",
-          default: null,
-          notes: (
-            <div>
-              This is to be used to be used to construct{" "}
-              <InlineCode>{`<option>`}</InlineCode> elements when you have{" "}
-              <InlineCode>type="select"</InlineCode>.
-            </div>
-          ),
-        },
-        {
           name: "inputRest",
           required: false,
           type: 'Omit<ComponentProps<"input">, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
@@ -688,35 +641,6 @@ export default () => {
               <CodeBlock
                 language="tsx"
                 code={`<RadioButtonGroup {...radioButtonGroupRest}></RadioButtonGroup>`}
-              />
-            </div>
-          ),
-        },
-        {
-          name: "selectRest",
-          required: false,
-          type: 'Omit<SelectType, "id" | "name" | "value" | "required" | "invalid">',
-          default: null,
-          notes: (
-            <div>
-              <div>
-                The structure of <InlineCode>FormField</InlineCode> when used
-                with <InlineCode>type="select"</InlineCode> is something like
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<div>
-  ...
-  <Select></Select>
-</div>`}
-              />
-              <div className="mb-3 mt-4">
-                <InlineCode>selectRest</InlineCode> gets passed like this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<Select {...selectRest}></Select>`}
               />
             </div>
           ),
