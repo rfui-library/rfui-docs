@@ -151,41 +151,60 @@ export default () => {
   ]}
 />`,
     },
-    //     {
-    //       title: "Controlled",
-    //       description: (
-    //         <div>
-    //           See{" "}
-    //           <Link href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components">
-    //             Controlled & Uncontrolled Components
-    //           </Link>
-    //           . Passing <InlineCode>checked</InlineCode> and{" "}
-    //           <InlineCode>onChange</InlineCode> work because of{" "}
-    //           <Link href="/rest-parameters">
-    //             <InlineCode>...rest</InlineCode>
-    //           </Link>
-    //           .
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Select>
-    //           <option value="foo">foo</option>
-    //           <option value="bar">bar</option>
-    //           <option value="baz">baz</option>
-    //         </Select>
-    //       ),
-    //       code: (
-    //         <CodeBlock
-    //           className="mt-4"
-    //           language="tsx"
-    //           code={`<Select value={value} onChange={onChange}>
-    //   <option value="foo">foo</option>
-    //   <option value="bar">bar</option>
-    //   <option value="baz">baz</option>
-    // </Select>`}
-    //         />
-    //       ),
-    //     },
+    {
+      title: "Handle change",
+      description: (
+        <div>
+          Use the <InlineCode>onChange</InlineCode> prop.
+        </div>
+      ),
+      demo: (
+        <Select
+          onChange={(newVal) => {
+            console.log(newVal);
+          }}
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: `<Select
+  onChange={(newVal) => {
+    console.log(newVal);
+  }}
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
     {
       title: "Size",
       description: (
