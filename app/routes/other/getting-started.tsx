@@ -119,8 +119,8 @@ export default () => {
           has the styles that come from RFUI .
         </p>
         <p>
-          If you are using Tailwind in your app, make sure that you have a CSS
-          file like{" "}
+          Right now RFUI requires you to use Tailwind in your app. Make sure
+          that you have a CSS file like{" "}
           <Link href="https://github.com/rfui-library/rfui-docs/blob/master/app/app.css">
             this one
           </Link>
@@ -135,17 +135,6 @@ export default () => {
           <InlineCode>content</InlineCode> array so that Tailwind doesn't purge
           the classes that RFUI needs.
         </p>
-        <p>
-          If you aren't using Tailwind you can use this{" "}
-          <Link href="https://github.com/rfui-library/rfui-package/blob/master/rfui.css">
-            <InlineCode>rfui.css</InlineCode>
-          </Link>{" "}
-          file:
-        </p>
-        <CodeBlock
-          language="html"
-          code='<link rel="stylesheet" href="https://github.com/rfui-library/rfui-package/blob/master/rfui.css" />'
-        />
       </Text>
 
       <H2 inPageLink="import-rfui-component">
