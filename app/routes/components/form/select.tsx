@@ -793,6 +793,28 @@ export default () => {
       title: null,
       props: [
         {
+          name: "options",
+          required: true,
+          type: '{ id: string; display: string; value: ComponentProps<"option">["value"]; disabled?: boolean; }[]',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "name",
+          required: false,
+          type: "string",
+          default: null,
+          notes: (
+            <div>
+              Use if you want to submit as an HTML form. See{" "}
+              <Link href="https://headlessui.com/react/listbox#using-with-html-forms">
+                Headless UI's docs
+              </Link>
+              .
+            </div>
+          ),
+        },
+        {
           name: "size",
           required: false,
           type: '"sm" | "md" | "lg"',
@@ -827,32 +849,54 @@ export default () => {
           notes: null,
         },
         {
-          name: "...rest",
+          name: "onChange",
           required: false,
-          type: 'Omit<ComponentProps<"select">, "size">',
+          type: "(newValue: Option) => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "buttonClassName",
+          required: false,
+          type: "string",
           default: null,
           notes: (
             <div>
-              <div className="leading-relaxed">
-                See the docs for{" "}
-                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>Select</InlineCode>, you could pass anything you
-                normally would pass to <InlineCode>{"<select>"}</InlineCode>{" "}
-                because the return value{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/form/select.tsx">
-                  looks something like
-                </Link>{" "}
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<select
-  className={className}
-  {...restWithoutClass}
->
-  {children}
-</select>`}
-              />
+              This will be passed to Headless UI's{" "}
+              <Link href="https://headlessui.com/react/listbox#listbox-button">
+                <InlineCode>ListboxButton</InlineCode>
+              </Link>{" "}
+              component.
+            </div>
+          ),
+        },
+        {
+          name: "optionsClassName",
+          required: false,
+          type: "string",
+          default: null,
+          notes: (
+            <div>
+              This will be passed to Headless UI's{" "}
+              <Link href="https://headlessui.com/react/listbox#listbox-options">
+                <InlineCode>ListboxOptions</InlineCode>
+              </Link>{" "}
+              component.
+            </div>
+          ),
+        },
+        {
+          name: "optionClassName",
+          required: false,
+          type: "string",
+          default: null,
+          notes: (
+            <div>
+              This will be passed to Headless UI's{" "}
+              <Link href="https://headlessui.com/react/listbox#listbox-option">
+                <InlineCode>ListboxOption</InlineCode>
+              </Link>{" "}
+              component.
             </div>
           ),
         },
