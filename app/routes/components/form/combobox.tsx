@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { InlineCode, Link, Select } from "rfui-package";
+import { Combobox, InlineCode, Link } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -10,7 +10,7 @@ export default () => {
     {
       title: "Basic",
       demo: (
-        <Select
+        <Combobox
           options={[
             {
               id: "foo",
@@ -30,7 +30,7 @@ export default () => {
           ]}
         />
       ),
-      code: `<Select
+      code: `<Combobox
   options={[
     {
       id: "foo",
