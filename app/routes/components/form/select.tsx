@@ -82,6 +82,62 @@ export default () => {
 />`,
     },
     {
+      title: "Using with HTML forms",
+      description: (
+        <div>
+          If you add the <InlineCode>name</InlineCode> prop, a hidden input
+          element will be rendered and kept in sync with the
+          <InlineCode>Select</InlineCode> state. See Headless UI's docs{" "}
+          <Link href="https://headlessui.com/react/listbox#using-with-html-forms">
+            here
+          </Link>
+          .
+        </div>
+      ),
+      demo: (
+        <Select
+          name="name-example"
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: `<Select
+  name="name-example"
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
+    {
       title: "Empty initial value",
       description: (
         <div>
