@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, Combobox, InlineCode, Link } from "rfui-package";
+import { CodeBlock, Combobox, InlineCode, Link, Stack } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -151,7 +151,7 @@ export default () => {
           ]}
         />
       ),
-      code: `<Select
+      code: `<Combobox
   options={[
     {
       id: "",
@@ -184,7 +184,7 @@ export default () => {
     //         </div>
     //       ),
     //       demo: (
-    //         <Select
+    //         <Combobox
     //           onChange={(newVal) => {
     //             console.log(newVal);
     //           }}
@@ -207,7 +207,7 @@ export default () => {
     //           ]}
     //         />
     //       ),
-    //       code: `<Select
+    //       code: `<Combobox
     //   onChange={(newVal) => {
     //     console.log(newVal);
     //   }}
@@ -230,143 +230,143 @@ export default () => {
     //   ]}
     // />`,
     //     },
-    //     {
-    //       title: "Size",
-    //       description: (
-    //         <div>
-    //           Set <InlineCode>size</InlineCode> to either{" "}
-    //           <InlineCode>"sm"</InlineCode>, <InlineCode>"md"</InlineCode> or{" "}
-    //           <InlineCode>"lg"</InlineCode>. Defaults to{" "}
-    //           <InlineCode>"md"</InlineCode>.
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Stack className="w-fit gap-5">
-    //           <Select
-    //             size="sm"
-    //             options={[
-    //               {
-    //                 id: "foo",
-    //                 value: "foo",
-    //                 display: "foo",
-    //               },
-    //               {
-    //                 id: "bar",
-    //                 value: "bar",
-    //                 display: "bar",
-    //               },
-    //               {
-    //                 id: "baz",
-    //                 value: "baz",
-    //                 display: "baz",
-    //               },
-    //             ]}
-    //           />
-    //           <Select
-    //             size="md"
-    //             options={[
-    //               {
-    //                 id: "foo",
-    //                 value: "foo",
-    //                 display: "foo",
-    //               },
-    //               {
-    //                 id: "bar",
-    //                 value: "bar",
-    //                 display: "bar",
-    //               },
-    //               {
-    //                 id: "baz",
-    //                 value: "baz",
-    //                 display: "baz",
-    //               },
-    //             ]}
-    //           />
-    //           <Select
-    //             size="lg"
-    //             options={[
-    //               {
-    //                 id: "foo",
-    //                 value: "foo",
-    //                 display: "foo",
-    //               },
-    //               {
-    //                 id: "bar",
-    //                 value: "bar",
-    //                 display: "bar",
-    //               },
-    //               {
-    //                 id: "baz",
-    //                 value: "baz",
-    //                 display: "baz",
-    //               },
-    //             ]}
-    //           />
-    //         </Stack>
-    //       ),
-    //       code: `<Stack className="w-fit gap-5">
-    //   <Select
-    //     size="sm"
-    //     options={[
-    //       {
-    //         id: "foo",
-    //         value: "foo",
-    //         display: "foo",
-    //       },
-    //       {
-    //         id: "bar",
-    //         value: "bar",
-    //         display: "bar",
-    //       },
-    //       {
-    //         id: "baz",
-    //         value: "baz",
-    //         display: "baz",
-    //       },
-    //     ]}
-    //   />
-    //   <Select
-    //     size="md"
-    //     options={[
-    //       {
-    //         id: "foo",
-    //         value: "foo",
-    //         display: "foo",
-    //       },
-    //       {
-    //         id: "bar",
-    //         value: "bar",
-    //         display: "bar",
-    //       },
-    //       {
-    //         id: "baz",
-    //         value: "baz",
-    //         display: "baz",
-    //       },
-    //     ]}
-    //   />
-    //   <Select
-    //     size="lg"
-    //     options={[
-    //       {
-    //         id: "foo",
-    //         value: "foo",
-    //         display: "foo",
-    //       },
-    //       {
-    //         id: "bar",
-    //         value: "bar",
-    //         display: "bar",
-    //       },
-    //       {
-    //         id: "baz",
-    //         value: "baz",
-    //         display: "baz",
-    //       },
-    //     ]}
-    //   />
-    // </Stack>`,
-    //     },
+    {
+      title: "Size",
+      description: (
+        <div>
+          Set <InlineCode>size</InlineCode> to either{" "}
+          <InlineCode>"sm"</InlineCode>, <InlineCode>"md"</InlineCode> or{" "}
+          <InlineCode>"lg"</InlineCode>. Defaults to{" "}
+          <InlineCode>"md"</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <Stack className="w-fit gap-5">
+          <Combobox
+            size="sm"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Combobox
+            size="md"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+          <Combobox
+            size="lg"
+            options={[
+              {
+                id: "foo",
+                value: "foo",
+                display: "foo",
+              },
+              {
+                id: "bar",
+                value: "bar",
+                display: "bar",
+              },
+              {
+                id: "baz",
+                value: "baz",
+                display: "baz",
+              },
+            ]}
+          />
+        </Stack>
+      ),
+      code: `<Stack className="w-fit gap-5">
+  <Combobox
+    size="sm"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Combobox
+    size="md"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+  <Combobox
+    size="lg"
+    options={[
+      {
+        id: "foo",
+        value: "foo",
+        display: "foo",
+      },
+      {
+        id: "bar",
+        value: "bar",
+        display: "bar",
+      },
+      {
+        id: "baz",
+        value: "baz",
+        display: "baz",
+      },
+    ]}
+  />
+</Stack>`,
+    },
     //     {
     //       title: "Width",
     //       description: (
@@ -376,7 +376,7 @@ export default () => {
     //         </div>
     //       ),
     //       demo: (
-    //         <Select
+    //         <Combobox
     //           buttonClassName="w-[500px]"
     //           optionsClassName="w-[500px]"
     //           options={[
@@ -398,7 +398,7 @@ export default () => {
     //           ]}
     //         />
     //       ),
-    //       code: `<Select
+    //       code: `<Combobox
     //   buttonClassName="w-[500px]"
     //   optionsClassName="w-[500px]"
     //   options={[
@@ -434,7 +434,7 @@ export default () => {
     //       ),
     //       demo: (
     //         <Stack className="w-fit gap-5">
-    //           <Select
+    //           <Combobox
     //             rounded="square"
     //             options={[
     //               {
@@ -454,7 +454,7 @@ export default () => {
     //               },
     //             ]}
     //           />
-    //           <Select
+    //           <Combobox
     //             rounded="sm"
     //             options={[
     //               {
@@ -474,7 +474,7 @@ export default () => {
     //               },
     //             ]}
     //           />
-    //           <Select
+    //           <Combobox
     //             rounded="lg"
     //             options={[
     //               {
@@ -494,7 +494,7 @@ export default () => {
     //               },
     //             ]}
     //           />
-    //           <Select
+    //           <Combobox
     //             rounded="full"
     //             options={[
     //               {
@@ -517,7 +517,7 @@ export default () => {
     //         </Stack>
     //       ),
     //       code: `<Stack className="w-fit gap-5">
-    //   <Select
+    //   <Combobox
     //     rounded="square"
     //     options={[
     //       {
@@ -537,7 +537,7 @@ export default () => {
     //       },
     //     ]}
     //   />
-    //   <Select
+    //   <Combobox
     //     rounded="sm"
     //     options={[
     //       {
@@ -557,7 +557,7 @@ export default () => {
     //       },
     //     ]}
     //   />
-    //   <Select
+    //   <Combobox
     //     rounded="lg"
     //     options={[
     //       {
@@ -577,7 +577,7 @@ export default () => {
     //       },
     //     ]}
     //   />
-    //   <Select
+    //   <Combobox
     //     rounded="full"
     //     options={[
     //       {
@@ -608,7 +608,7 @@ export default () => {
     //         </div>
     //       ),
     //       demo: (
-    //         <Select
+    //         <Combobox
     //           disabled
     //           options={[
     //             {
@@ -629,7 +629,7 @@ export default () => {
     //           ]}
     //         />
     //       ),
-    //       code: `<Select
+    //       code: `<Combobox
     //   disabled
     //   options={[
     //     {
@@ -659,7 +659,7 @@ export default () => {
     //         </div>
     //       ),
     //       demo: (
-    //         <Select
+    //         <Combobox
     //           options={[
     //             {
     //               id: "foo",
@@ -682,7 +682,7 @@ export default () => {
     //           ]}
     //         />
     //       ),
-    //       code: `<Select
+    //       code: `<Combobox
     //   options={[
     //     {
     //       id: "foo",
@@ -714,7 +714,7 @@ export default () => {
     //         </div>
     //       ),
     //       demo: (
-    //         <Select
+    //         <Combobox
     //           invalid
     //           options={[
     //             {
@@ -735,7 +735,7 @@ export default () => {
     //           ]}
     //         />
     //       ),
-    //       code: `<Select
+    //       code: `<Combobox
     //   invalid
     //   options={[
     //     {
