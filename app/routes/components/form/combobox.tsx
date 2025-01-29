@@ -176,60 +176,60 @@ export default () => {
   ]}
 />`,
     },
-    //     {
-    //       title: "Handle change",
-    //       description: (
-    //         <div>
-    //           Use the <InlineCode>onChange</InlineCode> prop.
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Combobox
-    //           onChange={(newVal) => {
-    //             console.log(newVal);
-    //           }}
-    //           options={[
-    //             {
-    //               id: "foo",
-    //               value: "foo",
-    //               display: "foo",
-    //             },
-    //             {
-    //               id: "bar",
-    //               value: "bar",
-    //               display: "bar",
-    //             },
-    //             {
-    //               id: "baz",
-    //               value: "baz",
-    //               display: "baz",
-    //             },
-    //           ]}
-    //         />
-    //       ),
-    //       code: `<Combobox
-    //   onChange={(newVal) => {
-    //     console.log(newVal);
-    //   }}
-    //   options={[
-    //     {
-    //       id: "foo",
-    //       value: "foo",
-    //       display: "foo",
-    //     },
-    //     {
-    //       id: "bar",
-    //       value: "bar",
-    //       display: "bar",
-    //     },
-    //     {
-    //       id: "baz",
-    //       value: "baz",
-    //       display: "baz",
-    //     },
-    //   ]}
-    // />`,
-    //     },
+    {
+      title: "Handle change",
+      description: (
+        <div>
+          Use the <InlineCode>onChange</InlineCode> prop.
+        </div>
+      ),
+      demo: (
+        <Combobox
+          onChange={(newVal) => {
+            console.log(newVal);
+          }}
+          options={[
+            {
+              id: "foo",
+              value: "foo",
+              display: "foo",
+            },
+            {
+              id: "bar",
+              value: "bar",
+              display: "bar",
+            },
+            {
+              id: "baz",
+              value: "baz",
+              display: "baz",
+            },
+          ]}
+        />
+      ),
+      code: `<Combobox
+  onChange={(newVal) => {
+    console.log(newVal);
+  }}
+  options={[
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ]}
+/>`,
+    },
     {
       title: "Size",
       description: (
