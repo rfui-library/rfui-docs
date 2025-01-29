@@ -367,59 +367,6 @@ export default () => {
   />
 </Stack>`,
     },
-    //     {
-    //       title: "Width",
-    //       description: (
-    //         <div>
-    //           To set the width use <InlineCode>buttonClassName</InlineCode> and{" "}
-    //           <InlineCode>optionsClassName</InlineCode>.
-    //         </div>
-    //       ),
-    //       demo: (
-    //         <Combobox
-    //           buttonClassName="w-[500px]"
-    //           optionsClassName="w-[500px]"
-    //           options={[
-    //             {
-    //               id: "foo",
-    //               value: "foo",
-    //               display: "foo",
-    //             },
-    //             {
-    //               id: "bar",
-    //               value: "bar",
-    //               display: "bar",
-    //             },
-    //             {
-    //               id: "baz",
-    //               value: "baz",
-    //               display: "baz",
-    //             },
-    //           ]}
-    //         />
-    //       ),
-    //       code: `<Combobox
-    //   buttonClassName="w-[500px]"
-    //   optionsClassName="w-[500px]"
-    //   options={[
-    //     {
-    //       id: "foo",
-    //       value: "foo",
-    //       display: "foo",
-    //     },
-    //     {
-    //       id: "bar",
-    //       value: "bar",
-    //       display: "bar",
-    //     },
-    //     {
-    //       id: "baz",
-    //       value: "baz",
-    //       display: "baz",
-    //     },
-    //   ]}
-    // />`,
-    //     },
     {
       title: "Rounded",
       description: (
