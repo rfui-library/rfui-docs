@@ -8,6 +8,7 @@ import {
   CheckboxCardGroup,
   CheckboxCardGroupItem,
   CodeBlock,
+  Combobox,
   Flex,
   FormField,
   H1,
@@ -132,6 +133,21 @@ export const getComponents = () => ({
           <CheckboxCardGroupItem>One</CheckboxCardGroupItem>
           <CheckboxCardGroupItem>Two</CheckboxCardGroupItem>
         </CheckboxCardGroup>
+      ),
+    },
+    {
+      name: "Combobox",
+      href: "/components/form/combobox",
+      demo: (
+        <Combobox
+          options={[
+            {
+              id: "oregon",
+              value: "oregon",
+              display: "Oregon",
+            },
+          ]}
+        />
       ),
     },
     {

@@ -2,7 +2,7 @@ See https://rfui-docs.onrender.com/
 
 # `npm link`
 
-Note: `npm link` is giving me trouble. Instead of using it, it's easier to do `"rfui-package": "file:../rfui-package"` in `package.json`. And then whenever I update `rfui-package` locally I'll need to run `npm run build` in that repo in order for the effects to show up in this repo. And I'll need to revert the `"rfui-package": "file:../rfui-package"` change before merging to `master`.
+Run `npm link` in `rfui-package` and then `npm link rfui-package` in this repo. When I make changes to `rfui-package` I'll have to run `npm build` in `rfui-package` for the changes to be reflected here.
 
 Note: I also might need to do this:
 
