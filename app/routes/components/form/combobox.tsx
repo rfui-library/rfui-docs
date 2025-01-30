@@ -723,7 +723,7 @@ export default () => {
           notes: (
             <div>
               Use if you want to submit as an HTML form. See{" "}
-              <Link href="https://headlessui.com/react/listbox#using-with-html-forms">
+              <Link href="https://headlessui.com/react/combobox#using-with-html-forms">
                 Headless UI's docs
               </Link>
               .
@@ -772,15 +772,15 @@ export default () => {
           notes: null,
         },
         {
-          name: "buttonClassName",
+          name: "inputClassName",
           required: false,
           type: "string",
           default: null,
           notes: (
             <div>
               This will be passed to Headless UI's{" "}
-              <Link href="https://headlessui.com/react/listbox#listbox-button">
-                <InlineCode>ListboxButton</InlineCode>
+              <Link href="https://headlessui.com/react/combobox#combobox-input">
+                <InlineCode>ComboboxInput</InlineCode>
               </Link>{" "}
               component.
             </div>
@@ -794,8 +794,8 @@ export default () => {
           notes: (
             <div>
               This will be passed to Headless UI's{" "}
-              <Link href="https://headlessui.com/react/listbox#listbox-options">
-                <InlineCode>ListboxOptions</InlineCode>
+              <Link href="https://headlessui.com/react/combobox#combobox-options">
+                <InlineCode>ComboboxOptions</InlineCode>
               </Link>{" "}
               component.
             </div>
@@ -809,8 +809,8 @@ export default () => {
           notes: (
             <div>
               This will be passed to Headless UI's{" "}
-              <Link href="https://headlessui.com/react/listbox#listbox-option">
-                <InlineCode>ListboxOption</InlineCode>
+              <Link href="https://headlessui.com/react/combobox#combobox-option">
+                <InlineCode>ComboboxOption</InlineCode>
               </Link>{" "}
               component.
             </div>
