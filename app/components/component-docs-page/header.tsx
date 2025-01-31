@@ -18,7 +18,7 @@ export const Header = ({
 }: HeaderType) => {
   return (
     <header className="mb-10">
-      <H1 className="!mt-0 break-words">{componentName}</H1>
+      <H1 className="mt-0! break-words">{componentName}</H1>
       <Stack className="gap-5">
         <Text>
           {overviewNotes && (
@@ -30,7 +30,7 @@ export const Header = ({
             _includeNewTabIcon
             _newTab
             href={sourceCodeUrl}
-            className="inline w-fit !text-neutral-900"
+            className="inline w-fit text-neutral-900!"
           >
             Source code
           </Link>
