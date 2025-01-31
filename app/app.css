@@ -4,7 +4,7 @@
 
 @theme {
   --font-*: initial;
-  --fontFamily-sans: "Open Sans", sans-serif;
+  --font-sans: "Open Sans", sans-serif;
 
   --spacing-px: 1px;
   --spacing-0: 0;
