@@ -86,25 +86,6 @@
   --color-supporting-red-700: rgb(145 17 17);
   --color-supporting-red-800: rgb(120 10 10);
   --color-supporting-red-900: rgb(97 4 4);
-
-  --spacing-0: var(--spacing-0);
-  --spacing-1: var(--spacing-1);
-  --spacing-2: var(--spacing-2);
-  --spacing-3: var(--spacing-3);
-  --spacing-4: var(--spacing-4);
-  --spacing-5: var(--spacing-5);
-  --spacing-6: var(--spacing-6);
-  --spacing-7: var(--spacing-7);
-  --spacing-8: var(--spacing-8);
-  --spacing-9: var(--spacing-9);
-  --spacing-10: var(--spacing-10);
-  --spacing-11: var(--spacing-11);
-  --spacing-12: var(--spacing-12);
-  --spacing-13: var(--spacing-13);
-  --spacing-14: var(--spacing-14);
-  --spacing-15: var(--spacing-15);
-  --spacing-16: var(--spacing-16);
-  --spacing-px: var(--spacing-px);
 }
 
 /*
