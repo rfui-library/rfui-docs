@@ -115,7 +115,7 @@ export default () => {
           from RFUI.
         </p>
         <p>
-          Right now RFUI requires you to use Tailwind in your app. Below the{" "}
+          If you're using Tailwind, below the{" "}
           <InlineCode>@import "tailwindcss";</InlineCode> directive include the
           following:
         </p>
@@ -128,6 +128,18 @@ export default () => {
           The first line will include some RFUI styles and theme information.
           The second will make sure that Tailwind doesn't purge styles that RFUI
           uses.
+        </p>
+        <p>
+          If you're not using Tailwind add the following to your CSS file to
+          import the RFUI styles:
+        </p>
+        <CodeBlock code='@import "rfui-package/dist/rfui.css";' />
+        <p>
+          You can also see that <InlineCode>rfui.css</InlineCode> file on GitHub{" "}
+          <Link href="https://github.com/rfui-library/rfui-package/blob/master/src/rfui.css">
+            here
+          </Link>
+          .
         </p>
       </Text>
 
