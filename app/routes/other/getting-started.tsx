@@ -112,28 +112,22 @@ export default () => {
         <p>
           Most of the styles you'll need come from{" "}
           <Link href="https://tailwindcss.com/">Tailwind CSS</Link>. Others come
-          from RFUI. The bottom of{" "}
-          <Link href="https://github.com/rfui-library/rfui-docs/blob/master/app/app.css">
-            this file
-          </Link>{" "}
-          has the styles that come from RFUI .
+          from RFUI.
         </p>
         <p>
-          Right now RFUI requires you to use Tailwind in your app. Make sure
-          that you have a CSS file like{" "}
-          <Link href="https://github.com/rfui-library/rfui-docs/blob/master/app/app.css">
-            this one
-          </Link>
-          . Note the <InlineCode>@tailwind</InlineCode> directives at the top,
-          the <InlineCode>@layer</InlineCode> directive in the middle, and the
-          RFUI styles at the bottom. They are all needed. You will also need to
-          have:
+          Right now RFUI requires you to use Tailwind in your app. Below the{" "}
+          <InlineCode>@import "tailwindcss";</InlineCode> directive include the
+          following:
         </p>
-        <CodeBlock code='"./node_modules/rfui-package/dist/**/*.{js,ts}"' />
+        <CodeBlock
+          code={`@import "rfui-package/dist/rfui-tailwind.css";
+@source '../node_modules/rfui-package/dist/**/*.{js,ts}';
+`}
+        />
         <p>
-          in your <InlineCode>tailwind.config.ts</InlineCode>'s{" "}
-          <InlineCode>content</InlineCode> array so that Tailwind doesn't purge
-          the classes that RFUI needs.
+          The first line will include some RFUI styles and theme information.
+          The second will make sure that Tailwind doesn't purge styles that RFUI
+          uses.
         </p>
       </Text>
 
