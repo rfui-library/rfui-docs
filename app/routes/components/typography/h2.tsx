@@ -65,8 +65,8 @@ export default () => {
           </div>
         </Stack>
       ),
-      demo: <H2 className="!my-2">Hello world</H2>,
-      code: `<H2 className="!my-2">Hello world</H2>`,
+      demo: <H2 className="my-2!">Hello world</H2>,
+      code: `<H2 className="my-2!">Hello world</H2>`,
     },
     {
       title: "In-page link",

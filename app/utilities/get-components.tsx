@@ -65,7 +65,7 @@ export const getComponents = () => ({
       href: "/components/typography/highlight",
       demo: (
         <div>
-          The <Highlight className="!bg-neutral-100">map</Highlight> is not the
+          The <Highlight className="bg-neutral-100!">map</Highlight> is not the
           territory.
         </div>
       ),
@@ -115,7 +115,7 @@ export const getComponents = () => ({
       name: "Button",
       href: "/components/form/button",
       demo: (
-        <Button className="!border-neutral-900 !text-neutral-900">
+        <Button className="border-neutral-900! text-neutral-900!">
           Submit
         </Button>
       ),
@@ -343,16 +343,16 @@ export const getComponents = () => ({
     {
       name: "Container",
       href: "/components/layout/container",
-      demo: <div className="h-2/3 w-full rounded bg-neutral-100/50"></div>,
+      demo: <div className="h-2/3 w-full rounded-sm bg-neutral-100/50"></div>,
     },
     {
       name: "Flex",
       href: "/components/layout/flex",
       demo: (
         <Flex className="h-2/3 w-full items-stretch justify-between gap-3">
-          <div className="w-10 rounded bg-neutral-100/50 p-2"></div>
-          <div className="w-10 rounded bg-neutral-100/50 p-2"></div>
-          <div className="w-10 rounded bg-neutral-100/50 p-2"></div>
+          <div className="w-10 rounded-sm bg-neutral-100/50 p-2"></div>
+          <div className="w-10 rounded-sm bg-neutral-100/50 p-2"></div>
+          <div className="w-10 rounded-sm bg-neutral-100/50 p-2"></div>
         </Flex>
       ),
     },
@@ -361,9 +361,9 @@ export const getComponents = () => ({
       href: "/components/layout/stack",
       demo: (
         <Stack className="w-full items-stretch gap-3">
-          <div className="h-6 rounded bg-neutral-100/50 p-2"></div>
-          <div className="h-6 rounded bg-neutral-100/50 p-2"></div>
-          <div className="h-6 rounded bg-neutral-100/50 p-2"></div>
+          <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
+          <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
+          <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
         </Stack>
       ),
     },

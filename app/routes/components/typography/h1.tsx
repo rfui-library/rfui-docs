@@ -65,8 +65,8 @@ export default () => {
           </div>
         </Stack>
       ),
-      demo: <H1 className="!my-4">Hello world</H1>,
-      code: `<H1 className="!my-4">Hello world</H1>`,
+      demo: <H1 className="my-4!">Hello world</H1>,
+      code: `<H1 className="my-4!">Hello world</H1>`,
     },
   ];
   const propsTables = [

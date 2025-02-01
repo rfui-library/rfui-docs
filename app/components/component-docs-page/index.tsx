@@ -38,7 +38,7 @@ export const ComponentDocsPage = ({
       <section className="hidden xl:block">
         <ComponentsList />
       </section>
-      <main className="flex-grow overflow-x-hidden" id="overview">
+      <main className="grow overflow-x-hidden" id="overview">
         <Header
           componentName={componentName}
           overviewNotes={overviewNotes}
@@ -49,7 +49,7 @@ export const ComponentDocsPage = ({
         <Examples examples={examples} />
         <PropsTables propsTables={propsTables} />
       </main>
-      <section className="hidden flex-shrink-0 lg:block">
+      <section className="hidden shrink-0 lg:block">
         <OnThisPage
           exampleTitles={exampleTitles}
           propsTableTitles={propsTableTitles}

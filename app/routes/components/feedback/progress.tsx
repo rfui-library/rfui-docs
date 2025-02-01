@@ -17,7 +17,7 @@ export default () => {
       description: (
         <div>
           You can also do something like{" "}
-          <InlineCode>className="!h-8"</InlineCode> to set the height to a
+          <InlineCode>className="h-8!"</InlineCode> to set the height to a
           specific value.
         </div>
       ),

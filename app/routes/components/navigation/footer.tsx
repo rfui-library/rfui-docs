@@ -184,7 +184,7 @@ export default () => {
         </Stack>
       ),
       demo: (
-        <Footer className="!mt-0">
+        <Footer className="mt-0!">
           <FooterColumn>
             <FooterHeading>About</FooterHeading>
             <FooterItem href="/about">About</FooterItem>
@@ -201,7 +201,7 @@ export default () => {
           </FooterColumn>
         </Footer>
       ),
-      code: `<Footer className="!mt-0">
+      code: `<Footer className="mt-0!">
   <FooterColumn>
     <FooterHeading>About</FooterHeading>
     <FooterItem href="/about">About</FooterItem>

@@ -51,7 +51,7 @@ export default () => {
     {
       title: "Basic",
       demo: (
-        <VerticalNavbar className="!h-[300px]">
+        <VerticalNavbar className="h-[300px]!">
           <VerticalNavbarTop>
             <VerticalNavbarItem href="/one" isActive={false}>
               One
@@ -94,7 +94,7 @@ export default () => {
         </Stack>
       ),
       demo: (
-        <VerticalNavbar className="!h-[300px]">
+        <VerticalNavbar className="h-[300px]!">
           <VerticalNavbarTop>
             <VerticalNavbarItem href="/one" isActive={true}>
               One
@@ -125,7 +125,7 @@ export default () => {
     {
       title: "Sections",
       demo: (
-        <VerticalNavbar className="!h-[400px]">
+        <VerticalNavbar className="h-[400px]!">
           <VerticalNavbarTop>
             <VerticalNavbarSection>
               <VerticalNavbarItem href="/one" isActive={false}>
@@ -170,7 +170,7 @@ export default () => {
     {
       title: "Heading",
       demo: (
-        <VerticalNavbar className="!h-[300px]">
+        <VerticalNavbar className="h-[300px]!">
           <VerticalNavbarTop>
             <VerticalNavbarSection heading="Heading">
               <VerticalNavbarItem href="/one" isActive={false}>
@@ -213,7 +213,7 @@ export default () => {
         </div>
       ),
       demo: (
-        <VerticalNavbar className="!h-[300px]">
+        <VerticalNavbar className="h-[300px]!">
           <VerticalNavbarTop>
             <VerticalNavbarItem href="/one" isActive={false}>
               One
@@ -271,7 +271,7 @@ export default () => {
         </Stack>
       ),
       demo: (
-        <VerticalNavbar className="!h-[300px]">
+        <VerticalNavbar className="h-[300px]!">
           <VerticalNavbarTop>
             <VerticalNavbarItem href="/one" isActive={false} icon={<IconOne />}>
               One
