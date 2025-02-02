@@ -15,7 +15,7 @@ export default () => {
           items={[
             {
               type: "button",
-              text: "Foo long text some more longer text",
+              text: "Foo",
               onClick: () => {
                 alert("Foo");
               },
@@ -32,6 +32,61 @@ export default () => {
       ),
       code: `<DropdownMenu
   buttonText="Basic example"
+  items={[
+    {
+      type: "button",
+      text: "Foo",
+      onClick: () => {
+        alert("Foo");
+      },
+    },
+    {
+      type: "button",
+      text: "Bar",
+      onClick: () => {
+        alert("Bar");
+      },
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Button styling",
+      description: (
+        <div>
+          Whatever you pass to <InlineCode>buttonProps</InlineCode> will be
+          passed through to a{" "}
+          <Link href="/components/form/button">
+            <InlineCode>Button</InlineCode>
+          </Link>{" "}
+          component that <InlineCode>DropdownMenu</InlineCode> uses internally.
+        </div>
+      ),
+      demo: (
+        <DropdownMenu
+          buttonText="Button styling example"
+          buttonProps={{ variant: "primary" }}
+          items={[
+            {
+              type: "button",
+              text: "Foo",
+              onClick: () => {
+                alert("Foo");
+              },
+            },
+            {
+              type: "button",
+              text: "Bar",
+              onClick: () => {
+                alert("Bar");
+              },
+            },
+          ]}
+        />
+      ),
+      code: `<DropdownMenu
+  buttonText="Button styling example"
+  buttonProps={{ variant: "primary" }}
   items={[
     {
       type: "button",
@@ -120,61 +175,6 @@ export default () => {
       },
     },
     { type: "separator" },
-    {
-      type: "button",
-      text: "Bar",
-      onClick: () => {
-        alert("Bar");
-      },
-    },
-  ]}
-/>`,
-    },
-    {
-      title: "Button styling",
-      description: (
-        <div>
-          Whatever you pass to <InlineCode>buttonProps</InlineCode> will be
-          passed through to a{" "}
-          <Link href="/components/form/button">
-            <InlineCode>Button</InlineCode>
-          </Link>{" "}
-          component that <InlineCode>DropdownMenu</InlineCode> uses internally.
-        </div>
-      ),
-      demo: (
-        <DropdownMenu
-          buttonText="Basic example"
-          buttonProps={{ variant: "primary" }}
-          items={[
-            {
-              type: "button",
-              text: "Foo long text some more longer text",
-              onClick: () => {
-                alert("Foo");
-              },
-            },
-            {
-              type: "button",
-              text: "Bar",
-              onClick: () => {
-                alert("Bar");
-              },
-            },
-          ]}
-        />
-      ),
-      code: `<DropdownMenu
-  buttonText="Basic example"
-  buttonProps={{ variant: "primary" }}
-  items={[
-    {
-      type: "button",
-      text: "Foo long text some more longer text",
-      onClick: () => {
-        alert("Foo");
-      },
-    },
     {
       type: "button",
       text: "Bar",
