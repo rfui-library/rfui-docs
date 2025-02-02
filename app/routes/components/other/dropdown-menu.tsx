@@ -185,6 +185,101 @@ export default () => {
   ]}
 />`,
     },
+    {
+      title: "Sections",
+      demo: (
+        <DropdownMenu
+          buttonText="Example of sections"
+          items={[
+            {
+              type: "section",
+              heading: "Fruits",
+              items: [
+                {
+                  type: "button",
+                  text: "Apple",
+                  onClick: () => {
+                    alert("Apple");
+                  },
+                },
+                {
+                  type: "button",
+                  text: "Banana",
+                  onClick: () => {
+                    alert("Banana");
+                  },
+                },
+              ],
+            },
+            {
+              type: "section",
+              heading: "Vegetables",
+              items: [
+                {
+                  type: "button",
+                  text: "Onion",
+                  onClick: () => {
+                    alert("Onion");
+                  },
+                },
+                {
+                  type: "button",
+                  text: "Carrot",
+                  onClick: () => {
+                    alert("Carrot");
+                  },
+                },
+              ],
+            },
+          ]}
+        />
+      ),
+      code: `<DropdownMenu
+  buttonText="Example of sections"
+  items={[
+    {
+      type: "section",
+      heading: "Fruits",
+      items: [
+        {
+          type: "button",
+          text: "Apple",
+          onClick: () => {
+            alert("Apple");
+          },
+        },
+        {
+          type: "button",
+          text: "Banana",
+          onClick: () => {
+            alert("Banana");
+          },
+        },
+      ],
+    },
+    {
+      type: "section",
+      heading: "Vegetables",
+      items: [
+        {
+          type: "button",
+          text: "Onion",
+          onClick: () => {
+            alert("Onion");
+          },
+        },
+        {
+          type: "button",
+          text: "Carrot",
+          onClick: () => {
+            alert("Carrot");
+          },
+        },
+      ],
+    },
+  ]}
+/>`,
+    },
   ];
   const propsTables = [
     {
