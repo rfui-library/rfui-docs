@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, DropdownMenu, InlineCode } from "rfui-package";
+import { CodeBlock, DropdownMenu, InlineCode, Link } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -130,6 +130,61 @@ export default () => {
   ]}
 />`,
     },
+    {
+      title: "Button styling",
+      description: (
+        <div>
+          Whatever you pass to <InlineCode>buttonProps</InlineCode> will be
+          passed through to a{" "}
+          <Link href="/components/form/button">
+            <InlineCode>Button</InlineCode>
+          </Link>{" "}
+          component that <InlineCode>DropdownMenu</InlineCode> uses internally.
+        </div>
+      ),
+      demo: (
+        <DropdownMenu
+          buttonText="Basic example"
+          buttonProps={{ variant: "primary" }}
+          items={[
+            {
+              type: "button",
+              text: "Foo long text some more longer text",
+              onClick: () => {
+                alert("Foo");
+              },
+            },
+            {
+              type: "button",
+              text: "Bar",
+              onClick: () => {
+                alert("Bar");
+              },
+            },
+          ]}
+        />
+      ),
+      code: `<DropdownMenu
+  buttonText="Basic example"
+  buttonProps={{ variant: "primary" }}
+  items={[
+    {
+      type: "button",
+      text: "Foo long text some more longer text",
+      onClick: () => {
+        alert("Foo");
+      },
+    },
+    {
+      type: "button",
+      text: "Bar",
+      onClick: () => {
+        alert("Bar");
+      },
+    },
+  ]}
+/>`,
+    },
   ];
   const propsTables = [
     {
@@ -141,6 +196,21 @@ export default () => {
           type: "string",
           default: null,
           notes: null,
+        },
+        {
+          name: "buttonProps",
+          required: false,
+          type: "Partial<ButtonType>",
+          default: null,
+          notes: (
+            <div>
+              See the docs for the{" "}
+              <Link href="/components/form/button">
+                <InlineCode>Button</InlineCode>
+              </Link>{" "}
+              component.
+            </div>
+          ),
         },
         {
           name: "items",
