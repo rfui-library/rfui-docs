@@ -137,6 +137,19 @@ export default () => {
               ))}
             </Flex>
           </Stack>
+          <Stack className="gap-7">
+            <Category>Other</Category>
+            <Flex className="flex-wrap gap-6">
+              {components.other.map((component) => (
+                <Item
+                  key={component.name}
+                  name={component.name}
+                  href={component.href}
+                  demo={component.demo}
+                />
+              ))}
+            </Flex>
+          </Stack>
         </Stack>
       </Flex>
     </Stack>

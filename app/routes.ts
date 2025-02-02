@@ -85,5 +85,8 @@ export default [
       route("text", "./routes/components/typography/text.tsx"),
       route("ul", "./routes/components/typography/ul.tsx"),
     ]),
+    ...prefix("other", [
+      route("dropdown-menu", "./routes/components/other/dropdown-menu.tsx"),
+    ]),
   ]),
 ] satisfies RouteConfig;

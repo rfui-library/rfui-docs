@@ -9,6 +9,7 @@ import {
   CheckboxCardGroupItem,
   CodeBlock,
   Combobox,
+  DropdownMenu,
   Flex,
   FormField,
   H1,
@@ -366,6 +367,13 @@ export const getComponents = () => ({
           <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
         </Stack>
       ),
+    },
+  ],
+  other: [
+    {
+      name: "DropdownMenu",
+      href: "/components/other/dropdown-menu",
+      demo: <DropdownMenu buttonText="Example" items={[]} />,
     },
   ],
 });
