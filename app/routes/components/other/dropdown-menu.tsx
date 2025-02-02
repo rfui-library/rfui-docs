@@ -186,6 +186,51 @@ export default () => {
 />`,
     },
     {
+      title: "Disabled item",
+      demo: (
+        <DropdownMenu
+          buttonText="Disabled item example"
+          items={[
+            {
+              type: "button",
+              text: "Foo",
+              disabled: true,
+              onClick: () => {
+                alert("Foo");
+              },
+            },
+            {
+              type: "button",
+              text: "Bar",
+              onClick: () => {
+                alert("Bar");
+              },
+            },
+          ]}
+        />
+      ),
+      code: `<DropdownMenu
+  buttonText="Disabled item example"
+  items={[
+    {
+      type: "button",
+      text: "Foo",
+      disabled: true,
+      onClick: () => {
+        alert("Foo");
+      },
+    },
+    {
+      type: "button",
+      text: "Bar",
+      onClick: () => {
+        alert("Bar");
+      },
+    },
+  ]}
+/>`,
+    },
+    {
       title: "Sections",
       demo: (
         <DropdownMenu
