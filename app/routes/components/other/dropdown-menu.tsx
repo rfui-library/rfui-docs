@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, DropdownMenu, InlineCode, Link } from "rfui-package";
+import { CodeBlock, DropdownMenu, InlineCode } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -136,53 +136,31 @@ export default () => {
       title: null,
       props: [
         {
-          name: "links",
+          name: "buttonText",
           required: true,
-          type: "BreadcrumbLink[]",
+          type: "string",
           default: null,
-          notes: (
-            <div>
-              The type for <InlineCode>BreadcrumbLink</InlineCode> is:
-              <CodeBlock
-                language="tsx"
-                code={`type BreadcrumbLink = {
-  title: string;
-  href: string;
-};`}
-              />
-            </div>
-          ),
-        },
-        {
-          name: "size",
-          required: false,
-          type: '"sm" | "md" | "lg" | "xl"',
-          default: '"sm"',
           notes: null,
         },
         {
-          name: "...rest",
-          required: false,
-          type: `ComponentProps<"nav">`,
+          name: "items",
+          required: true,
+          type: `{
+  buttonText: string;
+  items: DropdownMenuItemType[];
+}`,
           default: null,
           notes: (
             <div>
-              <div className="leading-relaxed">
-                See the docs for{" "}
-                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>Breadcrumbs</InlineCode>, you could pass anything
-                you normally would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
-                because the container{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/breadcrumbs.tsx">
-                  looks something like
-                </Link>{" "}
-                this:
-              </div>
+              The type for <InlineCode>DropdownMenuItemType</InlineCode> is:
               <CodeBlock
                 language="tsx"
-                code={`<nav className={className} {...restWithoutClass}>
-  {children}
-</nav>`}
+                code={`type DropdownMenuItemType =
+  | { type: "link"; text: string; href: string; disabled?: boolean }
+  | { type: "button"; text: string; onClick: () => void; disabled?: boolean }
+  | { type: "separator" }
+  | { type: "section"; heading: string; items: DropdownMenuItemType[] };
+`}
               />
             </div>
           ),
