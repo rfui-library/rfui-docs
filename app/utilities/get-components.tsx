@@ -368,4 +368,11 @@ export const getComponents = () => ({
       ),
     },
   ],
+  other: [
+    {
+      name: "DropdownMenu",
+      href: "/components/other/dropdown-menu",
+      demo: <div>TODO</div>,
+    },
+  ],
 });
