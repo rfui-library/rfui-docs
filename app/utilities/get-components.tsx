@@ -9,6 +9,7 @@ import {
   CheckboxCardGroupItem,
   CodeBlock,
   Combobox,
+  DropdownMenu,
   Flex,
   FormField,
   H1,
@@ -372,7 +373,7 @@ export const getComponents = () => ({
     {
       name: "DropdownMenu",
       href: "/components/other/dropdown-menu",
-      demo: <div>TODO</div>,
+      demo: <DropdownMenu buttonText="Example" items={[]} />,
     },
   ],
 });
