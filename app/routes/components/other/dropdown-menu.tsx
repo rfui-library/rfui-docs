@@ -2,22 +2,14 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { Breadcrumbs, CodeBlock, InlineCode, Link } from "rfui-package";
+import { CodeBlock, DropdownMenu, InlineCode, Link } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
   const examples: ExampleType[] = [
     {
       title: "Basic",
-      demo: (
-        <Breadcrumbs
-          links={[
-            { title: "One", href: "/one" },
-            { title: "Two", href: "/two" },
-            { title: "Three", href: "/three" },
-          ]}
-        />
-      ),
+      demo: <DropdownMenu buttonText="Example" />,
       code: `<Breadcrumbs
   links={[
     { title: "One", href: "/one" },
