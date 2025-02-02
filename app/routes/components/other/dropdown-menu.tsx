@@ -9,12 +9,124 @@ export default () => {
   const examples: ExampleType[] = [
     {
       title: "Basic",
-      demo: <DropdownMenu buttonText="Example" />,
-      code: `<Breadcrumbs
-  links={[
-    { title: "One", href: "/one" },
-    { title: "Two", href: "/two" },
-    { title: "Three", href: "/three" },
+      demo: (
+        <DropdownMenu
+          buttonText="Basic example"
+          items={[
+            {
+              type: "button",
+              text: "Foo long text some more longer text",
+              onClick: () => {
+                alert("Foo");
+              },
+            },
+            {
+              type: "button",
+              text: "Bar",
+              onClick: () => {
+                alert("Bar");
+              },
+            },
+          ]}
+        />
+      ),
+      code: `<DropdownMenu
+  buttonText="Basic example"
+  items={[
+    {
+      type: "button",
+      text: "Foo",
+      onClick: () => {
+        alert("Foo");
+      },
+    },
+    {
+      type: "button",
+      text: "Bar",
+      onClick: () => {
+        alert("Bar");
+      },
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Links",
+      demo: (
+        <DropdownMenu
+          buttonText="Links example"
+          items={[
+            {
+              type: "link",
+              text: "Foo",
+              href: "/foo",
+            },
+            {
+              type: "link",
+              text: "Bar",
+              href: "/bar",
+            },
+          ]}
+        />
+      ),
+      code: `<DropdownMenu
+  buttonText="Links example"
+  items={[
+    {
+      type: "link",
+      text: "Foo",
+      href: "/foo",
+    },
+    {
+      type: "link",
+      text: "Bar",
+      href: "/bar",
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Separator",
+      demo: (
+        <DropdownMenu
+          buttonText="Separator example"
+          items={[
+            {
+              type: "button",
+              text: "Foo",
+              onClick: () => {
+                alert("Foo");
+              },
+            },
+            { type: "separator" },
+            {
+              type: "button",
+              text: "Bar",
+              onClick: () => {
+                alert("Bar");
+              },
+            },
+          ]}
+        />
+      ),
+      code: `<DropdownMenu
+  buttonText="Separator example"
+  items={[
+    {
+      type: "button",
+      text: "Foo",
+      onClick: () => {
+        alert("Foo");
+      },
+    },
+    { type: "separator" },
+    {
+      type: "button",
+      text: "Bar",
+      onClick: () => {
+        alert("Bar");
+      },
+    },
   ]}
 />`,
     },
