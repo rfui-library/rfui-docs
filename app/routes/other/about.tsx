@@ -31,8 +31,13 @@ const SubmitButton = () => {
           <Link href="https://www.npmjs.com/package/rfui-package">
             NPM package
           </Link>
-          . Check out the <Link href="/getting-started">Getting Started</Link>{" "}
-          page if you'd like to give it a try.
+          . Check out this{" "}
+          <Link href="https://codesandbox.io/p/sandbox/jolly-dijkstra-mcfptq">
+            CodeSandbox
+          </Link>{" "}
+          if you'd like to play around or the{" "}
+          <Link href="/getting-started">Getting Started</Link> page if you'd
+          like to give it a try in your project.
         </p>
         <Alert className="mt-4">
           <Text>

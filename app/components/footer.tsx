@@ -19,6 +19,9 @@ export const Footer = () => {
       <FooterColumn>
         <FooterHeading>Docs</FooterHeading>
         <FooterItem href="/">Components</FooterItem>
+        <FooterItem href="https://codesandbox.io/p/sandbox/jolly-dijkstra-mcfptq">
+          Playground
+        </FooterItem>
         <FooterItem href="/getting-started">Getting started</FooterItem>
         <FooterItem href="/choose-a-personality">
           Choose a personality
