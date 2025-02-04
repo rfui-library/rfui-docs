@@ -157,7 +157,7 @@ export default () => {
 };
 
 const Category = ({ children }: { children: ReactNode }) => {
-  return <div className="flex-none text-4xl text-neutral-900">{children}</div>;
+  return <div className="text-primary-900 flex-none text-4xl">{children}</div>;
 };
 
 const Item = ({
