@@ -32,7 +32,7 @@ export default () => {
       <CodeBlock
         language="tsx"
         code={`<section className="sm:flex">
-  <VerticalNavbar route={route} />
+  <VerticalNavbar route={location.pathname} />
   <Container className="grow pb-8">
     {children}
   </Container>
