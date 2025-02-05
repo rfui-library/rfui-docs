@@ -40,7 +40,7 @@ export default () => {
     <>
       <Navbar />
       <Container size="xl">
-        <Component />
+        {children}
       </Container>
       <Footer />
     </>

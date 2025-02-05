@@ -34,7 +34,7 @@ export default () => {
         code={`<section className="sm:flex">
   <VerticalNavbar route={route} />
   <Container className="grow pb-8">
-    <Component />
+    {children}
   </Container>
 </section>`}
       />

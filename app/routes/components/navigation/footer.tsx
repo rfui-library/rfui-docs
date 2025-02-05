@@ -38,7 +38,7 @@ export default () => {
     <>
       <Navbar />
       <Container size="xl">
-        <Component />
+        {children}
       </Container>
       <Footer />
     </>
@@ -64,7 +64,7 @@ export default () => {
     <Stack className="min-h-screen">
       <Navbar />
       <Container size="xl" className="grow">
-        <Component />
+        {children}
       </Container>
       <Footer />
     </Stack>
