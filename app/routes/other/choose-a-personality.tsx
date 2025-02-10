@@ -110,7 +110,7 @@ export default () => {
         </p>
         <p>
           I'd recommend choosing a value and sticking with it throughout your
-          app. For demo:
+          app. For example:
         </p>
         <UL>
           <li>
