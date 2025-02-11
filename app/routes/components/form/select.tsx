@@ -30,6 +30,23 @@ export default () => {
       </p>
     </Stack>
   );
+  const uncontrolledOptions = [
+    {
+      id: "foo",
+      value: "foo",
+      display: "foo",
+    },
+    {
+      id: "bar",
+      value: "bar",
+      display: "bar",
+    },
+    {
+      id: "baz",
+      value: "baz",
+      display: "baz",
+    },
+  ];
   const examples: ExampleType[] = [
     {
       title: "Basic",
@@ -252,6 +269,27 @@ export default () => {
       display: "baz",
     },
   ]}
+/>`,
+    },
+    {
+      title: "Uncontrolled",
+      description: (
+        <div>
+          If you don't pass <InlineCode>onChange</InlineCode> this component
+          will be uncontrolled. If you're taking the uncontrolled approach you
+          can use the <InlineCode>defaultValue</InlineCode> prop to set the
+          initial value.
+        </div>
+      ),
+      demo: (
+        <Select
+          defaultValue={uncontrolledOptions[1]}
+          options={uncontrolledOptions}
+        />
+      ),
+      code: `<Select
+  defaultValue={uncontrolledOptions[1]}
+  options={uncontrolledOptions}
 />`,
     },
     {
@@ -845,6 +883,13 @@ export default () => {
           name: "onChange",
           required: false,
           type: "(newValue: Option) => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "defaultValue",
+          required: false,
+          type: "Option",
           default: null,
           notes: null,
         },
