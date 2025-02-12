@@ -437,6 +437,42 @@ export default () => {
   ]}
 />`,
     },
+    {
+      title: "Select",
+      description: (
+        <div>
+          To use RFUI's{" "}
+          <Link href="/components/form/select">
+            <InlineCode>Select</InlineCode>
+          </Link>{" "}
+          component with <InlineCode>FormField</InlineCode> set{" "}
+          <InlineCode>type</InlineCode> to <InlineCode>"select"</InlineCode> and
+          use <InlineCode>selectOptions</InlineCode> like so:
+        </div>
+      ),
+      demo: (
+        <FormField
+          label="Country"
+          type="select"
+          name="country"
+          selectOptions={[
+            { id: "free", value: "free", display: "Free" },
+            { id: "basic", value: "basic", display: "Basic" },
+            { id: "premium", value: "premium", display: "Premium" },
+          ]}
+        />
+      ),
+      code: `<FormField
+  label="Country"
+  type="select"
+  name="country"
+  selectOptions={[
+    { id: "free", value: "free", display: "Free" },
+    { id: "basic", value: "basic", display: "Basic" },
+    { id: "premium", value: "premium", display: "Premium" },
+  ]}
+/>`,
+    },
   ];
   const propsTables = [
     {
@@ -464,9 +500,37 @@ export default () => {
           notes: null,
         },
         {
+          name: "defaultValue",
+          required: false,
+          type: 'ComponentProps<"input">["defaultValue"]',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "selectDefaultValue",
+          required: false,
+          type: 'SelectType["defaultValue"]',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "checked",
+          required: false,
+          type: "boolean",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "defaultChecked",
+          required: false,
+          type: "boolean",
+          default: null,
+          notes: null,
+        },
+        {
           name: "type",
           required: false,
-          type: 'ComponentProps<"input">["type"] | "rfui-password-input"',
+          type: 'ComponentProps<"input">["type"] | "switch" | "rfui-password-input" | "textarea" | "radio-button-group" | "select"',
           default: null,
           notes: null,
         },
@@ -562,6 +626,20 @@ export default () => {
           ),
         },
         {
+          name: "onChange",
+          required: false,
+          type: "(e: any) => void;",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "onInput",
+          required: false,
+          type: "(e: any) => void;",
+          default: null,
+          notes: null,
+        },
+        {
           name: "inputRest",
           required: false,
           type: 'Omit<ComponentProps<"input">, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
@@ -616,6 +694,13 @@ export default () => {
           ),
         },
         {
+          name: "selectOptions",
+          required: false,
+          type: 'SelectType["options"]',
+          default: null,
+          notes: null,
+        },
+        {
           name: "radioButtonGroupRest",
           required: false,
           type: 'Omit<RadioButtonGroupType, "id" | "name" | "value" | "required" | "invalid">',
@@ -644,6 +729,13 @@ export default () => {
               />
             </div>
           ),
+        },
+        {
+          name: "selectRest",
+          required: false,
+          type: "SelectType",
+          default: null,
+          notes: null,
         },
         {
           name: "...rest",
