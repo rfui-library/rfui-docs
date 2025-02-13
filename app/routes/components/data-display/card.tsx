@@ -13,6 +13,7 @@ import {
   Flex,
   FormField,
   InlineCode,
+  Input,
   Link,
   Stack,
 } from "rfui-package";
@@ -363,9 +364,15 @@ export default () => {
               Please fill out the following information.
             </div>
             <Stack className="gap-3">
-              <FormField label="Name" type="text" />
-              <FormField label="Email" type="email" />
-              <FormField label="Age" type="number" />
+              <FormField label="Name">
+                <Input name="name" />
+              </FormField>
+              <FormField label="Email">
+                <Input type="email" name="email" />
+              </FormField>
+              <FormField label="Age">
+                <Input type="number" name="age" />
+              </FormField>
             </Stack>
           </CardBody>
           <CardFooter>
@@ -385,9 +392,15 @@ export default () => {
       Please fill out the following information.
     </div>
     <Stack className="gap-3">
-      <FormField label="Name" type="text" />
-      <FormField label="Email" type="email" />
-      <FormField label="Age" type="number" />
+      <FormField label="Name">
+        <Input name="name" />
+      </FormField>
+      <FormField label="Email">
+        <Input type="email" name="email" />
+      </FormField>
+      <FormField label="Age">
+        <Input type="number" name="age" />
+      </FormField>
     </Stack>
   </CardBody>
   <CardFooter>
@@ -417,9 +430,15 @@ export default () => {
               Please fill out the following information.
             </div>
             <Stack className="gap-3">
-              <FormField label="Name" type="text" />
-              <FormField label="Email" type="email" />
-              <FormField label="Age" type="number" />
+              <FormField label="Name">
+                <Input name="name" />
+              </FormField>
+              <FormField label="Email">
+                <Input type="email" name="email" />
+              </FormField>
+              <FormField label="Age">
+                <Input type="number" name="age" />
+              </FormField>
             </Stack>
           </CardBody>
           <CardFooter>
@@ -439,9 +458,15 @@ export default () => {
       Please fill out the following information.
     </div>
     <Stack className="gap-3">
-      <FormField label="Name" type="text" />
-      <FormField label="Email" type="email" />
-      <FormField label="Age" type="number" />
+      <FormField label="Name">
+        <Input name="name" />
+      </FormField>
+      <FormField label="Email">
+        <Input type="email" name="email" />
+      </FormField>
+      <FormField label="Age">
+        <Input type="number" name="age" />
+      </FormField>
     </Stack>
   </CardBody>
   <CardFooter>
@@ -470,11 +495,17 @@ export default () => {
             <div className="mb-6 text-neutral-700">
               Please fill out the following information.
             </div>
-            {/* <Stack className="gap-3">
-              <FormField label="Name" type="text" />
-              <FormField label="Email" type="email" />
-              <FormField label="Age" type="number" />
-            </Stack> */}
+            <Stack className="gap-3">
+              <FormField label="Name">
+                <Input name="name" />
+              </FormField>
+              <FormField label="Email">
+                <Input type="email" name="email" />
+              </FormField>
+              <FormField label="Age">
+                <Input type="number" name="age" />
+              </FormField>{" "}
+            </Stack>
           </CardBody>
           <CardFooter>
             <Flex className="gap-2">
@@ -493,9 +524,15 @@ export default () => {
       Please fill out the following information.
     </div>
     <Stack className="gap-3">
-      <FormField label="Name" type="text" />
-      <FormField label="Email" type="email" />
-      <FormField label="Age" type="number" />
+      <FormField label="Name">
+        <Input name="name" />
+      </FormField>
+      <FormField label="Email">
+        <Input type="email" name="email" />
+      </FormField>
+      <FormField label="Age">
+        <Input type="number" name="age" />
+      </FormField>    
     </Stack>
   </CardBody>
   <CardFooter>

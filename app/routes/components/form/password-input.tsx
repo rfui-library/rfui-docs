@@ -33,8 +33,7 @@ export default () => {
         <Link href="/components/form/form-field#example-passwordinput">
           <InlineCode>FormField</InlineCode>
         </Link>{" "}
-        component with <InlineCode>type="rfui-password-input"</InlineCode>{" "}
-        instead. If not, you'll probably want to use{" "}
+        to wrap it. If not, you'll probably want to use{" "}
         <InlineCode>{`<label>`}</InlineCode> along with{" "}
         <InlineCode>{`PasswordInput`}</InlineCode>.
       </div>

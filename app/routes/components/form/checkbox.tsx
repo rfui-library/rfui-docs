@@ -12,9 +12,9 @@ export default () => {
       want to use it along with a <InlineCode>{`<label>`}</InlineCode>. You also
       might prefer to use RFUI's{" "}
       <Link href="/components/form/form-field#example-checkbox">
-        <InlineCode>{`FormField`}</InlineCode>
+        <InlineCode>FormField</InlineCode>
       </Link>{" "}
-      component with <InlineCode>type="checkbox"</InlineCode>instead.
+      to wrap it.
     </div>
   );
   const examples: ExampleType[] = [

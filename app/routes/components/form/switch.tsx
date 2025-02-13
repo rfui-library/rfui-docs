@@ -20,9 +20,9 @@ export default () => {
         <Link href="/components/form/form-field#example-switch">
           <InlineCode>FormField</InlineCode>
         </Link>{" "}
-        component with <InlineCode>type="switch"</InlineCode> instead. If not,
-        you'll probably want to use <InlineCode>{`<label>`}</InlineCode> along
-        with <InlineCode>{`Switch`}</InlineCode>.
+        component to wrap it. If not, you'll probably want to use{" "}
+        <InlineCode>{`<label>`}</InlineCode> along with{" "}
+        <InlineCode>{`Switch`}</InlineCode>.
       </div>
     </Stack>
   );

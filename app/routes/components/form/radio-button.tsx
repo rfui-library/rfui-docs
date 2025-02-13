@@ -13,9 +13,9 @@ export default () => {
         want to use it along with a <InlineCode>{`<label>`}</InlineCode>. You
         also might prefer to use RFUI's{" "}
         <Link href="/components/form/form-field">
-          <InlineCode>{`FormField`}</InlineCode>
+          <InlineCode>FormField</InlineCode>
         </Link>{" "}
-        component instead.
+        component to wrap it.
       </div>
       <div>
         Radio buttons are{" "}

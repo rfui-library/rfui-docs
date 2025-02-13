@@ -2,69 +2,63 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, FormField, InlineCode, Link, Stack } from "rfui-package";
+import {
+  Checkbox,
+  CodeBlock,
+  FormField,
+  InlineCode,
+  Input,
+  Link,
+  Stack,
+} from "rfui-package";
 
 export default () => {
-  const overviewNotes = null;
+  const overviewNotes = (
+    <div>
+      <InlineCode>FormField</InlineCode> is a wrapper for input fields like{" "}
+      <Link href="/components/form/input">
+        <InlineCode>Input</InlineCode>
+      </Link>{" "}
+      and{" "}
+      <Link href="/components/form/select">
+        <InlineCode>Select</InlineCode>
+      </Link>
+      . It lets you provide things like labels and helper text.
+    </div>
+  );
   const examples: ExampleType[] = [
     {
       title: "Basic",
-      demo: <FormField label="Name" />,
-      code: `<FormField label="Name" />`,
-    },
-    {
-      title: "Uncontrolled",
-      demo: <FormField label="Name" name="name" defaultValue="John Doe" />,
-      code: `<FormField label="Name" name="name" defaultValue="John Doe" />,`,
-    },
-    {
-      title: "Controlled",
-      description: (
-        <div>
-          See{" "}
-          <Link href="https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components">
-            Controlled & Uncontrolled Components
-          </Link>
-          .
-        </div>
+      demo: (
+        <FormField label="Name">
+          <Input name="name" />
+        </FormField>
       ),
-      demo: <FormField label="Name" />,
-      code: `<FormField label="Name" value={value} onChange={onChange} />`,
+      code: `<FormField label="Name">
+  <Input name="name" />
+</FormField>`,
     },
     {
       title: "Helper text",
-      description: (
-        <div>
-          Set <InlineCode>helperText</InlineCode> to a string to render helper
-          text above the form field.
-        </div>
+      demo: (
+        <FormField label="Name" helperText="Your first and last name">
+          <Input name="name" />
+        </FormField>
       ),
-      demo: <FormField label="Name" helperText="Your first and last name" />,
-      code: `<FormField label="Name" helperText="Your first and last name" />`,
-    },
-    {
-      title: "Invalid",
-      description: (
-        <div>
-          Set <InlineCode>invalid</InlineCode> to either{" "}
-          <InlineCode>true</InlineCode> or <InlineCode>false</InlineCode>.
-          Defaults to <InlineCode>false</InlineCode>.
-        </div>
-      ),
-      demo: <FormField label="Name" invalid />,
-      code: `<FormField label="Name" invalid />`,
+      code: `<FormField label="Name" helperText="Your first and last name">
+  <Input name="name" />
+</FormField>`,
     },
     {
       title: "Error text",
-      description: (
-        <div>
-          When <InlineCode>invalid</InlineCode> is <InlineCode>true</InlineCode>
-          , set <InlineCode>errorText</InlineCode> to a string to render error
-          text above the form field.
-        </div>
+      demo: (
+        <FormField label="Name" errorText="Invalid name">
+          <Input invalid name="name" />
+        </FormField>
       ),
-      demo: <FormField label="Name" invalid errorText="Invalid name" />,
-      code: `<FormField label="Name" invalid errorText="Invalid name" />`,
+      code: `<FormField label="Name" errorText="Invalid name">
+  <Input invalid name="name" />
+</FormField>`,
     },
     {
       title: "Helper and error text",
@@ -73,16 +67,18 @@ export default () => {
         <FormField
           label="Name"
           helperText="Your first and last name"
-          invalid
           errorText="Invalid name"
-        />
+        >
+          <Input invalid name="name" />
+        </FormField>
       ),
       code: `<FormField
   label="Name"
   helperText="Your first and last name"
-  invalid
   errorText="Invalid name"
-/>`,
+>
+  <Input invalid name="name" />
+</FormField>`,
     },
     {
       title: "Required",
@@ -106,21 +102,21 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
-          <FormField label="Name" required requiredIndicator="text" />
-          <FormField label="Name" required requiredIndicator="asterisk" />
+          <FormField required requiredIndicator="text" label="Name">
+            <Input name="name" />
+          </FormField>
+          <FormField required requiredIndicator="asterisk" label="Name">
+            <Input name="name" />
+          </FormField>
         </Stack>
       ),
       code: `<Stack className="gap-5">
-  <FormField
-    label="Name"
-    required
-    requiredIndicator="text"
-  />
-  <FormField
-    label="Name"
-    required
-    requiredIndicator="asterisk"
-  />
+  <FormField required requiredIndicator="text" label="Name">
+    <Input name="name" />
+  </FormField>
+  <FormField required requiredIndicator="asterisk" label="Name">
+    <Input name="name" />
+  </FormField>
 </Stack>`,
     },
     {
@@ -145,19 +141,21 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
-          <FormField label="Name" optionalIndicator="text" />
-          <FormField label="Name" optionalIndicator="asterisk" />
+          <FormField optionalIndicator="text" label="Name">
+            <Input name="name" />
+          </FormField>
+          <FormField optionalIndicator="asterisk" label="Name">
+            <Input name="name" />
+          </FormField>
         </Stack>
       ),
       code: `<Stack className="gap-5">
-  <FormField
-    label="Name"
-    optionalIndicator="text"
-  />
-  <FormField
-    label="Name"
-    optionalIndicator="asterisk"
-  />
+  <FormField optionalIndicator="text" label="Name">
+    <Input name="name" />
+  </FormField>
+  <FormField optionalIndicator="asterisk" label="Name">
+    <Input name="name" />
+  </FormField>
 </Stack>`,
     },
     {
@@ -172,50 +170,62 @@ export default () => {
       demo: (
         <Stack className="gap-5">
           <FormField
+            required
             label="Name"
+            requiredIndicator="text"
+            helperText="First and last name"
             size="sm"
+          >
+            <Input name="name" size="sm" />
+          </FormField>
+          <FormField
             required
+            label="Name"
             requiredIndicator="text"
             helperText="First and last name"
-          />
-          <FormField
-            label="Name"
             size="md"
-            required
-            requiredIndicator="text"
-            helperText="First and last name"
-          />
+          >
+            <Input name="name" size="md" />
+          </FormField>
           <FormField
-            label="Name"
-            size="lg"
             required
+            label="Name"
             requiredIndicator="text"
             helperText="First and last name"
-          />
+            size="lg"
+          >
+            <Input name="name" size="lg" />
+          </FormField>
         </Stack>
       ),
       code: `<Stack className="gap-5">
   <FormField
+    required
     label="Name"
+    requiredIndicator="text"
+    helperText="First and last name"
     size="sm"
+  >
+    <Input name="name" size="sm" />
+  </FormField>
+  <FormField
     required
+    label="Name"
     requiredIndicator="text"
     helperText="First and last name"
-  />
-  <FormField
-    label="Name"
     size="md"
-    required
-    requiredIndicator="text"
-    helperText="First and last name"
-  />
+  >
+    <Input name="name" size="md" />
+  </FormField>
   <FormField
-    label="Name"
-    size="lg"
     required
+    label="Name"
     requiredIndicator="text"
     helperText="First and last name"
-  />
+    size="lg"
+  >
+    <Input name="name" size="lg" />
+  </FormField>
 </Stack>`,
     },
     {
@@ -230,248 +240,56 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
-          <FormField
-            label="Name on card"
-            type="text"
-            className="w-14 max-w-full"
-          />
-          <FormField
-            label="Card number"
-            type="text"
-            className="w-14 max-w-full"
-          />
-          <FormField label="Expiry date" type="text" className="w-10" />
-          <FormField label="CVC" type="text" className="w-10" />
+          <FormField label="Name on card" className="w-14 max-w-full">
+            <Input name="name-on-card" />
+          </FormField>
+          <FormField label="Card number" className="w-14 max-w-full">
+            <Input name="card-number" />
+          </FormField>
+          <FormField label="Expiry date" className="w-10">
+            <Input name="expiry-date" />
+          </FormField>
+          <FormField label="CVC" className="w-10">
+            <Input name="cvc" />
+          </FormField>
         </Stack>
       ),
       code: `<Stack className="gap-5">
-  <FormField
-    label="Name on card"
-    type="text"
-    className="w-14 max-w-full"
-  />
-  <FormField
-    label="Card number"
-    type="text"
-    className="w-14 max-w-full"
-  />
-  <FormField
-    label="Expiry date"
-    type="text"
-    className="w-10"
-  />
-  <FormField
-    label="CVC"
-    type="text"
-    className="w-10"
-  />
+  <FormField label="Name on card" className="w-14 max-w-full">
+    <Input name="name-on-card" />
+  </FormField>
+  <FormField label="Card number" className="w-14 max-w-full">
+    <Input name="card-number" />
+  </FormField>
+  <FormField label="Expiry date" className="w-10">
+    <Input name="expiry-date" />
+  </FormField>
+  <FormField label="CVC" className="w-10">
+    <Input name="cvc" />
+  </FormField>
 </Stack>`,
     },
     {
-      title: "Type",
-      description: (
-        <Stack className="gap-3">
-          <div>
-            <InlineCode>type</InlineCode> usually gets passed to{" "}
-            <Link href="/components/form/input">
-              <InlineCode>Input</InlineCode>
-            </Link>
-            . However, for some of the values a component other than{" "}
-            <InlineCode>Input</InlineCode> is used. See the examples in the
-            following sections.
-          </div>
-          <div>
-            RFUI's <InlineCode>Input</InlineCode> component wraps the native
-            HTML <InlineCode>input</InlineCode> and passes{" "}
-            <InlineCode>type</InlineCode> to <InlineCode>input</InlineCode>, and
-            so you could find the possible values documented{" "}
-            <Link href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input#input_types">
-              here on MDN
-            </Link>
-            . If you are thinking of using <InlineCode>number</InlineCode>,
-            consider taking{" "}
-            <Link href="https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/">
-              this approach
-            </Link>{" "}
-            instead.
-          </div>
-        </Stack>
-      ),
-      demo: (
-        <Stack className="gap-5">
-          <FormField label="Name" type="text" />
-          <FormField label="Email" type="email" />
-          <FormField label="Age" type="number" />
-          <FormField label="Password" type="password" defaultValue="foobar" />
-          <FormField label="Birthday" type="date" />
-          <FormField label="Appointment" type="datetime-local" />
-          <FormField label="Bed time" type="time" />
-          <FormField label="Profile photo" type="file" />
-          <FormField label="Mood" type="range" />
-          <FormField label="Favorite color" type="color" />
-        </Stack>
-      ),
-      code: `<Stack className="gap-5">
-  <FormField label="Name" type="text" />
-  <FormField label="Email" type="email" />
-  <FormField label="Age" type="number" />
-  <FormField label="Password" type="password" defaultValue="foobar" />
-  <FormField label="Birthday" type="date" />
-  <FormField label="Appointment" type="datetime-local" />
-  <FormField label="Bed time" type="time" />
-  <FormField label="Profile photo" type="file" />
-  <FormField label="Mood" type="range" />
-  <FormField label="Favorite color" type="color" />
-</Stack>`,
-    },
-    {
-      title: "Checkbox",
+      title: "Input type",
       description: (
         <div>
-          If you pass <InlineCode>type="checkbox"</InlineCode> it will use
-          RFUI's{" "}
+          <InlineCode>FormField</InlineCode> is just a wrapper. So far in the
+          above examples we've been passing <InlineCode>Input</InlineCode> to it
+          but you can pass other input components like{" "}
           <Link href="/components/form/checkbox">
             <InlineCode>Checkbox</InlineCode>
-          </Link>{" "}
-          component instead of doing{" "}
-          <InlineCode>{`<Input type="checkbox" />`}</InlineCode>.
-        </div>
-      ),
-      demo: <FormField label="Agreed" type="checkbox" defaultChecked={true} />,
-      code: `<FormField label="Agreed" type="checkbox" defaultChecked={true} />`,
-    },
-    {
-      title: "Switch",
-      description: (
-        <div>
-          If you pass <InlineCode>type="switch"</InlineCode> it will use RFUI's{" "}
-          <Link href="/components/form/switch">
-            <InlineCode>Switch</InlineCode>
-          </Link>{" "}
-          component.
-        </div>
-      ),
-      demo: <FormField label="Agreed" type="switch" />,
-      code: `<FormField label="Agreed" type="switch" />`,
-    },
-    {
-      title: "PasswordInput",
-      description: (
-        <div>
-          To use RFUI's{" "}
-          <Link href="/components/form/password-input">
-            <InlineCode>PasswordInput</InlineCode>
-          </Link>{" "}
-          component with <InlineCode>FormField</InlineCode> set{" "}
-          <InlineCode>type</InlineCode> to{" "}
-          <InlineCode>"rfui-password-input"</InlineCode>.
+          </Link>
+          .
         </div>
       ),
       demo: (
-        <FormField
-          label="Password"
-          type="rfui-password-input"
-          defaultValue="foobar"
-        />
+        <FormField label="Remember me">
+          <Checkbox name="remember-me" />
+        </FormField>
       ),
-      code: `<FormField label="Password" type="rfui-password-input" defaultValue="foobar" />`,
-    },
-    {
-      title: "Textarea",
-      description: (
-        <Stack className="gap-2">
-          <div>
-            To use RFUI's{" "}
-            <Link href="/components/form/textarea">
-              <InlineCode>Textarea</InlineCode>
-            </Link>{" "}
-            component with <InlineCode>FormField</InlineCode> set{" "}
-            <InlineCode>type</InlineCode> to <InlineCode>"textarea"</InlineCode>
-            .
-          </div>
-          <div>
-            Note: <InlineCode>value</InlineCode> or{" "}
-            <InlineCode>defaultValue</InlineCode> isn't passed as a prop; it's
-            passed instead like this:{" "}
-            <InlineCode>{"<Textarea>{value}</Textarea>"}</InlineCode>
-          </div>
-        </Stack>
-      ),
-      demo: <FormField label="Notes" type="textarea" />,
-      code: `<FormField label="Notes" type="textarea" />`,
-    },
-    {
-      title: "RadioButtonGroup",
-      description: (
-        <div>
-          To use RFUI's{" "}
-          <Link href="/components/form/radio-button-group">
-            <InlineCode>RadioButtonGroup</InlineCode>
-          </Link>{" "}
-          component with <InlineCode>FormField</InlineCode> set{" "}
-          <InlineCode>type</InlineCode> to{" "}
-          <InlineCode>"radio-button-group"</InlineCode> and use{" "}
-          <InlineCode>radioButtonGroupOptions</InlineCode> like so:
-        </div>
-      ),
-      demo: (
-        <FormField
-          label="Plan"
-          type="radio-button-group"
-          name="plan"
-          radioButtonGroupOptions={[
-            { value: "free", display: "Free" },
-            { value: "basic", display: "Basic" },
-            { value: "premium", display: "Premium" },
-          ]}
-        />
-      ),
-      code: `<FormField
-  label="Plan"
-  type="radio-button-group"
-  name="plan"
-  radioButtonGroupOptions={[
-    { value: "free", display: "Free" },
-    { value: "basic", display: "Basic" },
-    { value: "premium", display: "Premium" },
-  ]}
-/>`,
-    },
-    {
-      title: "Select",
-      description: (
-        <div>
-          To use RFUI's{" "}
-          <Link href="/components/form/select">
-            <InlineCode>Select</InlineCode>
-          </Link>{" "}
-          component with <InlineCode>FormField</InlineCode> set{" "}
-          <InlineCode>type</InlineCode> to <InlineCode>"select"</InlineCode> and
-          use <InlineCode>selectOptions</InlineCode> like so:
-        </div>
-      ),
-      demo: (
-        <FormField
-          label="Country"
-          type="select"
-          name="country"
-          selectOptions={[
-            { id: "free", value: "free", display: "Free" },
-            { id: "basic", value: "basic", display: "Basic" },
-            { id: "premium", value: "premium", display: "Premium" },
-          ]}
-        />
-      ),
-      code: `<FormField
-  label="Country"
-  type="select"
-  name="country"
-  selectOptions={[
-    { id: "free", value: "free", display: "Free" },
-    { id: "basic", value: "basic", display: "Basic" },
-    { id: "premium", value: "premium", display: "Premium" },
-  ]}
-/>`,
+      code: `<FormField label="Remember me">
+  <Checkbox name="remember-me" />
+</FormField>`,
     },
   ];
   const propsTables = [
@@ -482,55 +300,6 @@ export default () => {
           name: "label",
           required: true,
           type: "string",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "name",
-          required: false,
-          type: 'ComponentProps<"input">["name"]',
-          default: null,
-          notes: null,
-        },
-        {
-          name: "value",
-          required: false,
-          type: 'ComponentProps<"input">["value"]',
-          default: null,
-          notes: null,
-        },
-        {
-          name: "defaultValue",
-          required: false,
-          type: 'ComponentProps<"input">["defaultValue"]',
-          default: null,
-          notes: null,
-        },
-        {
-          name: "selectDefaultValue",
-          required: false,
-          type: 'SelectType["defaultValue"]',
-          default: null,
-          notes: null,
-        },
-        {
-          name: "checked",
-          required: false,
-          type: "boolean",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "defaultChecked",
-          required: false,
-          type: "boolean",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "type",
-          required: false,
-          type: 'ComponentProps<"input">["type"] | "switch" | "rfui-password-input" | "textarea" | "radio-button-group" | "select"',
           default: null,
           notes: null,
         },
@@ -599,141 +368,9 @@ export default () => {
           ),
         },
         {
-          name: "invalid",
-          required: false,
-          type: "boolean",
-          default: "false",
-          notes: null,
-        },
-        {
           name: "errorText",
           required: false,
           type: "string",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "radioButtonGroupOptions",
-          required: false,
-          type: "{ value: string; display: string; }[]",
-          default: null,
-          notes: (
-            <div>
-              This is to be used to be used to construct{" "}
-              <InlineCode>{`<input type="radio">`}</InlineCode> elements when
-              you have <InlineCode>type="radio-button-group"</InlineCode>.
-            </div>
-          ),
-        },
-        {
-          name: "onChange",
-          required: false,
-          type: "(e: any) => void;",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "onInput",
-          required: false,
-          type: "(e: any) => void;",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "inputRest",
-          required: false,
-          type: 'Omit<ComponentProps<"input">, "name" | "value" | "type" | "required" | "size" | "rounded" | "invalid">',
-          default: null,
-          notes: (
-            <div>
-              <div>
-                The structure of <InlineCode>FormField</InlineCode> is something
-                like this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<div>
-  ...
-  <Input />
-</div>`}
-              />
-              <div className="mb-3 mt-4">
-                <InlineCode>inputRest</InlineCode> gets passed like this:
-              </div>
-              <CodeBlock language="tsx" code={`<Input {...inputRest} />`} />
-            </div>
-          ),
-        },
-        {
-          name: "textareaRest",
-          required: false,
-          type: 'Omit<TextareaType, "id" | "name" | "value" | "required" | "invalid">',
-          default: null,
-          notes: (
-            <div>
-              <div>
-                The structure of <InlineCode>FormField</InlineCode> when used
-                with <InlineCode>type="textarea"</InlineCode> is something like
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<div>
-  ...
-  <Textarea></Textarea>
-</div>`}
-              />
-              <div className="mb-3 mt-4">
-                <InlineCode>textareaRest</InlineCode> gets passed like this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<Textarea {...textareaRest}></Textarea>`}
-              />
-            </div>
-          ),
-        },
-        {
-          name: "selectOptions",
-          required: false,
-          type: 'SelectType["options"]',
-          default: null,
-          notes: null,
-        },
-        {
-          name: "radioButtonGroupRest",
-          required: false,
-          type: 'Omit<RadioButtonGroupType, "id" | "name" | "value" | "required" | "invalid">',
-          default: null,
-          notes: (
-            <div>
-              <div>
-                The structure of <InlineCode>FormField</InlineCode> when used
-                with <InlineCode>type="radio-button-group"</InlineCode> is
-                something like this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<div>
-  ...
-  <RadioButtonGroup></RadioButtonGroup>
-</div>`}
-              />
-              <div className="mb-3 mt-4">
-                <InlineCode>radioButtonGroupRest</InlineCode> gets passed like
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<RadioButtonGroup {...radioButtonGroupRest}></RadioButtonGroup>`}
-              />
-            </div>
-          ),
-        },
-        {
-          name: "selectRest",
-          required: false,
-          type: "SelectType",
           default: null,
           notes: null,
         },

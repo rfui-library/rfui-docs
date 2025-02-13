@@ -12,9 +12,9 @@ export default () => {
       along with a <InlineCode>{`<label>`}</InlineCode>. You also might prefer
       to use RFUI's{" "}
       <Link href="/components/form/form-field">
-        <InlineCode>{`FormField`}</InlineCode>
+        <InlineCode>FormField</InlineCode>
       </Link>{" "}
-      component instead.
+      to wrap it.
     </div>
   );
   const examples: ExampleType[] = [

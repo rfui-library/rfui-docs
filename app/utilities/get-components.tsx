@@ -157,10 +157,9 @@ export const getComponents = () => ({
       name: "FormField",
       href: "/components/form/form-field",
       demo: (
-        <FormField
-          label="Email"
-          inputRest={{ className: "bg-neutral-50/20" }}
-        />
+        <FormField label="Email">
+          <Input type="email" name="email" className="bg-neutral-50/20" />
+        </FormField>
       ),
     },
     {
