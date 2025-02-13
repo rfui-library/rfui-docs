@@ -1,4 +1,5 @@
 import { titleToHref } from "@/utilities/title-to-href";
+import { CheckIcon } from "@heroicons/react/24/outline";
 import type { ReactNode } from "react";
 import {
   CodeBlock,
@@ -66,7 +67,7 @@ const PropsTable = ({ props, title }: PropsTableType) => {
               <td className="whitespace-nowrap">
                 <InlineCode>{prop.name}</InlineCode>
               </td>
-              <td>{prop.required ? "✔" : "-"}</td>
+              <td>{prop.required ? <CheckIcon className="size-5" /> : "-"}</td>
               <td className="whitespace-nowrap">
                 {prop.default !== null ? (
                   <InlineCode>{prop.default}</InlineCode>
