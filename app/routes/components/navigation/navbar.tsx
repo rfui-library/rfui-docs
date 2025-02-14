@@ -3,6 +3,7 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import {
+  Button,
   CodeBlock,
   InlineCode,
   Link,
@@ -150,6 +151,124 @@ export default () => {
 </Stack>`,
     },
     {
+      title: "Clickable non-link",
+      description: (
+        <div>
+          If you pass <InlineCode>onClick</InlineCode> without passing{" "}
+          <InlineCode>href</InlineCode> the navbar item will be displayed like a
+          link, won't be rendered as an <InlineCode>{"<a>"}</InlineCode> tag,
+          and will call <InlineCode>onClick</InlineCode> when clicked.
+        </div>
+      ),
+      demo: (
+        <Navbar size="xl">
+          <NavbarLeft>
+            <NavbarItem href="https://one.com">One</NavbarItem>
+            <NavbarItem href="https://two.com">Two</NavbarItem>
+            <NavbarItem
+              onClick={() => {
+                alert("Clicked");
+              }}
+            >
+              Click me
+            </NavbarItem>
+          </NavbarLeft>
+        </Navbar>
+      ),
+      code: `<Navbar size="xl">
+  <NavbarLeft>
+    <NavbarItem href="https://one.com">One</NavbarItem>
+    <NavbarItem href="https://two.com">Two</NavbarItem>
+    <NavbarItem
+      onClick={() => {
+        alert("Clicked");
+      }}
+    >
+      Click me
+    </NavbarItem>
+  </NavbarLeft>
+</Navbar>`,
+    },
+    {
+      title: "Form button",
+      description: (
+        <Stack className="gap-3">
+          <p>
+            If you pass <InlineCode>formProps</InlineCode> without passing{" "}
+            <InlineCode>href</InlineCode> the navbar item will be displayed like
+            a link and will be rendered as something like:
+          </p>
+          <CodeBlock
+            language="tsx"
+            code={`<form {...formProps}>
+  <button>{children}</button>
+</form>`}
+          />
+          <p>
+            rather than an <InlineCode>{"<a>"}</InlineCode> tag. This is useful
+            for things like log out functionality, where it is{" "}
+            <Link href="https://stackoverflow.com/a/14587231/1927876">
+              generally desirable
+            </Link>{" "}
+            to use POST instead of GET.
+          </p>
+        </Stack>
+      ),
+      demo: (
+        <Navbar size="xl">
+          <NavbarLeft>
+            <NavbarItem href="https://one.com">One</NavbarItem>
+            <NavbarItem href="https://two.com">Two</NavbarItem>
+            <NavbarItem formProps={{ method: "post" }}>Log out</NavbarItem>
+          </NavbarLeft>
+        </Navbar>
+      ),
+      code: `<Navbar size="xl">
+  <NavbarLeft>
+    <NavbarItem href="https://one.com">One</NavbarItem>
+    <NavbarItem href="https://two.com">Two</NavbarItem>
+    <NavbarItem formProps={{ method: "post" }}>Log out</NavbarItem>
+  </NavbarLeft>
+</Navbar>`,
+    },
+    {
+      title: "Custom content",
+      description: (
+        <div>
+          If you omit <InlineCode>href</InlineCode>,{" "}
+          <InlineCode>onClick</InlineCode>, and{" "}
+          <InlineCode>formProps</InlineCode>, what you pass to{" "}
+          <InlineCode>children</InlineCode> will be rendered.
+        </div>
+      ),
+      demo: (
+        <Navbar size="xl">
+          <NavbarLeft>
+            <NavbarItem href="https://one.com">One</NavbarItem>
+            <NavbarItem href="https://two.com">Two</NavbarItem>
+            <NavbarItem>
+              <div>Text</div>
+            </NavbarItem>
+            <NavbarItem>
+              <Button>Button</Button>
+            </NavbarItem>
+          </NavbarLeft>
+        </Navbar>
+      ),
+      code: `<Navbar size="xl">
+  <NavbarLeft>
+    <NavbarItem href="https://one.com">One</NavbarItem>
+    <NavbarItem href="https://two.com">Two</NavbarItem>
+    <NavbarItem>
+      <div>Text</div>
+    </NavbarItem>
+    <NavbarItem>
+      <Button>Button</Button>
+    </NavbarItem>
+  </NavbarLeft>
+</Navbar>`,
+    },
+    {
       title: "Dropdown",
       description: (
         <div>
@@ -157,7 +276,9 @@ export default () => {
           <Link href="https://www.nngroup.com/articles/mega-menus-work-well/">
             megamenu
           </Link>{" "}
-          when there are many menu items.
+          when there are many menu items. <InlineCode>onClick</InlineCode> and{" "}
+          <InlineCode>formProps</InlineCode> work similarly to how they work for{" "}
+          <InlineCode>NavbarItem</InlineCode>.
         </div>
       ),
       demo: (
@@ -169,8 +290,15 @@ export default () => {
               <NavbarDropdownItem href="https://three.com">
                 Three
               </NavbarDropdownItem>
-              <NavbarDropdownItem href="https://four.com">
-                Four
+              <NavbarDropdownItem
+                onClick={() => {
+                  alert("Clicked");
+                }}
+              >
+                onClick
+              </NavbarDropdownItem>
+              <NavbarDropdownItem formProps={{ method: "post" }}>
+                Log out
               </NavbarDropdownItem>
             </NavbarDropdown>
           </NavbarLeft>
@@ -184,8 +312,15 @@ export default () => {
       <NavbarDropdownItem href="https://three.com">
         Three
       </NavbarDropdownItem>
-      <NavbarDropdownItem href="https://four.com">
-        Four
+      <NavbarDropdownItem
+        onClick={() => {
+          alert("Clicked");
+        }}
+      >
+        onClick
+      </NavbarDropdownItem>
+      <NavbarDropdownItem formProps={{ method: "post" }}>
+        Log out
       </NavbarDropdownItem>
     </NavbarDropdown>
   </NavbarLeft>
@@ -360,7 +495,7 @@ export default () => {
       props: [
         {
           name: "href",
-          required: true,
+          required: false,
           type: "string",
           default: null,
           notes: null,
@@ -370,6 +505,20 @@ export default () => {
           required: false,
           type: "boolean",
           default: "false",
+          notes: null,
+        },
+        {
+          name: "onClick",
+          required: false,
+          type: "() => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "formProps",
+          required: false,
+          type: 'ComponentProps<"form">',
+          default: null,
           notes: null,
         },
         {
@@ -424,8 +573,22 @@ export default () => {
       props: [
         {
           name: "href",
-          required: true,
+          required: false,
           type: "string",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "onClick",
+          required: false,
+          type: "() => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "formProps",
+          required: false,
+          type: 'ComponentProps<"form">',
           default: null,
           notes: null,
         },

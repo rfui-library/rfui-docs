@@ -123,6 +123,119 @@ export default () => {
 </VerticalNavbar>`,
     },
     {
+      title: "Clickable non-link",
+      description: (
+        <div>
+          If you pass <InlineCode>onClick</InlineCode> without passing{" "}
+          <InlineCode>href</InlineCode> the navbar item won't be rendered as an{" "}
+          <InlineCode>{"<a>"}</InlineCode> tag and will call{" "}
+          <InlineCode>onClick</InlineCode> when clicked.
+        </div>
+      ),
+      demo: (
+        <VerticalNavbar className="min-h-[300px]!">
+          <VerticalNavbarTop>
+            <VerticalNavbarItem href="/one" isActive={false}>
+              One
+            </VerticalNavbarItem>
+            <VerticalNavbarItem href="/two" isActive={false}>
+              Two
+            </VerticalNavbarItem>
+            <VerticalNavbarItem href="/three" isActive={false}>
+              Three
+            </VerticalNavbarItem>
+            <VerticalNavbarItem
+              onClick={() => {
+                alert("Clicked");
+              }}
+            >
+              Click me
+            </VerticalNavbarItem>
+          </VerticalNavbarTop>
+        </VerticalNavbar>
+      ),
+      code: `<VerticalNavbar className="min-h-[300px]!">
+  <VerticalNavbarTop>
+    <VerticalNavbarItem href="/one" isActive={false}>
+      One
+    </VerticalNavbarItem>
+    <VerticalNavbarItem href="/two" isActive={false}>
+      Two
+    </VerticalNavbarItem>
+    <VerticalNavbarItem href="/three" isActive={false}>
+      Three
+    </VerticalNavbarItem>
+    <VerticalNavbarItem
+      onClick={() => {
+        alert("Clicked");
+      }}
+    >
+      Click me
+    </VerticalNavbarItem>
+  </VerticalNavbarTop>
+</VerticalNavbar>`,
+    },
+    {
+      title: "Form button",
+      description: (
+        <Stack className="gap-3">
+          <p>
+            If you pass <InlineCode>formProps</InlineCode> without passing{" "}
+            <InlineCode>href</InlineCode> the navbar item will be rendered as
+            something like:
+          </p>
+          <CodeBlock
+            language="tsx"
+            code={`<form {...formProps}>
+  <button>{children}</button>
+</form>`}
+          />
+          <p>
+            rather than an <InlineCode>{"<a>"}</InlineCode> tag. This is useful
+            for things like log out functionality, where it is{" "}
+            <Link href="https://stackoverflow.com/a/14587231/1927876">
+              generally desirable
+            </Link>{" "}
+            to use POST instead of GET.
+          </p>
+        </Stack>
+      ),
+      demo: (
+        <VerticalNavbar className="min-h-[300px]!">
+          <VerticalNavbarTop>
+            <VerticalNavbarItem href="/one" isActive={false}>
+              One
+            </VerticalNavbarItem>
+            <VerticalNavbarItem href="/two" isActive={false}>
+              Two
+            </VerticalNavbarItem>
+            <VerticalNavbarItem href="/three" isActive={false}>
+              Three
+            </VerticalNavbarItem>
+            <VerticalNavbarItem formProps={{ method: "post" }}>
+              Log out
+            </VerticalNavbarItem>
+          </VerticalNavbarTop>
+        </VerticalNavbar>
+      ),
+      code: `<VerticalNavbar className="min-h-[300px]!">
+  <VerticalNavbarTop>
+    <VerticalNavbarItem href="/one" isActive={false}>
+      One
+    </VerticalNavbarItem>
+    <VerticalNavbarItem href="/two" isActive={false}>
+      Two
+    </VerticalNavbarItem>
+    <VerticalNavbarItem href="/three" isActive={false}>
+      Three
+    </VerticalNavbarItem>
+    <VerticalNavbarItem formProps={{ method: "post" }}>
+      Log out
+    </VerticalNavbarItem>
+  </VerticalNavbarTop>
+</VerticalNavbar>`,
+    },
+    {
       title: "Sections",
       demo: (
         <VerticalNavbar className="h-[400px]!">
@@ -416,8 +529,22 @@ export default () => {
       props: [
         {
           name: "href",
-          required: true,
+          required: false,
           type: "string",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "onClick",
+          required: false,
+          type: "() => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "formProps",
+          required: false,
+          type: 'ComponentProps<"form">',
           default: null,
           notes: null,
         },
