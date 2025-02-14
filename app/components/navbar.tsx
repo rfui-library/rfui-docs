@@ -1,5 +1,6 @@
 import {
-  Button,
+  NavbarDropdown,
+  NavbarDropdownItem,
   NavbarItem,
   NavbarLeft,
   Navbar as RFUINavbar,
@@ -25,20 +26,19 @@ export const Navbar = ({ route }: NavbarType) => {
         <NavbarItem href="/about" isActive={route === "/about"}>
           About
         </NavbarItem>
-        <NavbarItem formProps={{ method: "post" }}>Log out</NavbarItem>
-        <NavbarItem
-          onClick={() => {
-            alert("onClick");
-          }}
-        >
-          onClick
-        </NavbarItem>
-        <NavbarItem>
-          <div>Text</div>
-        </NavbarItem>
-        <NavbarItem>
-          <Button>Button</Button>
-        </NavbarItem>
+        <NavbarDropdown title="Dropdown">
+          <NavbarDropdownItem href="/">Link</NavbarDropdownItem>
+          <NavbarDropdownItem
+            onClick={() => {
+              alert("Clicked");
+            }}
+          >
+            onClick
+          </NavbarDropdownItem>
+          <NavbarDropdownItem formProps={{ method: "post" }}>
+            Log out
+          </NavbarDropdownItem>
+        </NavbarDropdown>
       </NavbarLeft>
     </RFUINavbar>
   );

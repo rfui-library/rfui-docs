@@ -276,7 +276,9 @@ export default () => {
           <Link href="https://www.nngroup.com/articles/mega-menus-work-well/">
             megamenu
           </Link>{" "}
-          when there are many menu items.
+          when there are many menu items. <InlineCode>onClick</InlineCode> and{" "}
+          <InlineCode>formProps</InlineCode> work similarly to how they work for{" "}
+          <InlineCode>NavbarItem</InlineCode>.
         </div>
       ),
       demo: (
@@ -288,8 +290,15 @@ export default () => {
               <NavbarDropdownItem href="https://three.com">
                 Three
               </NavbarDropdownItem>
-              <NavbarDropdownItem href="https://four.com">
-                Four
+              <NavbarDropdownItem
+                onClick={() => {
+                  alert("Clicked");
+                }}
+              >
+                onClick
+              </NavbarDropdownItem>
+              <NavbarDropdownItem formProps={{ method: "post" }}>
+                Log out
               </NavbarDropdownItem>
             </NavbarDropdown>
           </NavbarLeft>
@@ -303,8 +312,15 @@ export default () => {
       <NavbarDropdownItem href="https://three.com">
         Three
       </NavbarDropdownItem>
-      <NavbarDropdownItem href="https://four.com">
-        Four
+      <NavbarDropdownItem
+        onClick={() => {
+          alert("Clicked");
+        }}
+      >
+        onClick
+      </NavbarDropdownItem>
+      <NavbarDropdownItem formProps={{ method: "post" }}>
+        Log out
       </NavbarDropdownItem>
     </NavbarDropdown>
   </NavbarLeft>
@@ -557,8 +573,22 @@ export default () => {
       props: [
         {
           name: "href",
-          required: true,
+          required: false,
           type: "string",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "onClick",
+          required: false,
+          type: "() => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "formProps",
+          required: false,
+          type: 'ComponentProps<"form">',
           default: null,
           notes: null,
         },
