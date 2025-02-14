@@ -11,3 +11,5 @@ code/rfui-package » npm link ../rfui-docs/node_modules/react
 ```
 
 See https://react.dev/warnings/invalid-hook-call-warning.
+
+Note: In going back and forth between `"rfui-package": "^../rfui-package"` and whatever else, I may need to delete `package-lock.json` and re-run `npm install`.
