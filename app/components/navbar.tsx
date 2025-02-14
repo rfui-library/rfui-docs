@@ -1,10 +1,4 @@
-import {
-  NavbarDropdown,
-  NavbarDropdownItem,
-  NavbarItem,
-  NavbarLeft,
-  Navbar as RFUINavbar,
-} from "rfui-package";
+import { NavbarItem, NavbarLeft, Navbar as RFUINavbar } from "rfui-package";
 
 type NavbarType = {
   route: string;
@@ -26,19 +20,6 @@ export const Navbar = ({ route }: NavbarType) => {
         <NavbarItem href="/about" isActive={route === "/about"}>
           About
         </NavbarItem>
-        <NavbarDropdown title="Dropdown">
-          <NavbarDropdownItem href="/">Link</NavbarDropdownItem>
-          <NavbarDropdownItem
-            onClick={() => {
-              alert("Clicked");
-            }}
-          >
-            onClick
-          </NavbarDropdownItem>
-          <NavbarDropdownItem formProps={{ method: "post" }}>
-            Log out
-          </NavbarDropdownItem>
-        </NavbarDropdown>
       </NavbarLeft>
     </RFUINavbar>
   );
