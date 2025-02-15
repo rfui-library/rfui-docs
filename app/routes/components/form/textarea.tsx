@@ -76,8 +76,8 @@ export default () => {
           Defaults to <InlineCode>false</InlineCode>.
         </div>
       ),
-      demo: <Textarea readOnly>Example</Textarea>,
-      code: `<Textarea readOnly>Example</Textarea>`,
+      demo: <Textarea readOnly defaultValue="Example"></Textarea>,
+      code: `<Textarea readOnly defaultValue="Example"></Textarea>`,
     },
     {
       title: "Invalid",
@@ -88,8 +88,8 @@ export default () => {
           Defaults to <InlineCode>false</InlineCode>.
         </div>
       ),
-      demo: <Textarea invalid>Example</Textarea>,
-      code: `<Textarea invalid>Example</Textarea>`,
+      demo: <Textarea invalid defaultValue="Example"></Textarea>,
+      code: `<Textarea invalid defaultValue="Example"></Textarea>`,
     },
   ];
   const propsTables = [

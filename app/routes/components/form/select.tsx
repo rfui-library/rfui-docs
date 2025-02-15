@@ -32,19 +32,16 @@ export default () => {
   );
   const uncontrolledOptions = [
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ];
   const examples: ExampleType[] = [
@@ -54,19 +51,16 @@ export default () => {
         <Select
           options={[
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -74,19 +68,16 @@ export default () => {
       code: `<Select
   options={[
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -109,19 +100,16 @@ export default () => {
           name="name-example"
           options={[
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -130,19 +118,16 @@ export default () => {
   name="name-example"
   options={[
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -159,9 +144,8 @@ export default () => {
             className="mt-2"
             language="ts"
             code={`{
-  id: "",
+  label: "",
   value: "",
-  display: "",
 }`}
           />
         </div>
@@ -170,24 +154,20 @@ export default () => {
         <Select
           options={[
             {
-              id: "",
+              label: "",
               value: "",
-              display: "",
             },
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -195,24 +175,20 @@ export default () => {
       code: `<Select
   options={[
     {
-      id: "",
+      label: "",
       value: "",
-      display: "",
     },
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -231,19 +207,16 @@ export default () => {
           }}
           options={[
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -254,19 +227,16 @@ export default () => {
   }}
   options={[
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -283,12 +253,12 @@ export default () => {
       ),
       demo: (
         <Select
-          defaultValue={uncontrolledOptions[1]}
+          defaultValue={uncontrolledOptions[1].value}
           options={uncontrolledOptions}
         />
       ),
       code: `<Select
-  defaultValue={uncontrolledOptions[1]}
+  defaultValue={uncontrolledOptions[1].value}
   options={uncontrolledOptions}
 />`,
     },
@@ -308,19 +278,16 @@ export default () => {
             size="sm"
             options={[
               {
-                id: "foo",
+                label: "foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -328,19 +295,16 @@ export default () => {
             size="md"
             options={[
               {
-                id: "foo",
+                label: "foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -348,19 +312,16 @@ export default () => {
             size="lg"
             options={[
               {
-                id: "foo",
+                label: "foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -371,19 +332,16 @@ export default () => {
     size="sm"
     options={[
       {
-        id: "foo",
+        label: "foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -391,19 +349,16 @@ export default () => {
     size="md"
     options={[
       {
-        id: "foo",
+        label: "foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -411,19 +366,16 @@ export default () => {
     size="lg"
     options={[
       {
-        id: "foo",
+        label: "foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -443,19 +395,16 @@ export default () => {
           optionsClassName="w-[500px]"
           options={[
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -465,19 +414,16 @@ export default () => {
   optionsClassName="w-[500px]"
   options={[
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -500,19 +446,16 @@ export default () => {
             rounded="square"
             options={[
               {
-                id: "foo",
+                label: "foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -520,19 +463,16 @@ export default () => {
             rounded="sm"
             options={[
               {
-                id: "foo",
+                label: "foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -540,19 +480,16 @@ export default () => {
             rounded="lg"
             options={[
               {
-                id: "foo",
+                label: "foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -560,19 +497,16 @@ export default () => {
             rounded="full"
             options={[
               {
-                id: "foo",
+                label: "foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -583,19 +517,16 @@ export default () => {
     rounded="square"
     options={[
       {
-        id: "foo",
+        label: "foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -603,19 +534,16 @@ export default () => {
     rounded="sm"
     options={[
       {
-        id: "foo",
+        label: "foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -623,19 +551,16 @@ export default () => {
     rounded="lg"
     options={[
       {
-        id: "foo",
+        label: "foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -643,19 +568,16 @@ export default () => {
     rounded="full"
     options={[
       {
-        id: "foo",
+        label: "foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -674,19 +596,16 @@ export default () => {
           disabled
           options={[
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -695,19 +614,16 @@ export default () => {
   disabled
   options={[
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -724,21 +640,18 @@ export default () => {
         <Select
           options={[
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
               disabled: false,
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
               disabled: true,
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
               disabled: false,
             },
           ]}
@@ -747,21 +660,18 @@ export default () => {
       code: `<Select
   options={[
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
       disabled: false,
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
       disabled: true,
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
       disabled: false,
     },
   ]}
@@ -780,19 +690,16 @@ export default () => {
           invalid
           options={[
             {
-              id: "foo",
+              label: "foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -801,19 +708,16 @@ export default () => {
   invalid
   options={[
     {
-      id: "foo",
+      label: "foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -826,7 +730,7 @@ export default () => {
         {
           name: "options",
           required: true,
-          type: '{ id: string; display: string; value: ComponentProps<"option">["value"]; disabled?: boolean; }[]',
+          type: '{ label: string; value: Exclude<ComponentProps<"option">["value"], readonly string[]>; disabled?: boolean; }[]',
           default: null,
           notes: null,
         },
