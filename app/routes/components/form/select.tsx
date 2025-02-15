@@ -32,15 +32,15 @@ export default () => {
   );
   const uncontrolledOptions = [
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ];
@@ -51,15 +51,15 @@ export default () => {
         <Select
           options={[
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
             },
           ]}
@@ -68,15 +68,15 @@ export default () => {
       code: `<Select
   options={[
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ]}
@@ -100,15 +100,15 @@ export default () => {
           name="name-example"
           options={[
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
             },
           ]}
@@ -118,15 +118,15 @@ export default () => {
   name="name-example"
   options={[
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ]}
@@ -158,15 +158,15 @@ export default () => {
               value: "",
             },
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
             },
           ]}
@@ -179,15 +179,15 @@ export default () => {
       value: "",
     },
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ]}
@@ -207,15 +207,15 @@ export default () => {
           }}
           options={[
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
             },
           ]}
@@ -227,15 +227,15 @@ export default () => {
   }}
   options={[
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ]}
@@ -253,7 +253,7 @@ export default () => {
       ),
       demo: (
         <Select
-          defaultValue={uncontrolledOptions[1].value}
+          defaultValue={uncontrolledOptions[1]}
           options={uncontrolledOptions}
         />
       ),
@@ -278,15 +278,15 @@ export default () => {
             size="sm"
             options={[
               {
-                label: "foo",
+                label: "Foo",
                 value: "foo",
               },
               {
-                label: "bar",
+                label: "Bar",
                 value: "bar",
               },
               {
-                label: "baz",
+                label: "Baz",
                 value: "baz",
               },
             ]}
@@ -295,15 +295,15 @@ export default () => {
             size="md"
             options={[
               {
-                label: "foo",
+                label: "Foo",
                 value: "foo",
               },
               {
-                label: "bar",
+                label: "Bar",
                 value: "bar",
               },
               {
-                label: "baz",
+                label: "Baz",
                 value: "baz",
               },
             ]}
@@ -312,15 +312,15 @@ export default () => {
             size="lg"
             options={[
               {
-                label: "foo",
+                label: "Foo",
                 value: "foo",
               },
               {
-                label: "bar",
+                label: "Bar",
                 value: "bar",
               },
               {
-                label: "baz",
+                label: "Baz",
                 value: "baz",
               },
             ]}
@@ -332,15 +332,15 @@ export default () => {
     size="sm"
     options={[
       {
-        label: "foo",
+        label: "Foo",
         value: "foo",
       },
       {
-        label: "bar",
+        label: "Bar",
         value: "bar",
       },
       {
-        label: "baz",
+        label: "Baz",
         value: "baz",
       },
     ]}
@@ -349,15 +349,15 @@ export default () => {
     size="md"
     options={[
       {
-        label: "foo",
+        label: "Foo",
         value: "foo",
       },
       {
-        label: "bar",
+        label: "Bar",
         value: "bar",
       },
       {
-        label: "baz",
+        label: "Baz",
         value: "baz",
       },
     ]}
@@ -366,15 +366,15 @@ export default () => {
     size="lg"
     options={[
       {
-        label: "foo",
+        label: "Foo",
         value: "foo",
       },
       {
-        label: "bar",
+        label: "Bar",
         value: "bar",
       },
       {
-        label: "baz",
+        label: "Baz",
         value: "baz",
       },
     ]}
@@ -395,15 +395,15 @@ export default () => {
           optionsClassName="w-[500px]"
           options={[
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
             },
           ]}
@@ -414,15 +414,15 @@ export default () => {
   optionsClassName="w-[500px]"
   options={[
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ]}
@@ -446,15 +446,15 @@ export default () => {
             rounded="square"
             options={[
               {
-                label: "foo",
+                label: "Foo",
                 value: "foo",
               },
               {
-                label: "bar",
+                label: "Bar",
                 value: "bar",
               },
               {
-                label: "baz",
+                label: "Baz",
                 value: "baz",
               },
             ]}
@@ -463,15 +463,15 @@ export default () => {
             rounded="sm"
             options={[
               {
-                label: "foo",
+                label: "Foo",
                 value: "foo",
               },
               {
-                label: "bar",
+                label: "Bar",
                 value: "bar",
               },
               {
-                label: "baz",
+                label: "Baz",
                 value: "baz",
               },
             ]}
@@ -480,15 +480,15 @@ export default () => {
             rounded="lg"
             options={[
               {
-                label: "foo",
+                label: "Foo",
                 value: "foo",
               },
               {
-                label: "bar",
+                label: "Bar",
                 value: "bar",
               },
               {
-                label: "baz",
+                label: "Baz",
                 value: "baz",
               },
             ]}
@@ -497,15 +497,15 @@ export default () => {
             rounded="full"
             options={[
               {
-                label: "foo",
+                label: "Foo",
                 value: "foo",
               },
               {
-                label: "bar",
+                label: "Bar",
                 value: "bar",
               },
               {
-                label: "baz",
+                label: "Baz",
                 value: "baz",
               },
             ]}
@@ -517,15 +517,15 @@ export default () => {
     rounded="square"
     options={[
       {
-        label: "foo",
+        label: "Foo",
         value: "foo",
       },
       {
-        label: "bar",
+        label: "Bar",
         value: "bar",
       },
       {
-        label: "baz",
+        label: "Baz",
         value: "baz",
       },
     ]}
@@ -534,15 +534,15 @@ export default () => {
     rounded="sm"
     options={[
       {
-        label: "foo",
+        label: "Foo",
         value: "foo",
       },
       {
-        label: "bar",
+        label: "Bar",
         value: "bar",
       },
       {
-        label: "baz",
+        label: "Baz",
         value: "baz",
       },
     ]}
@@ -551,15 +551,15 @@ export default () => {
     rounded="lg"
     options={[
       {
-        label: "foo",
+        label: "Foo",
         value: "foo",
       },
       {
-        label: "bar",
+        label: "Bar",
         value: "bar",
       },
       {
-        label: "baz",
+        label: "Baz",
         value: "baz",
       },
     ]}
@@ -568,15 +568,15 @@ export default () => {
     rounded="full"
     options={[
       {
-        label: "foo",
+        label: "Foo",
         value: "foo",
       },
       {
-        label: "bar",
+        label: "Bar",
         value: "bar",
       },
       {
-        label: "baz",
+        label: "Baz",
         value: "baz",
       },
     ]}
@@ -596,15 +596,15 @@ export default () => {
           disabled
           options={[
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
             },
           ]}
@@ -614,15 +614,15 @@ export default () => {
   disabled
   options={[
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ]}
@@ -640,17 +640,17 @@ export default () => {
         <Select
           options={[
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
               disabled: false,
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
               disabled: true,
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
               disabled: false,
             },
@@ -660,17 +660,17 @@ export default () => {
       code: `<Select
   options={[
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
       disabled: false,
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
       disabled: true,
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
       disabled: false,
     },
@@ -690,15 +690,15 @@ export default () => {
           invalid
           options={[
             {
-              label: "foo",
+              label: "Foo",
               value: "foo",
             },
             {
-              label: "bar",
+              label: "Bar",
               value: "bar",
             },
             {
-              label: "baz",
+              label: "Baz",
               value: "baz",
             },
           ]}
@@ -708,15 +708,15 @@ export default () => {
   invalid
   options={[
     {
-      label: "foo",
+      label: "Foo",
       value: "foo",
     },
     {
-      label: "bar",
+      label: "Bar",
       value: "bar",
     },
     {
-      label: "baz",
+      label: "Baz",
       value: "baz",
     },
   ]}
