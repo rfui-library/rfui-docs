@@ -54,7 +54,7 @@ export default () => {
             Controlled & Uncontrolled Components
           </Link>
           . Passing <InlineCode>value</InlineCode> and{" "}
-          <InlineCode>onInput</InlineCode> work because of{" "}
+          <InlineCode>onChange</InlineCode> work because of{" "}
           <Link href="/rest-parameters">
             <InlineCode>...rest</InlineCode>
           </Link>
@@ -62,7 +62,7 @@ export default () => {
         </div>
       ),
       demo: <PasswordInput />,
-      code: `<PasswordInput value={value} onInput={onInput} />`,
+      code: `<PasswordInput value={value} onChange={onChange} />`,
     },
     {
       title: "Default visible",

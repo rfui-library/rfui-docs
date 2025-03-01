@@ -21,7 +21,7 @@ export default () => {
             Controlled & Uncontrolled Components
           </Link>
           . Passing <InlineCode>value</InlineCode> and{" "}
-          <InlineCode>onInput</InlineCode> work because of{" "}
+          <InlineCode>onChange</InlineCode> work because of{" "}
           <Link href="/rest-parameters">
             <InlineCode>...rest</InlineCode>
           </Link>
@@ -29,7 +29,7 @@ export default () => {
         </div>
       ),
       demo: <Textarea></Textarea>,
-      code: `<Textarea value={value} onInput={onInput}></Textarea>`,
+      code: `<Textarea value={value} onChange={onChange}></Textarea>`,
     },
     {
       title: "Rounded",
