@@ -154,6 +154,11 @@ export const getComponents = () => ({
       ),
     },
     {
+      name: "EditableText",
+      href: "/components/form/editable-text",
+      demo: <div>EditableText</div>,
+    },
+    {
       name: "FormField",
       href: "/components/form/form-field",
       demo: (
