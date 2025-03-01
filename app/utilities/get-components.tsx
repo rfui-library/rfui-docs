@@ -204,9 +204,8 @@ export const getComponents = () => ({
         <Select
           options={[
             {
-              id: "united-states",
+              label: "United States",
               value: "united-states",
-              display: "United States",
             },
           ]}
         />
