@@ -2,15 +2,85 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, InlineCode, Link, Textarea } from "rfui-package";
+import { useState } from "react";
+import { EditableText, InlineCode } from "rfui-package";
 
 export default () => {
+  const [basicExampleText, setBasicExampleText] = useState(
+    "Lorem ipsum dolor..."
+  );
+  const [textareaExampleText, setTextareaExampleText] = useState(
+    "Lorem ipsum dolor..."
+  );
   const overviewNotes = null;
   const examples: ExampleType[] = [
     {
       title: "Basic",
-      demo: <Textarea></Textarea>,
-      code: `<Textarea></Textarea>`,
+      demo: (
+        <EditableText
+          text={basicExampleText}
+          onChange={(newText) => {
+            setBasicExampleText(newText);
+          }}
+        />
+      ),
+      code: `<EditableText
+  text={basicExampleText}
+  onChange={(newText) => {
+    setBasicExampleText(newText);
+  }}
+/>`,
+    },
+    {
+      title: "Textarea",
+      demo: (
+        <EditableText
+          type="textarea"
+          text={textareaExampleText}
+          onChange={(newText) => {
+            console.log(newText);
+            setTextareaExampleText(newText);
+          }}
+        />
+      ),
+      code: `<EditableText
+  text={textareaExampleText}
+  onChange={(newText) => {
+    setTextareaExampleText(newText);
+  }}
+/>`,
+    },
+    {
+      title: "...rest",
+      description: (
+        <div>
+          Whatever you pass to <InlineCode>...rest</InlineCode> will get passed
+          to <InlineCode>Text</InlineCode>, <InlineCode>Input</InlineCode>, and{" "}
+          <InlineCode>Textarea</InlineCode>. If instead you want to pass props
+          to only one of those three components, you can use{" "}
+          <InlineCode>textProps</InlineCode>,{" "}
+          <InlineCode>inputProps</InlineCode>, or{" "}
+          <InlineCode>textareaProps</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <EditableText
+          text={textareaExampleText}
+          onChange={(newText) => {
+            console.log(newText);
+            setTextareaExampleText(newText);
+          }}
+          className="text-supporting-green-500"
+        />
+      ),
+      code: `<EditableText
+  text={textareaExampleText}
+  onChange={(newText) => {
+    console.log(newText);
+    setTextareaExampleText(newText);
+  }}
+  className="text-supporting-green-500"
+/>`,
     },
   ];
   const propsTables = [
@@ -18,39 +88,80 @@ export default () => {
       title: null,
       props: [
         {
-          name: "children",
+          name: "text",
           required: true,
-          type: "ComponentChild",
+          type: "string",
           default: null,
           notes: null,
         },
         {
-          name: "...rest",
+          name: "onChange",
+          required: true,
+          type: "(newText: string) => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "type",
           required: false,
-          type: 'ComponentProps<"textarea">',
+          type: '"input" | "textarea"',
+          default: '"input"',
+          notes: null,
+        },
+        {
+          name: "textProps",
+          required: false,
+          type: 'Omit<TextType, "onClick">',
           default: null,
           notes: (
             <div>
-              <div className="leading-relaxed">
-                See the docs for{" "}
-                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>Textarea</InlineCode>, you could pass anything you
-                normally would pass to <InlineCode>{"<textarea>"}</InlineCode>{" "}
-                because the return value{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/form/textarea.tsx">
-                  looks something like
-                </Link>{" "}
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<textarea
-  className={className}
-  {...resstWithoutClass}
->
-  {children}
-</textarea>`}
-              />
+              Gets passed to <InlineCode>Text</InlineCode>.
+            </div>
+          ),
+        },
+        {
+          name: "inputProps",
+          required: false,
+          type: `Omit<
+  InputType,
+  "onClick" | "type" | "value" | "onChange" | "onBlur"
+>`,
+          default: null,
+          notes: (
+            <div>
+              Gets passed to <InlineCode>Input</InlineCode>.
+            </div>
+          ),
+        },
+        {
+          name: "textareaProps",
+          required: false,
+          type: `Omit<
+  InputType,
+  "onClick" | "type" | "value" | "onChange" | "onBlur"
+>`,
+          default: null,
+          notes: (
+            <div>
+              Gets passed to <InlineCode>Textarea</InlineCode>.
+            </div>
+          ),
+        },
+        {
+          name: "...rest",
+          required: false,
+          type: `See TypeScript type`,
+          default: null,
+          notes: (
+            <div>
+              Whatever you pass to <InlineCode>...rest</InlineCode> will get
+              passed to <InlineCode>Text</InlineCode>,{" "}
+              <InlineCode>Input</InlineCode>, and{" "}
+              <InlineCode>Textarea</InlineCode>. If instead you want to pass
+              props to only one of those three components, you can use{" "}
+              <InlineCode>textProps</InlineCode>,{" "}
+              <InlineCode>inputProps</InlineCode>, or{" "}
+              <InlineCode>textareaProps</InlineCode>.
             </div>
           ),
         },
