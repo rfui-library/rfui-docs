@@ -154,6 +154,11 @@ export const getComponents = () => ({
       ),
     },
     {
+      name: "EditableText",
+      href: "/components/form/editable-text",
+      demo: <div>EditableText</div>,
+    },
+    {
       name: "FormField",
       href: "/components/form/form-field",
       demo: (
@@ -204,9 +209,8 @@ export const getComponents = () => ({
         <Select
           options={[
             {
-              id: "united-states",
+              label: "United States",
               value: "united-states",
-              display: "United States",
             },
           ]}
         />

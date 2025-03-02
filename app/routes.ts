@@ -30,6 +30,7 @@ export default [
       ),
       route("checkbox", "./routes/components/form/checkbox.tsx"),
       route("combobox", "./routes/components/form/combobox.tsx"),
+      route("editable-text", "./routes/components/form/editable-text.tsx"),
       route("form-field", "./routes/components/form/form-field.tsx"),
       route("input", "./routes/components/form/input.tsx"),
       route("password-input", "./routes/components/form/password-input.tsx"),
