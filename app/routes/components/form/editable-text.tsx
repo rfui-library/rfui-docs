@@ -41,7 +41,6 @@ export default () => {
           type="textarea"
           text={textareaExampleText}
           onChange={(newText) => {
-            console.log(newText);
             setTextareaExampleText(newText);
           }}
         />
@@ -70,7 +69,6 @@ export default () => {
         <EditableText
           text={restExampleText}
           onChange={(newText) => {
-            console.log(newText);
             setRestExampleText(newText);
           }}
           className="text-supporting-green-500"
@@ -79,7 +77,6 @@ export default () => {
       code: `<EditableText
   text={restExampleText}
   onChange={(newText) => {
-    console.log(newText);
     setRestExampleText(newText);
   }}
   className="text-supporting-green-500"
