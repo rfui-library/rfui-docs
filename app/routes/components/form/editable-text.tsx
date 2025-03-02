@@ -12,6 +12,9 @@ export default () => {
   const [textareaExampleText, setTextareaExampleText] = useState(
     "Lorem ipsum dolor..."
   );
+  const [restExampleText, setRestExampleText] = useState(
+    "Lorem ipsum dolor..."
+  );
   const overviewNotes = null;
   const examples: ExampleType[] = [
     {
@@ -65,19 +68,19 @@ export default () => {
       ),
       demo: (
         <EditableText
-          text={textareaExampleText}
+          text={restExampleText}
           onChange={(newText) => {
             console.log(newText);
-            setTextareaExampleText(newText);
+            setRestExampleText(newText);
           }}
           className="text-supporting-green-500"
         />
       ),
       code: `<EditableText
-  text={textareaExampleText}
+  text={restExampleText}
   onChange={(newText) => {
     console.log(newText);
-    setTextareaExampleText(newText);
+    setRestExampleText(newText);
   }}
   className="text-supporting-green-500"
 />`,
