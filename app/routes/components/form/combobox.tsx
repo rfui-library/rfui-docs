@@ -2,10 +2,26 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
+import { useState } from "react";
 import { CodeBlock, Combobox, InlineCode, Link, Stack } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
+  const options = [
+    {
+      label: "Foo",
+      value: "foo",
+    },
+    {
+      label: "Bar",
+      value: "bar",
+    },
+    {
+      label: "Baz",
+      value: "baz",
+    },
+  ];
+  const [controlledValue, setControlledValue] = useState(options[1]);
   const examples: ExampleType[] = [
     {
       title: "Basic",
@@ -13,19 +29,16 @@ export default () => {
         <Combobox
           options={[
             {
-              id: "foo",
+              label: "Foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "Bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "Baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -33,19 +46,16 @@ export default () => {
       code: `<Combobox
   options={[
     {
-      id: "foo",
+      label: "Foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "Bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "Baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -68,19 +78,16 @@ export default () => {
           name="name-example"
           options={[
             {
-              id: "foo",
+              label: "Foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "Bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "Baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -89,19 +96,16 @@ export default () => {
   name="name-example"
   options={[
     {
-      id: "foo",
+      label: "Foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "Bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "Baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -118,10 +122,9 @@ export default () => {
             className="mt-2"
             language="ts"
             code={`{
-      id: "",
-      value: "",
-      display: "",
-    }`}
+  label: "",
+  value: "",
+}`}
           />
         </div>
       ),
@@ -129,24 +132,20 @@ export default () => {
         <Combobox
           options={[
             {
-              id: "",
+              label: "",
               value: "",
-              display: "",
             },
             {
-              id: "foo",
+              label: "Foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "Bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "Baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -154,80 +153,60 @@ export default () => {
       code: `<Combobox
   options={[
     {
-      id: "",
+      label: "",
       value: "",
-      display: "",
     },
     {
-      id: "foo",
+      label: "Foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "Bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "Baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
     },
     {
-      title: "Handle change",
+      title: "Uncontrolled",
       description: (
         <div>
-          Use the <InlineCode>onChange</InlineCode> prop.
+          If you don't pass <InlineCode>onChange</InlineCode> this component
+          will be uncontrolled. If you're taking the uncontrolled approach you
+          can use the <InlineCode>defaultValue</InlineCode> prop to set the
+          initial value.
+        </div>
+      ),
+      demo: <Combobox defaultValue={options[1]} options={options} />,
+      code: `<Combobox defaultValue={options[1]} options={options} />`,
+    },
+    {
+      title: "Controlled",
+      description: (
+        <div>
+          Pass <InlineCode>value</InlineCode> and{" "}
+          <InlineCode>onChange</InlineCode> to make this a controlled component.
         </div>
       ),
       demo: (
         <Combobox
-          onChange={(newVal) => {
-            console.log(newVal);
+          value={controlledValue}
+          onChange={(newValue) => {
+            setControlledValue(newValue as { label: string; value: string });
           }}
-          options={[
-            {
-              id: "foo",
-              value: "foo",
-              display: "foo",
-            },
-            {
-              id: "bar",
-              value: "bar",
-              display: "bar",
-            },
-            {
-              id: "baz",
-              value: "baz",
-              display: "baz",
-            },
-          ]}
+          options={options}
         />
       ),
       code: `<Combobox
-  onChange={(newVal) => {
-    console.log(newVal);
+  value={controlledValue}
+  onChange={(newValue) => {
+    setControlledValue(newValue as { label: string; value: string });
   }}
-  options={[
-    {
-      id: "foo",
-      value: "foo",
-      display: "foo",
-    },
-    {
-      id: "bar",
-      value: "bar",
-      display: "bar",
-    },
-    {
-      id: "baz",
-      value: "baz",
-      display: "baz",
-    },
-  ]}
+  options={options}
 />`,
     },
     {
@@ -246,19 +225,16 @@ export default () => {
             size="sm"
             options={[
               {
-                id: "foo",
+                label: "Foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "Bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "Baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -266,19 +242,16 @@ export default () => {
             size="md"
             options={[
               {
-                id: "foo",
+                label: "Foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "Bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "Baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -286,19 +259,16 @@ export default () => {
             size="lg"
             options={[
               {
-                id: "foo",
+                label: "Foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "Bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "Baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -309,19 +279,16 @@ export default () => {
     size="sm"
     options={[
       {
-        id: "foo",
+        label: "Foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "Bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "Baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -329,19 +296,16 @@ export default () => {
     size="md"
     options={[
       {
-        id: "foo",
+        label: "Foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "Bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "Baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -349,19 +313,16 @@ export default () => {
     size="lg"
     options={[
       {
-        id: "foo",
+        label: "Foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "Bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "Baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -385,19 +346,16 @@ export default () => {
             rounded="square"
             options={[
               {
-                id: "foo",
+                label: "Foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "Bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "Baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -405,19 +363,16 @@ export default () => {
             rounded="sm"
             options={[
               {
-                id: "foo",
+                label: "Foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "Bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "Baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -425,19 +380,16 @@ export default () => {
             rounded="lg"
             options={[
               {
-                id: "foo",
+                label: "Foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "Bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "Baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -445,19 +397,16 @@ export default () => {
             rounded="full"
             options={[
               {
-                id: "foo",
+                label: "Foo",
                 value: "foo",
-                display: "foo",
               },
               {
-                id: "bar",
+                label: "Bar",
                 value: "bar",
-                display: "bar",
               },
               {
-                id: "baz",
+                label: "Baz",
                 value: "baz",
-                display: "baz",
               },
             ]}
           />
@@ -468,19 +417,16 @@ export default () => {
     rounded="square"
     options={[
       {
-        id: "foo",
+        label: "Foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "Bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "Baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -488,19 +434,16 @@ export default () => {
     rounded="sm"
     options={[
       {
-        id: "foo",
+        label: "Foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "Bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "Baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -508,19 +451,16 @@ export default () => {
     rounded="lg"
     options={[
       {
-        id: "foo",
+        label: "Foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "Bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "Baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -528,19 +468,16 @@ export default () => {
     rounded="full"
     options={[
       {
-        id: "foo",
+        label: "Foo",
         value: "foo",
-        display: "foo",
       },
       {
-        id: "bar",
+        label: "Bar",
         value: "bar",
-        display: "bar",
       },
       {
-        id: "baz",
+        label: "Baz",
         value: "baz",
-        display: "baz",
       },
     ]}
   />
@@ -559,19 +496,16 @@ export default () => {
           disabled
           options={[
             {
-              id: "foo",
+              label: "Foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "Bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "Baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -580,19 +514,16 @@ export default () => {
   disabled
   options={[
     {
-      id: "foo",
+      label: "Foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "Bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "Baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -609,21 +540,18 @@ export default () => {
         <Combobox
           options={[
             {
-              id: "foo",
+              label: "Foo",
               value: "foo",
-              display: "foo",
               disabled: false,
             },
             {
-              id: "bar",
+              label: "Bar",
               value: "bar",
-              display: "bar",
               disabled: true,
             },
             {
-              id: "baz",
+              label: "Baz",
               value: "baz",
-              display: "baz",
               disabled: false,
             },
           ]}
@@ -632,21 +560,18 @@ export default () => {
       code: `<Combobox
   options={[
     {
-      id: "foo",
+      label: "Foo",
       value: "foo",
-      display: "foo",
       disabled: false,
     },
     {
-      id: "bar",
+      label: "Bar",
       value: "bar",
-      display: "bar",
       disabled: true,
     },
     {
-      id: "baz",
+      label: "Baz",
       value: "baz",
-      display: "baz",
       disabled: false,
     },
   ]}
@@ -665,19 +590,16 @@ export default () => {
           invalid
           options={[
             {
-              id: "foo",
+              label: "Foo",
               value: "foo",
-              display: "foo",
             },
             {
-              id: "bar",
+              label: "Bar",
               value: "bar",
-              display: "bar",
             },
             {
-              id: "baz",
+              label: "Baz",
               value: "baz",
-              display: "baz",
             },
           ]}
         />
@@ -686,19 +608,16 @@ export default () => {
   invalid
   options={[
     {
-      id: "foo",
+      label: "Foo",
       value: "foo",
-      display: "foo",
     },
     {
-      id: "bar",
+      label: "Bar",
       value: "bar",
-      display: "bar",
     },
     {
-      id: "baz",
+      label: "Baz",
       value: "baz",
-      display: "baz",
     },
   ]}
 />`,
@@ -711,7 +630,7 @@ export default () => {
         {
           name: "options",
           required: true,
-          type: '{ id: string; display: string; value: ComponentProps<"option">["value"]; disabled?: boolean; }[]',
+          type: "Option[]",
           default: null,
           notes: null,
         },
@@ -762,6 +681,20 @@ export default () => {
           required: false,
           type: "boolean",
           default: "false",
+          notes: null,
+        },
+        {
+          name: "defaultValue",
+          required: false,
+          type: "Option",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "value",
+          required: false,
+          type: "Option",
+          default: null,
           notes: null,
         },
         {

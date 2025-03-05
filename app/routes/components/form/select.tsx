@@ -2,6 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
+import { useState } from "react";
 import { CodeBlock, InlineCode, Link, Select, Stack } from "rfui-package";
 
 export default () => {
@@ -44,6 +45,9 @@ export default () => {
       value: "baz",
     },
   ];
+  const [controlledValue, setControlledValue] = useState(
+    uncontrolledOptions[1]
+  );
   const examples: ExampleType[] = [
     {
       title: "Basic",
@@ -194,54 +198,6 @@ export default () => {
 />`,
     },
     {
-      title: "Handle change",
-      description: (
-        <div>
-          Use the <InlineCode>onChange</InlineCode> prop.
-        </div>
-      ),
-      demo: (
-        <Select
-          onChange={(newVal) => {
-            console.log(newVal);
-          }}
-          options={[
-            {
-              label: "Foo",
-              value: "foo",
-            },
-            {
-              label: "Bar",
-              value: "bar",
-            },
-            {
-              label: "Baz",
-              value: "baz",
-            },
-          ]}
-        />
-      ),
-      code: `<Select
-  onChange={(newVal) => {
-    console.log(newVal);
-  }}
-  options={[
-    {
-      label: "Foo",
-      value: "foo",
-    },
-    {
-      label: "Bar",
-      value: "bar",
-    },
-    {
-      label: "Baz",
-      value: "baz",
-    },
-  ]}
-/>`,
-    },
-    {
       title: "Uncontrolled",
       description: (
         <div>
@@ -259,6 +215,31 @@ export default () => {
       ),
       code: `<Select
   defaultValue={uncontrolledOptions[1].value}
+  options={uncontrolledOptions}
+/>`,
+    },
+    {
+      title: "Controlled",
+      description: (
+        <div>
+          Pass <InlineCode>value</InlineCode> and{" "}
+          <InlineCode>onChange</InlineCode> to make this a controlled component.
+        </div>
+      ),
+      demo: (
+        <Select
+          value={controlledValue}
+          onChange={(newValue) => {
+            setControlledValue(newValue as { label: string; value: string });
+          }}
+          options={uncontrolledOptions}
+        />
+      ),
+      code: `<Select
+  value={controlledValue}
+  onChange={(newValue) => {
+    setControlledValue(newValue as { label: string; value: string });
+  }}
   options={uncontrolledOptions}
 />`,
     },
@@ -730,7 +711,7 @@ export default () => {
         {
           name: "options",
           required: true,
-          type: '{ label: string; value: Exclude<ComponentProps<"option">["value"], readonly string[]>; disabled?: boolean; }[]',
+          type: "Option[]",
           default: null,
           notes: null,
         },
@@ -784,16 +765,23 @@ export default () => {
           notes: null,
         },
         {
-          name: "onChange",
+          name: "defaultValue",
           required: false,
-          type: "(newValue: Option) => void",
+          type: "Option",
           default: null,
           notes: null,
         },
         {
-          name: "defaultValue",
+          name: "value",
           required: false,
           type: "Option",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "onChange",
+          required: false,
+          type: "(newValue: Option) => void",
           default: null,
           notes: null,
         },
