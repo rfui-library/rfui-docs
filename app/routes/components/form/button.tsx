@@ -74,6 +74,30 @@ export default () => {
 </Flex>`,
     },
     {
+      title: "Link variant",
+      description: (
+        <div>
+          With <InlineCode>varaint</InlineCode> set to{" "}
+          <InlineCode>"link"</InlineCode> the component will look like a link
+          but will still behave link a button.
+        </div>
+      ),
+      demo: <Button variant="link">Link variant</Button>,
+      code: `<Button variant="link">Link variant</Button>`,
+    },
+    {
+      title: "Link behavior",
+      description: (
+        <div>
+          With <InlineCode>href</InlineCode> set, the component will behave like
+          a link. In fact, an <InlineCode>a</InlineCode> tag will be rendered
+          instead of a <InlineCode>button</InlineCode> tag.
+        </div>
+      ),
+      demo: <Button href="https://example.com">Example</Button>,
+      code: `<Button href="https://example.com">Example</Button>`,
+    },
+    {
       title: "Size",
       description: (
         <p>
@@ -328,7 +352,7 @@ export default () => {
         {
           name: "variant",
           required: false,
-          type: '"primary" | "secondary" | "tertiary" | "danger-primary" | "danger-secondary" | "danger-tertiary"',
+          type: '"primary" | "secondary" | "tertiary" | "danger-primary" | "danger-secondary" | "danger-tertiary" | "link"',
           default: '"secondary"',
           notes: null,
         },
@@ -371,6 +395,13 @@ export default () => {
               <InlineCode>true</InlineCode>.
             </div>
           ),
+        },
+        {
+          name: "href",
+          required: false,
+          type: "string",
+          default: null,
+          notes: null,
         },
         {
           name: "children",
