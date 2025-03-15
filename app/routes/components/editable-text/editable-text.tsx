@@ -172,7 +172,7 @@ export default () => {
   return (
     <ComponentDocsPage
       componentName="EditableText"
-      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/editable-text.tsx"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/editable-text/editable-text.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}
