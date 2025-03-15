@@ -146,22 +146,10 @@ export const getComponents = () => ({
         <Combobox
           options={[
             {
-              id: "oregon",
+              label: "Oregon",
               value: "oregon",
-              display: "Oregon",
             },
           ]}
-        />
-      ),
-    },
-    {
-      name: "EditableText",
-      href: "/components/form/editable-text",
-      demo: (
-        <EditableText
-          text="Project name"
-          onChange={() => {}}
-          className="border border-dashed border-neutral-700"
         />
       ),
     },
@@ -399,6 +387,19 @@ export const getComponents = () => ({
           <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
           <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
         </Stack>
+      ),
+    },
+  ],
+  editableText: [
+    {
+      name: "EditableText",
+      href: "/components/editable-text/editable-text",
+      demo: (
+        <EditableText
+          text="Project name"
+          onChange={() => {}}
+          className="border border-dashed border-neutral-700"
+        />
       ),
     },
   ],

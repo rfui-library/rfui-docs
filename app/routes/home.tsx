@@ -138,6 +138,19 @@ export default () => {
             </Flex>
           </Stack>
           <Stack className="gap-7">
+            <Category>Editable Text</Category>
+            <Flex className="flex-wrap gap-6">
+              {components.editableText.map((component) => (
+                <Item
+                  key={component.name}
+                  name={component.name}
+                  href={component.href}
+                  demo={component.demo}
+                />
+              ))}
+            </Flex>
+          </Stack>
+          <Stack className="gap-7">
             <Category>Other</Category>
             <Flex className="flex-wrap gap-6">
               {components.other.map((component) => (
