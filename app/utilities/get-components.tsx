@@ -11,6 +11,8 @@ import {
   CodeBlock,
   Combobox,
   DropdownMenu,
+  EditableH1,
+  EditableH2,
   EditableText,
   Flex,
   FormField,
@@ -146,22 +148,10 @@ export const getComponents = () => ({
         <Combobox
           options={[
             {
-              id: "oregon",
+              label: "Oregon",
               value: "oregon",
-              display: "Oregon",
             },
           ]}
-        />
-      ),
-    },
-    {
-      name: "EditableText",
-      href: "/components/form/editable-text",
-      demo: (
-        <EditableText
-          text="Project name"
-          onChange={() => {}}
-          className="border border-dashed border-neutral-700"
         />
       ),
     },
@@ -399,6 +389,41 @@ export const getComponents = () => ({
           <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
           <div className="h-6 rounded-sm bg-neutral-100/50 p-2"></div>
         </Stack>
+      ),
+    },
+  ],
+  editableText: [
+    {
+      name: "EditableH1",
+      href: "/components/editable-text/editable-h1",
+      demo: (
+        <EditableH1
+          text="Project name"
+          onChange={() => {}}
+          className="border border-dashed border-neutral-700"
+        />
+      ),
+    },
+    {
+      name: "EditableH2",
+      href: "/components/editable-text/editable-h2",
+      demo: (
+        <EditableH2
+          text="Project name"
+          onChange={() => {}}
+          className="border border-dashed border-neutral-700"
+        />
+      ),
+    },
+    {
+      name: "EditableText",
+      href: "/components/editable-text/editable-text",
+      demo: (
+        <EditableText
+          text="Project name"
+          onChange={() => {}}
+          className="border border-dashed border-neutral-700"
+        />
       ),
     },
   ],

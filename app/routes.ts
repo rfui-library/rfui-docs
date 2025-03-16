@@ -30,7 +30,6 @@ export default [
       ),
       route("checkbox", "./routes/components/form/checkbox.tsx"),
       route("combobox", "./routes/components/form/combobox.tsx"),
-      route("editable-text", "./routes/components/form/editable-text.tsx"),
       route("form-field", "./routes/components/form/form-field.tsx"),
       route("input", "./routes/components/form/input.tsx"),
       route("password-input", "./routes/components/form/password-input.tsx"),
@@ -86,6 +85,15 @@ export default [
       route("text", "./routes/components/typography/text.tsx"),
       route("ul", "./routes/components/typography/ul.tsx"),
     ]),
+    ...prefix("editable-text", [
+      route("editable-h1", "./routes/components/editable-text/editable-h1.tsx"),
+      route("editable-h2", "./routes/components/editable-text/editable-h2.tsx"),
+      route(
+        "editable-text",
+        "./routes/components/editable-text/editable-text.tsx"
+      ),
+    ]),
+
     ...prefix("other", [
       route("dropdown-menu", "./routes/components/other/dropdown-menu.tsx"),
     ]),

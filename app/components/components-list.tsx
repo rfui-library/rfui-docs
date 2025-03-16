@@ -46,6 +46,11 @@ export const ComponentsList = ({ isSticky = false }: ComponentsList) => {
       name: component.name,
       href: component.href,
     })),
+    { name: "Editable Text", isHeader: true },
+    ...components.editableText.map((component) => ({
+      name: component.name,
+      href: component.href,
+    })),
     { name: "Other", isHeader: true },
     ...components.other.map((component) => ({
       name: component.name,

@@ -3,15 +3,13 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import { useState } from "react";
-import { EditableText, InlineCode } from "rfui-package";
+import { EditableH1, InlineCode } from "rfui-package";
 
 export default () => {
   const [basicExampleText, setBasicExampleText] = useState(
     "Lorem ipsum dolor..."
   );
-  const [textareaExampleText, setTextareaExampleText] = useState(
-    "Lorem ipsum dolor..."
-  );
+  const [emptyStateExampleText, setEmptyStateExampleText] = useState("");
   const [restExampleText, setRestExampleText] = useState(
     "Lorem ipsum dolor..."
   );
@@ -20,14 +18,14 @@ export default () => {
     {
       title: "Basic",
       demo: (
-        <EditableText
+        <EditableH1
           text={basicExampleText}
           onChange={(newText) => {
             setBasicExampleText(newText);
           }}
         />
       ),
-      code: `<EditableText
+      code: `<EditableH1
   text={basicExampleText}
   onChange={(newText) => {
     setBasicExampleText(newText);
@@ -35,21 +33,28 @@ export default () => {
 />`,
     },
     {
-      title: "Textarea",
+      title: "Empty state with placeholder",
       demo: (
-        <EditableText
-          type="textarea"
-          text={textareaExampleText}
+        <EditableH1
+          emptyStateText="Empty state text"
+          text={emptyStateExampleText}
           onChange={(newText) => {
-            setTextareaExampleText(newText);
+            if (newText.length > 0) {
+              setEmptyStateExampleText(newText);
+            }
           }}
+          inputProps={{ placeholder: "Placeholder text..." }}
         />
       ),
-      code: `<EditableText
-  text={textareaExampleText}
+      code: `<EditableH1
+  emptyStateText="Empty state text"
+  text={emptyStateExampleText}
   onChange={(newText) => {
-    setTextareaExampleText(newText);
+    if (newText.length > 0) {
+      setEmptyStateExampleText(newText);
+    }
   }}
+  inputProps={{ placeholder: "Placeholder text..." }}
 />`,
     },
     {
@@ -57,16 +62,15 @@ export default () => {
       description: (
         <div>
           Whatever you pass to <InlineCode>...rest</InlineCode> will get passed
-          to <InlineCode>Text</InlineCode>, <InlineCode>Input</InlineCode>, and{" "}
-          <InlineCode>Textarea</InlineCode>. If instead you want to pass props
-          to only one of those three components, you can use{" "}
-          <InlineCode>textProps</InlineCode>,{" "}
-          <InlineCode>inputProps</InlineCode>, or{" "}
-          <InlineCode>textareaProps</InlineCode>.
+          to <InlineCode>H1</InlineCode> and
+          <InlineCode>Input</InlineCode>. If instead you want to pass props to
+          only one of those two components, you can use{" "}
+          <InlineCode>h1</InlineCode> or
+          <InlineCode>inputProps</InlineCode>.
         </div>
       ),
       demo: (
-        <EditableText
+        <EditableH1
           text={restExampleText}
           onChange={(newText) => {
             setRestExampleText(newText);
@@ -74,7 +78,7 @@ export default () => {
           className="text-supporting-green-500"
         />
       ),
-      code: `<EditableText
+      code: `<EditableH1
   text={restExampleText}
   onChange={(newText) => {
     setRestExampleText(newText);
@@ -102,20 +106,20 @@ export default () => {
           notes: null,
         },
         {
-          name: "type",
+          name: "emptyStateText",
           required: false,
-          type: '"input" | "textarea"',
-          default: '"input"',
+          type: "string",
+          default: null,
           notes: null,
         },
         {
-          name: "textProps",
+          name: "h1Props",
           required: false,
-          type: 'Omit<TextType, "onClick">',
+          type: 'Omit<H1Type, "onClick">',
           default: null,
           notes: (
             <div>
-              Gets passed to <InlineCode>Text</InlineCode>.
+              Gets passed to <InlineCode>H1</InlineCode>.
             </div>
           ),
         },
@@ -134,20 +138,6 @@ export default () => {
           ),
         },
         {
-          name: "textareaProps",
-          required: false,
-          type: `Omit<
-  InputType,
-  "onClick" | "type" | "value" | "onChange" | "onBlur"
->`,
-          default: null,
-          notes: (
-            <div>
-              Gets passed to <InlineCode>Textarea</InlineCode>.
-            </div>
-          ),
-        },
-        {
           name: "...rest",
           required: false,
           type: `See TypeScript type`,
@@ -155,13 +145,11 @@ export default () => {
           notes: (
             <div>
               Whatever you pass to <InlineCode>...rest</InlineCode> will get
-              passed to <InlineCode>Text</InlineCode>,{" "}
-              <InlineCode>Input</InlineCode>, and{" "}
-              <InlineCode>Textarea</InlineCode>. If instead you want to pass
-              props to only one of those three components, you can use{" "}
-              <InlineCode>textProps</InlineCode>,{" "}
-              <InlineCode>inputProps</InlineCode>, or{" "}
-              <InlineCode>textareaProps</InlineCode>.
+              passed to <InlineCode>H1</InlineCode> and
+              <InlineCode>Input</InlineCode>. If instead you want to pass props
+              to only one of those two components, you can use{" "}
+              <InlineCode>h1</InlineCode> or
+              <InlineCode>inputProps</InlineCode>.
             </div>
           ),
         },
@@ -171,8 +159,8 @@ export default () => {
 
   return (
     <ComponentDocsPage
-      componentName="EditableText"
-      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/form/editable-text.tsx"
+      componentName="EditableH1"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/editable-text/editable-h1.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}
