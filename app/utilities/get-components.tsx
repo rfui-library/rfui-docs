@@ -309,6 +309,11 @@ export const getComponents = () => ({
       ),
     },
     {
+      name: "Pagination",
+      href: "/components/navigation/pagination",
+      demo: <div>TODO</div>,
+    },
+    {
       name: "Tabs",
       href: "/components/navigation/tabs",
       demo: (
