@@ -11,6 +11,8 @@ import {
   CodeBlock,
   Combobox,
   DropdownMenu,
+  EditableH1,
+  EditableH2,
   EditableText,
   Flex,
   FormField,
@@ -391,6 +393,28 @@ export const getComponents = () => ({
     },
   ],
   editableText: [
+    {
+      name: "EditableH1",
+      href: "/components/editable-text/editable-h1",
+      demo: (
+        <EditableH1
+          text="Project name"
+          onChange={() => {}}
+          className="border border-dashed border-neutral-700"
+        />
+      ),
+    },
+    {
+      name: "EditableH2",
+      href: "/components/editable-text/editable-h2",
+      demo: (
+        <EditableH2
+          text="Project name"
+          onChange={() => {}}
+          className="border border-dashed border-neutral-700"
+        />
+      ),
+    },
     {
       name: "EditableText",
       href: "/components/editable-text/editable-text",

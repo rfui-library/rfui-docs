@@ -86,6 +86,8 @@ export default [
       route("ul", "./routes/components/typography/ul.tsx"),
     ]),
     ...prefix("editable-text", [
+      route("editable-h1", "./routes/components/editable-text/editable-h1.tsx"),
+      route("editable-h2", "./routes/components/editable-text/editable-h2.tsx"),
       route(
         "editable-text",
         "./routes/components/editable-text/editable-text.tsx"
