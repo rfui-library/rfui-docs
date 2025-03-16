@@ -12,6 +12,7 @@ export default () => {
   const [textareaExampleText, setTextareaExampleText] = useState(
     "Lorem ipsum dolor..."
   );
+  const [emptyStateExampleText, setEmptyStateExampleText] = useState("");
   const [restExampleText, setRestExampleText] = useState(
     "Lorem ipsum dolor..."
   );
@@ -50,6 +51,31 @@ export default () => {
   onChange={(newText) => {
     setTextareaExampleText(newText);
   }}
+/>`,
+    },
+    {
+      title: "Empty state with placeholder",
+      demo: (
+        <EditableText
+          emptyStateText="Empty state text"
+          text={emptyStateExampleText}
+          onChange={(newText) => {
+            if (newText.length > 0) {
+              setEmptyStateExampleText(newText);
+            }
+          }}
+          inputProps={{ placeholder: "Placeholder text..." }}
+        />
+      ),
+      code: `<EditableText
+  emptyStateText="Empty state text"
+  text={emptyStateExampleText}
+  onChange={(newText) => {
+    if (newText.length > 0) {
+      setEmptyStateExampleText(newText);
+    }
+  }}
+  inputProps={{ placeholder: "Placeholder text..." }}
 />`,
     },
     {
@@ -106,6 +132,13 @@ export default () => {
           required: false,
           type: '"input" | "textarea"',
           default: '"input"',
+          notes: null,
+        },
+        {
+          name: "emptyStateText",
+          required: false,
+          type: "string",
+          default: null,
           notes: null,
         },
         {

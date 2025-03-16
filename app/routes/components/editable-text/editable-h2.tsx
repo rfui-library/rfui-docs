@@ -9,6 +9,7 @@ export default () => {
   const [basicExampleText, setBasicExampleText] = useState(
     "Lorem ipsum dolor..."
   );
+  const [emptyStateExampleText, setEmptyStateExampleText] = useState("");
   const [restExampleText, setRestExampleText] = useState(
     "Lorem ipsum dolor..."
   );
@@ -29,6 +30,31 @@ export default () => {
   onChange={(newText) => {
     setBasicExampleText(newText);
   }}
+/>`,
+    },
+    {
+      title: "Empty state with placeholder",
+      demo: (
+        <EditableH2
+          emptyStateText="Empty state text"
+          text={emptyStateExampleText}
+          onChange={(newText) => {
+            if (newText.length > 0) {
+              setEmptyStateExampleText(newText);
+            }
+          }}
+          inputProps={{ placeholder: "Placeholder text..." }}
+        />
+      ),
+      code: `<EditableH2
+  emptyStateText="Empty state text"
+  text={emptyStateExampleText}
+  onChange={(newText) => {
+    if (newText.length > 0) {
+      setEmptyStateExampleText(newText);
+    }
+  }}
+  inputProps={{ placeholder: "Placeholder text..." }}
 />`,
     },
     {
@@ -76,6 +102,13 @@ export default () => {
           name: "onChange",
           required: true,
           type: "(newText: string) => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "emptyStateText",
+          required: false,
+          type: "string",
           default: null,
           notes: null,
         },
