@@ -710,9 +710,9 @@ export default () => {
       title: "Uncontrolled multiselect",
       description: (
         <div>
-          Set <InlineCode>multiple</InlineCode> to
-          <InlineCode>true</InlineCode>. If using{" "}
-          <InlineCode>defaultValue</InlineCode> pass an array of options.
+          Set <InlineCode>multiple</InlineCode> to <InlineCode>true</InlineCode>
+          . If using <InlineCode>defaultValue</InlineCode> pass an array of
+          options.
         </div>
       ),
       demo: (
@@ -766,9 +766,8 @@ export default () => {
       title: "Controlled multiselect",
       description: (
         <div>
-          Set <InlineCode>multiple</InlineCode> to
-          <InlineCode>true</InlineCode> and pass an array to{" "}
-          <InlineCode>value</InlineCode>.
+          Set <InlineCode>multiple</InlineCode> to <InlineCode>true</InlineCode>{" "}
+          and pass an array to <InlineCode>value</InlineCode>.
         </div>
       ),
       demo: (
