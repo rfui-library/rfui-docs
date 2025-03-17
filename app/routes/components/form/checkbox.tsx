@@ -53,12 +53,14 @@ export default () => {
       ),
       demo: (
         <Stack className="gap-5">
+          <Checkbox size="xs" />
           <Checkbox size="sm" />
           <Checkbox size="md" />
           <Checkbox size="lg" />
         </Stack>
       ),
       code: `<Stack className="gap-5">
+  <Checkbox size="xs" />
   <Checkbox size="sm" />
   <Checkbox size="md" />
   <Checkbox size="lg" />
@@ -96,15 +98,15 @@ export default () => {
         {
           name: "size",
           required: false,
-          type: '"sm" | "md" | "lg"',
+          type: '"xs" "sm" | "md" | "lg"',
           default: '"md"',
           notes: null,
         },
         {
           name: "invalid",
           required: false,
-          type: '"sm" | "md" | "lg"',
-          default: '"md"',
+          type: "boolean",
+          default: "false",
           notes: null,
         },
         {
