@@ -109,8 +109,8 @@ export default () => {
               <div className="leading-relaxed">
                 See the docs for{" "}
                 <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>Breadcrumbs</InlineCode>, you could pass anything
-                you normally would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
+                <InlineCode>Pagination</InlineCode>, you could pass anything you
+                normally would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
                 because the container{" "}
                 <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/pagination.tsx">
                   looks something like
