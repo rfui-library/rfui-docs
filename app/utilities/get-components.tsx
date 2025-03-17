@@ -311,7 +311,7 @@ export const getComponents = () => ({
     {
       name: "Pagination",
       href: "/components/navigation/pagination",
-      demo: <div>TODO</div>,
+      demo: <InlineCode>{"<Pagination>"}</InlineCode>,
     },
     {
       name: "Tabs",
