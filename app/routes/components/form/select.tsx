@@ -711,7 +711,8 @@ export default () => {
       description: (
         <div>
           Set <InlineCode>multiple</InlineCode> to
-          <InlineCode>true</InlineCode>.
+          <InlineCode>true</InlineCode>. If using{" "}
+          <InlineCode>defaultValue</InlineCode> pass an array of options.
         </div>
       ),
       demo: (
@@ -893,7 +894,7 @@ export default () => {
         {
           name: "defaultValue",
           required: false,
-          type: "Option",
+          type: "Option | Option[]",
           default: null,
           notes: null,
         },
