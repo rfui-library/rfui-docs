@@ -22,6 +22,9 @@ export default () => {
     },
   ];
   const [controlledValue, setControlledValue] = useState(options[1]);
+  const [controlledMultiselectValues, setControlledMultiselectValues] =
+    useState([options[1]]);
+
   const examples: ExampleType[] = [
     {
       title: "Basic",
@@ -622,6 +625,129 @@ export default () => {
   ]}
 />`,
     },
+    {
+      title: "Uncontrolled multiselect",
+      description: (
+        <div>
+          Set <InlineCode>multiple</InlineCode> to <InlineCode>true</InlineCode>
+          . If using <InlineCode>defaultValue</InlineCode> pass an array of
+          options.
+        </div>
+      ),
+      demo: (
+        <Combobox
+          multiple
+          options={[
+            {
+              label: "Foo",
+              value: "foo",
+            },
+            {
+              label: "Bar",
+              value: "bar",
+            },
+            {
+              label: "Baz",
+              value: "baz",
+            },
+            {
+              label:
+                "Some long text here causing the display to show 'n item(s) selected'",
+              value: "long",
+            },
+          ]}
+        />
+      ),
+      code: `<Combobox
+  invalid
+  options={[
+    {
+      label: "Foo",
+      value: "foo",
+    },
+    {
+      label: "Bar",
+      value: "bar",
+    },
+    {
+      label: "Baz",
+      value: "baz",
+    },
+    {
+      label:
+        "Some long text here causing the display to show 'n item(s) selected'",
+      value: "long",
+    },
+  ]}
+/>`,
+    },
+    {
+      title: "Controlled multiselect",
+      description: (
+        <div>
+          Set <InlineCode>multiple</InlineCode> to <InlineCode>true</InlineCode>{" "}
+          and pass an array to <InlineCode>value</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <Combobox
+          multiple
+          value={controlledMultiselectValues}
+          onChange={(newValues) => {
+            setControlledMultiselectValues(
+              newValues as { label: string; value: string }[]
+            );
+          }}
+          options={[
+            {
+              label: "Foo",
+              value: "foo",
+            },
+            {
+              label: "Bar",
+              value: "bar",
+            },
+            {
+              label: "Baz",
+              value: "baz",
+            },
+            {
+              label:
+                "Some long text here causing the display to show 'n item(s) selected'",
+              value: "long",
+            },
+          ]}
+        />
+      ),
+      code: `<Combobox
+  multiple
+  value={controlledMultiselectValues}
+  onChange={(newValues) => {
+    setControlledMultiselectValues(
+      newValues as { label: string; value: string }[]
+    );
+  }}
+  options={[
+    {
+      label: "Foo",
+      value: "foo",
+    },
+    {
+      label: "Bar",
+      value: "bar",
+    },
+    {
+      label: "Baz",
+      value: "baz",
+    },
+    {
+      label:
+        "Some long text here causing the display to show 'n item(s) selected'",
+      value: "long",
+    },
+  ]}
+/>`,
+    },
   ];
   const propsTables = [
     {
@@ -686,22 +812,29 @@ export default () => {
         {
           name: "defaultValue",
           required: false,
-          type: "Option",
+          type: "Option | Option[]",
           default: null,
           notes: null,
         },
         {
           name: "value",
           required: false,
-          type: "Option",
+          type: "Option | Option[]",
           default: null,
           notes: null,
         },
         {
           name: "onChange",
           required: false,
-          type: "(newValue: Option) => void",
+          type: "(newValue: Option | Option[]) => void",
           default: null,
+          notes: null,
+        },
+        {
+          name: "multiple",
+          required: false,
+          type: "boolean",
+          default: "false",
           notes: null,
         },
         {
