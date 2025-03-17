@@ -79,6 +79,27 @@ export default () => {
           notes: null,
         },
         {
+          name: "buildHref",
+          required: false,
+          type: "(page: number) => string",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "onChange",
+          required: false,
+          type: "(newPage: number) => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "size",
+          required: false,
+          type: '"sm" | "md" | "lg"',
+          default: '"md"',
+          notes: null,
+        },
+        {
           name: "...rest",
           required: false,
           type: `ComponentProps<"nav">`,
