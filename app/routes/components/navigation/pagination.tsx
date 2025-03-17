@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { Breadcrumbs, CodeBlock, InlineCode, Link } from "rfui-package";
+import { CodeBlock, InlineCode, Link, Pagination } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -10,20 +10,46 @@ export default () => {
     {
       title: "Basic",
       demo: (
-        <Breadcrumbs
-          links={[
-            { title: "One", href: "/one" },
-            { title: "Two", href: "/two" },
-            { title: "Three", href: "/three" },
-          ]}
+        <Pagination
+          currPage={5}
+          itemsPerPage={10}
+          totalItems={100}
+          buildHref={(page) => `/items?page=${page}`}
         />
       ),
-      code: `<Breadcrumbs
-  links={[
-    { title: "One", href: "/one" },
-    { title: "Two", href: "/two" },
-    { title: "Three", href: "/three" },
-  ]}
+      code: `<Pagination
+  currPage={5}
+  itemsPerPage={10}
+  totalItems={100}
+  buildHref={(page) => \`/items?page=\${page}\`}
+/>`,
+    },
+    {
+      title: "Controlled",
+      description: (
+        <div>
+          Pass <InlineCode>onChange</InlineCode> instead of{" "}
+          <InlineCode>buildHref</InlineCode> to make this a controlled
+          component.
+        </div>
+      ),
+      demo: (
+        <Pagination
+          currPage={5}
+          itemsPerPage={10}
+          totalItems={100}
+          onChange={(newPage) => {
+            console.log(newPage);
+          }}
+        />
+      ),
+      code: `<Pagination
+  currPage={5}
+  itemsPerPage={10}
+  totalItems={100}
+  onChange={(newPage) => {
+    console.log(newPage);
+  }}
 />`,
     },
   ];
@@ -32,28 +58,24 @@ export default () => {
       title: null,
       props: [
         {
-          name: "links",
+          name: "currPage",
           required: true,
-          type: "BreadcrumbLink[]",
+          type: "number",
           default: null,
-          notes: (
-            <div>
-              The type for <InlineCode>BreadcrumbLink</InlineCode> is:
-              <CodeBlock
-                language="tsx"
-                code={`type BreadcrumbLink = {
-  title: string;
-  href: string;
-};`}
-              />
-            </div>
-          ),
+          notes: null,
         },
         {
-          name: "size",
-          required: false,
-          type: '"sm" | "md" | "lg" | "xl"',
-          default: '"sm"',
+          name: "itemsPerPage",
+          required: true,
+          type: "number",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "totalItems",
+          required: true,
+          type: "number",
+          default: null,
           notes: null,
         },
         {
@@ -69,7 +91,7 @@ export default () => {
                 <InlineCode>Breadcrumbs</InlineCode>, you could pass anything
                 you normally would pass to <InlineCode>{"<nav>"}</InlineCode>{" "}
                 because the container{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/breadcrumbs.tsx">
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/navigation/pagination.tsx">
                   looks something like
                 </Link>{" "}
                 this:
