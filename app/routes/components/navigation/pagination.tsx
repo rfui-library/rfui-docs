@@ -2,7 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, InlineCode, Link, Pagination } from "rfui-package";
+import { CodeBlock, InlineCode, Link, Pagination, Stack } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -51,6 +51,57 @@ export default () => {
     console.log(newPage);
   }}
 />`,
+    },
+    {
+      title: "Size",
+      demo: (
+        <Stack className="gap-6">
+          <Pagination
+            size="sm"
+            currPage={5}
+            itemsPerPage={10}
+            totalItems={100}
+            buildHref={(page) => `/items?page=${page}`}
+          />
+          <Pagination
+            size="md"
+            currPage={5}
+            itemsPerPage={10}
+            totalItems={100}
+            buildHref={(page) => `/items?page=${page}`}
+          />
+          <Pagination
+            size="lg"
+            currPage={5}
+            itemsPerPage={10}
+            totalItems={100}
+            buildHref={(page) => `/items?page=${page}`}
+          />
+        </Stack>
+      ),
+      code: `<Stack className="gap-6">
+  <Pagination
+    size="sm"
+    currPage={5}
+    itemsPerPage={10}
+    totalItems={100}
+    buildHref={(page) => \`/items\?page=\${page}\`}
+  />
+  <Pagination
+    size="md"
+    currPage={5}
+    itemsPerPage={10}
+    totalItems={100}
+    buildHref={(page) => \`/items?page=\${page}\`}
+  />
+  <Pagination
+    size="lg"
+    currPage={5}
+    itemsPerPage={10}
+    totalItems={100}
+    buildHref={(page) => \`/items?page=\${page}\`}
+  />
+</Stack>`,
     },
   ];
   const propsTables = [
