@@ -309,6 +309,11 @@ export const getComponents = () => ({
       ),
     },
     {
+      name: "Pagination",
+      href: "/components/navigation/pagination",
+      demo: <InlineCode>{"<Pagination>"}</InlineCode>,
+    },
+    {
       name: "Tabs",
       href: "/components/navigation/tabs",
       demo: (

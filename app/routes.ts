@@ -61,6 +61,7 @@ export default [
         "navigation-links",
         "./routes/components/navigation/navigation-links.tsx"
       ),
+      route("pagination", "./routes/components/navigation/pagination.tsx"),
       route("tabs", "./routes/components/navigation/tabs.tsx"),
       route(
         "vertical-navbar",
