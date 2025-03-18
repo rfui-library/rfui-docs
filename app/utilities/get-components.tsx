@@ -2,7 +2,6 @@ import {
   Alert,
   Badge,
   Blockquote,
-  Breadcrumbs,
   Button,
   Card,
   Checkbox,
@@ -23,7 +22,6 @@ import {
   InfoTooltip,
   InlineCode,
   Input,
-  NavigationLinks,
   OL,
   PasswordInput,
   Progress,
@@ -261,15 +259,7 @@ export const getComponents = () => ({
     {
       name: "Breadcrumbs",
       href: "/components/navigation/breadcrumbs",
-      demo: (
-        <Breadcrumbs
-          links={[
-            { title: "One", href: "/one" },
-            { title: "Two", href: "/two" },
-            { title: "Three", href: "/three" },
-          ]}
-        />
-      ),
+      demo: <InlineCode>{"<Breadcrumbs>"}</InlineCode>,
     },
     {
       name: "Footer",
@@ -293,20 +283,7 @@ export const getComponents = () => ({
     {
       name: "NavigationLinks",
       href: "/components/navigation/navigation-links",
-      demo: (
-        <NavigationLinks
-          linkItems={[
-            {
-              name: "One",
-              href: "/one",
-            },
-            {
-              name: "Two",
-              href: "/two",
-            },
-          ]}
-        />
-      ),
+      demo: <InlineCode>{"<NavigationLinks>"}</InlineCode>,
     },
     {
       name: "Pagination",
