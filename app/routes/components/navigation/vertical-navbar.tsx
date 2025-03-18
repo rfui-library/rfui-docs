@@ -9,6 +9,7 @@ import {
   Stack,
   VerticalNavbar,
   VerticalNavbarBottom,
+  VerticalNavbarDropdown,
   VerticalNavbarItem,
   VerticalNavbarSection,
   VerticalNavbarTop,
@@ -410,13 +411,80 @@ export default () => {
     <VerticalNavbarItem href="/two" isActive={false} icon={<IconTwo />}>
       Two
     </VerticalNavbarItem>
-    <VerticalNavbarItem
-      href="/three"
-      isActive={false}
-      icon={<IconThree />}
-    >
+    <VerticalNavbarItem href="/three" isActive={false} icon={<IconThree />}>
       Three
     </VerticalNavbarItem>
+  </VerticalNavbarTop>
+</VerticalNavbar>`,
+    },
+    {
+      title: "Dropdown",
+      demo: (
+        <VerticalNavbar className="h-[300px]!">
+          <VerticalNavbarTop>
+            <VerticalNavbarItem href="/one">One</VerticalNavbarItem>
+            <VerticalNavbarItem href="/two">Two</VerticalNavbarItem>
+            <VerticalNavbarDropdown
+              title="Dropdown"
+              items={[
+                { label: "Link", href: "/example" },
+                {
+                  label: "Link (new tab)",
+                  href: "/example",
+                  shouldOpenInNewTab: true,
+                },
+                {
+                  label: "onClick",
+                  onClick: () => {
+                    alert("clicked");
+                  },
+                },
+                { label: "Link with icon", href: "/icon", icon: <IconOne /> },
+                {
+                  label: "onClick with icon",
+                  onClick: () => {
+                    alert("clicked");
+                  },
+                  icon: <IconOne />,
+                },
+              ]}
+            />
+          </VerticalNavbarTop>
+        </VerticalNavbar>
+      ),
+      code: `<VerticalNavbar>
+  <VerticalNavbarTop>
+    <VerticalNavbarItem href="/one">
+      One
+    </VerticalNavbarItem>
+    <VerticalNavbarItem href="/two">
+      Two
+    </VerticalNavbarItem>
+    <VerticalNavbarDropdown
+      title="Dropdown"
+      items={[
+        { label: "Link", href: "/example" },
+        {
+          label: "Link (new tab)",
+          href: "/example",
+          shouldOpenInNewTab: true,
+        },
+        {
+          label: "onClick",
+          onClick: () => {
+            alert("clicked");
+          },
+        },
+        { label: "Link with icon", href: "/icon", icon: <IconOne /> },
+        {
+          label: "onClick with icon",
+          onClick: () => {
+            alert("clicked");
+          },
+          icon: <IconOne />,
+        },
+      ]}
+    />
   </VerticalNavbarTop>
 </VerticalNavbar>`,
     },
@@ -598,6 +666,46 @@ export default () => {
           name: "children",
           required: true,
           type: "ComponentChild",
+          default: null,
+          notes: null,
+        },
+      ],
+    },
+    {
+      title: "VerticalNavbarDropdown",
+      props: [
+        {
+          name: "label",
+          required: true,
+          type: "string",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "href",
+          required: false,
+          type: "string",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "shouldOpenInNewTab",
+          required: false,
+          type: "boolean",
+          default: "false",
+          notes: null,
+        },
+        {
+          name: "onClick",
+          required: false,
+          type: "() => void",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "icon",
+          required: false,
+          type: "ReactNode",
           default: null,
           notes: null,
         },
