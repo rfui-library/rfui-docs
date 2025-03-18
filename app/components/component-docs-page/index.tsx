@@ -1,3 +1,4 @@
+import { ComponentsList } from "@/components/components-list";
 import type { ReactNode } from "react";
 import { Flex } from "rfui-package";
 import { Examples } from "./examples";
@@ -34,9 +35,9 @@ export const ComponentDocsPage = ({
 
   return (
     <Flex className="mt-9 gap-10">
-      {/* <section className="hidden xl:block">
+      <section className="hidden xl:block">
         <ComponentsList />
-      </section> */}
+      </section>
       <main className="grow overflow-x-hidden" id="overview">
         <Header
           componentName={componentName}

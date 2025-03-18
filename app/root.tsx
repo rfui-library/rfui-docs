@@ -6,11 +6,12 @@ import {
   ScrollRestoration,
   useLocation,
 } from "react-router";
-import { Container } from "rfui-package";
+import { Container, Stack } from "rfui-package";
+import { Footer } from "./components/footer";
+import { Navbar } from "./components/navbar";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
-import { VerticalNavbar } from "./components/vertical-navbar";
 
 export { ErrorBoundary } from "@/components/error-boundary/error-boundary";
 
@@ -43,17 +44,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <Links />
       </head>
       <body>
-        {/* {<Stack className="min-h-screen">
+        <Stack className="min-h-screen">
           <Navbar route={location.pathname} />
           <Container size="2xl" className="mb-6 mt-8 grow font-sans">
             {children}
           </Container>
           <Footer />
-        </Stack>} */}
-        <section className="sm:flex">
-          <VerticalNavbar route={location.pathname} />
-          <Container className="grow pb-8">{children}</Container>
-        </section>
+        </Stack>
         <ScrollRestoration />
         <Scripts />
       </body>
