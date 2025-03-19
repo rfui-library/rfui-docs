@@ -9,7 +9,6 @@ import {
   Link,
   Navbar,
   NavbarDropdown,
-  NavbarDropdownItem,
   NavbarItem,
   NavbarLeft,
   NavbarMegamenu,
@@ -276,9 +275,7 @@ export default () => {
           <Link href="https://www.nngroup.com/articles/mega-menus-work-well/">
             megamenu
           </Link>{" "}
-          when there are many menu items. <InlineCode>onClick</InlineCode> and{" "}
-          <InlineCode>formProps</InlineCode> work similarly to how they work for{" "}
-          <InlineCode>NavbarItem</InlineCode>.
+          when there are many menu items.
         </div>
       ),
       demo: (
@@ -286,21 +283,31 @@ export default () => {
           <NavbarLeft>
             <NavbarItem href="https://one.com">One</NavbarItem>
             <NavbarItem href="https://two.com">Two</NavbarItem>
-            <NavbarDropdown title="Dropdown">
-              <NavbarDropdownItem href="https://three.com">
-                Three
-              </NavbarDropdownItem>
-              <NavbarDropdownItem
-                onClick={() => {
-                  alert("Clicked");
-                }}
-              >
-                onClick
-              </NavbarDropdownItem>
-              <NavbarDropdownItem formProps={{ method: "post" }}>
-                Log out
-              </NavbarDropdownItem>
-            </NavbarDropdown>
+            <NavbarDropdown
+              title="Dropdown"
+              items={[
+                { label: "Link", href: "/example" },
+                {
+                  label: "Link (new tab)",
+                  href: "/example",
+                  shouldOpenInNewTab: true,
+                },
+                {
+                  label: "onClick",
+                  onClick: () => {
+                    alert("clicked");
+                  },
+                },
+                { label: "Link with icon", href: "/icon", icon: <IconOne /> },
+                {
+                  label: "onClick with icon",
+                  onClick: () => {
+                    alert("clicked");
+                  },
+                  icon: <IconOne />,
+                },
+              ]}
+            />
           </NavbarLeft>
         </Navbar>
       ),
@@ -308,21 +315,31 @@ export default () => {
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
-    <NavbarDropdown title="Dropdown">
-      <NavbarDropdownItem href="https://three.com">
-        Three
-      </NavbarDropdownItem>
-      <NavbarDropdownItem
-        onClick={() => {
-          alert("Clicked");
-        }}
-      >
-        onClick
-      </NavbarDropdownItem>
-      <NavbarDropdownItem formProps={{ method: "post" }}>
-        Log out
-      </NavbarDropdownItem>
-    </NavbarDropdown>
+    <NavbarDropdown
+      title="Dropdown"
+      items={[
+        { label: "Link", href: "/example" },
+        {
+          label: "Link (new tab)",
+          href: "/example",
+          shouldOpenInNewTab: true,
+        },
+        {
+          label: "onClick",
+          onClick: () => {
+            alert("clicked");
+          },
+        },
+        { label: "Link with icon", href: "/icon", icon: <IconOne /> },
+        {
+          label: "onClick with icon",
+          onClick: () => {
+            alert("clicked");
+          },
+          icon: <IconOne />,
+        },
+      ]}
+    />
   </NavbarLeft>
 </Navbar>`,
     },
@@ -548,54 +565,9 @@ export default () => {
           notes: null,
         },
         {
-          name: "children",
+          name: "items",
           required: true,
-          type: "ComponentChild",
-          default: null,
-          notes: (
-            <div>
-              The <InlineCode>children</InlineCode> should consist of{" "}
-              <InlineCode>NavbarDropdownItem</InlineCode> elements.
-            </div>
-          ),
-        },
-        {
-          name: "...rest",
-          required: false,
-          type: 'ComponentProps<"li">',
-          default: null,
-          notes: null,
-        },
-      ],
-    },
-    {
-      title: "NavbarDropdownItem",
-      props: [
-        {
-          name: "href",
-          required: false,
-          type: "string",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "onClick",
-          required: false,
-          type: "() => void",
-          default: null,
-          notes: null,
-        },
-        {
-          name: "formProps",
-          required: false,
-          type: 'ComponentProps<"form">',
-          default: null,
-          notes: null,
-        },
-        {
-          name: "children",
-          required: true,
-          type: "ComponentChild",
+          type: "DropdownItemType[]",
           default: null,
           notes: null,
         },
@@ -616,12 +588,7 @@ export default () => {
           required: true,
           type: "ComponentChild",
           default: null,
-          notes: (
-            <div>
-              The <InlineCode>children</InlineCode> should consist of{" "}
-              <InlineCode>NavbarDropdownItem</InlineCode> elements.
-            </div>
-          ),
+          notes: null,
         },
         {
           name: "desktopSubmenu",
@@ -668,3 +635,20 @@ export default () => {
     />
   );
 };
+
+const IconOne = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="h-[20px] w-[20px]"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25"
+    />
+  </svg>
+);
