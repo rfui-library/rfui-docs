@@ -165,6 +165,7 @@ export default () => {
             <NavbarItem href="https://one.com">One</NavbarItem>
             <NavbarItem href="https://two.com">Two</NavbarItem>
             <NavbarItem
+              type="button"
               onClick={() => {
                 alert("Clicked");
               }}
@@ -179,6 +180,7 @@ export default () => {
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
     <NavbarItem
+      type="button"
       onClick={() => {
         alert("Clicked");
       }}
@@ -218,7 +220,9 @@ export default () => {
           <NavbarLeft>
             <NavbarItem href="https://one.com">One</NavbarItem>
             <NavbarItem href="https://two.com">Two</NavbarItem>
-            <NavbarItem formProps={{ method: "post" }}>Log out</NavbarItem>
+            <NavbarItem type="form" formProps={{ method: "post" }}>
+              Log out
+            </NavbarItem>
           </NavbarLeft>
         </Navbar>
       ),
@@ -226,7 +230,9 @@ export default () => {
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
-    <NavbarItem formProps={{ method: "post" }}>Log out</NavbarItem>
+    <NavbarItem type="form" formProps={{ method: "post" }}>
+      Log out
+    </NavbarItem>
   </NavbarLeft>
 </Navbar>`,
     },
@@ -245,10 +251,10 @@ export default () => {
           <NavbarLeft>
             <NavbarItem href="https://one.com">One</NavbarItem>
             <NavbarItem href="https://two.com">Two</NavbarItem>
-            <NavbarItem>
+            <NavbarItem type="custom">
               <div>Text</div>
             </NavbarItem>
-            <NavbarItem>
+            <NavbarItem type="button" onClick={() => {}}>
               <Button>Button</Button>
             </NavbarItem>
           </NavbarLeft>
@@ -258,10 +264,10 @@ export default () => {
   <NavbarLeft>
     <NavbarItem href="https://one.com">One</NavbarItem>
     <NavbarItem href="https://two.com">Two</NavbarItem>
-    <NavbarItem>
+    <NavbarItem type="custom">
       <div>Text</div>
     </NavbarItem>
-    <NavbarItem>
+    <NavbarItem type="button" onClick={() => {}}>
       <Button>Button</Button>
     </NavbarItem>
   </NavbarLeft>
@@ -293,6 +299,7 @@ export default () => {
                   shouldOpenInNewTab: true,
                 },
                 {
+                  type: "button",
                   label: "onClick",
                   onClick: () => {
                     alert("clicked");
@@ -300,6 +307,7 @@ export default () => {
                 },
                 { label: "Link with icon", href: "/icon", icon: <IconOne /> },
                 {
+                  type: "button",
                   label: "onClick with icon",
                   onClick: () => {
                     alert("clicked");
@@ -510,6 +518,13 @@ export default () => {
     {
       title: "NavbarItem",
       props: [
+        {
+          name: "type",
+          required: false,
+          type: '"link" | "button" | "form" | "custom"',
+          default: '"link"',
+          notes: null,
+        },
         {
           name: "href",
           required: false,

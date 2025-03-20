@@ -38,6 +38,7 @@ export default () => {
           currPage={5}
           itemsPerPage={10}
           totalItems={100}
+          type="button"
           onChange={(newPage) => {
             console.log(newPage);
           }}
@@ -127,6 +128,13 @@ export default () => {
           required: true,
           type: "number",
           default: null,
+          notes: null,
+        },
+        {
+          name: "type",
+          required: false,
+          type: '"link" | "button"',
+          default: '"link"',
           notes: null,
         },
         {

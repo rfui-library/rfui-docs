@@ -146,6 +146,7 @@ export default () => {
               Three
             </VerticalNavbarItem>
             <VerticalNavbarItem
+              type="button"
               onClick={() => {
                 alert("Clicked");
               }}
@@ -167,6 +168,7 @@ export default () => {
       Three
     </VerticalNavbarItem>
     <VerticalNavbarItem
+      type="button"
       onClick={() => {
         alert("Clicked");
       }}
@@ -213,7 +215,7 @@ export default () => {
             <VerticalNavbarItem href="/three" isActive={false}>
               Three
             </VerticalNavbarItem>
-            <VerticalNavbarItem formProps={{ method: "post" }}>
+            <VerticalNavbarItem type="form" formProps={{ method: "post" }}>
               Log out
             </VerticalNavbarItem>
           </VerticalNavbarTop>
@@ -230,7 +232,7 @@ export default () => {
     <VerticalNavbarItem href="/three" isActive={false}>
       Three
     </VerticalNavbarItem>
-    <VerticalNavbarItem formProps={{ method: "post" }}>
+    <VerticalNavbarItem type="form" formProps={{ method: "post" }}>
       Log out
     </VerticalNavbarItem>
   </VerticalNavbarTop>
@@ -434,6 +436,7 @@ export default () => {
                   shouldOpenInNewTab: true,
                 },
                 {
+                  type: "button",
                   label: "onClick",
                   onClick: () => {
                     alert("clicked");
@@ -441,6 +444,7 @@ export default () => {
                 },
                 { label: "Link with icon", href: "/icon", icon: <IconOne /> },
                 {
+                  type: "button",
                   label: "onClick with icon",
                   onClick: () => {
                     alert("clicked");
@@ -596,6 +600,13 @@ export default () => {
       title: "VerticalNavbarItem",
       props: [
         {
+          name: "type",
+          required: false,
+          type: '"link" | "button" | "form"',
+          default: '"link"',
+          notes: null,
+        },
+        {
           name: "href",
           required: false,
           type: "string",
@@ -625,22 +636,6 @@ export default () => {
         },
         {
           name: "shouldOpenInNewTab",
-          required: false,
-          type: "boolean",
-          default: "false",
-          notes: (
-            <div>
-              See the{" "}
-              <Link href="/components/navigation/link#example-new-tab">
-                docs
-              </Link>{" "}
-              for the corresponding property in the{" "}
-              <InlineCode>Link</InlineCode> component.
-            </div>
-          ),
-        },
-        {
-          name: "shouldIncludeNewTabIcon",
           required: false,
           type: "boolean",
           default: "false",
