@@ -48,20 +48,20 @@ export default () => {
       title: "Initial active tab",
       description: (
         <div>
-          Set <InlineCode>initialActiveTab</InlineCode> to the{" "}
+          Set <InlineCode>initialActiveTabName</InlineCode> to the{" "}
           <InlineCode>tabName</InlineCode> of the{" "}
           <InlineCode>TabSection</InlineCode> that you want to display when the
           component loads.
         </div>
       ),
       demo: (
-        <Tabs initialActiveTab="Second">
+        <Tabs initialActiveTabName="Second">
           <TabSection tabName="First">One</TabSection>
           <TabSection tabName="Second">Two</TabSection>
           <TabSection tabName="Third">Three</TabSection>
         </Tabs>
       ),
-      code: `<Tabs initialActiveTab="Second">
+      code: `<Tabs initialActiveTabName="Second">
   <TabSection tabName="First">One</TabSection>
   <TabSection tabName="Second">Two</TabSection>
   <TabSection tabName="Third">Three</TabSection>
@@ -80,7 +80,7 @@ export default () => {
           notes: null,
         },
         {
-          name: "initialActiveTab",
+          name: "initialActiveTabName",
           required: false,
           type: "string",
           default: null,
