@@ -104,6 +104,25 @@ export default () => {
   />
 </Stack>`,
     },
+    {
+      title: "Disabled",
+      demo: (
+        <Pagination
+          disabled={true}
+          currPage={5}
+          itemsPerPage={10}
+          totalItems={100}
+          buildHref={(page) => `/items?page=${page}`}
+        />
+      ),
+      code: `<Pagination
+  disabled={true}
+  currPage={5}
+  itemsPerPage={10}
+  totalItems={100}
+  buildHref={(page) => \`/items?page=\${page}\`}
+/>`,
+    },
   ];
   const propsTables = [
     {
@@ -156,6 +175,13 @@ export default () => {
           required: false,
           type: '"sm" | "md" | "lg"',
           default: '"md"',
+          notes: null,
+        },
+        {
+          name: "disabled",
+          required: false,
+          type: "boolean",
+          default: "false",
           notes: null,
         },
         {
