@@ -1,4 +1,5 @@
 import {
+  AdvancedTable,
   Alert,
   Badge,
   Blockquote,
@@ -224,6 +225,22 @@ export const getComponents = () => ({
     },
   ],
   dataDisplay: [
+    {
+      name: "AdvancedTable",
+      href: "/components/data-display/advanced-table",
+      demo: (
+        <AdvancedTable
+          headerColumns={["Name", "Age"]}
+          bodyRowsData={[{ name: "Alice", age: 19 }]}
+          buildBodyRow={(row) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+        />
+      ),
+    },
     {
       name: "Badge",
       href: "/components/data-display/badge",

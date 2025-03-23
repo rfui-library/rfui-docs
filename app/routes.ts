@@ -14,6 +14,10 @@ export default [
   route("rest-parameters", "./routes/other/rest-parameters.tsx"),
   ...prefix("components", [
     ...prefix("data-display", [
+      route(
+        "advanced-table",
+        "./routes/components/data-display/advanced-table.tsx"
+      ),
       route("badge", "./routes/components/data-display/badge.tsx"),
       route("card", "./routes/components/data-display/card.tsx"),
       route("table", "./routes/components/data-display/table.tsx"),
