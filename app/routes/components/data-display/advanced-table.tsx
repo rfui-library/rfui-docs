@@ -16,7 +16,7 @@ export default () => {
       title: "Basic",
       demo: (
         <AdvancedTable
-          headerColumns={["Name", "Age"]}
+          headerColumns={["Name", "Age"].map((c) => ({ label: c }))}
           bodyRowsData={[
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
@@ -30,7 +30,46 @@ export default () => {
         />
       ),
       code: `<AdvancedTable
-  headerColumns={["Name", "Age"]}
+  headerColumns={["Name", "Age"].map((c) => ({ label: c }))}
+  bodyRowsData={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildBodyRow={(row: RowData) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+/>`,
+    },
+    {
+      title: "Automatic sorting",
+      demo: (
+        <AdvancedTable
+          sortType="automatic"
+          headerColumns={[
+            { label: "Name", sortKey: "name" },
+            { label: "Age", sortKey: "age" },
+          ]}
+          bodyRowsData={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildBodyRow={(row: RowData) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="automatic"
+  headerColumns={[
+    { label: "Name", sortKey: "name" },
+    { label: "Age", sortKey: "age" },
+  ]}
   bodyRowsData={[
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
