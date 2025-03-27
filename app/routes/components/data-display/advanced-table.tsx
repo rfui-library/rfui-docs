@@ -62,6 +62,9 @@ export default () => {
               <td>{row.age}</td>
             </>
           )}
+          onSort={(sortKey, sortType) => {
+            console.log(sortKey, sortType);
+          }}
         />
       ),
       code: `<AdvancedTable
@@ -80,6 +83,58 @@ export default () => {
       <td>{row.age}</td>
     </>
   )}
+  onSort={(sortKey, sortType) => {
+    console.log(sortKey, sortType);
+  }}
+/>`,
+    },
+    {
+      title: "URL-based sorting",
+      demo: (
+        <AdvancedTable
+          sortType="url"
+          headerColumns={[
+            { label: "Name", sortKey: "name" },
+            { label: "Age", sortKey: "age" },
+          ]}
+          bodyRowsData={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildHref={(key, direction) =>
+            `/users?sort=${key}&direction=${direction}`
+          }
+          buildBodyRow={(row: RowData) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+          sortKey={null}
+          sortDirection={null}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="url"
+  headerColumns={[
+    { label: "Name", sortKey: "name" },
+    { label: "Age", sortKey: "age" },
+  ]}
+  bodyRowsData={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildHref={(key, direction) =>
+    \`/users?sort=\${key}&direction=$\{direction}\`
+  }
+  buildBodyRow={(row: RowData) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+  sortKey={null}
+  sortDirection={null}
 />`,
     },
   ];
