@@ -16,12 +16,12 @@ export default () => {
       title: "Basic",
       demo: (
         <AdvancedTable
-          headerColumns={["Name", "Age"].map((c) => ({ label: c }))}
-          bodyRowsData={[
+          columns={["Name", "Age"].map((c) => ({ label: c }))}
+          rows={[
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
-          buildBodyRow={(row: RowData) => (
+          buildRow={(row: RowData) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -30,12 +30,12 @@ export default () => {
         />
       ),
       code: `<AdvancedTable
-  headerColumns={["Name", "Age"].map((c) => ({ label: c }))}
-  bodyRowsData={[
+  columns={["Name", "Age"].map((c) => ({ label: c }))}
+  rows={[
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ]}
-  buildBodyRow={(row: RowData) => (
+  buildRow={(row: RowData) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -48,15 +48,15 @@ export default () => {
       demo: (
         <AdvancedTable
           sortType="automatic"
-          headerColumns={[
+          columns={[
             { label: "Name", sortKey: "name" },
             { label: "Age", sortKey: "age" },
           ]}
-          bodyRowsData={[
+          rows={[
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
-          buildBodyRow={(row: RowData) => (
+          buildRow={(row: RowData) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -69,15 +69,15 @@ export default () => {
       ),
       code: `<AdvancedTable
   sortType="automatic"
-  headerColumns={[
+  columns={[
     { label: "Name", sortKey: "name" },
     { label: "Age", sortKey: "age" },
   ]}
-  bodyRowsData={[
+  rows={[
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ]}
-  buildBodyRow={(row: RowData) => (
+  buildRow={(row: RowData) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -93,18 +93,18 @@ export default () => {
       demo: (
         <AdvancedTable
           sortType="url"
-          headerColumns={[
+          columns={[
             { label: "Name", sortKey: "name" },
             { label: "Age", sortKey: "age" },
           ]}
-          bodyRowsData={[
+          rows={[
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
           buildHref={(key, direction) =>
             `/users?sort=${key}&direction=${direction}`
           }
-          buildBodyRow={(row: RowData) => (
+          buildRow={(row: RowData) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -116,18 +116,18 @@ export default () => {
       ),
       code: `<AdvancedTable
   sortType="url"
-  headerColumns={[
+  columns={[
     { label: "Name", sortKey: "name" },
     { label: "Age", sortKey: "age" },
   ]}
-  bodyRowsData={[
+  rows={[
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ]}
   buildHref={(key, direction) =>
     \`/users?sort=\${key}&direction=$\{direction}\`
   }
-  buildBodyRow={(row: RowData) => (
+  buildRow={(row: RowData) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -143,21 +143,21 @@ export default () => {
       title: null,
       props: [
         {
-          name: "headerColumns",
+          name: "columns",
           required: true,
           type: "string[]",
           default: null,
           notes: null,
         },
         {
-          name: "bodyRowsData",
+          name: "rows",
           required: true,
           type: "T[]",
           default: null,
           notes: null,
         },
         {
-          name: "buildBodyRow",
+          name: "buildRow",
           required: true,
           type: "(row: T) => JSX.Element",
           default: null,
