@@ -12,7 +12,7 @@ type RowData = {
 
 export default () => {
   const overviewNotes = null;
-  const [sortKey, setSortKey] = useState<"name" | "age" | null>(null);
+  const [sortKey, setSortKey] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<SortDirection>(null);
   const initialRows = [
     { name: "Alice", age: 19 },
@@ -104,6 +104,53 @@ export default () => {
 />`,
     },
     {
+      title: "Automatic sorting with nesting",
+      description: (
+        <div>
+          When <InlineCode>sortKey</InlineCode> is a nested property like{" "}
+          <InlineCode>"firm.name"</InlineCode> it will sort by eg.{" "}
+          <InlineCode>user.firm.name</InlineCode> instead of{" "}
+          <InlineCode>user["firm.name"]</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <AdvancedTable
+          sortType="automatic"
+          columns={[
+            { label: "Name", sortKey: "name" },
+            { label: "Firm", sortKey: "firm.name" },
+          ]}
+          rows={[
+            { name: "Alice", firm: { name: "Acme" } },
+            { name: "Bob", firm: { name: "Beta" } },
+          ]}
+          buildRow={(row) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.firm.name}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="automatic"
+  columns={[
+    { label: "Name", sortKey: "name" },
+    { label: "Firm", sortKey: "firm.name" },
+  ]}
+  rows={[
+    { name: "Alice", firm: { name: "Acme" } },
+    { name: "Bob", firm: { name: "Beta" } },
+  ]}
+  buildRow={(row) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.firm.name}</td>
+    </>
+  )}
+/>`,
+    },
+    {
       title: "URL-based sorting",
       description: (
         <div>
@@ -187,34 +234,19 @@ export default () => {
           )}
           sortKey={sortKey}
           sortDirection={sortDirection}
-          onSort={(newSortKey, newSortDirection) => {
-            setSortKey(newSortKey);
-            setSortDirection(newSortDirection);
+          onSort={(key, direction) => {
+            setSortKey(key);
+            setSortDirection(direction);
             setRows(
-              newSortKey === null
+              key === null
                 ? initialRows
                 : [...rows].sort((a, b) => {
-                    if (
-                      typeof a[newSortKey] === "string" &&
-                      typeof b[newSortKey] === "string"
-                    ) {
-                      if (newSortDirection === "asc") {
-                        return a[newSortKey].localeCompare(b[newSortKey]);
-                      } else {
-                        return b[newSortKey].localeCompare(a[newSortKey]);
-                      }
-                    } else if (
-                      typeof a[newSortKey] === "number" &&
-                      typeof b[newSortKey] === "number"
-                    ) {
-                      if (newSortDirection === "asc") {
-                        return a[newSortKey] - b[newSortKey];
-                      } else {
-                        return b[newSortKey] - a[newSortKey];
-                      }
-                    } else {
-                      return 0;
-                    }
+                    const aValue = (a[key as keyof RowData] as string) ?? "";
+                    const bValue = (b[key as keyof RowData] as string) ?? "";
+
+                    return direction === "asc"
+                      ? aValue.localeCompare(bValue)
+                      : bValue.localeCompare(aValue);
                   })
             );
           }}
@@ -235,34 +267,19 @@ export default () => {
   )}
   sortKey={sortKey}
   sortDirection={sortDirection}
-  onSort={(newSortKey, newSortDirection) => {
-    setSortKey(newSortKey);
-    setSortDirection(newSortDirection);
+  onSort={(key, direction) => {
+    setSortKey(key);
+    setSortDirection(direction);
     setRows(
-      newSortKey === null
+      key === null
         ? initialRows
         : [...rows].sort((a, b) => {
-            if (
-              typeof a[newSortKey] === "string" &&
-              typeof b[newSortKey] === "string"
-            ) {
-              if (newSortDirection === "asc") {
-                return a[newSortKey].localeCompare(b[newSortKey]);
-              } else {
-                return b[newSortKey].localeCompare(a[newSortKey]);
-              }
-            } else if (
-              typeof a[newSortKey] === "number" &&
-              typeof b[newSortKey] === "number"
-            ) {
-              if (newSortDirection === "asc") {
-                return a[newSortKey] - b[newSortKey];
-              } else {
-                return b[newSortKey] - a[newSortKey];
-              }
-            } else {
-              return 0;
-            }
+            const aValue = (a[key as keyof RowData] as string) ?? "";
+            const bValue = (b[key as keyof RowData] as string) ?? "";
+
+            return direction === "asc"
+              ? aValue.localeCompare(bValue)
+              : bValue.localeCompare(aValue);
           })
     );
   }}

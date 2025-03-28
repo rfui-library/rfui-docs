@@ -230,9 +230,9 @@ export const getComponents = () => ({
       href: "/components/data-display/advanced-table",
       demo: (
         <AdvancedTable
-          headerColumns={["Name", "Age"]}
-          bodyRowsData={[{ name: "Alice", age: 19 }]}
-          buildBodyRow={(row) => (
+          columns={["Name", "Age"].map((label) => ({ label }))}
+          rows={[{ name: "Alice", age: 19 }]}
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
