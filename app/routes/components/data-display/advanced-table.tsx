@@ -2,7 +2,8 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { AdvancedTable } from "rfui-package";
+import { useState } from "react";
+import { AdvancedTable, type SortDirection } from "rfui-package";
 
 type RowData = {
   name: string;
@@ -11,6 +12,13 @@ type RowData = {
 
 export default () => {
   const overviewNotes = null;
+  const [sortKey, setSortKey] = useState<"name" | "age" | null>(null);
+  const [sortDirection, setSortDirection] = useState<SortDirection>(null);
+  const initialRows = [
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ];
+  const [rows, setRows] = useState<RowData[]>(initialRows);
   const examples: ExampleType[] = [
     {
       title: "Basic",
@@ -135,6 +143,105 @@ export default () => {
   )}
   sortKey={null}
   sortDirection={null}
+/>`,
+    },
+    {
+      title: "Controlled sorting",
+      demo: (
+        <AdvancedTable
+          sortType="controlled"
+          columns={[
+            { label: "Name", sortKey: "name" },
+            { label: "Age", sortKey: "age" },
+          ]}
+          rows={rows}
+          buildRow={(row: RowData) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+          sortKey={sortKey}
+          sortDirection={sortDirection}
+          onSort={(newSortKey, newSortDirection) => {
+            setSortKey(newSortKey);
+            setSortDirection(newSortDirection);
+            setRows(
+              newSortKey === null
+                ? initialRows
+                : [...rows].sort((a, b) => {
+                    if (
+                      typeof a[newSortKey] === "string" &&
+                      typeof b[newSortKey] === "string"
+                    ) {
+                      if (newSortDirection === "asc") {
+                        return a[newSortKey].localeCompare(b[newSortKey]);
+                      } else {
+                        return b[newSortKey].localeCompare(a[newSortKey]);
+                      }
+                    } else if (
+                      typeof a[newSortKey] === "number" &&
+                      typeof b[newSortKey] === "number"
+                    ) {
+                      if (newSortDirection === "asc") {
+                        return a[newSortKey] - b[newSortKey];
+                      } else {
+                        return b[newSortKey] - a[newSortKey];
+                      }
+                    } else {
+                      return 0;
+                    }
+                  })
+            );
+          }}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="controlled"
+  columns={[
+    { label: "Name", sortKey: "name" },
+    { label: "Age", sortKey: "age" },
+  ]}
+  rows={rows}
+  buildRow={(row: RowData) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+  sortKey={sortKey}
+  sortDirection={sortDirection}
+  onSort={(newSortKey, newSortDirection) => {
+    setSortKey(newSortKey);
+    setSortDirection(newSortDirection);
+    setRows(
+      newSortKey === null
+        ? initialRows
+        : [...rows].sort((a, b) => {
+            if (
+              typeof a[newSortKey] === "string" &&
+              typeof b[newSortKey] === "string"
+            ) {
+              if (newSortDirection === "asc") {
+                return a[newSortKey].localeCompare(b[newSortKey]);
+              } else {
+                return b[newSortKey].localeCompare(a[newSortKey]);
+              }
+            } else if (
+              typeof a[newSortKey] === "number" &&
+              typeof b[newSortKey] === "number"
+            ) {
+              if (newSortDirection === "asc") {
+                return a[newSortKey] - b[newSortKey];
+              } else {
+                return b[newSortKey] - a[newSortKey];
+              }
+            } else {
+              return 0;
+            }
+          })
+    );
+  }}
 />`,
     },
   ];
