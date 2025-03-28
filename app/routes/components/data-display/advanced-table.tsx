@@ -3,7 +3,7 @@ import {
   type ExampleType,
 } from "@/components/component-docs-page/index";
 import { useState } from "react";
-import { AdvancedTable, type SortDirection } from "rfui-package";
+import { AdvancedTable, InlineCode, type SortDirection } from "rfui-package";
 
 type RowData = {
   name: string;
@@ -53,6 +53,13 @@ export default () => {
     },
     {
       title: "Automatic sorting",
+      description: (
+        <div>
+          Set <InlineCode>sortType</InlineCode> to{" "}
+          <InlineCode>"automatic"</InlineCode> to enable automatic sorting. This
+          is useful if you don't have paginated data.
+        </div>
+      ),
       demo: (
         <AdvancedTable
           sortType="automatic"
@@ -98,6 +105,15 @@ export default () => {
     },
     {
       title: "URL-based sorting",
+      description: (
+        <div>
+          Set <InlineCode>sortType</InlineCode> to{" "}
+          <InlineCode>"url"</InlineCode> to enable URL-based sorting. This will
+          add an <InlineCode>{`<a>`}</InlineCode> to the header of each column
+          with an <InlineCode>href</InlineCode> based on{" "}
+          <InlineCode>buildHref</InlineCode>.
+        </div>
+      ),
       demo: (
         <AdvancedTable
           sortType="url"
@@ -147,6 +163,14 @@ export default () => {
     },
     {
       title: "Controlled sorting",
+      description: (
+        <div>
+          Set <InlineCode>sortType</InlineCode> to{" "}
+          <InlineCode>"controlled"</InlineCode> to enable controlled sorting.
+          This will allow you to manually sort the table via the{" "}
+          <InlineCode>onSort</InlineCode> prop.
+        </div>
+      ),
       demo: (
         <AdvancedTable
           sortType="controlled"
@@ -252,7 +276,7 @@ export default () => {
         {
           name: "columns",
           required: true,
-          type: "string[]",
+          type: "BaseColumn[] || SortableColumn[]",
           default: null,
           notes: null,
         },
@@ -266,7 +290,29 @@ export default () => {
         {
           name: "buildRow",
           required: true,
-          type: "(row: T) => JSX.Element",
+          type: "(row: T) => ReactNode",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "getRowKey",
+          required: false,
+          type: "(row: T) => string | number",
+          default: null,
+          notes: (
+            <div>
+              The purpose of this is to set <InlineCode>key</InlineCode> on the{" "}
+              <InlineCode>tr</InlineCode> element. If{" "}
+              <InlineCode>getRowKey</InlineCode> isn't provided it will fall
+              back to using <InlineCode>row.id</InlineCode> if it is available
+              and if not, to <InlineCode>index</InlineCode>.
+            </div>
+          ),
+        },
+        {
+          name: "tableProps",
+          required: false,
+          type: 'Omit<TableType, "children">',
           default: null,
           notes: null,
         },
