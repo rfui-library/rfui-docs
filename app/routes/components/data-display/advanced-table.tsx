@@ -385,6 +385,46 @@ export default () => {
   }}
 />`,
     },
+    {
+      title: "Exclude column from sorting",
+      description: (
+        <div>
+          To exclude a column from sorting, just omit{" "}
+          <InlineCode>sortKey</InlineCode>. This applies to all sorting types.
+          This example excludes the "Age" column.
+        </div>
+      ),
+      demo: (
+        <AdvancedTable
+          sortType="automatic"
+          columns={[{ label: "Name", sortKey: "name" }, { label: "Age" }]}
+          rows={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildRow={(row: RowData) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="automatic"
+  columns={[{ label: "Name", sortKey: "name" }, { label: "Age" }]}
+  rows={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildRow={(row: RowData) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+/>`,
+    },
   ];
   const propsTables = [
     {
