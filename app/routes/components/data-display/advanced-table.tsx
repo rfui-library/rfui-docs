@@ -157,10 +157,54 @@ export default () => {
           Set <InlineCode>sortType</InlineCode> to{" "}
           <InlineCode>"url"</InlineCode> to enable URL-based sorting. This will
           add an <InlineCode>{`<a>`}</InlineCode> to the header of each column
-          with an <InlineCode>href</InlineCode> based on{" "}
-          <InlineCode>buildHref</InlineCode>.
+          with an <InlineCode>href</InlineCode> based on the current URL and
+          with <InlineCode>sort</InlineCode> and{" "}
+          <InlineCode>direction</InlineCode> added as query params.
         </div>
       ),
+      demo: (
+        <AdvancedTable
+          sortType="url"
+          columns={[
+            { label: "Name", sortKey: "name" },
+            { label: "Age", sortKey: "age" },
+          ]}
+          rows={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildRow={(row: RowData) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+          sortKey={null}
+          sortDirection={null}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="url"
+  columns={[
+    { label: "Name", sortKey: "name" },
+    { label: "Age", sortKey: "age" },
+  ]}
+  rows={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildRow={(row: RowData) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+  sortKey={null}
+  sortDirection={null}
+/>`,
+    },
+    {
+      title: "URL-based sorting with custom href",
       demo: (
         <AdvancedTable
           sortType="url"
