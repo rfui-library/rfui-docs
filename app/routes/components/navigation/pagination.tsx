@@ -9,6 +9,23 @@ export default () => {
   const examples: ExampleType[] = [
     {
       title: "Basic",
+      demo: <Pagination currPage={5} itemsPerPage={10} totalItems={100} />,
+      code: `<Pagination
+  currPage={5}
+  itemsPerPage={10}
+  totalItems={100}
+/>`,
+    },
+    {
+      title: "With custom href",
+      description: (
+        <div>
+          By default the <InlineCode>href</InlineCode> will add the{" "}
+          <InlineCode>page</InlineCode> query string parameter to the current
+          URL. If you want to use a custom href, you can use the{" "}
+          <InlineCode>buildHref</InlineCode> prop.
+        </div>
+      ),
       demo: (
         <Pagination
           currPage={5}
@@ -28,9 +45,8 @@ export default () => {
       title: "Controlled",
       description: (
         <div>
-          Pass <InlineCode>onChange</InlineCode> instead of{" "}
-          <InlineCode>buildHref</InlineCode> to make this a controlled
-          component.
+          Pass <InlineCode>type="button"</InlineCode> and{" "}
+          <InlineCode>onChange</InlineCode> to make this a controlled component.
         </div>
       ),
       demo: (
@@ -48,6 +64,7 @@ export default () => {
   currPage={5}
   itemsPerPage={10}
   totalItems={100}
+  type="button"
   onChange={(newPage) => {
     console.log(newPage);
   }}
@@ -62,21 +79,18 @@ export default () => {
             currPage={5}
             itemsPerPage={10}
             totalItems={100}
-            buildHref={(page) => `/items?page=${page}`}
           />
           <Pagination
             size="md"
             currPage={5}
             itemsPerPage={10}
             totalItems={100}
-            buildHref={(page) => `/items?page=${page}`}
           />
           <Pagination
             size="lg"
             currPage={5}
             itemsPerPage={10}
             totalItems={100}
-            buildHref={(page) => `/items?page=${page}`}
           />
         </Stack>
       ),
@@ -86,21 +100,18 @@ export default () => {
     currPage={5}
     itemsPerPage={10}
     totalItems={100}
-    buildHref={(page) => \`/items\?page=\${page}\`}
   />
   <Pagination
     size="md"
     currPage={5}
     itemsPerPage={10}
     totalItems={100}
-    buildHref={(page) => \`/items?page=\${page}\`}
   />
   <Pagination
     size="lg"
     currPage={5}
     itemsPerPage={10}
     totalItems={100}
-    buildHref={(page) => \`/items?page=\${page}\`}
   />
 </Stack>`,
     },
@@ -112,7 +123,6 @@ export default () => {
           currPage={5}
           itemsPerPage={10}
           totalItems={100}
-          buildHref={(page) => `/items?page=${page}`}
         />
       ),
       code: `<Pagination
@@ -120,7 +130,6 @@ export default () => {
   currPage={5}
   itemsPerPage={10}
   totalItems={100}
-  buildHref={(page) => \`/items?page=\${page}\`}
 />`,
     },
   ];
