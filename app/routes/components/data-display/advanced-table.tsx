@@ -52,6 +52,62 @@ export default () => {
 />`,
     },
     {
+      title: "Passing props to <th>",
+      description: (
+        <div>
+          Use the optional <InlineCode>thProps</InlineCode> property of columns.
+        </div>
+      ),
+      demo: (
+        <AdvancedTable
+          columns={[
+            {
+              label: "Name",
+            },
+            {
+              label: "Age",
+              thProps: {
+                className: "text-right!",
+              },
+            },
+          ]}
+          rows={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildRow={(row: RowData) => (
+            <>
+              <td>{row.name}</td>
+              <td className="text-right!">{row.age}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  columns={[
+    {
+      label: "Name",
+    },
+    {
+      label: "Age",
+      thProps: {
+        className: "text-right",
+      },
+    },
+  ]}
+  rows={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildRow={(row: RowData) => (
+    <>
+      <td>{row.name}</td>
+      <td className="text-right">{row.age}</td>
+    </>
+  )}
+/>`,
+    },
+    {
       title: "Automatic sorting",
       description: (
         <div>
