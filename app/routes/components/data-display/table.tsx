@@ -99,7 +99,13 @@ export default () => {
       title: "No hover",
       description: (
         <div>
-          Set <InlineCode>hover</InlineCode> to <InlineCode>false</InlineCode>.
+          It is generally a{" "}
+          <Link href="https://ux.stackexchange.com/q/109934/39046">
+            good practice
+          </Link>{" "}
+          to highlight rows when users hover over them. If you don't want to do
+          this, set <InlineCode>hover</InlineCode> to{" "}
+          <InlineCode>false</InlineCode>.
         </div>
       ),
       demo: (
