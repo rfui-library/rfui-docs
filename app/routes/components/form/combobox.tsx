@@ -199,7 +199,7 @@ export default () => {
         <Combobox
           value={controlledValue}
           onChange={(newValue) => {
-            setControlledValue(newValue as { label: string; value: string });
+            setControlledValue(newValue);
           }}
           options={options}
         />
@@ -207,7 +207,7 @@ export default () => {
       code: `<Combobox
   value={controlledValue}
   onChange={(newValue) => {
-    setControlledValue(newValue as { label: string; value: string });
+    setControlledValue(newValue);
   }}
   options={options}
 />`,
@@ -694,9 +694,7 @@ export default () => {
           multiple
           value={controlledMultiselectValues}
           onChange={(newValues) => {
-            setControlledMultiselectValues(
-              newValues as { label: string; value: string }[]
-            );
+            setControlledMultiselectValues(newValues);
           }}
           options={[
             {
@@ -723,9 +721,7 @@ export default () => {
   multiple
   value={controlledMultiselectValues}
   onChange={(newValues) => {
-    setControlledMultiselectValues(
-      newValues as { label: string; value: string }[]
-    );
+    setControlledMultiselectValues(newValues );
   }}
   options={[
     {

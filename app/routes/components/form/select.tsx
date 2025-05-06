@@ -233,7 +233,7 @@ export default () => {
         <Select
           value={controlledValue}
           onChange={(newValue) => {
-            setControlledValue(newValue as { label: string; value: string });
+            setControlledValue(newValue);
           }}
           options={uncontrolledOptions}
         />
@@ -241,7 +241,7 @@ export default () => {
       code: `<Select
   value={controlledValue}
   onChange={(newValue) => {
-    setControlledValue(newValue as { label: string; value: string });
+    setControlledValue(newValue);
   }}
   options={controlledOptions}
 />`,
@@ -775,9 +775,7 @@ export default () => {
           multiple
           value={controlledMultiselectValues}
           onChange={(newValues) => {
-            setControlledMultiselectValues(
-              newValues as { label: string; value: string }[]
-            );
+            setControlledMultiselectValues(newValues);
           }}
           options={[
             {
@@ -804,9 +802,7 @@ export default () => {
   multiple
   value={controlledMultiselectValue}
   onChange={(newValues) => {
-    setControlledMultiselectValue(
-      newValues as { label: string; value: string }[]
-    );
+    setControlledMultiselectValue(newValues);
   }}
   options={[
     {
