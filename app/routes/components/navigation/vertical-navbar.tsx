@@ -456,14 +456,10 @@ export default () => {
           </VerticalNavbarTop>
         </VerticalNavbar>
       ),
-      code: `<VerticalNavbar>
+      code: `<VerticalNavbar className="h-[300px]!">
   <VerticalNavbarTop>
-    <VerticalNavbarItem href="/one">
-      One
-    </VerticalNavbarItem>
-    <VerticalNavbarItem href="/two">
-      Two
-    </VerticalNavbarItem>
+    <VerticalNavbarItem href="/one">One</VerticalNavbarItem>
+    <VerticalNavbarItem href="/two">Two</VerticalNavbarItem>
     <VerticalNavbarDropdown
       title="Dropdown"
       items={[
@@ -474,6 +470,7 @@ export default () => {
           shouldOpenInNewTab: true,
         },
         {
+          type: "button",
           label: "onClick",
           onClick: () => {
             alert("clicked");
@@ -481,6 +478,7 @@ export default () => {
         },
         { label: "Link with icon", href: "/icon", icon: <IconOne /> },
         {
+          type: "button",
           label: "onClick with icon",
           onClick: () => {
             alert("clicked");
