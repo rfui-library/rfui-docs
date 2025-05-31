@@ -420,6 +420,103 @@ export default () => {
   )}
 />`,
     },
+    {
+      title: "With help icon",
+      demo: (
+        <AdvancedTable
+          columns={[
+            {
+              label: "Name",
+              helpTooltipContent: "Some help text to explain something",
+            },
+            {
+              label: "Age",
+            },
+          ]}
+          rows={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildRow={(row) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  columns={[
+    {
+      label: "Name",
+      helpTooltipContent: "Some help text to explain something",
+    },
+    {
+      label: "Age",
+    },
+  ]}
+  rows={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildRow={(row) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+/>`,
+    },
+    {
+      title: "With help icon and sorting",
+      demo: (
+        <AdvancedTable
+          sortType="automatic"
+          columns={[
+            {
+              label: "Name",
+              sortKey: "name",
+              helpTooltipContent: "Some help text to explain something",
+            },
+            {
+              label: "Age",
+              sortKey: "age",
+            },
+          ]}
+          rows={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildRow={(row) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  columns={[
+    {
+      label: "Name",
+      helpTooltipContent: "Some help text to explain something",
+    },
+    {
+      label: "Age",
+    },
+  ]}
+  rows={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildRow={(row) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+/>`,
+    },
   ];
   const propsTables = [
     {
