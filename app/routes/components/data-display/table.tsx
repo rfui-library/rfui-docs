@@ -526,7 +526,10 @@ export default () => {
       code: `<Table>
   <thead>
     <tr>
-      <th>name</th>
+      <ThWithHelpTooltip
+        cellContent="name"
+        tooltipContent="Some help text to explain something"
+      />
       <th>age</th>
     </tr>
   </thead>

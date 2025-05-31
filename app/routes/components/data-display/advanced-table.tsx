@@ -496,13 +496,16 @@ export default () => {
         />
       ),
       code: `<AdvancedTable
+  sortType="automatic"
   columns={[
     {
       label: "Name",
+      sortKey: "name",
       helpTooltipContent: "Some help text to explain something",
     },
     {
       label: "Age",
+      sortKey: "age",
     },
   ]}
   rows={[
