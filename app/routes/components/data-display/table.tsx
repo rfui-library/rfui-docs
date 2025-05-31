@@ -2,7 +2,14 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import { CodeBlock, InlineCode, Link, Stack, Table } from "rfui-package";
+import {
+  CodeBlock,
+  InlineCode,
+  Link,
+  Stack,
+  Table,
+  ThWithHelpTooltip,
+} from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -491,6 +498,50 @@ export default () => {
   </tbody>
 </Table>`,
     },
+    {
+      title: "With help icon",
+      demo: (
+        <Table>
+          <thead>
+            <tr>
+              <ThWithHelpTooltip
+                cellContent="name"
+                tooltipContent="Some help text to explain something"
+              />
+              <th>age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alice</td>
+              <td>19</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>25</td>
+            </tr>
+          </tbody>
+        </Table>
+      ),
+      code: `<Table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</Table>`,
+    },
   ];
   const propsTables = [
     {
@@ -588,6 +639,25 @@ export default () => {
               />
             </div>
           ),
+        },
+      ],
+    },
+    {
+      title: "ThWithHelpTooltip",
+      props: [
+        {
+          name: "cellContent",
+          required: true,
+          type: "ReactNode",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "tooltipContent",
+          required: true,
+          type: "string",
+          default: null,
+          notes: null,
         },
       ],
     },
