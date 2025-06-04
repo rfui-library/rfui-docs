@@ -5,11 +5,6 @@ import {
 import { useState } from "react";
 import { AdvancedTable, InlineCode, type SortDirection } from "rfui-package";
 
-type RowData = {
-  name: string;
-  age: number;
-};
-
 export default () => {
   const overviewNotes = null;
   const [sortKey, setSortKey] = useState<string | null>(null);
@@ -18,7 +13,7 @@ export default () => {
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ];
-  const [rows, setRows] = useState<RowData[]>(initialRows);
+  const [rows, setRows] = useState(initialRows);
   const examples: ExampleType[] = [
     {
       title: "Basic",
@@ -29,7 +24,7 @@ export default () => {
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
-          buildRow={(row: RowData) => (
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -43,7 +38,7 @@ export default () => {
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ]}
-  buildRow={(row: RowData) => (
+  buildRow={(row) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -75,7 +70,7 @@ export default () => {
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
-          buildRow={(row: RowData) => (
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td className="text-right!">{row.age}</td>
@@ -99,7 +94,7 @@ export default () => {
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ]}
-  buildRow={(row: RowData) => (
+  buildRow={(row) => (
     <>
       <td>{row.name}</td>
       <td className="text-right">{row.age}</td>
@@ -127,7 +122,7 @@ export default () => {
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
-          buildRow={(row: RowData) => (
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -148,7 +143,7 @@ export default () => {
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ]}
-  buildRow={(row: RowData) => (
+  buildRow={(row) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -229,7 +224,7 @@ export default () => {
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
-          buildRow={(row: RowData) => (
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -249,7 +244,7 @@ export default () => {
     { name: "Alice", age: 19 },
     { name: "Bob", age: 25 },
   ]}
-  buildRow={(row: RowData) => (
+  buildRow={(row) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -275,7 +270,7 @@ export default () => {
           buildHref={(key, direction) =>
             `/users?sort=${key}&direction=${direction}`
           }
-          buildRow={(row: RowData) => (
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -298,7 +293,7 @@ export default () => {
   buildHref={(key, direction) =>
     \`/users?sort=\${key}&direction=$\{direction}\`
   }
-  buildRow={(row: RowData) => (
+  buildRow={(row) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -326,7 +321,7 @@ export default () => {
             { label: "Age", sortKey: "age" },
           ]}
           rows={rows}
-          buildRow={(row: RowData) => (
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -341,8 +336,8 @@ export default () => {
               key === null
                 ? initialRows
                 : [...rows].sort((a, b) => {
-                    const aValue = (a[key as keyof RowData] as string) ?? "";
-                    const bValue = (b[key as keyof RowData] as string) ?? "";
+                    const aValue = (a[key as keyof typeof a] as string) ?? "";
+                    const bValue = (b[key as keyof typeof b] as string) ?? "";
 
                     return direction === "asc"
                       ? aValue.localeCompare(bValue)
@@ -359,7 +354,7 @@ export default () => {
     { label: "Age", sortKey: "age" },
   ]}
   rows={rows}
-  buildRow={(row: RowData) => (
+  buildRow={(row) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>
@@ -374,8 +369,8 @@ export default () => {
       key === null
         ? initialRows
         : [...rows].sort((a, b) => {
-            const aValue = (a[key as keyof RowData] as string) ?? "";
-            const bValue = (b[key as keyof RowData] as string) ?? "";
+            const aValue = (a[key as keyof typeof a] as string) ?? "";
+            const bValue = (b[key as keyof typeof b] as string) ?? "";
 
             return direction === "asc"
               ? aValue.localeCompare(bValue)
@@ -402,7 +397,7 @@ export default () => {
             { name: "Alice", age: 19 },
             { name: "Bob", age: 25 },
           ]}
-          buildRow={(row: RowData) => (
+          buildRow={(row) => (
             <>
               <td>{row.name}</td>
               <td>{row.age}</td>
@@ -418,6 +413,106 @@ export default () => {
     { name: "Bob", age: 25 },
   ]}
   buildRow={(row: RowData) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+/>`,
+    },
+    {
+      title: "With help icon",
+      demo: (
+        <AdvancedTable
+          columns={[
+            {
+              label: "Name",
+              helpTooltipContent: "Some help text to explain something",
+            },
+            {
+              label: "Age",
+            },
+          ]}
+          rows={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildRow={(row) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  columns={[
+    {
+      label: "Name",
+      helpTooltipContent: "Some help text to explain something",
+    },
+    {
+      label: "Age",
+    },
+  ]}
+  rows={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildRow={(row) => (
+    <>
+      <td>{row.name}</td>
+      <td>{row.age}</td>
+    </>
+  )}
+/>`,
+    },
+    {
+      title: "With help icon and sorting",
+      demo: (
+        <AdvancedTable
+          sortType="automatic"
+          columns={[
+            {
+              label: "Name",
+              sortKey: "name",
+              helpTooltipContent: "Some help text to explain something",
+            },
+            {
+              label: "Age",
+              sortKey: "age",
+            },
+          ]}
+          rows={[
+            { name: "Alice", age: 19 },
+            { name: "Bob", age: 25 },
+          ]}
+          buildRow={(row) => (
+            <>
+              <td>{row.name}</td>
+              <td>{row.age}</td>
+            </>
+          )}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="automatic"
+  columns={[
+    {
+      label: "Name",
+      sortKey: "name",
+      helpTooltipContent: "Some help text to explain something",
+    },
+    {
+      label: "Age",
+      sortKey: "age",
+    },
+  ]}
+  rows={[
+    { name: "Alice", age: 19 },
+    { name: "Bob", age: 25 },
+  ]}
+  buildRow={(row) => (
     <>
       <td>{row.name}</td>
       <td>{row.age}</td>

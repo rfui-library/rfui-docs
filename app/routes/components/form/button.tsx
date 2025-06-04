@@ -2,6 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
+import { PlusIcon } from "@heroicons/react/16/solid";
 import { Button, CodeBlock, Flex, InlineCode, Link, Stack } from "rfui-package";
 
 export default () => {
@@ -342,6 +343,25 @@ export default () => {
       ),
       code: `<Button>
   <span>＋</span> Example
+</Button>`,
+    },
+    {
+      title: "Icon only (text)",
+      demo: <Button>＋</Button>,
+      code: `<Button>＋</Button>`,
+    },
+    {
+      title: "Icon only (SVG)",
+      description: (
+        <div>You might need to give your SVG an explicit height and width.</div>
+      ),
+      demo: (
+        <Button>
+          <PlusIcon className="h-5 w-4" />
+        </Button>
+      ),
+      code: `<Button>
+  <PlusIcon className="h-5 w-4" />
 </Button>`,
     },
   ];
