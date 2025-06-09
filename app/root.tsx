@@ -46,7 +46,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <Stack className="min-h-screen">
           <Navbar route={location.pathname} />
-          <Container size="2xl" className="mb-6 mt-8 grow font-sans">
+          <Container size="2xl" className="mb-6 grow font-sans">
             {children}
           </Container>
           <Footer />
