@@ -77,6 +77,13 @@ export default () => {
   </Tooltip>
 </Stack>`,
     },
+    {
+      title: "No content",
+      description:
+        "If you don't provide any content, the tooltip will not be shown.",
+      demo: <Tooltip content="">Test</Tooltip>,
+      code: `<Tooltip content="">Test</Tooltip>`,
+    },
   ];
   const propsTables = [
     {
