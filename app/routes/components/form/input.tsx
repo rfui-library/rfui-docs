@@ -129,6 +129,22 @@ export default () => {
       code: `<Input invalid defaultValue="example" />`,
     },
     {
+      title: "Content before/after",
+      description: <div>TODO</div>,
+      demo: (
+        <Stack className="gap-4">
+          <Input contentBefore="$" />
+          <Input contentAfter="%" />
+          <Input contentBefore="https://" contentAfter=".com" />
+        </Stack>
+      ),
+      code: `<Stack className="gap-4">
+  <Input contentBefore="$" />
+  <Input contentAfter="%" />
+  <Input contentBefore="https://" contentAfter=".com" />
+</Stack>`,
+    },
+    {
       title: "Type",
       description: (
         <div>
