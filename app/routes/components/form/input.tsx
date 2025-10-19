@@ -129,6 +129,28 @@ export default () => {
       code: `<Input invalid defaultValue="example" />`,
     },
     {
+      title: "Content before/after",
+      description: (
+        <div>
+          Set <InlineCode>contentBefore</InlineCode> and{" "}
+          <InlineCode>contentAfter</InlineCode> to the content you want to
+          display before and after the input.{" "}
+        </div>
+      ),
+      demo: (
+        <Stack className="gap-4">
+          <Input contentBefore="$" />
+          <Input contentAfter="%" />
+          <Input contentBefore="https://" contentAfter=".com" />
+        </Stack>
+      ),
+      code: `<Stack className="gap-4">
+  <Input contentBefore="$" />
+  <Input contentAfter="%" />
+  <Input contentBefore="https://" contentAfter=".com" />
+</Stack>`,
+    },
+    {
       title: "Type",
       description: (
         <div>
@@ -206,6 +228,20 @@ export default () => {
           required: false,
           type: "boolean",
           default: "false",
+          notes: null,
+        },
+        {
+          name: "contentBefore",
+          required: false,
+          type: "ReactNode",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "contentAfter",
+          required: false,
+          type: "ReactNode",
+          default: null,
           notes: null,
         },
         {
