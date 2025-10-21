@@ -202,6 +202,59 @@ export default () => {
 />`,
     },
     {
+      title: "Automatic sorting excluding last row",
+      description: (
+        <div>
+          Often times a table will have some sort of "total" row at the bottom
+          that you don't want to include in the sorting. Set{" "}
+          <InlineCode>shouldSortLastRow</InlineCode> to{" "}
+          <InlineCode>false</InlineCode> to exclude this row.
+        </div>
+      ),
+      demo: (
+        <AdvancedTable
+          sortType="automatic"
+          columns={[
+            { label: "Name", sortKey: "name" },
+            { label: "Cost", sortKey: "cost" },
+          ]}
+          rows={[
+            { name: "Milk", cost: 5 },
+            { name: "Eggs", cost: 4 },
+            { name: "Bread", cost: 2 },
+            { name: "Total", cost: 11 },
+          ]}
+          buildRow={(row, index) => (
+            <>
+              <td className={index === 3 ? "font-bold" : ""}>{row.name}</td>
+              <td className={index === 3 ? "font-bold" : ""}>{row.cost}</td>
+            </>
+          )}
+          shouldSortLastRow={false}
+        />
+      ),
+      code: `<AdvancedTable
+  sortType="automatic"
+  columns={[
+    { label: "Name", sortKey: "name" },
+    { label: "Cost", sortKey: "cost" },
+  ]}
+  rows={[
+    { name: "Milk", cost: 5 },
+    { name: "Eggs", cost: 4 },
+    { name: "Bread", cost: 2 },
+    { name: "Total", cost: 11 },
+  ]}
+  buildRow={(row, index) => (
+    <>
+      <td className={index === 3 ? "font-bold" : ""}>{row.name}</td>
+      <td className={index === 3 ? "font-bold" : ""}>{row.cost}</td>
+    </>
+  )}
+  shouldSortLastRow={false}
+/>`,
+    },
+    {
       title: "URL-based sorting",
       description: (
         <div>
@@ -342,7 +395,7 @@ export default () => {
                     return direction === "asc"
                       ? aValue.localeCompare(bValue)
                       : bValue.localeCompare(aValue);
-                  })
+                  }),
             );
           }}
         />
@@ -542,7 +595,7 @@ export default () => {
         {
           name: "buildRow",
           required: true,
-          type: "(row: T) => ReactNode",
+          type: "(row: T, index: number) => ReactNode",
           default: null,
           notes: null,
         },
