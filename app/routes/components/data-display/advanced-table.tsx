@@ -224,10 +224,10 @@ export default () => {
             { name: "Bread", cost: 2 },
             { name: "Total", cost: 11 },
           ]}
-          buildRow={(row, index) => (
+          buildRow={(row, _, isLastRow) => (
             <>
-              <td className={index === 3 ? "font-bold" : ""}>{row.name}</td>
-              <td className={index === 3 ? "font-bold" : ""}>{row.cost}</td>
+              <td className={isLastRow ? "font-bold" : ""}>{row.name}</td>
+              <td className={isLastRow ? "font-bold" : ""}>{row.cost}</td>
             </>
           )}
           shouldSortLastRow={false}
@@ -245,10 +245,10 @@ export default () => {
     { name: "Bread", cost: 2 },
     { name: "Total", cost: 11 },
   ]}
-  buildRow={(row, index) => (
+  buildRow={(row, _, isLastRow) => (
     <>
-      <td className={index === 3 ? "font-bold" : ""}>{row.name}</td>
-      <td className={index === 3 ? "font-bold" : ""}>{row.cost}</td>
+      <td className={isLastRow ? "font-bold" : ""}>{row.name}</td>
+      <td className={isLastRow ? "font-bold" : ""}>{row.cost}</td>
     </>
   )}
   shouldSortLastRow={false}
