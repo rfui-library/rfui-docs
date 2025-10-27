@@ -16,7 +16,7 @@ export default [
     ...prefix("data-display", [
       route(
         "advanced-table",
-        "./routes/components/data-display/advanced-table.tsx"
+        "./routes/components/data-display/advanced-table.tsx",
       ),
       route("badge", "./routes/components/data-display/badge.tsx"),
       route("card", "./routes/components/data-display/card.tsx"),
@@ -30,20 +30,21 @@ export default [
       route("button", "./routes/components/form/button.tsx"),
       route(
         "checkbox-card-group",
-        "./routes/components/form/checkbox-card-group.tsx"
+        "./routes/components/form/checkbox-card-group.tsx",
       ),
       route("checkbox", "./routes/components/form/checkbox.tsx"),
       route("combobox", "./routes/components/form/combobox.tsx"),
       route("form-field", "./routes/components/form/form-field.tsx"),
+      route("form-layout", "./routes/components/form/form-layout.tsx"),
       route("input", "./routes/components/form/input.tsx"),
       route("password-input", "./routes/components/form/password-input.tsx"),
       route(
         "radio-button-card-group",
-        "./routes/components/form/radio-button-card-group.tsx"
+        "./routes/components/form/radio-button-card-group.tsx",
       ),
       route(
         "radio-button-group",
-        "./routes/components/form/radio-button-group.tsx"
+        "./routes/components/form/radio-button-group.tsx",
       ),
       route("radio-button", "./routes/components/form/radio-button.tsx"),
       route("select", "./routes/components/form/select.tsx"),
@@ -63,13 +64,13 @@ export default [
       route("navbar", "./routes/components/navigation/navbar.tsx"),
       route(
         "navigation-links",
-        "./routes/components/navigation/navigation-links.tsx"
+        "./routes/components/navigation/navigation-links.tsx",
       ),
       route("pagination", "./routes/components/navigation/pagination.tsx"),
       route("tabs", "./routes/components/navigation/tabs.tsx"),
       route(
         "vertical-navbar",
-        "./routes/components/navigation/vertical-navbar.tsx"
+        "./routes/components/navigation/vertical-navbar.tsx",
       ),
     ]),
     ...prefix("overlays", [
@@ -95,7 +96,7 @@ export default [
       route("editable-h2", "./routes/components/editable-text/editable-h2.tsx"),
       route(
         "editable-text",
-        "./routes/components/editable-text/editable-text.tsx"
+        "./routes/components/editable-text/editable-text.tsx",
       ),
     ]),
 
