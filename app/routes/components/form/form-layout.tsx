@@ -254,6 +254,13 @@ export default () => {
           default: "'horizontal'",
           notes: null,
         },
+        {
+          name: "...rest",
+          required: false,
+          type: "StackType",
+          default: null,
+          notes: null,
+        },
       ],
     },
     {
@@ -283,7 +290,7 @@ export default () => {
         {
           name: "...rest",
           required: false,
-          type: "FlexType",
+          type: "ComponentProps<'div'>",
           default: null,
           notes: null,
         },
