@@ -571,6 +571,38 @@ export default () => {
   </Card>
 </Link>`,
     },
+    {
+      title: "Collapsible",
+      description: (
+        <div>
+          If you set <InlineCode>collapsible</InlineCode> to{" "}
+          <InlineCode>true</InlineCode>, when you click on the{" "}
+          <InlineCode>CardHeader</InlineCode> it will toggle the{" "}
+          <InlineCode>CardBody</InlineCode> and the{" "}
+          <InlineCode>CardFooter</InlineCode>.
+        </div>
+      ),
+      demo: (
+        <Card collapsible>
+          <CardHeader>
+            <CardHeading>Summary</CardHeading>
+          </CardHeader>
+          <CardBody>A summary of your account.</CardBody>
+          <CardFooter>
+            <Button>Close</Button>
+          </CardFooter>
+        </Card>
+      ),
+      code: `<Card collapsible>
+  <CardHeader>
+    <CardHeading>Summary</CardHeading>
+  </CardHeader>
+  <CardBody>A summary of your account.</CardBody>
+  <CardFooter>
+    <Button>Close</Button>
+  </CardFooter>
+</Card>`,
+    },
   ];
   const propsTables = [
     {
@@ -622,6 +654,13 @@ export default () => {
           required: false,
           type: '"sm" | "md" | "lg"',
           default: '"md"',
+          notes: null,
+        },
+        {
+          name: "collapsible",
+          required: false,
+          type: "boolean",
+          default: "false",
           notes: null,
         },
         {
