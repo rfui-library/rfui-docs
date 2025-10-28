@@ -664,6 +664,13 @@ export default () => {
           notes: null,
         },
         {
+          name: "isCollapsedByDefault",
+          required: false,
+          type: "boolean",
+          default: "false",
+          notes: null,
+        },
+        {
           name: "children",
           required: true,
           type: "ComponentChild",
