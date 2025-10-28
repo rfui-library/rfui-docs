@@ -164,6 +164,11 @@ export const getComponents = () => ({
       ),
     },
     {
+      name: "FormLayout",
+      href: "/components/form/form-layout",
+      demo: <InlineCode>{"<FormLayout>"}</InlineCode>,
+    },
+    {
       name: "Input",
       href: "/components/form/input",
       demo: <Input className="bg-neutral-50/20" />,
