@@ -2,15 +2,7 @@ import {
   ComponentDocsPage,
   type ExampleType,
 } from "@/components/component-docs-page/index";
-import {
-  CodeBlock,
-  FormField,
-  FormLayout,
-  FormSection,
-  InlineCode,
-  Input,
-  Link,
-} from "rfui-package";
+import { FormField, FormLayout, FormSection, Input } from "rfui-package";
 
 export default () => {
   const overviewNotes = null;
@@ -62,109 +54,44 @@ export default () => {
       title: null,
       props: [
         {
-          name: "label",
+          name: "layout",
+          required: false,
+          type: "'horizontal' | 'vertical'",
+          default: "'horizontal'",
+          notes: null,
+        },
+      ],
+    },
+    {
+      title: "FormSection",
+      props: [
+        {
+          name: "title",
           required: true,
           type: "string",
           default: null,
           notes: null,
         },
         {
-          name: "required",
-          required: false,
-          type: "boolean",
-          default: "false",
-          notes: null,
-        },
-        {
-          name: "requiredIndicator",
-          required: false,
-          type: '"text" | "asterisk" | "none"',
-          default: '"none"',
-          notes: (
-            <div>
-              See{" "}
-              <Link href="https://ux.stackexchange.com/q/840/39046">
-                https://ux.stackexchange.com/q/840/39046
-              </Link>{" "}
-              for a discussion.
-            </div>
-          ),
-        },
-        {
-          name: "optionalIndicator",
-          required: false,
-          type: '"text" | "asterisk" | "none"',
-          default: '"none"',
-          notes: (
-            <div>
-              See{" "}
-              <Link href="https://ux.stackexchange.com/q/840/39046">
-                https://ux.stackexchange.com/q/840/39046
-              </Link>{" "}
-              for a discussion.
-            </div>
-          ),
-        },
-        {
-          name: "helperText",
+          name: "description",
           required: false,
           type: "string",
           default: null,
           notes: null,
         },
         {
-          name: "size",
-          required: false,
-          type: '"sm" | "md" | "lg"',
-          default: '"md"',
-          notes: null,
-        },
-        {
-          name: "rounded",
-          required: false,
-          type: '"square" | "sm" | "lg" | "full"',
-          default: null,
-          notes: (
-            <div>
-              Defaults to the value of the CSS variable{" "}
-              <InlineCode>--default-roundedness</InlineCode>. See{" "}
-              <Link href="/default-roundedness">"Default roundedness"</Link>.
-            </div>
-          ),
-        },
-        {
-          name: "errorText",
-          required: false,
-          type: "string",
+          name: "children",
+          required: true,
+          type: "ComponentChild",
           default: null,
           notes: null,
         },
         {
           name: "...rest",
           required: false,
-          type: 'Omit<ComponentProps<"div">, "size">',
+          type: "FlexType",
           default: null,
-          notes: (
-            <div>
-              <div className="leading-relaxed">
-                See the docs for{" "}
-                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>FormField</InlineCode>, you could pass anything you
-                normally would pass to <InlineCode>{"<div>"}</InlineCode>{" "}
-                because the return value{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/form/form-field.tsx">
-                  looks something like
-                </Link>{" "}
-                this:
-              </div>
-              <CodeBlock
-                language="tsx"
-                code={`<div {...rest}>
-  ...
-</div>`}
-              />
-            </div>
-          ),
+          notes: null,
         },
       ],
     },
