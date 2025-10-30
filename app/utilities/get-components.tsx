@@ -10,6 +10,8 @@ import {
   CheckboxCardGroupItem,
   CodeBlock,
   Combobox,
+  DescriptionList,
+  DescriptionListItem,
   DropdownMenu,
   EditableH1,
   EditableH2,
@@ -255,6 +257,16 @@ export const getComponents = () => ({
       name: "Card",
       href: "/components/data-display/card",
       demo: <Card>Example</Card>,
+    },
+    {
+      name: "DescriptionList",
+      href: "/components/data-display/description-list",
+      demo: (
+        <DescriptionList>
+          <DescriptionListItem label="Name">John Doe</DescriptionListItem>
+          <DescriptionListItem label="Age">30</DescriptionListItem>
+        </DescriptionList>
+      ),
     },
     {
       name: "Table",
