@@ -20,6 +20,10 @@ export default [
       ),
       route("badge", "./routes/components/data-display/badge.tsx"),
       route("card", "./routes/components/data-display/card.tsx"),
+      route(
+        "description-list",
+        "./routes/components/data-display/description-list.tsx",
+      ),
       route("table", "./routes/components/data-display/table.tsx"),
     ]),
     ...prefix("feedback", [
