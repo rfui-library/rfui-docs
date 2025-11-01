@@ -11,15 +11,15 @@ export default () => {
       title: "Basic",
       demo: (
         <Tabs>
-          <TabSection tabName="First">One</TabSection>
-          <TabSection tabName="Second">Two</TabSection>
-          <TabSection tabName="Third">Three</TabSection>
+          <TabSection tabName="First">Content for first tab</TabSection>
+          <TabSection tabName="Second">Content for second tab</TabSection>
+          <TabSection tabName="Third">Content for third tab</TabSection>
         </Tabs>
       ),
       code: `<Tabs>
-  <TabSection tabName="First">One</TabSection>
-  <TabSection tabName="Second">Two</TabSection>
-  <TabSection tabName="Third">Three</TabSection>
+  <TabSection tabName="First">Content for first tab</TabSection>
+  <TabSection tabName="Second">Content for second tab</TabSection>
+  <TabSection tabName="Third">Content for third tab</TabSection>
 </Tabs>`,
     },
     {
@@ -33,15 +33,15 @@ export default () => {
       ),
       demo: (
         <Tabs fullWidth>
-          <TabSection tabName="First">One</TabSection>
-          <TabSection tabName="Second">Two</TabSection>
-          <TabSection tabName="Third">Three</TabSection>
+          <TabSection tabName="First">Content for first tab</TabSection>
+          <TabSection tabName="Second">Content for second tab</TabSection>
+          <TabSection tabName="Third">Content for third tab</TabSection>
         </Tabs>
       ),
       code: `<Tabs fullWidth>
-  <TabSection tabName="First">One</TabSection>
-  <TabSection tabName="Second">Two</TabSection>
-  <TabSection tabName="Third">Three</TabSection>
+  <TabSection tabName="First">Content for first tab</TabSection>
+  <TabSection tabName="Second">Content for second tab</TabSection>
+  <TabSection tabName="Third">Content for third tab</TabSection>
 </Tabs>`,
     },
     {
@@ -56,15 +56,42 @@ export default () => {
       ),
       demo: (
         <Tabs initialActiveTabName="Second">
-          <TabSection tabName="First">One</TabSection>
-          <TabSection tabName="Second">Two</TabSection>
-          <TabSection tabName="Third">Three</TabSection>
+          <TabSection tabName="First">Content for first tab</TabSection>
+          <TabSection tabName="Second">Content for second tab</TabSection>
+          <TabSection tabName="Third">Content for third tab</TabSection>
         </Tabs>
       ),
       code: `<Tabs initialActiveTabName="Second">
-  <TabSection tabName="First">One</TabSection>
-  <TabSection tabName="Second">Two</TabSection>
-  <TabSection tabName="Third">Three</TabSection>
+  <TabSection tabName="First">Content for first tab</TabSection>
+  <TabSection tabName="Second">Content for second tab</TabSection>
+  <TabSection tabName="Third">Content for third tab</TabSection>
+</Tabs>`,
+    },
+    {
+      title: "As links",
+      demo: (
+        <Tabs>
+          <TabSection tabName="First" href="/first">
+            Content for first tab
+          </TabSection>
+          <TabSection tabName="Second" href="/second">
+            Content for second tab
+          </TabSection>
+          <TabSection tabName="Third" href="/third">
+            Content for third tab
+          </TabSection>
+        </Tabs>
+      ),
+      code: `<Tabs>
+  <TabSection tabName="First" href="/first">
+    Content for first tab
+  </TabSection>
+  <TabSection tabName="Second" href="/second">
+    Content for second tab
+  </TabSection>
+  <TabSection tabName="Third" href="/third">
+    Content for third tab
+  </TabSection>
 </Tabs>`,
     },
   ];
@@ -101,6 +128,13 @@ export default () => {
         {
           name: "tabName",
           required: true,
+          type: "string",
+          default: null,
+          notes: null,
+        },
+        {
+          name: "href",
+          required: false,
           type: "string",
           default: null,
           notes: null,
