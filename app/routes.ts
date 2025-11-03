@@ -89,6 +89,7 @@ export default [
       route("code-block", "./routes/components/typography/code-block.tsx"),
       route("h1", "./routes/components/typography/h1.tsx"),
       route("h2", "./routes/components/typography/h2.tsx"),
+      route("h3", "./routes/components/typography/h3.tsx"),
       route("highlight", "./routes/components/typography/highlight.tsx"),
       route("inline-code", "./routes/components/typography/inline-code.tsx"),
       route("ol", "./routes/components/typography/ol.tsx"),
