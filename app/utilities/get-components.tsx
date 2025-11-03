@@ -20,6 +20,7 @@ import {
   FormField,
   H1,
   H2,
+  H3,
   HelpTooltip,
   Highlight,
   InfoTooltip,
@@ -66,6 +67,11 @@ export const getComponents = () => ({
       name: "H2",
       href: "/components/typography/h2",
       demo: <H2>Subheading</H2>,
+    },
+    {
+      name: "H3",
+      href: "/components/typography/h3",
+      demo: <H3>Subheading</H3>,
     },
     {
       name: "Highlight",
