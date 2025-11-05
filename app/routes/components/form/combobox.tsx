@@ -21,9 +21,9 @@ export default () => {
       value: "baz",
     },
   ];
-  const [controlledValue, setControlledValue] = useState(options[1]);
+  const [controlledValue, setControlledValue] = useState(options[1].value);
   const [controlledMultiselectValues, setControlledMultiselectValues] =
-    useState([options[1]]);
+    useState([options[1].value]);
 
   const examples: ExampleType[] = [
     {
@@ -184,8 +184,8 @@ export default () => {
           initial value.
         </div>
       ),
-      demo: <Combobox defaultValue={options[1]} options={options} />,
-      code: `<Combobox defaultValue={options[1]} options={options} />`,
+      demo: <Combobox defaultValue={options[1].value} options={options} />,
+      code: `<Combobox defaultValue={options[1].value} options={options} />`,
     },
     {
       title: "Controlled",

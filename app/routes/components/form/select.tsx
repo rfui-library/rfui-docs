@@ -46,10 +46,10 @@ export default () => {
     },
   ];
   const [controlledValue, setControlledValue] = useState(
-    uncontrolledOptions[1]
+    uncontrolledOptions[1].value,
   );
   const [controlledMultiselectValues, setControlledMultiselectValues] =
-    useState([uncontrolledOptions[1]]);
+    useState([uncontrolledOptions[1].value]);
 
   const examples: ExampleType[] = [
     {
@@ -212,7 +212,7 @@ export default () => {
       ),
       demo: (
         <Select
-          defaultValue={uncontrolledOptions[1]}
+          defaultValue={uncontrolledOptions[1].value}
           options={uncontrolledOptions}
         />
       ),
@@ -889,21 +889,21 @@ export default () => {
         {
           name: "defaultValue",
           required: false,
-          type: "Option | Option[]",
+          type: "T | T[]",
           default: null,
           notes: null,
         },
         {
           name: "value",
           required: false,
-          type: "Option | Option[]",
+          type: "T | T[]",
           default: null,
           notes: null,
         },
         {
           name: "onChange",
           required: false,
-          type: "(newValue: Option | Option[]) => void",
+          type: "(newValue: T | T[]) => void",
           default: null,
           notes: null,
         },
