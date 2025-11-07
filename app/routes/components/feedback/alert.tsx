@@ -173,6 +173,13 @@ export default () => {
           notes: null,
         },
         {
+          name: "onClose",
+          required: false,
+          type: "() => void",
+          default: null,
+          notes: null,
+        },
+        {
           name: "children",
           required: true,
           type: "ComponentChild",
