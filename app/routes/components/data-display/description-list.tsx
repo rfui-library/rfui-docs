@@ -41,10 +41,10 @@ export default () => {
               <div className="leading-relaxed">
                 See the docs for{" "}
                 <Link href="/rest-parameters">rest parameters</Link>. For{" "}
-                <InlineCode>DefinitionList</InlineCode>, you could pass anything
-                you normally would pass to <InlineCode>{"<dl>"}</InlineCode>{" "}
-                because the container{" "}
-                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/definition-list.tsx">
+                <InlineCode>DescriptionList</InlineCode>, you could pass
+                anything you normally would pass to{" "}
+                <InlineCode>{"<dl>"}</InlineCode> because the container{" "}
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/description-list.tsx">
                   looks something like
                 </Link>{" "}
                 this:
@@ -70,14 +70,41 @@ export default () => {
           default: null,
           notes: null,
         },
+        {
+          name: "...rest",
+          required: false,
+          type: 'ComponentProps<"div">',
+          default: null,
+          notes: (
+            <div>
+              <div className="leading-relaxed">
+                See the docs for{" "}
+                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+                <InlineCode>DescriptionListItem</InlineCode>, you could pass
+                anything you normally would pass to{" "}
+                <InlineCode>{"<div>"}</InlineCode> because the container{" "}
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/description-list.tsx">
+                  looks something like
+                </Link>{" "}
+                this:
+              </div>
+              <CodeBlock
+                language="tsx"
+                code={`<div className={className} {...restWithoutClass}>
+  {children}
+</div>`}
+              />
+            </div>
+          ),
+        },
       ],
     },
   ];
 
   return (
     <ComponentDocsPage
-      componentName="DefinitionList"
-      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/definition-list.tsx"
+      componentName="DescriptionList"
+      sourceCodeUrl="https://github.com/rfui-library/rfui-package/tree/master/src/data-display/description-list.tsx"
       overviewNotes={overviewNotes}
       examples={examples}
       propsTables={propsTables}
