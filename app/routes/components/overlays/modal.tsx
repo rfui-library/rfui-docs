@@ -4,7 +4,7 @@ import {
 } from "@/components/component-docs-page/index";
 import type { ReactNode } from "react";
 import { useState } from "react";
-import { Button, InlineCode, Modal } from "rfui-package";
+import { Button, CodeBlock, InlineCode, Link, Modal } from "rfui-package";
 
 type ModalExampleProps = { heading?: string; children: ReactNode };
 
@@ -93,6 +93,33 @@ export default () => {
           type: "ComponentChild",
           default: null,
           notes: null,
+        },
+        {
+          name: "...rest",
+          required: false,
+          type: "Dialog",
+          default: null,
+          notes: (
+            <div>
+              <div className="leading-relaxed">
+                See the docs for{" "}
+                <Link href="/rest-parameters">rest parameters</Link>. For{" "}
+                <InlineCode>Modal</InlineCode>, you could pass anything you
+                normally would pass to <InlineCode>{"<Dialog>"}</InlineCode>{" "}
+                because the container{" "}
+                <Link href="https://github.com/rfui-library/rfui-package/tree/master/src/overlays/modal.tsx">
+                  looks something like
+                </Link>{" "}
+                this:
+              </div>
+              <CodeBlock
+                language="tsx"
+                code={`<Dialog className={className} {...restWithoutClass}>
+  ...
+</Dialog>`}
+              />
+            </div>
+          ),
         },
       ],
     },
