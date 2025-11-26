@@ -376,6 +376,13 @@ export default () => {
           notes: null,
         },
         {
+          name: "infoPopoverContent",
+          required: false,
+          type: "string",
+          default: null,
+          notes: null,
+        },
+        {
           name: "size",
           required: false,
           type: '"sm" | "md" | "lg"',
