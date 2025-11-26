@@ -50,6 +50,34 @@ export default () => {
 </FormField>`,
     },
     {
+      title: "Info popover",
+      description: (
+        <div>
+          It is{" "}
+          <Link href="https://www.nngroup.com/articles/tooltip-guidelines/">
+            discouraged
+          </Link>{" "}
+          to hide information that is needed to complete the form behind a
+          popover. Consider this pattern for supplementary information that is
+          too long for helper text.
+        </div>
+      ),
+      demo: (
+        <FormField
+          label="Name"
+          infoPopoverContent="Some long content providing more information about this form field."
+        >
+          <Input name="name" />
+        </FormField>
+      ),
+      code: `<FormField
+  label="Name"
+  infoPopoverContent="Some long content providing more information about this form field."
+>
+  <Input name="name" />
+</FormField>`,
+    },
+    {
       title: "Error text",
       demo: (
         <FormField label="Name" errorText="Invalid name">
