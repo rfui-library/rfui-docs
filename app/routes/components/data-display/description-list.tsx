@@ -71,6 +71,20 @@ export default () => {
           notes: null,
         },
         {
+          name: "dtRest",
+          required: false,
+          type: 'ComponentProps<"dt">',
+          default: null,
+          notes: null,
+        },
+        {
+          name: "ddRest",
+          required: false,
+          type: 'ComponentProps<"dd">',
+          default: null,
+          notes: null,
+        },
+        {
           name: "...rest",
           required: false,
           type: 'ComponentProps<"div">',
