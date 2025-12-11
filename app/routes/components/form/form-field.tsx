@@ -371,7 +371,7 @@ export default () => {
         {
           name: "helperText",
           required: false,
-          type: "string",
+          type: "string | ReactNode",
           default: null,
           notes: null,
         },
@@ -405,7 +405,7 @@ export default () => {
         {
           name: "errorText",
           required: false,
-          type: "string",
+          type: "string | ReactNode",
           default: null,
           notes: null,
         },
